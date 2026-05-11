@@ -1,0 +1,188 @@
+\documentclass[a4paper, 12pt, oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[Lenny]{fncychap} % fancy chapter style (many more available, like Sonny, Bjarne, etc)
+\ChNameVar{\Large\rm\bfseries} % Set name to serif, bold
+\usepackage{fancyhdr} %to customize the headers
+\fancyhead{\nouppercase}
+\usepackage[lmargin=1in, rmargin=1in, tmargin=1.5in, bmargin=1.3in]{geometry} %sets the margins for the pages
+\setcounter{tocdepth}{2} %table of contents number depth for subsections (2 = x.x.x)
+\setcounter{secnumdepth}{4} %numbering depth for headers for subsections in the text(4 = x.x.x.x)
+\usepackage{url} %to include urls
+\usepackage{lipsum}
+\usepackage{listings} %include this if you want to include code in the thesis
+\usepackage{amsmath,amssymb} %mathematical package
+\usepackage[per-mode=symbol]{siunitx} %includes SI-units
+\usepackage[bf]{caption} %makes float captions bold
+\usepackage{array, booktabs} %to make better tables
+\usepackage{graphicx} %to include graphics
+\usepackage{float} %to include floats
+\usepackage[export]{adjustbox} %to adjust floats
+\usepackage{subcaption}
+\usepackage{chngcntr} %will make it possible to change the counter for tables, figures etc. such as below
+\usepackage{nicefrac} %to include nice fractions
+%\counterwithin{figure}{section} %change counter for figures within sections (also possible to choose for each chapter
+%\counterwithin{table}{section} %change counter for tables within sections
+\usepackage{color, xcolor} %edit e.g. text colors
+\usepackage{hyperref} %Adding internal links in you document
+\usepackage{bookmark}
+\usepackage{tikz-feynman} %to include feynman diagrams
+\usepackage{tikz} %to include tikz figures
+\usepackage{pgf} %to include pgf figures
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+% Define journal abbreviations
+\def\aj{AJ}
+\def\apj{ApJ}
+\def\apjl{ApJL}
+\def\apjs{ApJS}
+\def\aap{A\&A}
+\def\mnras{MNRAS}
+\def\nat{Nature}
+\def\prl{Phys. Rev. Lett.}
+
+\usepackage[backend = biber,
+            natbib = true,
+            style = authoryear,
+            maxcitenames = 2,
+            ]{biblatex}
+\addbibresource{bibliography.bib}
+\usepackage{comment}
+\usepackage{afterpage}
+\usepackage[version=4]{mhchem}
+
+\newcommand\myemptypage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage
+    } %sets new page command to insert an empty page without adding to the page counter or having a page number
+    \makeatletter
+    \renewcommand*{\@makechapterhead}[1]{%
+      \vspace*{0\p@}%
+      {\parindent \z@ \raggedright \normalfont
+        \ifnum \c@secnumdepth >\m@ne
+          \if@mainmatter%%%%% Fix for frontmatter, mainmatter, and backmatter 040920
+            \DOCH
+          \fi
+        \fi
+        \interlinepenalty\@M
+        \if@mainmatter%%%%% Fix for frontmatter, mainmatter, and backmatter 060424
+          \DOTI{#1}%
+        \else%
+          \DOTIS{#1}%
+        \fi
+      }}
+    % For the case \chapter*:
+    \renewcommand*{\@makeschapterhead}[1]{%
+      \vspace*{10\p@}%
+      {\parindent \z@ \raggedright
+        \normalfont
+        \interlinepenalty\@M
+        \DOTIS{#1}
+        \vskip 40\p@
+      }}
+    \makeatother
+
+\begin{document}
+
+\newgeometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\begin{titlepage}
+\begingroup
+\renewcommand{\huge}{\fontsize{20.74}{25}\selectfont}
+\renewcommand{\Large}{\fontsize{14.4}{18}\selectfont}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\center 
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.85\textwidth]{portada/logo_facultad.png}
+\end{figure}
+\hspace{2cm}
+
+\textbf{\Huge Máster en Física Avanzada}\\[0.7cm]
+\huge Especialidad Astrofísica\\[0.7cm] 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{portada/logo_uv.png}
+\end{figure}
+\hspace{1cm}
+
+\textbf{\Huge Trabajo Fin de Máster}\\[0.3cm]
+\HRule \\[1.5cm]
+{ \huge \bfseries Estudio Astrosismológico de Blue Stragglers en el contexto de la misión HAYDN}\\[2.5cm]
+
+\huge Pau Verdeguer Blom-Dahl\\[0.7cm]
+
+\begin{minipage}[t]{0.45\textwidth}
+    \begin{flushleft} 
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.52\textwidth}
+    \begin{flushright} \Large
+    {Tutores:} 
+    Andrés Moya Bedón, Giovanni M. Miurouh \\ [0.5cm]
+
+    \textit{Curso académico 2025/26}
+    \end{flushright}
+\end{minipage}
+
+\vfill
+
+\endgroup
+\end{titlepage}
+\restoregeometry
+
+% The pre-chapters
+\chapter*{Resumen} %pre-chapters should not be numbered, hExploratoryence the "*"
+\pagenumbering{roman} %introductory pages should be roman
+\setcounter{page}{1}
+\addcontentsline{toc}{chapter}{\protect\numberline{}Resumen} %add the chapter to the table of contents, this is not automatically added when creating unnumbered chapters (*). Add it in a chapter style, and keep all chapters on the same numberline indent regardless of number or not on the chapter
+\input{Capítulos/Resumen} %insert the chapter text from the files
+
+%add an empty non-counted page by the command below in order to get the first chapter on the left hand side, if needed (check your page number so that the first chapter is on an odd page)
+
+\chapter*{Prefacio}
+\addcontentsline{toc}{chapter}{\protect\numberline{}Prefacio} 
+\input{Capítulos/Prefacio}
+
+\tableofcontents
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Customize the layout of the main content of your thesis
+
+\pagestyle{fancy} %set customized page style for header
+%\fancyhf{} %clear header and footer fields
+\renewcommand{\headrulewidth}{0pt} %set to no rule
+%\fancyhead[LO, RO]{\thepage} %set the page number at left for even, right for odd pages
+\fancyhead[L]{\leftmark} %set the chapter name at right for even, left for odd pages
+%is is possible to design the header with the chapter as you wish, e.q. only the chapter or only the name, all lowercase instead etc.
+%you could also design the footer if you wish, for example:
+
+\setlength{\headheight}{14.49998pt} %set the header height
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%main content 
+
+\pagenumbering{arabic}
+
+%\input{Chapters/Introduction}
+%\input{Chapters/Results}
+%\input{Chapters/Outlook}
+
+%\addcontentsline{toc}{chapter}{\protect\numberline{}References}
+%\printbibliography[title={References}] % you may change the title in the toc here if you want
+%\cleardoublepage
+
+%\input{Chapters/Appendix}
+
+\end{document}
