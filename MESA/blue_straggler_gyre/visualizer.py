@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load the data
-binary_history_path = 'MESA/first-binary-test/binary_history.data'
-history_star1_path = 'MESA/first-binary-test/LOGS1/history.data'
+binary_history_path = '/Users/pauverdeguer/TFM/MESA/blue_straggler_gyre/binary_history.data'
+history_star2_path = '/Users/pauverdeguer/TFM/MESA/blue_straggler_gyre/LOGS2/history.data'
 
 try:
     bh = mr.MesaData(binary_history_path)
-    h1 = mr.MesaData(history_star1_path)
+    h2 = mr.MesaData(history_star2_path)
 except Exception as e:
     print(f"Error loading data: {e}")
     exit(1)
@@ -68,13 +68,13 @@ ax2b.tick_params(axis='y', labelcolor='green')
 ax2.set_title('Orbital Evolution')
 ax2.grid(True, linestyle='--', alpha=0.7)
 
-# 3. HR Diagram for Star 1
+# 3. HR Diagram for Star 2
 ax3 = plt.subplot(2, 2, 3)
-ax3.plot(h1.log_Teff, h1.log_L, color='orange', linewidth=2)
+ax3.plot(h2.log_Teff, h2.log_L, color='orange', linewidth=2)
 ax3.invert_xaxis()
 ax3.set_xlabel('$\log T_{eff}$ (K)')
 ax3.set_ylabel('$\log L/L_\odot$')
-ax3.set_title('HR Diagram (Donor Star)')
+ax3.set_title('HR Diagram (Accretor Star)')
 ax3.grid(True, linestyle='--', alpha=0.7)
 
 # 4. Mass Transfer Rate

@@ -6,7 +6,7 @@
    mesa_dir = ''
    show_log_description_at_start = .true.
 
-   pgstar_flag = .true.
+   pgstar_flag = .false.
 
 / ! end of star_job namelist
 
@@ -36,6 +36,7 @@
    history_interval = 1
    terminal_interval = 1
    write_header_frequency = 10
+   max_model_number = 800
 
 / ! end of controls namelist
 

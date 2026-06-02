@@ -6,7 +6,7 @@
    mesa_dir = ''
    show_log_description_at_start = .false.
 
-   pgstar_flag = .true.
+   pgstar_flag = .false.
 
    ! Write GYRE-compatible pulse data file when the simulation terminates
    save_pulse_data_when_terminate = .true.
@@ -40,6 +40,7 @@
    history_interval = 1
    terminal_interval = 1
    write_header_frequency = 10
+   max_model_number = 800
 
    ! GYRE output
    pulse_data_format = 'GYRE'

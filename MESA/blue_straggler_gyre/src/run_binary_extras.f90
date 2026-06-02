@@ -29,8 +29,6 @@ module run_binary_extras
 
    implicit none
 
-   logical :: mass_transfer_started = .false.
-
 contains
 
    subroutine extras_binary_controls(binary_id, ierr)
@@ -154,26 +152,11 @@ contains
       type(binary_info), pointer :: b
       integer, intent(in) :: binary_id
       integer :: ierr
-      real(dp) :: mdot_threshold
       call binary_ptr(binary_id, b, ierr)
       if (ierr /= 0) then  ! failure in  binary_ptr
          return
       end if
       extras_binary_finish_step = keep_going
-
-      ! Threshold: 1e-12 Msun/yr in cgs (g/s)
-      mdot_threshold = 1d-12 * Msun / secyer
-
-      ! Track whether significant mass transfer has ever occurred
-      if (abs(b% mtransfer_rate) > mdot_threshold) then
-         mass_transfer_started = .true.
-      end if
-
-      ! Terminate once mass transfer has started and the donor has clearly detached
-      if (mass_transfer_started .and. b% rl_relative_gap(b% d_i) < -0.01d0) then
-         write(*,*) '<<<< Mass transfer has ended (donor detached). Terminating binary evolution. >>>>'
-         extras_binary_finish_step = terminate
-      end if
 
    end function extras_binary_finish_step
 

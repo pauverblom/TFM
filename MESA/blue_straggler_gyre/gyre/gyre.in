@@ -35,9 +35,9 @@
 
 &scan
     grid_type = 'LINEAR'
-    freq_min = 10.0
-    freq_max = 500.0
-    n_freq = 200
+    freq_min = 10
+    freq_max = 1500.0
+    n_freq = 100
     freq_units = 'UHZ'
 /
 
