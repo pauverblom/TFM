@@ -2,10 +2,28 @@
 \usepackage[utf8]{inputenc}
 \usepackage[Lenny]{fncychap} % fancy chapter style (many more available, like Sonny, Bjarne, etc)
 \ChNameVar{\Large\rm\bfseries} % Set name to serif, bold
+\usepackage{color, xcolor} %edit e.g. text colors
+
+\usepackage{titlesec}
+
+% Section: Sans-serif, Large, Bold, Dark Blue with an elegant underline
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\thesection}{1em}{}[{\vspace{0.2ex}\titlerule[0.8pt]}]
+
+% Subsection: Sans-serif, large, bold, Dark Blue
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {\thesubsection}{1em}{}
+
+% Subsubsection: Sans-serif, normal size, italic, Dark Blue
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\itshape}
+  {\thesubsubsection}{1em}{}
 \usepackage{fancyhdr} %to customize the headers
 \fancyhead{\nouppercase}
 \usepackage[lmargin=1in, rmargin=1in, tmargin=1.5in, bmargin=1.3in]{geometry} %sets the margins for the pages
-\setcounter{tocdepth}{2} %table of contents number depth for subsections (2 = x.x.x)
+\setcounter{tocdepth}{3} %table of contents number depth for subsections (3 = x.x.x.x)
 \setcounter{secnumdepth}{4} %numbering depth for headers for subsections in the text(4 = x.x.x.x)
 \usepackage{url} %to include urls
 \usepackage{lipsum}
@@ -22,12 +40,13 @@
 \usepackage{nicefrac} %to include nice fractions
 %\counterwithin{figure}{section} %change counter for figures within sections (also possible to choose for each chapter
 %\counterwithin{table}{section} %change counter for tables within sections
-\usepackage{color, xcolor} %edit e.g. text colors
 \usepackage{hyperref} %Adding internal links in you document
 \usepackage{bookmark}
 \usepackage{tikz-feynman} %to include feynman diagrams
 \usepackage{tikz} %to include tikz figures
 \usepackage{pgf} %to include pgf figures
+\usepackage[spanish]{babel} %to include different languages, e.g. for captions
+
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -54,7 +73,7 @@
 \addbibresource{bibliography.bib}
 \usepackage{comment}
 \usepackage{afterpage}
-\usepackage[version=4]{mhchem}
+%\usepackage[version=4]{mhchem}
 
 \newcommand\myemptypage{
     \null
@@ -62,6 +81,7 @@
     \addtocounter{page}{-1}
     \newpage
     } %sets new page command to insert an empty page without adding to the page counter or having a page number
+
     \makeatletter
     \renewcommand*{\@makechapterhead}[1]{%
       \vspace*{0\p@}%
@@ -141,16 +161,18 @@
 \restoregeometry
 
 % The pre-chapters
-\chapter*{Resumen} %pre-chapters should not be numbered, hExploratoryence the "*"
+\chapter*{Resumen} %pre-chapters should not be numbered, hence the "*"
 \pagenumbering{roman} %introductory pages should be roman
 \setcounter{page}{1}
 \addcontentsline{toc}{chapter}{\protect\numberline{}Resumen} %add the chapter to the table of contents, this is not automatically added when creating unnumbered chapters (*). Add it in a chapter style, and keep all chapters on the same numberline indent regardless of number or not on the chapter
+
 \input{Capítulos/Resumen} %insert the chapter text from the files
 
 %add an empty non-counted page by the command below in order to get the first chapter on the left hand side, if needed (check your page number so that the first chapter is on an odd page)
 
 \chapter*{Prefacio}
 \addcontentsline{toc}{chapter}{\protect\numberline{}Prefacio} 
+
 \input{Capítulos/Prefacio}
 
 \tableofcontents
@@ -175,12 +197,12 @@
 
 \pagenumbering{arabic}
 
-%\input{Chapters/Introduction}
-%\input{Chapters/Results}
-%\input{Chapters/Outlook}
+\input{Capítulos/Introducción.tex}
+%\input{Capítulos/Resultados}
+%\input{Capítulos/Conclusiones}
 
-%\addcontentsline{toc}{chapter}{\protect\numberline{}References}
-%\printbibliography[title={References}] % you may change the title in the toc here if you want
+%\addcontentsline{toc}{chapter}{\protect\numberline{}Referencias}
+%\printbibliography[title={Referencias}] % you may change the title in the toc here if you want
 %\cleardoublepage
 
 %\input{Chapters/Appendix}

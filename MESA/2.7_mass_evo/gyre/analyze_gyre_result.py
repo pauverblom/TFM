@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Read the outputs for both stars
-s_regular_star = pg.read_output('/Users/pauverdeguer/TFM/MESA/2.7_mass_evo/gyre/summary.h5')
-s_blue_straggler = pg.read_output('/Users/pauverdeguer/TFM/MESA/blue_straggler_gyre/gyre/summary.h5')
+s_regular_star = pg.read_output('/MESA/2.7_mass_evo/gyre/summary.h5')
+s_blue_straggler = pg.read_output('/MESA/blue_straggler_gyre/gyre/summary.h5')
 
 # Group data by harmonic degree (l)
 sg_regular_star = s_regular_star.group_by('l')
