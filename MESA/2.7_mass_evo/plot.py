@@ -7,7 +7,9 @@ import matplotlib.pyplot as plt
 # https://billwolf.space/py_mesa_reader/
 
 # Specify the directory containing MESA logs
-logs = mr.MesaLogDir("LOGS")
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
+logs = mr.MesaLogDir(os.path.join(script_dir, "LOGS"))
 
 # Read the history and profile data
 history = logs.history

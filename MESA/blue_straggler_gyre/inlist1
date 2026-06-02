@@ -36,7 +36,7 @@
    history_interval = 1
    terminal_interval = 1
    write_header_frequency = 10
-   max_model_number = 800
+   max_model_number = 2000
 
 / ! end of controls namelist
 

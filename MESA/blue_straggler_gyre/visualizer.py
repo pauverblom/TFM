@@ -3,8 +3,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load the data
-binary_history_path = '/Users/pauverdeguer/TFM/MESA/blue_straggler_gyre/binary_history.data'
-history_star2_path = '/Users/pauverdeguer/TFM/MESA/blue_straggler_gyre/LOGS2/history.data'
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+binary_history_path = os.path.join(script_dir, 'binary_history.data')
+history_star2_path = os.path.join(script_dir, 'LOGS2', 'history.data')
 
 try:
     bh = mr.MesaData(binary_history_path)

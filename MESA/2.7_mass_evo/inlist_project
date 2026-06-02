@@ -57,8 +57,8 @@
    !xa_central_lower_limit_species(1) = 'h1'
    !xa_central_lower_limit(1) = 1d-3
 
-   ! stop when the model number reaches 185:
-   max_model_number = 185
+   ! stop when the model number reaches 500:
+   max_model_number = 500
 
    ! wind
 
