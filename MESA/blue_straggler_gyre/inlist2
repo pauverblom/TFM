@@ -6,7 +6,9 @@
    mesa_dir = ''
    show_log_description_at_start = .false.
 
-   pgstar_flag = .false.
+   pgstar_flag = .true.
+
+   create_pre_main_sequence_model = .false.
 
    ! Write GYRE-compatible pulse data file when the simulation terminates
    save_pulse_data_when_terminate = .true.
@@ -39,11 +41,20 @@
    profile_interval = 50
    history_interval = 1
    terminal_interval = 1
-   write_header_frequency = 10
-   max_model_number = 2000
+   write_header_frequency = 50
+
+   ! solver controls
+   ! Removed gold2 tolerances and explicitly loosened the max_residual
+   ! to 1d-3 because extreme accretion prevents the 1D solver from 
+   ! reaching 1e-4 precision due to numerical noise in the envelope.
+   gold_tol_max_residual3 = 1d-3
+   varcontrol_target = 5d-4
+   retry_limit = 100
+   max_number_retries = 100
 
    ! GYRE output
    pulse_data_format = 'GYRE'
+   write_pulse_data_with_profile = .true.
 
 / ! end of controls namelist
 

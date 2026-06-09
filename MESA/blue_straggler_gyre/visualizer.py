@@ -7,10 +7,12 @@ import os
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 binary_history_path = os.path.join(script_dir, 'binary_history.data')
+history_star1_path = os.path.join(script_dir, 'LOGS1', 'history.data')
 history_star2_path = os.path.join(script_dir, 'LOGS2', 'history.data')
 
 try:
     bh = mr.MesaData(binary_history_path)
+    h1 = mr.MesaData(history_star1_path)
     h2 = mr.MesaData(history_star2_path)
 except Exception as e:
     print(f"Error loading data: {e}")
@@ -42,15 +44,16 @@ print(f"Simulation Details:")
 print(f"  Maximum Mass Transfer Rate: {max_mdot:.2e} Msun/yr")
 print(f"  Total Duration: {bh.age[-1]:.2e} years")
 print("="*60)
+mask = bh.lg_mtransfer_rate > -60
 
 # Create the visualization
-fig = plt.figure(figsize=(15, 12))
-plt.subplots_adjust(hspace=0.3, wspace=0.3)
+fig = plt.figure(figsize=(18, 15))
+plt.subplots_adjust(hspace=0.4, wspace=0.3)
 
 # 1. Mass Evolution
-ax1 = plt.subplot(2, 2, 1)
-ax1.plot(bh.age / 1e9, bh.star_1_mass, label='Donor (Star 1)', color='blue', linewidth=2)
-ax1.plot(bh.age / 1e9, bh.star_2_mass, label='Accretor (Star 2)', color='red', linewidth=2)
+ax1 = plt.subplot(3, 3, 1)
+ax1.plot(bh.age[mask] / 1e9, bh.star_1_mass[mask], label='Donor (Star 1)', color='blue', linewidth=2)
+ax1.plot(bh.age[mask] / 1e9, bh.star_2_mass[mask], label='Accretor (Star 2)', color='red', linewidth=2)
 ax1.set_xlabel('Age (Gyr)')
 ax1.set_ylabel('Mass ($M_\odot$)')
 ax1.set_title('Mass Evolution')
@@ -58,37 +61,65 @@ ax1.legend()
 ax1.grid(True, linestyle='--', alpha=0.7)
 
 # 2. Orbital Evolution (Period and Separation)
-ax2 = plt.subplot(2, 2, 2)
-ax2.plot(bh.age / 1e9, bh.period_days, color='purple', label='Period', linewidth=2)
+ax2 = plt.subplot(3, 3, 2)
+ax2.plot(bh.age[mask] / 1e9, bh.period_days[mask], color='purple', label='Period', linewidth=2)
 ax2.set_xlabel('Age (Gyr)')
 ax2.set_ylabel('Period (days)', color='purple')
 ax2.tick_params(axis='y', labelcolor='purple')
 
 ax2b = ax2.twinx()
-ax2b.plot(bh.age / 1e9, bh.binary_separation, color='green', label='Separation', linestyle='--')
+ax2b.plot(bh.age[mask] / 1e9, bh.binary_separation[mask], color='green', label='Separation', linestyle='--')
 ax2b.set_ylabel('Separation ($R_\odot$)', color='green')
 ax2b.tick_params(axis='y', labelcolor='green')
 ax2.set_title('Orbital Evolution')
 ax2.grid(True, linestyle='--', alpha=0.7)
 
-# 3. HR Diagram for Star 2
-ax3 = plt.subplot(2, 2, 3)
-ax3.plot(h2.log_Teff, h2.log_L, color='orange', linewidth=2)
-ax3.invert_xaxis()
-ax3.set_xlabel('$\log T_{eff}$ (K)')
-ax3.set_ylabel('$\log L/L_\odot$')
-ax3.set_title('HR Diagram (Accretor Star)')
+# 3. Mass Transfer Rate
+ax3 = plt.subplot(3, 3, 3)
+# Masking low mtransfer rates for better visualization
+ax3.plot(bh.age[mask] / 1e9, bh.lg_mtransfer_rate[mask], color='black', linewidth=1.5)
+ax3.set_xlabel('Age (Gyr)')
+ax3.set_ylabel('$\log \dot{M}$ ($M_\odot/yr$)')
+ax3.set_title('Mass Transfer Rate')
 ax3.grid(True, linestyle='--', alpha=0.7)
 
-# 4. Mass Transfer Rate
-ax4 = plt.subplot(2, 2, 4)
-# Masking low mtransfer rates for better visualization
-mask = bh.lg_mtransfer_rate > -12
-ax4.plot(bh.age[mask] / 1e9, bh.lg_mtransfer_rate[mask], color='black', linewidth=1.5)
-ax4.set_xlabel('Age (Gyr)')
-ax4.set_ylabel('$\log \dot{M}$ ($M_\odot/yr$)')
-ax4.set_title('Mass Transfer Rate')
+# 4. HR Diagram for Star 1
+ax4 = plt.subplot(3, 3, 4)
+ax4.plot(h1.log_Teff, h1.log_L, color='blue', linewidth=2)
+ax4.invert_xaxis()
+ax4.set_xlabel('$\log T_{eff}$ (K)')
+ax4.set_ylabel('$\log L/L_\odot$')
+ax4.set_title('HR Diagram (Donor Star)')
 ax4.grid(True, linestyle='--', alpha=0.7)
+
+# 5. Center H and He for Star 1
+ax5 = plt.subplot(3, 3, 5)
+ax5.plot(h1.star_age / 1e9, h1.center_h1, color='blue', label='Center H1', linewidth=2)
+ax5.plot(h1.star_age / 1e9, h1.center_he4, color='orange', label='Center He4', linewidth=2, linestyle='--')
+ax5.set_xlabel('Age (Gyr)')
+ax5.set_ylabel('Mass Fraction')
+ax5.set_title('Central Abundances (Donor Star)')
+ax5.legend()
+ax5.grid(True, linestyle='--', alpha=0.7)
+
+# 6. HR Diagram for Star 2
+ax6 = plt.subplot(3, 3, 7)
+ax6.plot(h2.log_Teff, h2.log_L, color='red', linewidth=2)
+ax6.invert_xaxis()
+ax6.set_xlabel('$\log T_{eff}$ (K)')
+ax6.set_ylabel('$\log L/L_\odot$')
+ax6.set_title('HR Diagram (Accretor Star)')
+ax6.grid(True, linestyle='--', alpha=0.7)
+
+# 7. Center H and He for Star 2
+ax7 = plt.subplot(3, 3, 8)
+ax7.plot(h2.star_age / 1e9, h2.center_h1, color='blue', label='Center H1', linewidth=2)
+ax7.plot(h2.star_age / 1e9, h2.center_he4, color='orange', label='Center He4', linewidth=2, linestyle='--')
+ax7.set_xlabel('Age (Gyr)')
+ax7.set_ylabel('Mass Fraction')
+ax7.set_title('Central Abundances (Accretor Star)')
+ax7.legend()
+ax7.grid(True, linestyle='--', alpha=0.7)
 
 plt.suptitle('Detailed Binary Evolution Insights', fontsize=18)
 plt.savefig('binary_evolution_report.png')

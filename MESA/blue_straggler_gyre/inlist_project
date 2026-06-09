@@ -11,13 +11,31 @@
 
    m1 = 2.0d0 ! donor mass in Msun
    m2 = 1.0d0 ! companion mass in Msun
-   initial_period_in_days = 2d0
+   initial_period_in_days = 4d0
 
    ! termination handled in run_binary_extras.f90
 
    ! transfer efficiency controls
    limit_retention_by_mdot_edd = .false.
 
-   max_tries_to_achieve = 20
+   ! non-conservative mass transfer
+   ! beta: fraction lost from accretor vicinity (carries high specific angular momentum,
+   ! very effective at widening the orbit and stabilising the mass transfer)
+   mass_transfer_beta = 0.5d0
+
+   ! Limit the absolute peak of the mass transfer spike to prevent the accretor
+   ! from undergoing such extreme expansion cooling that its surface L drops to <= 0.
+   ! Reduced to 1d-4 because 5e-4 was still blowing up the accretor's envelope.
+   max_implicit_abs_mdot = 1d-4
+   max_explicit_abs_mdot = 1d-4
+
+   ! timestep controls for RLOF
+   ! Using MESA defaults which are much more forgiving during rapid mass transfer
+   fm = 0.01d0
+   fr = 0.1d0
+   fj = 0.01d0
+
+   ! implicit mass transfer scheme settings
+   max_tries_to_achieve = 40
 
 / ! end of binary_controls namelist

@@ -29,6 +29,9 @@ module run_binary_extras
 
    implicit none
 
+   ! Persistent flag to track if RLOF mass transfer has triggered yet
+   logical :: mass_transfer_started = .false.
+
 contains
 
    subroutine extras_binary_controls(binary_id, ierr)
@@ -156,6 +159,24 @@ contains
       if (ierr /= 0) then  ! failure in  binary_ptr
          return
       end if
+
+      ! 1. Flag when significant mass transfer begins (greater than 10^-6 Msun/yr)
+      if (abs(b% mtransfer_rate) > 1d-6) then
+         mass_transfer_started = .true.
+      end if
+
+      ! 2. If it has previously started and now falls below 10^-8 Msun/yr, terminate.
+      if (mass_transfer_started .and. abs(b% mtransfer_rate) < 1d-8) then
+         write(*,*) "========================================================="
+         write(*,*) "TERMINATING RUN: Mass transfer completed and dropped < 1e-8"
+         write(*,*) "Final Primary Mass (M1): ", b% m(1)
+         write(*,*) "Final Secondary Mass (M2): ", b% m(2)
+         write(*,*) "========================================================="
+         extras_binary_finish_step = terminate
+         return
+      end if
+
+      
       extras_binary_finish_step = keep_going
 
    end function extras_binary_finish_step
