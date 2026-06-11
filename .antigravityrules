@@ -1,0 +1,1 @@
+CRITICAL: If you wish to run MESA simulations OR python scripts for subsequent analysis, you MUST use the "load_mesa" alias with the fish shell. For example: fish -c "load_mesa && command_here" This will ensure that the correct environment variables are set for MESA and python to work correctly.

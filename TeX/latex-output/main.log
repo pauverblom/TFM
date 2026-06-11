@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.6.2)  2 JUN 2026 18:56
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.6.2)  11 JUN 2026 17:12
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/pauver/TFM/TeX/main
@@ -1227,31 +1227,7 @@ Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
 
 ] (./Capítulos/Prefacio.tex) [2
 
-] (./latex-output/main.toc
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-
-
-LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
-(Font)              using `TU/lmr/bx/n' instead on input line 2.
-
-
-Package spanish Warning: Replacing `TU/lmr/bx/sc' by 
-(spanish)                faked small caps on input line 2.
-
-
-Package spanish Warning: Replacing `TU/lmr/bx/sc' by 
-(spanish)                faked small caps on input line 3.
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+] (./latex-output/main.toc)
 \tf@toc=\write6
 
 \openout6 = main.toc
@@ -1264,7 +1240,11 @@ Capítulo 1.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1.
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)) [2
+)) ("./latex-output/Capítulos/Creando Blue Stragglers.tex" [2
+
+]
+Capítulo 2.
+) [3
 
 ] (./latex-output/main.aux
 LaTeX Info: Redefining \sptext on input line 14.
@@ -1275,35 +1255,25 @@ LaTeX Info: Redefining \% on input line 14.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 43162 strings out of 476076
+ 43128 strings out of 476076
  125016,1977958 words of node,token memory allocated
  615 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 4 glue, 4 kern, 1 glyph, 14 attribute, 69 glue_spec, 8 attribute_list, 2 write nodes
-   avail lists: 1:10,2:341,3:116,4:48,5:124,6:42,7:3384,8:3,9:234,10:23,11:430
- 64587 multiletter control sequences out of 65536+600000
- 46 fonts using 3428391 bytes
- 98i,6n,104p,922b,1895s stack positions out of 10000i,1000n,20000p,200000b,200000s
+   avail lists: 1:10,2:341,3:116,4:45,5:124,6:42,7:3384,8:3,9:234,10:10,11:430
+ 64558 multiletter control sequences out of 65536+600000
+ 27 fonts using 2179895 bytes
+ 98i,6n,104p,709b,1810s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on main.pdf (6 pages, 242263 bytes).
 
-warning  (pdf backend): unreferenced destination with name 'subsubsection.1.1.1.1'
-
-warning  (pdf backend): unreferenced destination with name 'subsection.1.1.1'
-
-warning  (pdf backend): unreferenced destination with name 'section.1.1'
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (5 pages, 245040 bytes).
-
-PDF statistics: 108 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 1048576)
- 40 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 99 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 1048576)
+ 48 words of extra memory for PDF output out of 10000 (max. 100000000)
 
