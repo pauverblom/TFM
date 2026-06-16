@@ -1,0 +1,26 @@
+!Created using wsssss.inlists.create_grid module.
+
+&star_job
+    pgstar_flag = .false.
+/ ! end of star_job namelist
+
+&eos
+/ ! end of eos namelist
+
+&kap
+    use_Type2_opacities = .true.
+    Zbase = 0.02d0
+/ ! end of kap namelist
+
+&controls
+    initial_mass = 1.81d0
+    initial_z = 0.02d0
+    xa_central_lower_limit_species(1) = 'h1'
+    xa_central_lower_limit(1) = 0.001d0
+    energy_eqn_option = 'dedt'
+    use_gold_tolerances = .true.
+    profile_interval = 999999
+    time_delta_coeff = 0.5d0
+    delta_HR_limit = 0.1d0
+    write_pulse_data_with_profile = .false.
+/ ! end of controls namelist

@@ -9,5 +9,6 @@
   ],
   "files.associations": {
     "**/LOGS*/*.data": "csv (whitespace)"
-  }
+  },
+  "python-envs.defaultEnvManager": "ms-python.python:venv"
 }
