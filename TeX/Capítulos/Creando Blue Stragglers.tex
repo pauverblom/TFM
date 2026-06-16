@@ -1,1 +1,106 @@
-\chapter{MESA y Cómo Crear Blue Stragglers}
+\chapter{Creando Blue Stragglers}
+
+En este capítulo expondré las técnicas utilizadas para simular la formación de Blue Stragglers utilizando MESA.
+
+\section{MESA}
+MESA (\textit{Modules for Experiments in Stellar Astrophysics}) es un entorno numérico de código abierto diseñado para simular la estructura y evolución estelar en una dimensión (1D) \citep{paxton2011, paxton2013, paxton2015, paxton2018, paxton2019, jermyn2023}. Gracias a su arquitectura modular, alta paralelización y un solucionador completamente implícito, MESA permite modelar una amplia gama de configuraciones estelares y escenarios evolutivos dinámicos o estacionarios.
+
+A diferencia de los códigos tradicionales de evolución estelar, MESA está escrito en Fortran moderno y se caracteriza por una separación estricta entre la física del interior estelar y la maquinaria numérica del solver. Su desarrollo activo por parte de una amplia comunidad científica asegura la continua actualización de las bases físicas y la optimización de los algoritmos numéricos.
+
+\subsection{Funcionamiento de MESA y Ecuaciones Base}
+El núcleo de MESA resuelve simultáneamente, en un esquema de diferencias finitas completamente implícito unidimensional, el sistema de ecuaciones diferenciales en derivadas parciales acopladas que rige la estructura y evolución estelar en coordenadas lagrangianas de masa $m$:
+
+\begin{enumerate}
+    \item \textbf{Ecuación de conservación de la masa:} Relaciona el radio del elemento de fluido estelar con su densidad de masa local $\rho$:
+    \begin{equation}
+        \frac{\partial r}{\partial m} = \frac{1}{4\pi r^2 \rho}
+    \end{equation}
+
+    \item \textbf{Ecuación de equilibrio hidrostático:} Describe el balance de fuerzas mecánicas, incluyendo el término de aceleración inercial fundamental para fases de evolución rápida:
+    \begin{equation}
+        \frac{\partial P}{\partial m} = -\frac{G m}{4\pi r^4} - \frac{1}{4\pi r^2}\frac{\partial^2 r}{\partial t^2}
+    \end{equation}
+    donde $P$ es la presión local y $G$ es la constante de gravitación universal.
+
+    \item \textbf{Ecuación de conservación de la energía:} Determina la luminosidad $L$ en función de la generación de energía interna:
+    \begin{equation}
+        \frac{\partial L}{\partial m} = \epsilon_{\text{nuc}} - \epsilon_\nu + \epsilon_{\text{grav}}
+    \end{equation}
+    siendo $\epsilon_{\text{nuc}}$ la tasa de generación de energía nuclear por unidad de masa, $\epsilon_\nu$ las pérdidas por neutrinos y $\epsilon_{\text{grav}}$ el término de energía térmica o gravitatoria definido como:
+    \begin{equation}
+        \epsilon_{\text{grav}} \equiv -T \frac{\partial s}{\partial t}
+    \end{equation}
+    donde $T$ es la temperatura local y $s$ es la entropía específica del gas.
+
+    \item \textbf{Ecuación de transporte de energía:} Determina el gradiente térmico necesario para transportar la energía producida:
+    \begin{equation}
+        \frac{\partial T}{\partial m} = -\frac{G m T}{4\pi r^4 P} \nabla
+    \end{equation}
+    donde el gradiente de temperatura local $\nabla \equiv \frac{\partial \ln T}{\partial \ln P}$ se define según el mecanismo de transporte dominante:
+    \begin{equation}
+        \nabla = 
+        \begin{cases} 
+          \nabla_{\text{rad}} = \frac{3 \kappa L P}{16 \pi G m a c T^4} & \text{en regiones radiativas (estable),} \\
+          \nabla_{\text{conv}} & \text{en regiones convectivas.}
+        \end{cases}
+    \end{equation}
+    Aquí, $\kappa$ representa la opacidad del gas, $a$ la constante de densidad de radiación y $c$ la velocidad de la luz. En regiones convectivas inestables, MESA calcula $\nabla_{\text{conv}}$ aplicando la teoría de la longitud de mezcla estándar (\textit{Mixing Length Theory}, MLT).
+\end{enumerate}
+
+El solver de MESA resuelve estas ecuaciones simultáneamente aplicando un método de Newton-Raphson de múltiples variables. Utiliza un esquema de discretización espacial adaptativa (malla móvil) que refina automáticamente el número y la distribución de las celdas en zonas con fuertes gradientes físicos (como límites de zonas convectivas, frentes de combustión nuclear o la atmósfera estelar). El paso de tiempo también se ajusta dinámicamente según la convergencia y la tasa de cambio de las variables termodinámicas de la estrella.
+
+\subsubsection{Módulos y Física Integrada}
+La modularidad de MESA radica en que las diferentes propiedades físicas se calculan a través de módulos independientes e intercambiables que se comunican con el solver principal. Los módulos clave implicados en nuestras simulaciones son:
+
+\begin{itemize}
+    \item \texttt{mesa/star}: El resolvedor central que orquesta la integración temporal y espacial.
+    \item \texttt{mesa/eos}: La ecuación de estado (EOS), que calcula la presión, entropía y demás variables termodinámicas en función de la densidad, temperatura y composición química. Utiliza una combinación de tablas (OPAL, SCVH, HELM y PC) adaptada a cada rango de densidad y temperatura.
+    \item \texttt{mesa/kap}: Módulo de opacidades. En nuestras simulaciones se activaron las opacidades avanzadas de tipo 2 (\texttt{use\_Type2\_opacities = .true.}), con una metalicidad base de $Z_{\text{base}} = 0.02$, permitiendo evaluar los efectos térmicos de las variaciones locales de carbono, nitrógeno y oxígeno en la envoltura estelar debido al material transferido.
+    \item \texttt{mesa/net}: La red de reacciones nucleares que determina la nucleosíntesis y la generación de energía nuclear $\epsilon_{\text{nuc}}$.
+    \item \texttt{mesa/binary}: Módulo de evolución binaria que acopla dinámicamente dos modelos estelares independientes a través de interacciones orbitales y transferencia de masa.
+\end{itemize}
+
+Para configurar estos módulos, los usuarios emplean archivos de configuración con formato de lista de variables (\textit{namelist}) de Fortran, denominados colectivamente \textit{inlists} (por ejemplo, \texttt{inlist\_project}, \texttt{inlist\_pgstar}). Esto permite modificar las condiciones físicas y los parámetros del solver sin necesidad de compilar el código fuente general del entorno.
+
+\subsection{MESA y la formación de Blue Stragglers}
+La formación de Blue Stragglers mediante la vía de transferencia de masa en sistemas binarios se modela a través del módulo \texttt{mesa/binary}. Este módulo calcula de manera simultánea la evolución de ambas estrellas (donante y acretora) y los parámetros orbitales como la separación angular y el período orbital.
+
+\subsubsection{Modelado de la Transferencia de Masa por Desbordamiento del Lóbulo de Roche}
+El inicio de la transferencia de masa se define cuando el radio de la estrella donante supera el radio equivalente de su lóbulo de Roche ($R_1 \geq R_{\text{L},1}$), aproximado mediante la expresión de Eggleton \citep{eggleton1983}:
+\begin{equation}
+    R_{\text{L},1} = a \frac{0.49 q^{2/3}}{0.6 q^{2/3} + \ln(1 + q^{1/3})}
+\end{equation}
+donde $a$ es la separación orbital del sistema y $q = M_1/M_2$ es la relación de masas. El ritmo de pérdida de masa de la estrella donante se calcula utilizando la formulación implícita de Ritter \citep{ritter1988, kolbritter1990}, que evalúa el desbordamiento basándose en la escala de altura de presión en las capas superficiales de la atmósfera estelar.
+
+Nuestra simulación modela la formación de una Blue Straggler a partir de un sistema binario inicial con las siguientes características:
+\begin{itemize}
+    \item \textbf{Estrella donante ($M_1$):} Masa inicial de $2.0\,M_\odot$, configurada con el archivo \texttt{inlist1}.
+    \item \textbf{Estrella acretora ($M_2$):} Masa inicial de $1.0\,M_\odot$, configurada con el archivo \texttt{inlist2}.
+    \item \textbf{Período orbital inicial:} $4.0$ días (\texttt{initial\_period\_in\_days = 4d0}).
+\end{itemize}
+
+El proceso de transferencia de masa se modela bajo una hipótesis de \textbf{transferencia de masa no conservativa}, parametrizada mediante el coeficiente $\beta = 0.5$ (\texttt{mass\_transfer\_beta = 0.5d0}). Esto significa que el 50\% de la masa transferida por la estrella donante es retenida por la acretora, mientras que el otro 50\% es expulsado del vecindario de la estrella acretora. Esta materia perdida abandona el sistema portando el momento angular específico de la órbita de la acretora, lo cual tiene un efecto estabilizador en la evolución orbital al ensanchar el semieje mayor.
+
+\subsubsection{Estabilidad Numérica del Acretor y Ajustes del Solver}
+La adición acelerada de material caliente sobre la estrella de $1.0\,M_\odot$ introduce perturbaciones térmicas y mecánicas drásticas en sus capas más externas. Esto provoca una expansión violenta de su envoltura convectiva y puede llevar a una caída de la luminosidad superficial por debajo de cero, deteniendo la convergencia numérica. Para mitigar esto, se aplican límites estrictos sobre la tasa de transferencia de masa implícita y explícita admisible por paso de tiempo a un valor máximo de $10^{-4}\,M_\odot/\text{año}$ (\texttt{max\_implicit\_abs\_mdot = 1d-4}).
+
+Desde el punto de vista físico, la envoltura externa del acretor es altamente superadiabática y está dominada por la presión de radiación. Para estabilizar este frente numéricamente, se activa el esquema \texttt{MLT++} en MESA (\texttt{okay\_to\_reduce\_gradT\_excess = .true.}). Este método reduce artificialmente la superadición del gradiente de temperatura en regiones donde la eficiencia del transporte convectivo es extremadamente baja pero la radiación ejerce una presión dominante, facilitando la convergencia sin alterar la estructura profunda de la estrella.
+
+Adicionalmente, se ajusta la tolerancia del resolvedor aumentando el coeficiente de resolución espacial superficial (\texttt{mesh\_delta\_coeff = 0.5}) para refinar el mallado del perfil y se relaja ligeramente el residuo máximo admisible a $10^{-3}$ (\texttt{gold\_tol\_max\_residual3 = 1d-3}) para evitar fallos del solver debidos al ruido numérico inducido por la acreción rápida. El control de paso de tiempo durante la fase de desbordamiento (RLOF) se restringe rígidamente utilizando los parámetros adimensionales \texttt{fm = 0.001}, \texttt{fr = 0.01} y \texttt{fj = 0.01} (que limitan los cambios fraccionales de masa, radio y momento angular en cada iteración).
+
+\subsubsection{Acoplamiento con GYRE para Análisis Astrosismológico}
+Una vez finalizada la fase de transferencia de masa, el modelo rejuvenecido resultante adquiere una masa final de $1.82136\,M_\odot$ y una estructura química interna alterada (con un núcleo enriquecido en helio y una envoltura rica en hidrógeno depositado). Esta Blue Straggler recién formada se evoluciona en una configuración de estrella aislada (\texttt{evolve\_created\_blue\_straggler}) a partir del modelo binario de salida, extendiendo la simulación hasta que la fracción de masa de hidrógeno central cae por debajo de $10^{-3}$ (\texttt{xa\_central\_lower\_limit(1) = 1d-3}), lo que define la TAMS (\textit{Terminal Age Main Sequence}).
+
+Para poder comparar las firmas espectrales de este modelo con estrellas normales, se genera de manera paralela una rejilla de modelos de control unidimensionales estándar utilizando el script \texttt{create\_mass\_grid.py} en el directorio \texttt{mass\_grid}. Esta rejilla abarca masas desde $1.75\,M_\odot$ hasta $1.89\,M_\odot$ con un incremento de $0.01\,M_\odot$, evolucionándose bajo las mismas condiciones físicas físicas base ($Z = 0.02$, opacidades tipo 2, $\text{X}_{\text{c}} \leq 10^{-3}$).
+
+Durante toda la evolución del modelo rejuvenecido y de la rejilla de control, MESA vuelca perfiles de estructura estelar en formato compatible con el código de oscilaciones estelares **GYRE** \citep{townsend2013} (\texttt{pulse\_data\_format = 'GYRE'}). 
+
+El análisis de oscilaciones estelares se automatiza mediante el script de shell \texttt{run\_gyre\_all.sh}, el cual realiza los siguientes pasos para cada perfil estructural guardado:
+\begin{enumerate}
+    \item Genera dinámicamente un archivo de parámetros \texttt{gyre.in} reemplazando la ruta del perfil de entrada y especificando los archivos de salida HDF5 correspondientes para el resumen de modos (\texttt{summary.h5}) y las funciones propias detalladas (\texttt{detail.l\%l.n\%n.h5}).
+    \item Resuelve las ecuaciones lineales de pulsación no adiabáticas o adiabáticas para los grados armónicos esféricos $l = 0$ (modos radiales), $l = 1$ (modos dipolares) y $l = 2$ (modos cuadrupolares) utilizando un esquema de colocación de cuarto orden (\texttt{COLLOC\_GL4}).
+    \item Realiza un barrido lineal en frecuencia entre $0.1$ y $20$ ciclos por día (\texttt{freq\_min = 0.1}, \texttt{freq\_max = 20}) con $3000$ puntos para identificar los autovalores de frecuencia y las amplitudes de los desplazamientos radiales ($\xi_r$) y horizontales ($\xi_h$).
+\end{enumerate}
+
+Este acoplamiento numérico entre MESA y GYRE permite discernir las sutiles diferencias en la frecuencia acústica característica (frecuencia de Lamb $S_l$) y de flotabilidad (Brunt-Väisälä $N$) entre la Blue Straggler y las estrellas ordinarias de la secuencia principal de idéntica masa, ofreciendo un método directo para verificar los modelos de rejuvenecimiento frente a observaciones astrosismológicas reales (como las proyectadas en la misión espacial HAYDN).
+

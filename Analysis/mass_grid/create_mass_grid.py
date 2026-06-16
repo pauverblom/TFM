@@ -3,12 +3,12 @@ import numpy as np
 import os
 from wsssss.inlists.create_grid import MesaGrid
 
-base_dir = '/Users/pauverdeguer/TFM/MESA/evolve_1.8_mass_star'
-grid_dir = '/Users/pauverdeguer/TFM/MESA/mass_grid'
+base_dir = '/home/pauver/TFM/MESA/evolve_1.8_mass_star'
+grid_dir = '/home/pauver/TFM/MESA/mass_grid'
 
 # Create grid generator
 grid = MesaGrid(
-    mesa_dir='/Users/pauverdeguer/mesa-25.12.1',
+    mesa_dir='/home/pauver/mesa/mesa-26.04.1',
     inlist_filename='inlist',
     starjob_filename='inlist_project',
     controls_filename='inlist_project',
@@ -35,15 +35,15 @@ grid.controls['xa_central_lower_limit_species(1)'] = "h1"
 grid.controls['xa_central_lower_limit(1)'] = 1e-3
 grid.controls['energy_eqn_option'] = "dedt"
 grid.controls['use_gold_tolerances'] = True
-grid.controls['profile_interval'] = 999999
-
+grid.controls['profile_interval'] = 5
+grid.controls['pulse_data_format'] = 'GYRE'
+grid.controls['write_pulse_data_with_profile'] = True
 # Speed up timesteps
 grid.controls['time_delta_coeff'] = 0.5 
 grid.controls['delta_HR_limit'] = 0.1   
 
 # Turn off pgstar
 grid.star_job['pgstar_flag'] = False
-grid.controls['write_pulse_data_with_profile'] = False
 
 def name_function(unpacked_inlist):
     m = unpacked_inlist['controls']['initial_mass']

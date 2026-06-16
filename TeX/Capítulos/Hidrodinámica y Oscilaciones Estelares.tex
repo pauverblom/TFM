@@ -128,52 +128,52 @@ Para poder estudiar el problema de oscilaciones estelares de forma simplificada,
 
 Esta es la perturbación de la presión en el marco Euleriano (la perturbación en un punto en concreto).
 
-En cambio, en la perturbación lagrangiana consideramos que un elemento es movido desde $\mathbf{r_0}$ a $\mathbf{r_0} + \textbf{\delta r}$. Escribimos pues:
+En cambio, en la perturbación lagrangiana consideramos que un elemento es movido desde $\mathbf{r_0}$ a $\mathbf{r_0} + \boldsymbol{\delta r}$. Escribimos pues:
 
-$$ \delta p(\mathbf{r_0}) = p(\mathbf{r_0} + \textbf{\delta r}) - p_0({\mathbf{r_0}}) = p (\mathbf{r_0}) + \textbf{\delta r} \cdot \nabla p_0 - p_0(\mathbf{r_0}) = p'(\mathbf{r_0}) + \textbf{\delta r} \cdot \nabla p_0 $$
+$$ \delta p(\mathbf{r_0}) = p(\mathbf{r_0} + \boldsymbol{\delta r}) - p_0({\mathbf{r_0}}) = p (\mathbf{r_0}) + \boldsymbol{\delta r} \cdot \nabla p_0 - p_0(\mathbf{r_0}) = p'(\mathbf{r_0}) + \boldsymbol{\delta r} \cdot \nabla p_0 $$
 
 La velocidad asociada a la perturbación es simplemente la derivada temporal del desplazamiento del elemento de fluido:
 \begin{equation}
-    \mathbf{v} = \frac{\partial \textbf{\delta r}}{\partial t}.
+    \mathbf{v} = \frac{\partial \boldsymbol{\delta r}}{\partial t}.
 \end{equation}
 
 \subsection{Linealización del Sistema Hidrodinámico}
 
 Sustituyendo estas expresiones en las ecuaciones de la hidrodinámica, por ejemplo en la ecuación de continuidad, tenemos:
 
-$$\frac{\partial}{\partial t}\left(\cancel{\rho_0(\mathbf{r_0})} + \rho'(\mathbf{r_0}, t)\right) + \nabla \cdot \left[(\rho_0(\mathbf{r_0}) + \rho'(\mathbf{r_0}, t)) \frac{\partial \textbf{\delta r}}{\partial t}\right] = 0.$$
+$$\frac{\partial}{\partial t}\left(\cancel{\rho_0(\mathbf{r_0})} + \rho'(\mathbf{r_0}, t)\right) + \nabla \cdot \left[(\rho_0(\mathbf{r_0}) + \rho'(\mathbf{r_0}, t)) \frac{\partial \boldsymbol{\delta r}}{\partial t}\right] = 0.$$
 
 Desarrollando los términos espaciales y temporales, y recordando que en el estado de equilibrio la estrella es estática (por lo que la velocidad inicial es nula, $\mathbf{v}_0 = 0$, y la densidad de equilibrio no cambia en el tiempo, $\partial \rho_0 / \partial t = 0$), la ecuación se expande a:
 
-$$ \frac{\partial \rho'}{\partial t} + \nabla \cdot \left( \rho_0 \frac{\partial \textbf{\delta r}}{\partial t} \right) + \nabla \cdot \cancel{\left( \rho' \frac{\partial \textbf{\delta r}}{\partial t} \right)} = 0 $$
+$$ \frac{\partial \rho'}{\partial t} + \nabla \cdot \left( \rho_0 \frac{\partial \boldsymbol{\delta r}}{\partial t} \right) + \nabla \cdot \cancel{\left( \rho' \frac{\partial \boldsymbol{\delta r}}{\partial t} \right)} = 0 $$
 
-Donde hemos despreciado términos de segundo orden o superiores, como es el caso de $\rho' \frac{\partial \textbf{\delta r}}{\partial t}$. Por lo tanto, la ecuación linealizada se reduce a:
+Donde hemos despreciado términos de segundo orden o superiores, como es el caso de $\rho' \frac{\partial \boldsymbol{\delta r}}{\partial t}$. Por lo tanto, la ecuación linealizada se reduce a:
 
-$$ \frac{\partial \rho'}{\partial t} + \nabla \cdot \left( \rho_0 \frac{\partial \textbf{\delta r}}{\partial t} \right) = 0 $$
+$$ \frac{\partial \rho'}{\partial t} + \nabla \cdot \left( \rho_0 \frac{\partial \boldsymbol{\delta r}}{\partial t} \right) = 0 $$
 
 Dado que estamos trabajando en el marco euleriano, los operadores de derivación espacial y temporal conmutan. Esto nos permite reescribir la ecuación agrupando la derivada temporal:
 
-$$ \frac{\partial}{\partial t} \left[ \rho' + \nabla \cdot (\rho_0 \textbf{\delta r}) \right] = 0, $$
+$$ \frac{\partial}{\partial t} \left[ \rho' + \nabla \cdot (\rho_0 \boldsymbol{\delta r}) \right] = 0, $$
 
-e integrar respecto al tiempo. Asumimos que en el instante inicial (el estado de equilibrio no perturbado) tanto el desplazamiento $\textbf{\delta r}$ como la perturbación euleriana $\rho'$ son nulos, por lo que la constante de integración es cero. Llegamos así a la forma euleriana de la ecuación de continuidad linealizada:
+e integrar respecto al tiempo. Asumimos que en el instante inicial (el estado de equilibrio no perturbado) tanto el desplazamiento $\boldsymbol{\delta r}$ como la perturbación euleriana $\rho'$ son nulos, por lo que la constante de integración es cero. Llegamos así a la forma euleriana de la ecuación de continuidad linealizada:
 
 \begin{equation}
-    \rho' + \nabla \cdot (\rho_0 \textbf{\delta r}) = 0
+    \rho' + \nabla \cdot (\rho_0 \boldsymbol{\delta r}) = 0
     \label{eq:continuidad_linealizada_euleriana}
 \end{equation}
 
-Para el estudio de oscilaciones estelares, suele ser más útil expresar esta relación matemática en términos de la perturbación lagrangiana de la densidad, $\delta \rho$. Empleando la relación entre ambas perturbaciones introducida anteriormente ($\delta \rho = \rho' + \textbf{\delta r} \cdot \nabla \rho_0$), podemos despejar $\rho'$ y sustituirla en nuestra ecuación:
+Para el estudio de oscilaciones estelares, suele ser más útil expresar esta relación matemática en términos de la perturbación lagrangiana de la densidad, $\delta \rho$. Empleando la relación entre ambas perturbaciones introducida anteriormente ($\delta \rho = \rho' + \boldsymbol{\delta r} \cdot \nabla \rho_0$), podemos despejar $\rho'$ y sustituirla en nuestra ecuación:
 
-$$ (\delta \rho - \textbf{\delta r} \cdot \nabla \rho_0) + \nabla \cdot (\rho_0 \textbf{\delta r}) = 0 $$
+$$ (\delta \rho - \boldsymbol{\delta r} \cdot \nabla \rho_0) + \nabla \cdot (\rho_0 \boldsymbol{\delta r}) = 0 $$
 
-Aplicando la regla de la cadena para la divergencia del segundo término, $\nabla \cdot (\rho_0 \textbf{\delta r}) = \rho_0 \nabla \cdot \textbf{\delta r} + \textbf{\delta r} \cdot \nabla \rho_0$, la ecuación queda como:
+Aplicando la regla de la cadena para la divergencia del segundo término, $\nabla \cdot (\rho_0 \boldsymbol{\delta r}) = \rho_0 \nabla \cdot \boldsymbol{\delta r} + \boldsymbol{\delta r} \cdot \nabla \rho_0$, la ecuación queda como:
 
-$$ \delta \rho - \textbf{\delta r} \cdot \nabla \rho_0 + \rho_0 \nabla \cdot \textbf{\delta r} + \textbf{\delta r} \cdot \nabla \rho_0 = 0. $$
+$$ \delta \rho - \boldsymbol{\delta r} \cdot \nabla \rho_0 + \rho_0 \nabla \cdot \boldsymbol{\delta r} + \boldsymbol{\delta r} \cdot \nabla \rho_0 = 0. $$
 
 Los términos que contienen el gradiente de la densidad de equilibrio se cancelan entre sí. Obtenemos finalmente la forma lagrangiana de la ecuación de continuidad linealizada:
 
 \begin{equation}
-    \frac{\delta \rho}{\rho_0} = - \nabla \cdot \textbf{\delta r}
+    \frac{\delta \rho}{\rho_0} = - \nabla \cdot \boldsymbol{\delta r}
 \end{equation}
 
 Esta expresión final tiene una interpretación física directa: el cambio fraccional en la densidad de un elemento de fluido del gas es directamente proporcional a la compresión del campo de desplazamiento en esa región.
@@ -198,16 +198,16 @@ $$ \frac{\delta p}{p_0} = \Gamma_{1,0} \frac{\delta \rho}{\rho_0} $$
 
 Esta sencilla pero fundamental relación establece que los cambios fraccionales de presión y densidad en un mismo elemento de fluido estelar están acoplados directamente a través del índice adiabático del gas en cuestión.
 
-Suele ser de gran utilidad expresar esta relación en función del vector desplazamiento $\textbf{\delta r}$. Para ello, sustituimos el resultado de la ecuación de continuidad lagrangiana obtenida previamente ($ \delta \rho / \rho_0 = - \nabla \cdot \textbf{\delta r} $):
+Suele ser de gran utilidad expresar esta relación en función del vector desplazamiento $\boldsymbol{\delta r}$. Para ello, sustituimos el resultado de la ecuación de continuidad lagrangiana obtenida previamente ($ \delta \rho / \rho_0 = - \nabla \cdot \boldsymbol{\delta r} $):
 
-$$ \delta p = - \Gamma_{1,0} p_0 \nabla \cdot \textbf{\delta r} $$
+$$ \delta p = - \Gamma_{1,0} p_0 \nabla \cdot \boldsymbol{\delta r} $$
 
-Finalmente, para hallar la expresión análoga en el marco euleriano, empleamos la relación geométrica entre ambas perturbaciones para la presión ($ \delta p = p' + \textbf{\delta r} \cdot \nabla p_0 $). Sustituyendo y despejando la perturbación euleriana $p'$, obtenemos:
+Finalmente, para hallar la expresión análoga en el marco euleriano, empleamos la relación geométrica entre ambas perturbaciones para la presión ($ \delta p = p' + \boldsymbol{\delta r} \cdot \nabla p_0 $). Sustituyendo y despejando la perturbación euleriana $p'$, obtenemos:
 
-$$ p' + \textbf{\delta r} \cdot \nabla p_0 = - \Gamma_{1,0} p_0 \nabla \cdot \textbf{\delta r} $$
+$$ p' + \boldsymbol{\delta r} \cdot \nabla p_0 = - \Gamma_{1,0} p_0 \nabla \cdot \boldsymbol{\delta r} $$
 
 \begin{equation}
-    p' = - \textbf{\delta r} \cdot \nabla p_0 - \Gamma_{1,0} p_0 \nabla \cdot \textbf{\delta r}
+    p' = - \boldsymbol{\delta r} \cdot \nabla p_0 - \Gamma_{1,0} p_0 \nabla \cdot \boldsymbol{\delta r}
 \end{equation}
 
 Con esta última ecuación de estado linealizada, el conjunto base de ecuaciones fluido-dinámicas queda completamente cerrado. El comportamiento de las oscilaciones adiabáticas en interiores estelares puede modelarse, de este modo, resolviendo de forma acoplada las perturbaciones de masa, momento, gravedad y energía.
@@ -347,9 +347,9 @@ Al sustituir estas formas separadas en el sistema de ecuaciones fluido-dinámica
 
 Este paso elimina las derivadas angulares y temporales, transformando las ecuaciones en derivadas parciales en un sistema de ecuaciones diferenciales ordinarias (EDOs) unidimensionales para las amplitudes:
 \begin{align}
-\omega^2 \left[\tilde{\rho}' + \frac{1}{r^2}\frac{d}{dr}(r^2\rho_0\tilde{\xi}_r)\right] &= \frac{l(l+1)}{r^2}(\tilde{p}' + \rho_0\tilde{\Phi}'), \\
--\omega^2 \rho_0 \tilde{\xi}_r &= -\frac{d\tilde{p}'}{dr} - \tilde{\rho}'g_0 - \rho_0\frac{d\tilde{\Phi}'}{dr}, \\
-\frac{1}{r^2}\frac{d}{dr}\left( r^2 \frac{d\tilde{\Phi}'}{dr} \right) - \frac{l(l+1)}{r^2}\tilde{\Phi}' &= 4\pi G \tilde{\rho}',
+\omega^2 \left[\tilde{\rho}' + \frac{1}{r^2}\frac{d}{dr}(r^2\rho_0\tilde{\xi}_r)\right] &= \frac{l(l+1)}{r^2}(\tilde{p}' + \rho_0\tilde{\Phi}'), \label{eq:1}\\
+-\omega^2 \rho_0 \tilde{\xi}_r &= -\frac{d\tilde{p}'}{dr} - \tilde{\rho}'g_0 - \rho_0\frac{d\tilde{\Phi}'}{dr}, \label{eq:2}\\
+\frac{1}{r^2}\frac{d}{dr}\left( r^2 \frac{d\tilde{\Phi}'}{dr} \right) - \frac{l(l+1)}{r^2}\tilde{\Phi}' &= 4\pi G \tilde{\rho}', \label{eq:3}
 \end{align}
 
 junto con la ecuación de energía adiabática, que se desacopla asumiendo la misma dependencia espacial:
@@ -361,25 +361,99 @@ Como vamos a centrarnos en la aproximación adiabática, el término de ganancia
 
 Es fundamental notar que este sistema depende del grado esférico $l$, pero es totalmente independiente del orden azimutal $m$. Esta degeneración, en la que las frecuencias propias no dependen de $m$, es una consecuencia directa de haber asumido simetría esférica para el estado de equilibrio de la estrella.
 
-\subsection{Condiciones de Contorno}
+\subsection{Oscilaciones Adiabáticas y Condiciones de Contorno}
 
-El sistema que acabamos de obtener es un problema homogéneo que solo admite soluciones no triviales para valores discretos y específicos de la frecuencia $\omega$, convirtiendo el estudio de las oscilaciones estelares en un problema clásico de autovalores y autofunciones.
+Para oscilaciones adiabáticas, tenemos que $\delta q = 0$, y podemos reescribir la ecuación de energía como: 
 
-Para que el problema numérico esté matemáticamente bien planteado, al tratar con un sistema diferencial de cuarto orden, es imperativo establecer cuatro condiciones de contorno físicas:
+\begin{equation}
+    \rho' = \frac{\rho}{\Gamma_1 p} p' + \rho \xi_r \left(\frac{1}{\Gamma_1 p}\frac{dp}{dr} - \frac{1}{\rho}\frac{d\rho}{dr} \right),
+\end{equation}
+
+donde hemos suprimido la tilde en las funciones de amplitud y el ``0'' en las cantidades de equilibrio para simplificar la notación. . Este cambio no debería causar confusión.
+
+Podemos utilizar esta ecuación para eliminar $\rho'$ de las ecuaciones \eqref{eq:1} - \eqref{eq:3} y reescribirlas de la siguiente manera:
+
+La ecuación \eqref{eq:1} se convierte en:
+
+\begin{equation}
+    \frac{d\xi_r}{dr} = -\left(\frac{2}{r}+\frac{1}{\Gamma_1 p}\frac{dp}{dr}\right)\xi_r + \frac{1}{\rho c^2}\left(\frac{S_l^2}{\omega^2}-1\right) p' + \frac{l(l+1)}{\omega^2 r^2} \Phi',
+\end{equation}
+
+donde se introduce la frecuencia acústica característica $S_l$ como:
+$$S_l^2 = \frac{l(l+1)c^2}{r^2}=k_h^2c^2$$
+
+La ecuación \eqref{eq:2} nos da:
+\begin{equation}
+    \frac{dp'}{dr} = \rho(\omega^2 - N^2)\xi_r + \frac{1}{\Gamma_1 p}\frac{dp}{dr}p' - \rho \frac{d\Phi'}{dr},
+\end{equation}
+siendo N la frecuencia de flotabilidad, dada por:
+$$N = g\left(\frac{1}{\Gamma_1 p}\frac{dp}{dr} - \frac{1}{\rho}\frac{d\rho}{dr} \right).$$
+
+Finalmente, la ecuación \eqref{eq:3} se puede escribir como:
+
+\begin{equation}
+    \frac{1}{r^2}\frac{d}{dr} \left(r^2\frac{d\Phi'}{dr}\right) = 4\pi G\left( \frac{p'}{c^2} + \frac{\rho \xi_r}{g} N^2\right) + \frac{l(l+1)}{r^2} \Phi'.
+\end{equation}
+
+El sistema que acabamos de obtener es un sistema de ecuaciones diferenciales ordinarias de cuarto orden con las variables dependientes $\xi_r$, $\Phi'$, $p'$ y $d\Phi'/dr$. Para que dicho problema esté matemáticamente bien planteado, al tratar con un sistema diferencial de cuarto orden, es imperativo establecer cuatro condiciones de contorno físicas, las cuales pueden encontrarse en la literatura con más detalle:
 
 \begin{itemize}
-\item \textbf{En el centro ($r=0$):} Este punto representa una singularidad regular en las ecuaciones. Físicamente, se exige que las soluciones de onda sean regulares (finitas). Las expansiones asintóticas cerca del núcleo demuestran que el desplazamiento $\tilde{\xi}_r$ se comporta proporcionalmente a $r^{l-1}$. De esto se infiere que, por ejemplo, para oscilaciones estrictamente radiales ($l=0$), el desplazamiento en el centro del modelo debe ser cero. Al exigir soluciones regulares, obtenemos dos de las condiciones matemáticas necesarias.
-\item \textbf{En la superficie ($r=R$):} Asumiendo que la superficie exterior de la estrella está libre de fuerzas y que el sistema está aislado termodinámicamente, se impone que la perturbación de presión lagrangiana se anule, es decir, $\delta p = 0$. Por último, se exige que la perturbación del potencial gravitatorio ($\tilde{\Phi}'$) y su primera derivada empalmen de forma continua con la solución exterior en el vacío.
-\end{itemize}
+\item \textbf{En el centro ($r=0$):} Este punto representa una singularidad regular en las ecuaciones. Como es habitual en la teoría de ecuaciones diferenciales, el sistema admite tanto soluciones regulares como singulares en este punto, por lo que dos de las condiciones sirven para seleccionar únicamente las soluciones regulares. Expandiendo las ecuaciones cerca de $r=0$, se demuestra que el desplazamiento $\xi_r$ se comporta como $r^{l-1}$, mientras que $p'$ y $\Phi'$ se comportan como $r^l$. En el caso particular de las oscilaciones radiales, el coeficiente del término de orden principal de $\xi_r$ se anula, de manera que $\xi_r$ es proporcional a $r$. De hecho, por consideraciones geométricas, es evidente que para oscilaciones con simetría esférica el desplazamiento debe anularse en el centro. Además, a partir de estas expansiones, se obtiene que para $l>0$, las soluciones cerca del centro cumplen la relación $\xi_r \simeq l\xi_h$ cuando $r \rightarrow 0$. 
 
+\item \textbf{En la superficie ($r=R$):} Asumiendo que se asigna a la estrella un límite definido en $r=R$, es físicamente razonable suponer que dicha superficie exterior está libre, de modo que no actúan fuerzas sobre ella y el sistema se puede considerar como un sistema aislado. Esto equivale a exigir que la presión sea constante en la superficie perturbada. Por lo tanto, como condición de contorno en la superficie se toma que la perturbación de presión lagrangiana se anule, es decir, $\delta p = p' + \xi_r \frac{dp}{dr} = 0$ en $r=R$. 
+Por último, se exige la continuidad de la perturbación del potencial gravitatorio ($\Phi'$) y de su primera derivada en el radio de la superficie ($r=R$). Dado que fuera de la estrella la perturbación de densidad se anula, la ecuación de Poisson puede resolverse de forma analítica. La solución que decae y se anula en el infinito es $\Phi' = A r^{-l-1}$. Como consecuencia, $\Phi'$ debe satisfacer la siguiente condición matemática empalmando con el vacío exterior:
+\begin{equation}
+    \frac{d\Phi'}{dr} + \frac{l+1}{r}\Phi' = 0 \quad \text{en } r=R.
+\end{equation} 
+Como información adicional derivada de la condición de la presión, se puede aproximar que la proporción entre el desplazamiento horizontal y radial en la superficie depende únicamente de la frecuencia adimensional ($\sigma$), dada por $\frac{\xi_h(R)}{\xi_r(R)} \approx \sigma^{-2}$.
+\end{itemize}
+\newpage
 \section{Naturaleza y Clasificación de los Modos de Oscilación}
 
-\subsection{La Aproximación de Cowling}
+\subsection{La Aproximación de Cowling} 
 
-Tenemos que 
+Para analizar analíticamente las oscilaciones, a menudo se asume que la perturbación del potencial gravitatorio es despreciable $(\Phi' \approx 0)$. Esta simplificación es válida para grados $l$ grandes o cuando el orden radial $|n|$ es alto. Bajo esta aproximación, el sistema de cuarto orden se reduce a dos ecuaciones diferenciales de primer orden:
+\begin{align}
+ \frac{d\xi_r}{dr} &= -\left(\frac{2}{r} - \frac{1}{\Gamma_1 H_p}\right)\xi_r + \frac{1}{\rho c^2}\left(\frac{S_l^2}{\omega^2} - 1\right)p' \\
+ \frac{dp'}{dr} &= \rho(\omega^2 - N^2)\xi_r - \frac{1}{\Gamma_1 H_p}p',
+\end{align}
 
-\subsection{Frecuencias Características y Atrapamiento}
+donde $H_p = -(d \ln p / dr)^{-1}$ es la escala de altura de presión.
 
-\subsection{Modos de Presión (p-modes)}
+\subsection{Frecuencias Características y Atrapamiento} 
+Para modos de alto orden radial, las autofunciones varían mucho más rápido que las cantidades de equilibrio. Despreciando las derivadas de estas últimas, el sistema anterior se combina en una única ecuación diferencial de segundo orden que describe el comportamiento local de las ondas: 
+$$\frac{d^2\xi_r}{dr^2} = -K(r)\xi_r,$$  
 
-\subsection{Modos de Gravedad (g-modes)}
+donde la función K(r) viene dada por:
+\begin{equation}
+    K(r) = \frac{\omega^2}{c^2} \left( \frac{N^2}{\omega^2} - 1 \right) \left( \frac{S_l^2}{\omega^2} - 1 \right)
+\end{equation}
+
+La propagación depende de las dos frecuencias características: la frecuencia acústica $(S_l)$ y la de flotabilidad $(N)$. La solución es oscilatoria $(\xi_r \sim \cos(\int K^{1/2} dr + \phi))$ en las regiones de "atrapamiento" donde $K(r) > 0$. Fuera de estas regiones $(K(r) < 0)$, la solución decae exponencialmente. Los límites de atrapamiento se sitúan en los puntos de retorno geométricos, donde $K(r) = 0.$
+
+\subsection{Modos de Presión (p-modes)} 
+
+Corresponden a la rama de altas frecuencias donde típicamente $\omega \gg N$. En este límite, la función $K(r)$ se aproxima a:
+
+$$K(r) \simeq \frac{1}{c^2}(\omega^2 - S_l^2)$$
+
+La dinámica está dominada por la velocidad del sonido c (ondas acústicas). La condición del punto de retorno interno $(r_t)$, obtenida al igualar $S_l(r_t) = \omega$, es:
+
+$$\frac{c^2(r_t)}{r_t^2} = \frac{\omega^2}{l(l+1)}$$  
+
+A partir de la relación de dispersión para ondas sonoras planas, el número de onda radial al cuadrado se identifica de forma natural con K:
+
+$$k_r^2 = \frac{1}{c^2}(\omega^2 - S_l^2)$$
+
+En los modos p, la frecuencia de oscilación aumenta con el orden del modo.
+
+\subsection{Modos de Gravedad (g-modes)} 
+Corresponden a la rama de bajas frecuencias, encontradas en el interior profundo estelar, donde $\omega^2 \ll S_l^2$. La aproximación para K(r) se convierte en:
+
+$$ K(r) \simeq \frac{1}{\omega^2}(N^2 - \omega^2) \frac{l(l+1)}{r^2} $$
+
+Aquí, la dinámica está controlada por la variación de la frecuencia de flotabilidad $N$, siendo la gravedad la fuerza restauradora sobre las perturbaciones de densidad. Los puntos de retorno vienen dados por la condición $N = \omega$. En congruencia con las ondas de gravedad estacionarias, su número de onda radial es:
+
+$$k_r^2 = \frac{l(l+1)}{r^2}\left(\frac{N^2}{\omega^2} - 1\right)$$
+
+A diferencia de los p-modes, en los modos g el orden aumenta a medida que disminuye $\omega$, y su frecuencia máxima está limitada estrictamente por el valor máximo de $N$ en el interior de la estrella.

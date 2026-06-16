@@ -2,3 +2,14 @@
 
 .DS_Store
 .venv/
+
+# Ignore all folders named gyre_outputs
+**/gyre_outputs/
+gyre_outputs/
+
+# Ignore star build artifacts
+**/star
+star
+
+# Ignore LOGS inside mass_grid
+MESA/mass_grid/**/LOGS/

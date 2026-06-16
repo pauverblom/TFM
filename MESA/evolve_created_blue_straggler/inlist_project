@@ -71,8 +71,8 @@
    ! mixing
 
    ! timesteps
-   time_delta_coeff = 0.05
-   delta_HR_limit = 0.01
+   time_delta_coeff = 0.1
+   delta_HR_limit = 0.1
 
    ! mesh
 
@@ -82,7 +82,7 @@
    use_gold_tolerances = .true.
 
    ! output
-   profile_interval = 999999
+   profile_interval = 10
    pulse_data_format = 'GYRE'
    write_pulse_data_with_profile = .true.
 
