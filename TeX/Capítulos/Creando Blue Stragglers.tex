@@ -1,6 +1,6 @@
 \chapter{Simulando Blue Stragglers}
 
-En este capítulo expondré las técnicas utilizadas para simular la formación de Blue Stragglers utilizando MESA.
+En este capítulo se expondrán las técnicas utilizadas para simular la formación de Blue Stragglers utilizando MESA.
 
 \section{MESA}
 MESA (\textit{Modules for Experiments in Stellar Astrophysics}) es un entorno numérico de código abierto diseñado para simular la estructura y evolución estelar en 1D \autocite{paxton2011, paxton2013, paxton2015, paxton2018, paxton2019, jermyn2023}. Gracias a su arquitectura modular, MESA permite modelar una amplia gama de configuraciones estelares y escenarios evolutivos.
@@ -15,14 +15,14 @@ MESA funciona con lo que se conoce como módulos (la M de MESA). La idea es que 
     \item \texttt{mesa/eos}: La ecuación de estado (EOS), que calcula la presión, entropía y demás variables termodinámicas en función de la densidad, temperatura y composición química de la estrella. Utiliza una combinación de tablas (OPAL, SCVH, HELM y PC) adaptada a cada rango de densidad y temperatura.
     \item \texttt{mesa/kap}: Módulo de opacidades. En las simulaciones se utilizaron las opacidades avanzadas de tipo 2 (\texttt{use\_Type2\_opacities = .true.}), con una metalicidad base de $Z_{\text{base}} = 0.02$.
     \item \texttt{mesa/net}: La red de reacciones nucleares que determina la nucleosíntesis y la generación de energía nuclear $\epsilon_{\text{nuc}}$.
-    \item \texttt{mesa/binary}: Especialmente relevante cuando queremos simular la formación de la Blue Straggler. Este módulo de evolución binaria simula dos modelos estelares que se comunican entre sí a través de interacciones orbitales y transferencia de masa.
+    \item \texttt{mesa/binary}: Especialmente relevante cuando se quiere simular la formación de la Blue Straggler. Este módulo de evolución binaria simula dos modelos estelares que se comunican entre sí a través de interacciones orbitales y transferencia de masa.
 \end{itemize}
 
 Para configurar estos módulos, se utilizan archivos de configuración con formato de lista de variables (\textit{namelist}) de Fortran, denominados colectivamente \textit{inlists} (por ejemplo, \texttt{inlist\_project}, \texttt{inlist\_pgstar}). Esto permite modificar las condiciones físicas y los parámetros del solver sin necesidad de compilar el código fuente general del entorno. Infinidad de parámetros pueden ser ajustados dependiendo de las circunstancias y detalles de la situación física que se quiera modelar.
 
 \subsection{Formación de Blue Stragglers}
 
-Estudiamos la formación de Blue Stragglers mediante la vía de transferencia de masa en sistemas binarios. Para ello, usamos el módulo \texttt{mesa/binary}, el cual calcula de manera simultánea la evolución de ambas estrellas (donante y acretora) y los parámetros orbitales del sistema. La Figura \ref{fig:binary_flow_chart} ilustra el diagrama de flujo que emplea este módulo para simular ambas estrellas.
+Se estudia la formación de Blue Stragglers mediante la vía de transferencia de masa en sistemas binarios. Para ello, se emplea el módulo \texttt{mesa/binary}, el cual calcula de manera simultánea la evolución de ambas estrellas (donante y acretora) y los parámetros orbitales del sistema. La Figura \ref{fig:binary_flow_chart} ilustra el diagrama de flujo que emplea este módulo para simular ambas estrellas.
 
 \begin{figure}[H]
   \centering
@@ -55,43 +55,64 @@ Existen tres casos principales para la formación de Blue Stragglers, dependiend
     \item \textbf{Caso C:} ocurre en etapas evolutivas aún más tardías, cuando la estrella donante inicia la transferencia de masa siendo ya una estrella que se encuentra en la fase de quema de helio en una capa exterior.
 \end{itemize}
 
-En nuestro caso, hemos optado por el \textbf{Caso A}. No obstante, para producir resultados más interesantes, hemos seleccionado un periodo inicial de 4 días. Esto permite a la estrella donante evolucionar durante un cierto tiempo por la MS, quemando una porción de su hidrógeno central, hasta que su radio aumenta lo suficiente como para comenzar a transferir masa a la acretora.
+En este caso, se ha optado por el \textbf{Caso A}. No obstante, para producir resultados más interesantes, se ha seleccionado un periodo inicial de 4 días. Esto permite a la estrella donante evolucionar durante un cierto tiempo por la MS, quemando una porción de su hidrógeno central, hasta que su radio aumenta lo suficiente como para comenzar a transferir masa a la acretora, y así evitar que se forme una envoltura común prematura.
 
 
 \subsubsection{Estabilidad Numérica del Acretor y Ajustes del Solver}
 
-La evolución de nuestro sistema es un proceso delicado. Es necesario elegir una combinación adecuada de condiciones iniciales y parámetros del solver para asegurar que la evolución se desarrolle de manera física y numérica correcta. En nuestro caso, hemos tomado las siguientes consideraciones:
+La evolución de nuestro sistema es un proceso delicado. Es necesario elegir una combinación adecuada de condiciones iniciales y parámetros del solver para asegurar que la evolución se desarrolle de manera física y numérica correcta. En este caso, se han tomado las siguientes consideraciones:
 \begin{itemize}
 
 \item El proceso de transferencia de masa se modela bajo la hipótesis de \textbf{transferencia de masa no conservativa}, parametrizada mediante el coeficiente $\beta = 0.5$ (\texttt{mass\_\allowbreak transfer\_beta = 0.5d0}). Esto significa que el 50\% de la masa transferida por la estrella donante es retenida por la acretora, mientras que el otro 50\% es expulsado del vecindario de la estrella acretora. Esta materia perdida abandona el sistema, llevando con sí momento angular específico de la órbita de la acretora. Esto permite estabilizar la evolución orbital del sistema, ensanchando su semieje mayor.
 
-\item La adición acelerada de material caliente sobre la estrella de $1.0\,M_\odot$ introduce perturbaciones térmicas y mecánicas drásticas en sus capas más externas. Esto provoca una expansión violenta de su envoltura convectiva y puede llevar a una caída de la luminosidad superficial por debajo de cero, deteniendo la convergencia numérica. Para mitigar esto, hemos aplicado un límite estricto sobre la máxima tasa de transferencia de masa de la donante a la acretora por paso de tiempo a un valor máximo de $10^{-4}\,M_\odot/\text{año}$ (\texttt{max\_implicit\_abs\_mdot = 1d-4}).
+\item La adición acelerada de material caliente sobre la estrella de $1.0\,M_\odot$ introduce perturbaciones térmicas y mecánicas drásticas en sus capas más externas. Esto provoca una expansión violenta de su envoltura convectiva y puede llevar a una caída de la luminosidad superficial por debajo de cero, deteniendo la convergencia numérica. Para mitigar esto, se ha aplicado un límite estricto sobre la máxima tasa de transferencia de masa de la donante a la acretora por paso de tiempo a un valor máximo de $10^{-4}\,M_\odot/\text{año}$ (\texttt{max\_implicit\_abs\_mdot = 1d-4}).
 
 \item La envoltura externa de la acretora es altamente superadiabática y está dominada por la presión de radiación. Para estabilizar esto numéricamente, se activa el esquema \texttt{MLT++} en MESA (\url{okay\_to\_reduce\_gradT\_excess = .true.}). Esto reduce artificialmente la superadición del gradiente de temperatura en regiones donde la eficiencia del transporte convectivo es extremadamente baja pero la radiación ejerce una presión dominante.
 
 \item Finamente, se ajusta la tolerancia del solver aumentando el coeficiente de resolución espacial superficial (\texttt{mesh\_delta\_coeff = 0.5}) para tener un mallado del perfil más fino, y se relaja ligeramente el residuo máximo admisible a $10^{-3}$ (\texttt{gold\_\allowbreak tol\_max\_residual3 = 1d-3}) para evitar fallos del solver debidos al ruido numérico inducido por la acreción rápida. Además, el paso de tiempo durante la fase de desbordamiento (Roche Limit Overflow) se restringe rígidamente utilizando los parámetros \texttt{fm = 0.001}, \texttt{fr = 0.01} y \texttt{fj = 0.01} (que limitan los cambios fraccionales de masa, radio y momento angular respectivamente).
 
+\item \textbf{Omisión de la rotación estelar:} Por simplicidad computacional, se ha omitido la rotación en MESA y GYRE. Aunque en la realidad la acreción acelera drásticamente el giro de la estrella (\textit{spin-up}), ignorar este efecto nos permite asumir simetría esférica estricta y evitar severas complejidades numéricas en los modelos evolutivos y las ecuaciones de oscilación.
+
 \end{itemize}
 
 
-Una vez finalizada la fase de transferencia de masa, el modelo rejuvenecido resultante adquiere una masa final de $1.82136\,M_\odot$ y una estructura química interna alterada (con un núcleo enriquecido en helio y una envoltura rica en hidrógeno depositado). Esta Blue Straggler recién formada se evoluciona en una configuración de estrella aislada (\texttt{evolve\_created\_blue\_straggler}) a partir del modelo binario de salida, extendiendo la simulación hasta que la fracción de masa de hidrógeno central cae por debajo de $10^{-3}$ (\texttt{xa\_central\_lower\_limit(1) = 1d-3}), lo que define la TAMS (\textit{Terminal Age Main Sequence}). Sólo evolucionamos hasta este punto ya que nos interesa comparar las Blue Stragglers (que están en su Main Sequence ``rejuvenecida'') con estrellas que también están en las mismas posiciones.
+Una vez finalizada la fase de transferencia de masa, el modelo rejuvenecido resultante adquiere una masa final de $1.82136\,M_\odot$ y una estructura química interna alterada. Esta Blue Straggler recién formada se evoluciona en una configuración de estrella aislada (\texttt{evolve\_created\_blue\_straggler}) a partir del modelo binario de salida, extendiendo la simulación hasta que la fracción de masa de hidrógeno central cae por debajo de $10^{-3}$ (\texttt{xa\_central\_lower\_limit(1) = 1d-3}), lo que define la TAMS (\textit{Terminal Age Main Sequence}). Sólo se evoluciona hasta este punto ya que interesa comparar las Blue Stragglers (que están en su Main Sequence ``rejuvenecida'') con estrellas que también están en las mismas posiciones.
 
-Durante toda la evolución del modelo rejuvenecido, MESA vuelca perfiles de estructura estelar en formato compatible con el código de oscilaciones estelares GYRE \citep{townsend2013} (\texttt{pulse\_data\_format = 'GYRE'}), del cual hablaremos más adelante.
+Durante toda la evolución del modelo rejuvenecido, MESA vuelca perfiles de estructura estelar en formato compatible con el código de oscilaciones estelares GYRE \citep{townsend2013} (\texttt{pulse\_data\_format = 'GYRE'}), el cual será expuesto más adelante.
 
 A continuación, una serie de figuras detallando el proceso de formación de la blue straggler se muestran.
 
+\begin{equation*}
+    \text{Tiempo de Comienzo de Transferencia de Masa, }t_0 = 909.3 \text{Myr}
+\end{equation*}
 
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Imagenes/macrofigure_1.png}
+\end{figure}
 
+\begin{figure}[H]
+    \includegraphics[width=1.02\linewidth]{Imagenes/macrofigure_2.png}
+\end{figure}
 
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{Imagenes/bss_radial_profile.png}
+    \caption{Gráficas detallando la evolución de la Donante (que pasa de $2 M_\odot$ a $0.38 M_\odot$) y la Acretora (que pasa de $1 M_\odot$ a $1.82 M_\odot$). Diversas cantidades de interés se muestran. La escala de tiempo ha sido expandida después de $t_0$ para que se pueda apreciar la evolución de ambas estrellas durante el intercambio de masa.}
+\end{figure}
 
 \section{GYRE}
 
-El análisis de oscilaciones estelares se automatiza mediante el script de shell \texttt{run\_gyre\_all.sh}, el cual realiza los siguientes pasos para cada perfil estructural guardado:
+El análisis de oscilaciones estelares se automatiza mediante el script de shell \texttt{run\_gyre\_\allowbreak all.sh}, el cual realiza los siguientes pasos para cada perfil estructural guardado:
 \begin{enumerate}
     \item Genera dinámicamente un archivo de parámetros \texttt{gyre.in} reemplazando la ruta del perfil de entrada y especificando los archivos de salida HDF5 correspondientes para el resumen de modos (\texttt{summary.h5}) y las funciones propias detalladas (\texttt{detail.l\%l.n\%n.h5}).
-    \item Resuelve las ecuaciones lineales de pulsación no adiabáticas o adiabáticas para los grados armónicos esféricos $l = 0$ (modos radiales), $l = 1$ (modos dipolares) y $l = 2$ (modos cuadrupolares) utilizando un esquema de colocación de cuarto orden (\texttt{COLLOC\_GL4}).
-    \item Realiza un barrido lineal en frecuencia entre $0.1$ y $20$ ciclos por día (\texttt{freq\_min = 0.1}, \texttt{freq\_max = 20}) con $3000$ puntos para identificar los autovalores de frecuencia y las amplitudes de los desplazamientos radiales ($\xi_r$) y horizontales ($\xi_h$).
+    \item Resuelve las ecuaciones de pulsación detalladas en el capítulo anterior para los grados armónicos esféricos $l = 0$ (modos radiales), $l = 1$ (modos dipolares) y $l = 2$ (modos cuadrupolares) utilizando un esquema de colocación de cuarto orden (\texttt{COLLOC\_GL4}).
+    \item Realiza un barrido lineal en frecuencia entre $0.1$ y $20$ ciclos por día (\texttt{freq\_min = 0.1}, \texttt{freq\_max = 20}) con $3000$ puntos para identificar los autovalores de frecuencia y las amplitudes de los desplazamientos radiales ($\xi_r$) y horizontales ($\xi_h$). Estos valores han sido elegidos expresamente para asegurar que todos los modos para $n_{pg} \in [-10, 10]$ son hallados por GYRE ($n_{pg}$ denota el orden radial del modo, donde los valores positivos corresponden a modos p y los negativos a modos g).
 \end{enumerate}
 
-Este acoplamiento numérico entre MESA y GYRE permite discernir las sutiles diferencias en la frecuencia acústica característica (frecuencia de Lamb $S_l$) y de flotabilidad (Brunt-Väisälä $N$) entre la Blue Straggler y las estrellas ordinarias de la secuencia principal de idéntica masa, ofreciendo un método directo para verificar los modelos de rejuvenecimiento frente a observaciones astrosismológicas reales (como las proyectadas en la misión espacial HAYDN).
+El diagrama de propagación de la Blue Straggler justo al final de la transferencia de masa (obtenido con los datos de GYRE) se muestra en la Figura \ref{fig:prop_bss}.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.861\textwidth]{Imagenes/propagation_diagram.png}
+    \caption{Diagrama de propagación para la Blue Straggler creada a partir de la transferencia de masa de la estrella donante. En negro en línea continua y continua-discontinua se representa el cuadrado de las frecuencias de Lamb y Brunt-Väisälä. En azul se representan los modos p, y, en rojo, los modos g. Se pueden apreciar modos mixtos (modos con nodos en sendas zonas p y g).}
+    \label{fig:prop_bss}
+\end{figure}

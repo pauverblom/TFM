@@ -19,6 +19,36 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{ChristensenDalsgaard2019}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fe4a7458ec93782245e568b26655dd2b}{%
+           family={Christensen-Dalsgaard},
+           familyi={C\bibinithyphendelim D\bibinitperiod},
+           given={J{ø}rgen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Institut for Fysik og Astronomi, Aarhus Universitet}%
+      }
+      \strng{namehash}{fe4a7458ec93782245e568b26655dd2b}
+      \strng{fullhash}{fe4a7458ec93782245e568b26655dd2b}
+      \strng{bibnamehash}{fe4a7458ec93782245e568b26655dd2b}
+      \strng{authorbibnamehash}{fe4a7458ec93782245e568b26655dd2b}
+      \strng{authornamehash}{fe4a7458ec93782245e568b26655dd2b}
+      \strng{authorfullhash}{fe4a7458ec93782245e568b26655dd2b}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Fifth}
+      \field{howpublished}{\url{https://users-phys.au.dk/jcd/oscilnotes/Lecture_Notes_on_Stellar_Oscillations.pdf}}
+      \field{note}{Accessed: 2026-06-19}
+      \field{title}{Lecture Notes on Stellar Oscillations}
+      \field{year}{2019}
+    \endentry
     \entry{eggleton1983}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=dca83cc53d25cba3930c0e586dd41167}{%
@@ -49,6 +79,32 @@
       \verb{doi}
       \verb 10.1086/160960
       \endverb
+    \endentry
+    \entry{PhysicsStackExchange537111}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6b9d6379ea49c31dd6cd51eaf3b462a0}{%
+           family={Exchange},
+           familyi={E\bibinitperiod},
+           given={Physics\bibnamedelima Stack},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6b9d6379ea49c31dd6cd51eaf3b462a0}
+      \strng{fullhash}{6b9d6379ea49c31dd6cd51eaf3b462a0}
+      \strng{bibnamehash}{6b9d6379ea49c31dd6cd51eaf3b462a0}
+      \strng{authorbibnamehash}{6b9d6379ea49c31dd6cd51eaf3b462a0}
+      \strng{authornamehash}{6b9d6379ea49c31dd6cd51eaf3b462a0}
+      \strng{authorfullhash}{6b9d6379ea49c31dd6cd51eaf3b462a0}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://physics.stackexchange.com/questions/537111/eulerian-description-for-a-deforming-control-volume}}
+      \field{note}{Accessed: 2026-06-19}
+      \field{title}{Eulerian description for a deforming control volume}
+      \field{year}{2020}
     \endentry
     \entry{jermyn2023}{article}{}
       \name{author}{13}{}{%

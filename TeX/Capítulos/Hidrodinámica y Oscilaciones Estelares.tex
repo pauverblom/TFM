@@ -5,6 +5,12 @@
 \section{Ecuaciones Básicas de la Hidrodinámica}
 Las propiedades esenciales del gas estelar pueden especificarse como funciones de la posición y del tiempo. Estas propiedades incluyen la densidad local $\rho(\mathbf{r},t)$, la presión $p(\mathbf{r},t)$, la temperatura $T(\mathbf{r},t)$ (y/o cualquier otra cantidad termodinámica relevante) y la velocidad del fluido $\mathbf{v}(\mathbf{r},t)$. Aquí, $\mathbf{r}$ denota el vector posición con respecto a un punto de referencia en el espacio, correspondiéndose con lo que vería un observador en reposo. Esta descripción, pues, se conoce como la descripción \textit{Euleriana} del fluido. Otra descripción posible es la \textit{Lagrangiana}, en la cual un observador sigue el movimiento de un elemento de fluido a medida que se desplaza por el espacio. En este marco, un elemento de gas puede ser etiquetado por su posición inicial $\mathbf{r}_0$, y sus propiedades se describen como funciones de $\mathbf{r}_0$ y del tiempo $t$ (por ejemplo, $\mathbf{r}(\mathbf{r}_0,t)$).
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{Imagenes/euler_vs_lagrange.png}
+    \caption{La descripción Euleriana describe el flujo del fluido desde la perspectiva de un volumen fijo en el espacio. La descripción Lagrangiana describe el flujo del fluido desde la perspectiva de un elemento de fluido individual. Imagen tomada de \autocite{PhysicsStackExchange537111}}
+\end{figure}
+
 La derivada temporal de una cantidad $\phi$, observada desde un marco lagrangiano, es
 
 \begin{equation}
@@ -104,8 +110,6 @@ Por lo tanto, $T/\tau_F$y $T/\tau_\epsilon$ son valores diminutos, lo que hace q
 \begin{equation} 
     \frac{dp}{dt} = \frac{\Gamma_1 p}{\rho} \frac{d\rho}{dt} 
 \end{equation}
-
-\newpage
 
 Por lo tanto, las ecuaciones de la hidrodinámica bajo la aproximación adiabática son:
 
@@ -214,8 +218,6 @@ Con esta última ecuación de estado linealizada, el conjunto base de ecuaciones
 
 
 siendo $\mathbf{g}' = - \nabla \Phi'$
-
-\newpage
 
 \section{Las Ecuaciones de Oscilación Estelar}
 
@@ -334,10 +336,18 @@ $$f_1(\theta) = P_l^m(\cos \theta),$$ siendo $P_l^m$ el polinomio de Legendre. F
 \begin{equation}
 f(\theta, \phi) = (-1)^m c_{lm} P_l^m(\cos \theta) \exp(im\phi) \equiv Y_m^l(\theta, \phi),
 \end{equation}
-siendo $c_{lm}$ una constante de normalización para que $\int |Y_l^m|^2 d\Omega = 1$. $Y_l^m$ son los esperados armónicos esféricos. Al emplear dichos armónicos esféricos como base angular y asumiendo una dependencia temporal armónica de la forma $\exp(-i\omega t)$ (donde $\omega$ es la frecuencia de oscilación propia), podemos escribir las perturbaciones escalares y la componente radial del desplazamiento como:
+siendo $c_{lm}$ una constante de normalización para que $\int |Y_l^m|^2 d\Omega = 1$. $Y_l^m$ son los esperados armónicos esféricos. 
+
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=0.9\linewidth]{Imagenes/spherical_harmonics.png}
+\caption{Contorno de las partes reales de los armónicos esféricos $Y_m^l$; para simplificar, el factor de fase $(-1)^m$ se ha suprimido. Las líneas de contorno positivas están indicadas por líneas continuas y las negativas por líneas discontinuas. El eje θ = 0 está inclinado en 45º hacia el observador, y se indica con una estrella. El ecuador se muestra como “++++”. Los siguientes casos son ilustrados: a) $l = 1, m = 0$; b) $l = 1, m = 1$; c) $l = 2, m = 0$; d) $l= 2, m = 1$; e) $l = 2, m = 2$; f) $l = 3, m = 0$; g) $l = 3, m = 1$; h) $l = 3, m = 2$; i) $l = 3, m = 3$; j) $l = 5, m = 5$; k) $l = 10, m = 5$; l) $l = 10, m = 10$. Figura tomada de \autocite{ChristensenDalsgaard2019}}
+\end{figure}
+
+Al emplear dichos armónicos esféricos como base angular y asumiendo una dependencia temporal armónica de la forma $\exp(-i\omega t)$ (donde $\omega$ es la frecuencia de oscilación propia), podemos escribir las perturbaciones escalares y la componente radial del desplazamiento como:
 
 \begin{align}
-\xi_r(r, \theta, \phi, t) &= \sqrt{4\pi}\tilde{\xi}_r(r) Y_l^m(\theta, \phi) \exp(-i\omega t), \
+\xi_r(r, \theta, \phi, t) &= \sqrt{4\pi}\tilde{\xi}_r(r) Y_l^m(\theta, \phi) \exp(-i\omega t), \\
 p'(r, \theta, \phi, t) &= \sqrt{4\pi}\tilde{p}'(r) Y_l^m(\theta, \phi) \exp(-i\omega t),
 \end{align}
 
@@ -379,14 +389,14 @@ La ecuación \eqref{eq:1} se convierte en:
     \frac{d\xi_r}{dr} = -\left(\frac{2}{r}+\frac{1}{\Gamma_1 p}\frac{dp}{dr}\right)\xi_r + \frac{1}{\rho c^2}\left(\frac{S_l^2}{\omega^2}-1\right) p' + \frac{l(l+1)}{\omega^2 r^2} \Phi',
 \end{equation}
 
-donde se introduce la frecuencia acústica característica $S_l$ como:
+donde se introduce la frecuencia acústica característica $S_l$ (o de Lamb) como:
 $$S_l^2 = \frac{l(l+1)c^2}{r^2}=k_h^2c^2$$
 
 La ecuación \eqref{eq:2} nos da:
 \begin{equation}
     \frac{dp'}{dr} = \rho(\omega^2 - N^2)\xi_r + \frac{1}{\Gamma_1 p}\frac{dp}{dr}p' - \rho \frac{d\Phi'}{dr},
 \end{equation}
-siendo N la frecuencia de flotabilidad, dada por:
+siendo N la frecuencia de flotabilidad (o de Brunt-Väisälä), dada por:
 $$N = g\left(\frac{1}{\Gamma_1 p}\frac{dp}{dr} - \frac{1}{\rho}\frac{d\rho}{dr} \right).$$
 
 Finalmente, la ecuación \eqref{eq:3} se puede escribir como:
@@ -407,7 +417,6 @@ Por último, se exige la continuidad de la perturbación del potencial gravitato
 \end{equation} 
 Como información adicional derivada de la condición de la presión, se puede aproximar que la proporción entre el desplazamiento horizontal y radial en la superficie depende únicamente de la frecuencia adimensional ($\sigma$), dada por $\frac{\xi_h(R)}{\xi_r(R)} \approx \sigma^{-2}$.
 \end{itemize}
-\newpage
 \section{Naturaleza y Clasificación de los Modos de Oscilación}
 
 \subsection{La Aproximación de Cowling} 
@@ -429,11 +438,18 @@ donde la función K(r) viene dada por:
     K(r) = \frac{\omega^2}{c^2} \left( \frac{N^2}{\omega^2} - 1 \right) \left( \frac{S_l^2}{\omega^2} - 1 \right)
 \end{equation}
 
-La propagación depende de las dos frecuencias características: la frecuencia acústica $(S_l)$ y la de flotabilidad $(N)$. La solución es oscilatoria $(\xi_r \sim \cos(\int K^{1/2} dr + \phi))$ en las regiones de "atrapamiento" donde $K(r) > 0$. Fuera de estas regiones $(K(r) < 0)$, la solución decae exponencialmente. Los límites de atrapamiento se sitúan en los puntos de retorno geométricos, donde $K(r) = 0.$
+La propagación depende de las dos frecuencias características: la frecuencia acústica $(S_l)$ y la de flotabilidad $(N)$. La solución es oscilatoria $(\xi_r \sim \cos(\int K^{1/2} dr + \phi))$ en las regiones de ``atrapamiento'' donde $K(r) > 0$. Fuera de estas regiones $(K(r) < 0)$, la solución decae exponencialmente. Los límites de atrapamiento se sitúan en los puntos de retorno geométricos, donde $K(r) = 0.$
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Imagenes/prop_diagrams.png}
+    \caption{Diagrama de propagación para un modelo de $1.4 M_\odot$ con $X_H=0.4$ (línea vertical gris punteada más a la izquierda en Fig. 1) que muestra, en unidades de $\nu_{\text{max}}$, las frecuencias de flotabilidad ($N$), la frecuencia de Lamb ($S_{l=1}$) y el potencial acústico, $V$, que es una frecuencia característica que describe la propagación de los modos radiales de una estrella. La región naranja del diagrama de propagación representa las regiones donde se pueden propagar modos p, mientras que las regiones azules representan las regiones de propagación de modos g. En las capas exteriores de la estrella, la frecuencia mínima a la cual se pueden propagar los modos p está determinada por la frecuencia crítica ($\nu_{\text{crit}}$ imita $V$ cerca de la superficie del modelo) en las capas exteriores. \textbf{Panel superior derecho:} El mismo panel que el anterior pero para el modelo de $1.4 M_\odot$ más tarde en su evolución (línea gris punteada a la derecha en Fig. 1, $X_H=0.05$). \textbf{Paneles inferiores:} Diagrama de propagación para los mismos dos modelos que los superiores, pero el eje x muestra la coordenada relativa de masa en escala logarítmica para mostrar las características cercanas al núcleo en mayor detalle. El potencial acústico, $V$, muestra un pico localizado y agudo en la parte cercana al núcleo.}
+    \label{fig:prop_diagrams}
+\end{figure}
 
 \subsection{Modos de Presión (p-modes)} 
 
-Corresponden a la rama de altas frecuencias donde típicamente $\omega \gg N$. En este límite, la función $K(r)$ se aproxima a:
+Corresponden a la rama de altas frecuencias donde $\omega \gg N$. En este límite, la función $K(r)$ se aproxima a:
 
 $$K(r) \simeq \frac{1}{c^2}(\omega^2 - S_l^2)$$
 
@@ -457,3 +473,4 @@ Aquí, la dinámica está controlada por la variación de la frecuencia de flota
 $$k_r^2 = \frac{l(l+1)}{r^2}\left(\frac{N^2}{\omega^2} - 1\right)$$
 
 A diferencia de los p-modes, en los modos g el orden aumenta a medida que disminuye $\omega$, y su frecuencia máxima está limitada estrictamente por el valor máximo de $N$ en el interior de la estrella.
+

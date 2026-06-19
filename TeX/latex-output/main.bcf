@@ -2362,16 +2362,20 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">paxton2011</bcf:citekey>
-    <bcf:citekey order="1" intorder="2">paxton2013</bcf:citekey>
-    <bcf:citekey order="1" intorder="3">paxton2015</bcf:citekey>
-    <bcf:citekey order="1" intorder="4">paxton2018</bcf:citekey>
-    <bcf:citekey order="1" intorder="5">paxton2019</bcf:citekey>
-    <bcf:citekey order="1" intorder="6">jermyn2023</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">eggleton1983</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">ritter1988</bcf:citekey>
-    <bcf:citekey order="3" intorder="2">kolbritter1990</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">townsend2013</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">PhysicsStackExchange537111</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">PhysicsStackExchange537111</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">ChristensenDalsgaard2019</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">ChristensenDalsgaard2019</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">paxton2011</bcf:citekey>
+    <bcf:citekey order="5" intorder="2">paxton2013</bcf:citekey>
+    <bcf:citekey order="5" intorder="3">paxton2015</bcf:citekey>
+    <bcf:citekey order="5" intorder="4">paxton2018</bcf:citekey>
+    <bcf:citekey order="5" intorder="5">paxton2019</bcf:citekey>
+    <bcf:citekey order="5" intorder="6">jermyn2023</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">eggleton1983</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">ritter1988</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">kolbritter1990</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">townsend2013</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

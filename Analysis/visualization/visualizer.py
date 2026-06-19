@@ -48,7 +48,7 @@ print("="*60)
 import matplotlib.ticker as ticker
 
 # Global variables for mass transfer and dynamic formatting
-idx_start_bh = np.argmax(bh.rl_relative_overflow_1 > 0) if np.any(bh.rl_relative_overflow_1 > 0) else 0
+idx_start_bh = np.argmax(bh.lg_mtransfer_rate > -25) if np.any(bh.lg_mtransfer_rate > -25) else 0
 age_mt_start = bh.age[idx_start_bh]
 t_0_myr_bh = age_mt_start / 1e6
 
@@ -107,23 +107,23 @@ accretor_color = '#2980B9' # Blue, slightly desaturated
 alpha_val = 0.8
 
 # 2. Orbital Evolution (Period and Separation)
-fig2, ax2 = plt.subplots(figsize=(8, 6))
+fig2, ax2 = plt.subplots(figsize=(7.5, 6.0))
 
 ax2.plot(bh.model_number, bh.period_days, color='#8E44AD', label='Período', linewidth=2.5)
-ax2.set_ylabel('Período (días)', color='black')
+ax2.set_ylabel('Período (días)', color='black', fontsize=14)
 ax2.tick_params(axis='y', colors='black')
 
 ax2b = ax2.twinx()
 ax2b.plot(bh.model_number, bh.binary_separation, color='#27AE60', label='Separación', linestyle='-', linewidth=2.5)
-ax2b.set_ylabel('Separación ($R_\odot$)', color='black')
+ax2b.set_ylabel('Separación ($R_\odot$)', color='black', fontsize=14)
 ax2b.tick_params(axis='y', colors='black')
 
 # Línea vertical indicando el inicio de la transferencia de masa
 ax2.axvline(bh.model_number[idx_start_bh], color='gray', linestyle=':', linewidth=2, alpha=0.8, label='Inicio Transf. Masa')
 
 ax2.xaxis.set_major_formatter(ticker.FuncFormatter(format_age_bh))
-ax2.set_xlabel(f'Edad (Resolución Dinámica)')
-ax2.set_title('Evolución Orbital')
+ax2.set_xlabel('Edad', fontsize=14)
+ax2.set_title('Evolución Orbital', fontsize=14)
 
 # Combinar leyendas de ambos ejes
 lines, labels = ax2.get_legend_handles_labels()
@@ -134,21 +134,22 @@ ax2.grid(True, linestyle='--', alpha=0.7)
 fig2.savefig(os.path.join(script_dir, 'orbital_evolution.png'), dpi=300, bbox_inches='tight')
 
 # 3. Mass Transfer Rate
-fig3, ax3 = plt.subplots(figsize=(8, 6))
-ax3.plot(bh.model_number, bh.lg_mtransfer_rate, color='black', linewidth=1.5)
+fig3, ax3 = plt.subplots(figsize=(7.5, 6.0))
+ax3.plot(bh.model_number, bh.lg_mtransfer_rate, color='red', linewidth=1.5)
 ax3.axvline(bh.model_number[idx_start_bh], color='gray', linestyle=':', linewidth=2, alpha=0.8, label='Inicio Transf. Masa')
 ax3.xaxis.set_major_formatter(ticker.FuncFormatter(format_age_bh))
-ax3.set_xlabel(f'Edad (Resolución Dinámica)')
-ax3.set_ylabel('$\log \dot{M}$ ($M_\odot$/año)')
-ax3.set_title('Tasa de Transferencia de Masa')
+ax3.set_xlabel('Edad', fontsize=14)
+ax3.set_ylabel('$\log \dot{M}$ ($M_\odot$/año)', fontsize=14)
+ax3.set_title('Tasa de Transferencia de Masa', fontsize=14)
+ax3.set_ylim(-25, 0)
 ax3.grid(True, linestyle='--', alpha=0.7)
 fig3.savefig(os.path.join(script_dir, 'mass_transfer_rate.png'), dpi=300, bbox_inches='tight')
 
 idx_start_1 = 0
 idx_start_2 = 0
 
-# 4. HR Diagram (Both stars)
-fig4, ax4 = plt.subplots(figsize=(8, 6))
+# 4. HR Diagram
+fig4, ax4 = plt.subplots(figsize=(12.6, 6.5))
 # Plot traces
 ax4.plot(h1.log_Teff, h1.log_L, color=donor_color, alpha=alpha_val, linewidth=2, label='Donante (Estrella 1)', zorder=1)
 ax4.plot(h2.log_Teff, h2.log_L, color=accretor_color, alpha=alpha_val, linewidth=2, label='Acretora (Estrella 2)', zorder=1)
@@ -164,9 +165,9 @@ ax4.scatter(h2.log_Teff[idx_mt_start_2], h2.log_L[idx_mt_start_2], color=accreto
 ax4.scatter(h2.log_Teff[idx_mt_end_2], h2.log_L[idx_mt_end_2], color=accretor_color, alpha=alpha_val, marker='s', s=100, zorder=5, edgecolor='black')
 
 ax4.invert_xaxis()
-ax4.set_xlabel('$\log T_{eff}$ (K)')
-ax4.set_ylabel('$\log L/L_\odot$')
-ax4.set_title('Diagrama HR')
+ax4.set_xlabel('$\log T_{eff}$ (K)', fontsize=14)
+ax4.set_ylabel('$\log L/L_\odot$', fontsize=14)
+ax4.set_title('Diagrama HR', fontsize=14)
 
 from matplotlib.lines import Line2D
 legend_elements = [
@@ -235,7 +236,7 @@ x_custom_h1 = get_split_x(h1, idx_mt_start_1)
 x_custom_h2 = get_split_x(h2, idx_mt_start_2)
 formatter_h1 = get_split_formatter(h1, idx_mt_start_1)
 
-fig5, (ax5a, ax5b) = plt.subplots(2, 1, figsize=(10, 10), sharex=True)
+fig5, (ax5a, ax5b) = plt.subplots(2, 1, figsize=(12.6, 7.0), sharex=True)
 fig5.suptitle('Abundancias Centrales', fontsize=14, y=0.91)
 fig5.subplots_adjust(hspace=0.05)
 
@@ -262,8 +263,9 @@ ax5b.xaxis.set_major_formatter(formatter_h1)
 # Specific ticks requested by user
 t_0_h1 = h1.star_age[idx_mt_start_1]
 target_ages = [
-    t_0_h1 + 12.8 * 1e3,
-    t_0_h1 + 231.0 * 1e3,
+    t_0_h1 + 580.8 * 1e3,
+    t_0_h1 + 590.6 * 1e3,
+    t_0_h1 + 808.8 * 1e3,
     1003.8 * 1e6
 ]
 
@@ -271,7 +273,7 @@ mn_t0_h1 = h1.model_number[idx_mt_start_1]
 mn_max_h1 = h1.model_number[-1]
 
 split_point = 0.25
-custom_ticks = [0.0, split_point/2, split_point] # Ticks for linear pre-MT phase
+custom_ticks = [0.0, split_point/2] # Ticks for linear pre-MT phase (removed t_0 to avoid overlap)
 for t_target in target_ages:
     idx = np.argmin(np.abs(h1.star_age - t_target))
     mn = h1.model_number[idx]
@@ -280,7 +282,7 @@ for t_target in target_ages:
         custom_ticks.append(x_val)
 
 ax5b.set_xticks(custom_ticks)
-ax5b.set_xlabel(f'Edad (Izquierda: Lineal hasta $t_0$, Derecha: Resolución Dinámica)')
+ax5b.set_xlabel('Edad (Izquierda: Lineal hasta $t_0$, Derecha: Tiempo post-$t_0$)', fontsize=14)
 fig5.savefig(os.path.join(script_dir, 'central_abundances.png'), dpi=300, bbox_inches='tight')
 
 # 6 & 7. Kippenhahn Diagrams using mkipp
@@ -309,8 +311,7 @@ def my_extractor(identifier, log10_on_data, prof, return_data_columns=False):
         else:
             return val
 
-def plot_mkipp_diagram(logs_dir, save_name, title, color_mt, cmap_name="Blues", cores=["He"]):
-    fig, ax = plt.subplots(figsize=(10, 6))
+def plot_mkipp_diagram(ax, logs_dir, title, color_mt, cmap_name="Blues", cores=["He"], show_xlabel=True):
     plt.sca(ax)
     
     args = mkipp.Kipp_Args(
@@ -359,7 +360,8 @@ def plot_mkipp_diagram(logs_dir, save_name, title, color_mt, cmap_name="Blues", 
     idx_end = np.argmin(np.abs(h_local.star_age - age_mt_end))
     ax.axvline(h_local.model_number[idx_start], color=color_mt, linestyle=':', linewidth=2, alpha=0.8)
 
-    ax.set_title(title)
+    if title:
+        ax.set_title(title, fontsize=16, pad=15)
     
     # Custom legend
     legend_elements = [
@@ -393,32 +395,40 @@ def plot_mkipp_diagram(logs_dir, save_name, title, color_mt, cmap_name="Blues", 
             return f"{t:.1f} Myr"
             
     ax.xaxis.set_major_formatter(ticker.FuncFormatter(format_age))
-    ax.set_xlabel(f'Edad (Resolución Dinámica)  |  $t_0$ = Inicio de Transferencia ({t_0_myr:.1f} Myr)')
-    ax.set_ylabel('Coordenada de Masa ($M_\odot$)')
+    if show_xlabel:
+        ax.set_xlabel('Edad', fontsize=14)
+    else:
+        ax.set_xlabel('')
     
-    fig.savefig(os.path.join(script_dir, save_name), dpi=300, bbox_inches='tight')
-    plt.close(fig)
+    ax.set_ylabel('Masa ($M_\odot$)', fontsize=14)
 
-print("Generando Diagramas de Kippenhahn usando mkipp...")
+print("Generando Diagramas de Kippenhahn combinados usando mkipp...")
+fig_kipp, (ax_kipp1, ax_kipp2) = plt.subplots(2, 1, figsize=(7.5, 12.5), sharex=True)
+fig_kipp.subplots_adjust(hspace=0.08)
+
 plot_mkipp_diagram(
+    ax_kipp1,
     os.path.join(script_dir, "../../MESA/blue_straggler_model_create/LOGS1"),
-    'kippenhahn_donor.png',
-    'Diagrama de Kippenhahn (Donante)',
+    'Diagramas de Kippenhahn',
     donor_color,
-    cmap_name="Oranges"
+    cmap_name="Oranges",
+    show_xlabel=False
 )
 plot_mkipp_diagram(
+    ax_kipp2,
     os.path.join(script_dir, "../../MESA/blue_straggler_model_create/LOGS2"),
-    'kippenhahn_accretor.png',
-    'Diagrama de Kippenhahn (Acretora)',
+    None,
     accretor_color,
     cmap_name="Blues",
-    cores=[]
+    cores=[],
+    show_xlabel=True
 )
 
+fig_kipp.savefig(os.path.join(script_dir, 'kippenhahn_combined.png'), dpi=300, bbox_inches='tight')
+
 # 8. Evolución del Radio vs Lóbulo de Roche
-fig8, (ax8a, ax8b) = plt.subplots(2, 1, figsize=(10, 10), sharex=True)
-fig8.suptitle('Evolución del Radio Estelar vs Lóbulo de Roche', fontsize=14, y=0.91)
+fig8, (ax8a, ax8b) = plt.subplots(2, 1, figsize=(7.5, 12.5), sharex=True)
+fig8.suptitle('Evolución del Radio Estelar\nvs Lóbulo de Roche', fontsize=16, y=0.92)
 fig8.subplots_adjust(hspace=0.05)
 
 # Star 1 (Donor)
@@ -431,7 +441,7 @@ if np.any(mask_rlof1):
     ax8a.fill_between(h1.model_number, R1, rl_1, where=mask_rlof1, color=donor_color, alpha=0.3, label='Desbordamiento (RLOF)')
 ax8a.axvline(h1.model_number[idx_mt_start_1], color=donor_color, linestyle=':', linewidth=2, alpha=0.8, label='Inicio Transf. Masa')
 
-ax8a.set_ylabel('Radio ($R_\odot$)')
+ax8a.set_ylabel('Radio ($R_\odot$)', fontsize=14)
 ax8a.grid(True, linestyle='--', alpha=0.7)
 ax8a.legend()
 
@@ -450,13 +460,12 @@ if 'rl_2' in h2.bulk_names:
             ax8b.fill_between(h2.model_number, R2, rl_2, where=mask_rlof2, color=accretor_color, alpha=0.3, label='Desbordamiento (RLOF)')
     ax8b.axvline(h2.model_number[idx_mt_start_2], color=accretor_color, linestyle=':', linewidth=2, alpha=0.8, label='Inicio Transf. Masa')
 
-    ax8b.set_ylabel('Radio ($R_\odot$)')
+    ax8b.set_ylabel('Radio ($R_\odot$)', fontsize=14)
     ax8b.grid(True, linestyle='--', alpha=0.7)
     ax8b.legend()
 
     ax8b.xaxis.set_major_formatter(ticker.FuncFormatter(format_age_rlof2))
-    ax8b.set_xlabel(f'Edad (Resolución Dinámica)'
-                    )
+    ax8b.set_xlabel('Edad', fontsize=14)
 
 # plt.tight_layout() comentado para respetar subplots_adjust
 fig8.savefig(os.path.join(script_dir, 'radio_vs_rlof.png'), dpi=300, bbox_inches='tight')

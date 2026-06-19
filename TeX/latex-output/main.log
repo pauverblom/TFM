@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2025.2.1)  18 JUN 2026 18:13
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2025.2.1)  19 JUN 2026 16:59
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/Users/pauverdeguer/TFM/TeX/main
@@ -1330,11 +1330,16 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 
 ]
 Capítulo 2.
+<Imagenes/euler_vs_lagrange.png, id=98, 855.195pt x 357.335pt>
+File: Imagenes/euler_vs_lagrange.png Graphic file (type png)
+<use Imagenes/euler_vs_lagrange.png>
+Package luatex.def Info: Imagenes/euler_vs_lagrange.png  used on input line 10.
+(luatex.def)             Requested size: 452.9679pt x 189.2667pt.
 [3
 
 ]
-LaTeX Info: Redefining \. on input line 80.
-LaTeX Info: Redefining \% on input line 80.
+LaTeX Info: Redefining \. on input line 65.
+LaTeX Info: Redefining \% on input line 65.
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1343,9 +1348,9 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
-[4]
-LaTeX Info: Redefining \. on input line 108.
-LaTeX Info: Redefining \% on input line 108.
+[4<./Imagenes/euler_vs_lagrange.png>]
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1355,8 +1360,8 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
 [5]
-LaTeX Info: Redefining \. on input line 151.
-LaTeX Info: Redefining \% on input line 151.
+LaTeX Info: Redefining \. on input line 142.
+LaTeX Info: Redefining \% on input line 142.
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1366,8 +1371,8 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
 [6]
-LaTeX Info: Redefining \. on input line 186.
-LaTeX Info: Redefining \% on input line 186.
+LaTeX Info: Redefining \. on input line 175.
+LaTeX Info: Redefining \% on input line 175.
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1377,8 +1382,8 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
 [7]
-LaTeX Info: Redefining \. on input line 218.
-LaTeX Info: Redefining \% on input line 218.
+LaTeX Info: Redefining \. on input line 210.
+LaTeX Info: Redefining \% on input line 210.
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1388,8 +1393,8 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
 [8]
-LaTeX Info: Redefining \. on input line 278.
-LaTeX Info: Redefining \% on input line 278.
+LaTeX Info: Redefining \. on input line 260.
+LaTeX Info: Redefining \% on input line 260.
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1399,8 +1404,8 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
 [9]
-LaTeX Info: Redefining \. on input line 320.
-LaTeX Info: Redefining \% on input line 320.
+LaTeX Info: Redefining \. on input line 309.
+LaTeX Info: Redefining \% on input line 309.
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1410,12 +1415,14 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
 [10]
-Overfull \hbox (1.87541pt too wide) detected at line 342
-[]
- []
+<Imagenes/spherical_harmonics.png, id=194, 949.5475pt x 1164.35pt>
+File: Imagenes/spherical_harmonics.png Graphic file (type png)
+<use Imagenes/spherical_harmonics.png>
+Package luatex.def Info: Imagenes/spherical_harmonics.png  used on input line 343.
+(luatex.def)             Requested size: 407.66833pt x 499.87901pt.
+LaTeX Info: Redefining \. on input line 357.
+LaTeX Info: Redefining \% on input line 357.
 
-LaTeX Info: Redefining \. on input line 358.
-LaTeX Info: Redefining \% on input line 358.
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
 (fancyhdr)                Make it at least 15.21004pt, for example:
@@ -1424,8 +1431,8 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
 [11]
-LaTeX Info: Redefining \. on input line 401.
-LaTeX Info: Redefining \% on input line 401.
+LaTeX Info: Redefining \. on input line 357.
+LaTeX Info: Redefining \% on input line 357.
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1434,9 +1441,11 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
-[12]
-LaTeX Info: Redefining \. on input line 410.
-LaTeX Info: Redefining \% on input line 410.
+[12
+Missing character: There is no θ (U+03B8) in font [lmroman12-regular]:+tlig;!
+<./Imagenes/spherical_harmonics.png>]
+LaTeX Info: Redefining \. on input line 393.
+LaTeX Info: Redefining \% on input line 393.
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1446,8 +1455,8 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
 [13]
-LaTeX Info: Redefining \. on input line 442.
-LaTeX Info: Redefining \% on input line 442.
+LaTeX Info: Redefining \. on input line 417.
+LaTeX Info: Redefining \% on input line 417.
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1456,7 +1465,34 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
-[14]) ("./Capítulos/Creando Blue Stragglers.tex"
+[14]
+<Imagenes/prop_diagrams.png, id=240, 834.11626pt x 822.07124pt>
+File: Imagenes/prop_diagrams.png Graphic file (type png)
+<use Imagenes/prop_diagrams.png>
+Package luatex.def Info: Imagenes/prop_diagrams.png  used on input line 445.
+(luatex.def)             Requested size: 407.66833pt x 401.78984pt.
+LaTeX Info: Redefining \. on input line 454.
+LaTeX Info: Redefining \% on input line 454.
+
+
+Package fancyhdr Warning: \headheight is too small (14.49998pt): 
+(fancyhdr)                Make it at least 15.21004pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.21004pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
+
+[15]
+LaTeX Info: Redefining \. on input line 454.
+LaTeX Info: Redefining \% on input line 454.
+
+
+Package fancyhdr Warning: \headheight is too small (14.49998pt): 
+(fancyhdr)                Make it at least 15.21004pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.21004pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
+
+[16<./Imagenes/prop_diagrams.png>]) ("./Capítulos/Creando Blue Stragglers.tex"
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -1467,12 +1503,12 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
-[15]
+[17]
 Capítulo 3.
-[16
+[18
 
 ]
-<Imagenes/binary_flow_chart.png, id=253, 1114.1625pt x 625.33624pt>
+<Imagenes/binary_flow_chart.png, id=282, 1114.1625pt x 625.33624pt>
 File: Imagenes/binary_flow_chart.png Graphic file (type png)
 <use Imagenes/binary_flow_chart.png>
 Package luatex.def Info: Imagenes/binary_flow_chart.png  used on input line 29.
@@ -1487,7 +1523,7 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
-[17<./Imagenes/binary_flow_chart.png>]
+[19<./Imagenes/binary_flow_chart.png>]
 Overfull \hbox (6.25093pt too wide) in paragraph at lines 43--44
 []\TU/lmr/bx/sc/12 Es-tre-lla do-nan-te ($\OML/cmm/m/it/12 M[]$\TU/lmr/bx/sc/12 ): \TU/lmr/m/n/12 Ma-sa ini-cial de $\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 0 \OML/cmm/m/it/12 M[]$\TU/lmr/m/n/12 , con-fi-gu-ra-da con el ar-chi-vo \TU/lmtt/m/n/12 inlist1\TU/lmr/m/n/12 . 
  []
@@ -1506,9 +1542,9 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
-[18]
-LaTeX Info: Redefining \. on input line 79.
-LaTeX Info: Redefining \% on input line 79.
+[20]
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
 
 
 Package fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -1517,11 +1553,70 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
-[19]
-Overfull \hbox (40.66429pt too wide) in paragraph at lines 82--83
-[]\TU/lmr/m/n/12 El aná-li-sis de os-ci-la-cio-nes es-te-la-res se au-to-ma-ti-za me-dian-te el script de shell \TU/lmtt/m/n/12 run_gyre_all.sh\TU/lmr/m/n/12 ,
+[21]
+<Imagenes/macrofigure_1.png, id=309, 1003.5894pt x 962.1546pt>
+File: Imagenes/macrofigure_1.png Graphic file (type png)
+<use Imagenes/macrofigure_1.png>
+Package luatex.def Info: Imagenes/macrofigure_1.png  used on input line 90.
+(luatex.def)             Requested size: 452.9679pt x 434.27222pt.
+<Imagenes/macrofigure_2.png, id=310, 979.0176pt x 1378.4298pt>
+File: Imagenes/macrofigure_2.png Graphic file (type png)
+<use Imagenes/macrofigure_2.png>
+Package luatex.def Info: Imagenes/macrofigure_2.png  used on input line 94.
+(luatex.def)             Requested size: 462.02917pt x 650.53331pt.
+
+Overfull \hbox (9.06128pt too wide) in paragraph at lines 94--95
+[][] 
  []
 
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
+
+Package fancyhdr Warning: \headheight is too small (14.49998pt): 
+(fancyhdr)                Make it at least 15.21004pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.21004pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
+
+[22<./Imagenes/macrofigure_1.png>]
+Overfull \vbox (7.84268pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
+
+
+Package fancyhdr Warning: \headheight is too small (14.49998pt): 
+(fancyhdr)                Make it at least 15.21004pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.21004pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
+
+[23<./Imagenes/macrofigure_2.png>]
+<Imagenes/bss_radial_profile.png, id=323, 787.0203pt x 476.982pt>
+File: Imagenes/bss_radial_profile.png Graphic file (type png)
+<use Imagenes/bss_radial_profile.png>
+Package luatex.def Info: Imagenes/bss_radial_profile.png  used on input line 98.
+(luatex.def)             Requested size: 452.9679pt x 274.5318pt.
+
+Overfull \hbox (0.32033pt too wide) in paragraph at lines 104--105
+[]\TU/lmr/m/n/12 El aná-li-sis de os-ci-la-cio-nes es-te-la-res se au-to-ma-ti-za me-dian-te el script de shell \TU/lmtt/m/n/12 run_gyre_
+ []
+
+LaTeX Info: Redefining \. on input line 109.
+LaTeX Info: Redefining \% on input line 109.
+
+Package fancyhdr Warning: \headheight is too small (14.49998pt): 
+(fancyhdr)                Make it at least 15.21004pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.21004pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
+
+[24<./Imagenes/bss_radial_profile.png>]
+<Imagenes/propagation_diagram.png, id=334, 688.974pt x 859.5312pt>
+File: Imagenes/propagation_diagram.png Graphic file (type png)
+<use Imagenes/propagation_diagram.png>
+Package luatex.def Info: Imagenes/propagation_diagram.png  used on input line 115.
+(luatex.def)             Requested size: 390.00192pt x 486.54099pt.
 )
 LaTeX Info: Redefining \. on input line 210.
 LaTeX Info: Redefining \% on input line 210.
@@ -1533,7 +1628,12 @@ Package fancyhdr Warning: \headheight is too small (14.49998pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.71005pt}.
 
-[20] [21
+[25<./Imagenes/propagation_diagram.png>]
+Overfull \hbox (9.99158pt too wide) in paragraph at lines 210--210
+[][]$\TU/lmtt/m/n/12 https : / / physics . stackexchange . com / questions / 537111 / eulerian - description -
+ []
+
+[26
 
 ] (./latex-output/main.aux
 LaTeX Info: Redefining \sptext on input line 14.
@@ -1554,19 +1654,19 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 43886 strings out of 476447
+ 43978 strings out of 476447
  125016,1977958 words of node,token memory allocated
- 1226 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 221 attribute, 69 glue_spec, 112 attribute_list, 3 write nodes
-   avail lists: 1:9,2:1154,3:324,4:229,5:447,6:93,7:8003,8:77,9:1001,10:24,11:1114
- 64794 multiletter control sequences out of 65536+600000
+ 1244 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 225 attribute, 69 glue_spec, 114 attribute_list, 3 write, 1 pdf_action nodes
+   avail lists: 1:9,2:1292,3:387,4:221,5:440,6:89,7:8404,8:102,9:1014,10:27,11:1167
+ 64851 multiletter control sequences out of 65536+600000
  62 fonts using 4903839 bytes
- 105i,14n,100p,1122b,2104s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf>{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (24 pages, 680056 bytes).
+ 105i,14n,100p,1547b,2437s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf>{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on main.pdf (29 pages, 4910524 bytes).
 
-PDF statistics: 502 PDF objects out of 1000 (max. 8388607)
- 425 compressed objects within 5 object streams
- 120 named destinations out of 1000 (max. 131072)
- 248 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 551 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 134 named destinations out of 1000 (max. 131072)
+ 240 words of extra memory for PDF output out of 10000 (max. 100000000)
 
