@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.3 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{nyt/global//global/global/global}
-    \entry{eggleton1983}{article}{}{}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{eggleton1983}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=dca83cc53d25cba3930c0e586dd41167}{%
            family={{Eggleton}},
@@ -30,12 +30,10 @@
       }
       \strng{namehash}{dca83cc53d25cba3930c0e586dd41167}
       \strng{fullhash}{dca83cc53d25cba3930c0e586dd41167}
-      \strng{fullhashraw}{dca83cc53d25cba3930c0e586dd41167}
       \strng{bibnamehash}{dca83cc53d25cba3930c0e586dd41167}
       \strng{authorbibnamehash}{dca83cc53d25cba3930c0e586dd41167}
       \strng{authornamehash}{dca83cc53d25cba3930c0e586dd41167}
       \strng{authorfullhash}{dca83cc53d25cba3930c0e586dd41167}
-      \strng{authorfullhashraw}{dca83cc53d25cba3930c0e586dd41167}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{extradatescope}{labelyear}
@@ -52,7 +50,7 @@
       \verb 10.1086/160960
       \endverb
     \endentry
-    \entry{jermyn2023}{article}{}{}
+    \entry{jermyn2023}{article}{}
       \name{author}{13}{}{%
         {{un=0,uniquepart=base,hash=66d427d68ccd48cfebe44d859a7c745b}{%
            family={{Jermyn}},
@@ -135,12 +133,10 @@
       }
       \strng{namehash}{ec6de5207869c36b70afd6f3c252c416}
       \strng{fullhash}{a807f2cf947068ae3d614884bdf72800}
-      \strng{fullhashraw}{a807f2cf947068ae3d614884bdf72800}
       \strng{bibnamehash}{ec6de5207869c36b70afd6f3c252c416}
       \strng{authorbibnamehash}{ec6de5207869c36b70afd6f3c252c416}
       \strng{authornamehash}{ec6de5207869c36b70afd6f3c252c416}
       \strng{authorfullhash}{a807f2cf947068ae3d614884bdf72800}
-      \strng{authorfullhashraw}{a807f2cf947068ae3d614884bdf72800}
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{extradatescope}{labelyear}
@@ -158,7 +154,7 @@
       \verb 10.3847/1538-4365/acb1b4
       \endverb
     \endentry
-    \entry{kolbritter1990}{article}{}{}
+    \entry{kolbritter1990}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=fff8de0c39e018f109ed9e350738b937}{%
            family={{Kolb}},
@@ -175,12 +171,10 @@
       }
       \strng{namehash}{685f3f2cb8f84085d5c4aa455efae893}
       \strng{fullhash}{685f3f2cb8f84085d5c4aa455efae893}
-      \strng{fullhashraw}{685f3f2cb8f84085d5c4aa455efae893}
       \strng{bibnamehash}{685f3f2cb8f84085d5c4aa455efae893}
       \strng{authorbibnamehash}{685f3f2cb8f84085d5c4aa455efae893}
       \strng{authornamehash}{685f3f2cb8f84085d5c4aa455efae893}
       \strng{authorfullhash}{685f3f2cb8f84085d5c4aa455efae893}
-      \strng{authorfullhashraw}{685f3f2cb8f84085d5c4aa455efae893}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
@@ -194,7 +188,7 @@
       \field{pages}{385\bibrangedash 392}
       \range{pages}{8}
     \endentry
-    \entry{paxton2011}{article}{}{}
+    \entry{paxton2011}{article}{}
       \name{author}{6}{ul=2}{%
         {{un=0,uniquepart=base,hash=264369391be8f4fc6bdfbdba197cc0aa}{%
            family={{Paxton}},
@@ -235,12 +229,10 @@
       }
       \strng{namehash}{0ee49bcadd6f0d0918c45a1a35151a72}
       \strng{fullhash}{3a4562653dfa1f22f5da07d9949b82d4}
-      \strng{fullhashraw}{3a4562653dfa1f22f5da07d9949b82d4}
       \strng{bibnamehash}{0ee49bcadd6f0d0918c45a1a35151a72}
       \strng{authorbibnamehash}{0ee49bcadd6f0d0918c45a1a35151a72}
       \strng{authornamehash}{0ee49bcadd6f0d0918c45a1a35151a72}
       \strng{authorfullhash}{3a4562653dfa1f22f5da07d9949b82d4}
-      \strng{authorfullhashraw}{3a4562653dfa1f22f5da07d9949b82d4}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
@@ -258,7 +250,7 @@
       \verb 10.1088/0067-0049/192/1/3
       \endverb
     \endentry
-    \entry{paxton2013}{article}{}{}
+    \entry{paxton2013}{article}{}
       \name{author}{10}{ul=2}{%
         {{un=0,uniquepart=base,hash=264369391be8f4fc6bdfbdba197cc0aa}{%
            family={{Paxton}},
@@ -323,12 +315,10 @@
       }
       \strng{namehash}{aa5f2a8b257ae18940fd91c10090921c}
       \strng{fullhash}{4cf5d63b6982e4d62d5a42f257728270}
-      \strng{fullhashraw}{4cf5d63b6982e4d62d5a42f257728270}
       \strng{bibnamehash}{aa5f2a8b257ae18940fd91c10090921c}
       \strng{authorbibnamehash}{aa5f2a8b257ae18940fd91c10090921c}
       \strng{authornamehash}{aa5f2a8b257ae18940fd91c10090921c}
       \strng{authorfullhash}{4cf5d63b6982e4d62d5a42f257728270}
-      \strng{authorfullhashraw}{4cf5d63b6982e4d62d5a42f257728270}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
@@ -346,7 +336,7 @@
       \verb 10.1088/0067-0049/208/1/4
       \endverb
     \endentry
-    \entry{paxton2015}{article}{}{}
+    \entry{paxton2015}{article}{}
       \name{author}{11}{ul=2}{%
         {{un=0,uniquepart=base,hash=264369391be8f4fc6bdfbdba197cc0aa}{%
            family={{Paxton}},
@@ -417,12 +407,10 @@
       }
       \strng{namehash}{8115ceea277caf8b72b58a35879f9fde}
       \strng{fullhash}{8fadb3293da5f6b7c186fb999bd6514e}
-      \strng{fullhashraw}{8fadb3293da5f6b7c186fb999bd6514e}
       \strng{bibnamehash}{8115ceea277caf8b72b58a35879f9fde}
       \strng{authorbibnamehash}{8115ceea277caf8b72b58a35879f9fde}
       \strng{authornamehash}{8115ceea277caf8b72b58a35879f9fde}
       \strng{authorfullhash}{8fadb3293da5f6b7c186fb999bd6514e}
-      \strng{authorfullhashraw}{8fadb3293da5f6b7c186fb999bd6514e}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
@@ -440,7 +428,7 @@
       \verb 10.1088/0067-0049/220/1/15
       \endverb
     \endentry
-    \entry{paxton2018}{article}{}{}
+    \entry{paxton2018}{article}{}
       \name{author}{13}{ul=2}{%
         {{un=0,uniquepart=base,hash=264369391be8f4fc6bdfbdba197cc0aa}{%
            family={{Paxton}},
@@ -523,12 +511,10 @@
       }
       \strng{namehash}{d930009e2515423831e5e4ca6f3f8786}
       \strng{fullhash}{1762a9e3f75bde6dcfcf711ca078753c}
-      \strng{fullhashraw}{1762a9e3f75bde6dcfcf711ca078753c}
       \strng{bibnamehash}{d930009e2515423831e5e4ca6f3f8786}
       \strng{authorbibnamehash}{d930009e2515423831e5e4ca6f3f8786}
       \strng{authornamehash}{d930009e2515423831e5e4ca6f3f8786}
       \strng{authorfullhash}{1762a9e3f75bde6dcfcf711ca078753c}
-      \strng{authorfullhashraw}{1762a9e3f75bde6dcfcf711ca078753c}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
@@ -546,7 +532,7 @@
       \verb 10.3847/1538-4365/aaa5a8
       \endverb
     \endentry
-    \entry{paxton2019}{article}{}{}
+    \entry{paxton2019}{article}{}
       \name{author}{17}{ul=2}{%
         {{un=0,uniquepart=base,hash=264369391be8f4fc6bdfbdba197cc0aa}{%
            family={{Paxton}},
@@ -653,12 +639,10 @@
       }
       \strng{namehash}{7fd9a4a39f9afff28b058f6e2ffbbcd1}
       \strng{fullhash}{67d148f9044c60103a51476950bf735a}
-      \strng{fullhashraw}{67d148f9044c60103a51476950bf735a}
       \strng{bibnamehash}{7fd9a4a39f9afff28b058f6e2ffbbcd1}
       \strng{authorbibnamehash}{7fd9a4a39f9afff28b058f6e2ffbbcd1}
       \strng{authornamehash}{7fd9a4a39f9afff28b058f6e2ffbbcd1}
       \strng{authorfullhash}{67d148f9044c60103a51476950bf735a}
-      \strng{authorfullhashraw}{67d148f9044c60103a51476950bf735a}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
@@ -676,7 +660,7 @@
       \verb 10.3847/1538-4365/ab2241
       \endverb
     \endentry
-    \entry{ritter1988}{article}{}{}
+    \entry{ritter1988}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=2cf7d4ab324e08ec60edf083cf696d14}{%
            family={{Ritter}},
@@ -687,12 +671,10 @@
       }
       \strng{namehash}{2cf7d4ab324e08ec60edf083cf696d14}
       \strng{fullhash}{2cf7d4ab324e08ec60edf083cf696d14}
-      \strng{fullhashraw}{2cf7d4ab324e08ec60edf083cf696d14}
       \strng{bibnamehash}{2cf7d4ab324e08ec60edf083cf696d14}
       \strng{authorbibnamehash}{2cf7d4ab324e08ec60edf083cf696d14}
       \strng{authornamehash}{2cf7d4ab324e08ec60edf083cf696d14}
       \strng{authorfullhash}{2cf7d4ab324e08ec60edf083cf696d14}
-      \strng{authorfullhashraw}{2cf7d4ab324e08ec60edf083cf696d14}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{extradatescope}{labelyear}
@@ -706,7 +688,7 @@
       \field{pages}{93\bibrangedash 100}
       \range{pages}{8}
     \endentry
-    \entry{townsend2013}{article}{}{}
+    \entry{townsend2013}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=a6dabc2a87fe1e0dc4a19d564b40edfa}{%
            family={{Townsend}},
@@ -723,12 +705,10 @@
       }
       \strng{namehash}{c5545b7d515ae4ce3cdff4d16fc2e76a}
       \strng{fullhash}{c5545b7d515ae4ce3cdff4d16fc2e76a}
-      \strng{fullhashraw}{c5545b7d515ae4ce3cdff4d16fc2e76a}
       \strng{bibnamehash}{c5545b7d515ae4ce3cdff4d16fc2e76a}
       \strng{authorbibnamehash}{c5545b7d515ae4ce3cdff4d16fc2e76a}
       \strng{authornamehash}{c5545b7d515ae4ce3cdff4d16fc2e76a}
       \strng{authorfullhash}{c5545b7d515ae4ce3cdff4d16fc2e76a}
-      \strng{authorfullhashraw}{c5545b7d515ae4ce3cdff4d16fc2e76a}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{extradatescope}{labelyear}
