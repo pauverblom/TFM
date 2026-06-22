@@ -1,14 +1,16 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'latex-output/main.blg'
-[33] biber-darwin:340> INFO - === Fri Jun 19, 2026, 16:59:17
-[41] Biber.pm:419> INFO - Reading 'latex-output/main.bcf'
-[79] Biber.pm:979> INFO - Found 12 citekeys in bib section 0
-[86] Biber.pm:4419> INFO - Processing section 0
-[92] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[93] bibtex.pm:1713> INFO - LaTeX decoding ...
-[100] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[180] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[180] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[180] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
-[188] bbl.pm:660> INFO - Writing 'latex-output/main.bbl' with encoding 'UTF-8'
-[202] bbl.pm:763> INFO - Output to latex-output/main.bbl
+[35] biber-darwin:340> INFO - === Mon Jun 22, 2026, 13:23:16
+[43] Biber.pm:419> INFO - Reading 'latex-output/main.bcf'
+[82] Biber.pm:979> INFO - Found 15 citekeys in bib section 0
+[89] Biber.pm:4419> INFO - Processing section 0
+[94] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[96] bibtex.pm:1713> INFO - LaTeX decoding ...
+[108] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[217] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[217] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[217] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
+[229] bbl.pm:660> INFO - Writing 'latex-output/main.bbl' with encoding 'UTF-8'
+[253] bbl.pm:763> INFO - Output to latex-output/main.bbl
+[253] Biber.pm:131> WARN - legacy month field 'sep' in entry 'NASAWebb2023Cepheids' is not an integer - this will probably not sort properly.
+[253] Biber.pm:133> INFO - WARNINGS: 1

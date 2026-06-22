@@ -5,6 +5,7 @@
   model_type = 'EVOL'  ! Obtain stellar structure from an evolutionary model
   file = 'LOGS/profile1.data.GYRE' ! Default profile
   file_format = 'MESA' ! File format of the evolutionary model
+  repair_As = .TRUE.
 /
 
 &mode

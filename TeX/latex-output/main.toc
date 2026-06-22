@@ -1,29 +1,30 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {}Resumen}{\es@scroman {i}}{chapter*.3}%
-\contentsline {chapter}{\numberline {}Prefacio}{\es@scroman {ii}}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Introducción}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Contexto Científico}{2}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}El problema de los Blue Stragglers}{2}{subsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1.1}Enfoque astrosismológico}{2}{subsubsection.1.1.1.1}%
-\contentsline {chapter}{\numberline {2}Hidrodinámica y Oscilaciones Estelares}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Ecuaciones Básicas de la Hidrodinámica}{3}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Aproximación Adiabática}{5}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Análisis Perturbativo}{6}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Marco Euleriano y Lagrangiano}{6}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Linealización del Sistema Hidrodinámico}{7}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Las Ecuaciones de Oscilación Estelar}{9}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Componentes Radiales y Horizontales}{9}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Separación de Variables y Problema de Autovalores}{11}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Oscilaciones Adiabáticas y Condiciones de Contorno}{13}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Naturaleza y Clasificación de los Modos de Oscilación}{15}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}La Aproximación de Cowling}{15}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Frecuencias Características y Atrapamiento}{15}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Modos de Presión (p-modes)}{17}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Modos de Gravedad (g-modes)}{17}{subsection.2.4.4}%
-\contentsline {chapter}{\numberline {3}Simulando Blue Stragglers}{18}{chapter.3}%
-\contentsline {section}{\numberline {3.1}MESA}{18}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Módulos y Física Integrada}{18}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Formación de Blue Stragglers}{19}{subsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.2.1}Estabilidad Numérica del Acretor y Ajustes del Solver}{21}{subsubsection.3.1.2.1}%
-\contentsline {section}{\numberline {3.2}GYRE}{24}{section.3.2}%
-\contentsline {chapter}{\numberline {}Referencias}{26}{figure.caption.13}%
+\contentsline {section}{\numberline {1.1}Blue Stragglers}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}HAYDN}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Objetivos y Arquitectura}{5}{subsection.1.2.1}%
+\contentsline {chapter}{\numberline {2}Hidrodinámica y Oscilaciones Estelares}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Ecuaciones Básicas de la Hidrodinámica}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Aproximación Adiabática}{9}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Análisis Perturbativo}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Marco Euleriano y Lagrangiano}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Linealización del Sistema Hidrodinámico}{11}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Las Ecuaciones de Oscilación Estelar}{13}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Componentes Radiales y Horizontales}{13}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Separación de Variables y Problema de Autovalores}{15}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Oscilaciones Adiabáticas y Condiciones de Contorno}{17}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Naturaleza y Clasificación de los Modos de Oscilación}{19}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}La Aproximación de Cowling}{19}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Frecuencias Características y Atrapamiento}{19}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Modos de Presión (p-modes)}{21}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Modos de Gravedad (g-modes)}{21}{subsection.2.4.4}%
+\contentsline {chapter}{\numberline {3}Creando Blue Stragglers}{23}{chapter.3}%
+\contentsline {section}{\numberline {3.1}MESA}{23}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Módulos y Física Integrada}{23}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Formación de Blue Stragglers}{24}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Estabilidad Numérica del Acretor y Ajustes del Solver}{26}{subsubsection.3.1.2.1}%
+\contentsline {section}{\numberline {3.2}GYRE}{29}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Evolución de la Blue Straggler}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Evolución de Estrellas Similares}{31}{section.4.1}%
+\contentsline {chapter}{\numberline {}Referencias}{31}{figure.caption.15}%

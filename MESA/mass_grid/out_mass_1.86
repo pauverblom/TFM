@@ -1,7 +1,7 @@
-DATE: 2026-06-16
-TIME: 13:18:59
- reading user weak rate file /home/pauver/mesa/mesa-26.04.1/data/rates_data/rate_tables/S13_r_be7_wk_li7.h5
- version_number r26.4.1
+DATE: 2026-06-22
+TIME: 11:55:04
+ reading user weak rate file /Users/pauverdeguer/mesa-25.12.1/data/rates_data/rate_tables/S13_r_be7_wk_li7.h5
+ version_number r25.12.1
  WARNING: Failed to find colors namelist in file: inlist
  read inlist_project
 
@@ -48,12 +48,12 @@ TIME: 13:18:59
  kap_option gs98
  kap_CO_option gs98_co
  kap_lowT_option lowT_fa05_gs98
-                                        OMP_NUM_THREADS          16
+                                        OMP_NUM_THREADS           4
 
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -99,7 +99,7 @@ save LOGS/profile2.data LOGS/profile2.data.GYRE for model 5
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -149,7 +149,7 @@ save LOGS/profile4.data LOGS/profile4.data.GYRE for model 15
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -199,7 +199,7 @@ save LOGS/profile6.data LOGS/profile6.data.GYRE for model 25
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -249,7 +249,7 @@ save LOGS/profile8.data LOGS/profile8.data.GYRE for model 35
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -300,7 +300,7 @@ save LOGS/profile11.data LOGS/profile11.data.GYRE for model 49
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -351,7 +351,7 @@ save LOGS/profile13.data LOGS/profile13.data.GYRE for model 55
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -402,7 +402,7 @@ save LOGS/profile16.data LOGS/profile16.data.GYRE for model 68
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -452,7 +452,7 @@ save LOGS/profile18.data LOGS/profile18.data.GYRE for model 75
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -503,7 +503,7 @@ save LOGS/profile21.data LOGS/profile21.data.GYRE for model 86
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -553,7 +553,7 @@ save LOGS/profile23.data LOGS/profile23.data.GYRE for model 95
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -605,7 +605,7 @@ save LOGS/profile26.data LOGS/profile26.data.GYRE for model 106
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -655,7 +655,7 @@ save LOGS/profile28.data LOGS/profile28.data.GYRE for model 115
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -705,7 +705,7 @@ save LOGS/profile30.data LOGS/profile30.data.GYRE for model 125
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -755,7 +755,7 @@ save LOGS/profile32.data LOGS/profile32.data.GYRE for model 135
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -806,7 +806,7 @@ save LOGS/profile35.data LOGS/profile35.data.GYRE for model 145
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -857,7 +857,7 @@ save LOGS/profile37.data LOGS/profile37.data.GYRE for model 155
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -907,7 +907,7 @@ save LOGS/profile39.data LOGS/profile39.data.GYRE for model 165
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -957,7 +957,7 @@ save LOGS/profile41.data LOGS/profile41.data.GYRE for model 175
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -1007,7 +1007,7 @@ save LOGS/profile43.data LOGS/profile43.data.GYRE for model 185
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -1057,7 +1057,7 @@ save LOGS/profile45.data LOGS/profile45.data.GYRE for model 195
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -1108,7 +1108,7 @@ save LOGS/profile47.data LOGS/profile47.data.GYRE for model 205
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -1136,7 +1136,7 @@ save photos/x211 for model 211
 termination code: xa_central_lower_limit
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -1145,5 +1145,5 @@ ________________________________________________________________________________
  4.6710E+00   7.471280   0.416498 -29.097148   0.043373 -99.000000   0.148355   0.979536   0.000880   0.020000   0.124341      3
  1.1272E+09   2.366998   1.298441 -99.000000 -99.000000  -8.067223   0.000000   0.000124   0.002085   0.019491  0.000E+00    lg_XH_cntr
 
-DATE: 2026-06-16
-TIME: 13:19:17
+DATE: 2026-06-22
+TIME: 11:57:32

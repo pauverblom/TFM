@@ -69,7 +69,7 @@ def format_age_bh(value, tick_number):
     elif abs(t - t_0_myr_bh) < 2.0:
         delta_kyr = (t - t_0_myr_bh) * 1000
         sign = '+' if delta_kyr >= 0 else ''
-        return f"$t_0$ {sign}{delta_kyr:.1f} kyr"
+        return f"$t_0${sign}{delta_kyr:.1f} kyr"
     else:
         return f"{t:.1f} Myr"
 
@@ -82,7 +82,7 @@ def format_age_rlof1(value, tick_number):
     elif abs(t - t_0_myr_h1) < 2.0:
         delta_kyr = (t - t_0_myr_h1) * 1000
         sign = '+' if delta_kyr >= 0 else ''
-        return f"$t_0$ {sign}{delta_kyr:.1f} kyr"
+        return f"$t_0${sign}{delta_kyr:.1f} kyr"
     else:
         return f"{t:.1f} Myr"
 
@@ -95,7 +95,7 @@ def format_age_rlof2(value, tick_number):
     elif abs(t - t_0_myr_h2) < 2.0:
         delta_kyr = (t - t_0_myr_h2) * 1000
         sign = '+' if delta_kyr >= 0 else ''
-        return f"$t_0$ {sign}{delta_kyr:.1f} kyr"
+        return f"$t_0${sign}{delta_kyr:.1f} kyr"
     else:
         return f"{t:.1f} Myr"
 
@@ -110,20 +110,22 @@ alpha_val = 0.8
 fig2, ax2 = plt.subplots(figsize=(7.5, 6.0))
 
 ax2.plot(bh.model_number, bh.period_days, color='#8E44AD', label='Período', linewidth=2.5)
-ax2.set_ylabel('Período (días)', color='black', fontsize=14)
-ax2.tick_params(axis='y', colors='black')
+ax2.set_ylabel('Período (días)', color='black', fontsize=15)
+ax2.tick_params(axis='y', colors='black', labelsize=13)
+ax2.tick_params(axis='x', labelsize=13)
 
 ax2b = ax2.twinx()
 ax2b.plot(bh.model_number, bh.binary_separation, color='#27AE60', label='Separación', linestyle='-', linewidth=2.5)
 ax2b.set_ylabel('Separación ($R_\odot$)', color='black', fontsize=14)
-ax2b.tick_params(axis='y', colors='black')
+ax2b.tick_params(axis='y', colors='black', labelsize=15)
 
 # Línea vertical indicando el inicio de la transferencia de masa
 ax2.axvline(bh.model_number[idx_start_bh], color='gray', linestyle=':', linewidth=2, alpha=0.8, label='Inicio Transf. Masa')
 
 ax2.xaxis.set_major_formatter(ticker.FuncFormatter(format_age_bh))
+ax2.set_xlim(bh.model_number[0], bh.model_number[-1])
 ax2.set_xlabel('Edad', fontsize=14)
-ax2.set_title('Evolución Orbital', fontsize=14)
+ax2.set_title('Evolución Orbital', fontsize=16)
 
 # Combinar leyendas de ambos ejes
 lines, labels = ax2.get_legend_handles_labels()
@@ -138,9 +140,11 @@ fig3, ax3 = plt.subplots(figsize=(7.5, 6.0))
 ax3.plot(bh.model_number, bh.lg_mtransfer_rate, color='red', linewidth=1.5)
 ax3.axvline(bh.model_number[idx_start_bh], color='gray', linestyle=':', linewidth=2, alpha=0.8, label='Inicio Transf. Masa')
 ax3.xaxis.set_major_formatter(ticker.FuncFormatter(format_age_bh))
-ax3.set_xlabel('Edad', fontsize=14)
+ax3.set_xlim(bh.model_number[0], bh.model_number[-1])
+ax3.tick_params(axis='both', labelsize=13)
+ax3.set_xlabel('Edad', fontsize=16)
 ax3.set_ylabel('$\log \dot{M}$ ($M_\odot$/año)', fontsize=14)
-ax3.set_title('Tasa de Transferencia de Masa', fontsize=14)
+ax3.set_title('Tasa de Transferencia de Masa', fontsize=16)
 ax3.set_ylim(-25, 0)
 ax3.grid(True, linestyle='--', alpha=0.7)
 fig3.savefig(os.path.join(script_dir, 'mass_transfer_rate.png'), dpi=300, bbox_inches='tight')
@@ -227,7 +231,7 @@ def get_split_formatter(h, idx_mt_start):
                 if abs(delta_kyr) < 0.1:
                     return f"$t_0$"
                 sign = '+' if delta_kyr >= 0 else ''
-                return f"$t_0$ {sign}{delta_kyr:.1f} kyr"
+                return f"$t_0${sign}{delta_kyr:.1f} kyr"
             else:
                 return f"{t:.1f} Myr"
     return ticker.FuncFormatter(formatter)
@@ -257,6 +261,7 @@ ax5b.set_ylabel('Fracción de Masa')
 ax5b.yaxis.set_major_formatter(log_formatter)
 ax5b.legend()
 ax5b.grid(True, linestyle='--', alpha=0.7)
+ax5b.set_xlim(0, 1)
 
 ax5b.xaxis.set_major_formatter(formatter_h1)
 
@@ -351,11 +356,12 @@ def plot_mkipp_diagram(ax, logs_dir, title, color_mt, cmap_name="Blues", cores=[
                 bot_vals = np.where(bot_vals < 0, np.nan, bot_vals)
                 ax.fill_between(x_vals, bot_vals, top_vals, color='lightgray', alpha=0.5, hatch='//', edgecolor='none')
         
-        ax.set_xlim(min(x_vals), max(x_vals))
+        pass
     
     # Add vertical lines for MT using age logic mapped to model_number
     # Access the specific history for this directory to find MT model numbers
     h_local = mr.MesaData(os.path.join(logs_dir, 'history.data'))
+    ax.set_xlim(h_local.model_number[0], h_local.model_number[-1])
     idx_start = np.argmin(np.abs(h_local.star_age - age_mt_start))
     idx_end = np.argmin(np.abs(h_local.star_age - age_mt_end))
     ax.axvline(h_local.model_number[idx_start], color=color_mt, linestyle=':', linewidth=2, alpha=0.8)
@@ -390,11 +396,12 @@ def plot_mkipp_diagram(ax, logs_dir, title, color_mt, cmap_name="Blues", cores=[
         elif abs(t - t_0_myr) < 2.0:
             delta_kyr = (t - t_0_myr) * 1000
             sign = '+' if delta_kyr >= 0 else ''
-            return f"$t_0$ {sign}{delta_kyr:.1f} kyr"
+            return f"$t_0${sign}{delta_kyr:.1f} kyr"
         else:
             return f"{t:.1f} Myr"
             
     ax.xaxis.set_major_formatter(ticker.FuncFormatter(format_age))
+    ax.tick_params(axis='both', labelsize=12)
     if show_xlabel:
         ax.set_xlabel('Edad', fontsize=14)
     else:
@@ -403,7 +410,7 @@ def plot_mkipp_diagram(ax, logs_dir, title, color_mt, cmap_name="Blues", cores=[
     ax.set_ylabel('Masa ($M_\odot$)', fontsize=14)
 
 print("Generando Diagramas de Kippenhahn combinados usando mkipp...")
-fig_kipp, (ax_kipp1, ax_kipp2) = plt.subplots(2, 1, figsize=(7.5, 12.5), sharex=True)
+fig_kipp, (ax_kipp1, ax_kipp2) = plt.subplots(2, 1, figsize=(8.5, 12.5), sharex=True)
 fig_kipp.subplots_adjust(hspace=0.08)
 
 plot_mkipp_diagram(
@@ -427,7 +434,7 @@ plot_mkipp_diagram(
 fig_kipp.savefig(os.path.join(script_dir, 'kippenhahn_combined.png'), dpi=300, bbox_inches='tight')
 
 # 8. Evolución del Radio vs Lóbulo de Roche
-fig8, (ax8a, ax8b) = plt.subplots(2, 1, figsize=(7.5, 12.5), sharex=True)
+fig8, (ax8a, ax8b) = plt.subplots(2, 1, figsize=(6.5, 12.5), sharex=True)
 fig8.suptitle('Evolución del Radio Estelar\nvs Lóbulo de Roche', fontsize=16, y=0.92)
 fig8.subplots_adjust(hspace=0.05)
 
@@ -441,7 +448,9 @@ if np.any(mask_rlof1):
     ax8a.fill_between(h1.model_number, R1, rl_1, where=mask_rlof1, color=donor_color, alpha=0.3, label='Desbordamiento (RLOF)')
 ax8a.axvline(h1.model_number[idx_mt_start_1], color=donor_color, linestyle=':', linewidth=2, alpha=0.8, label='Inicio Transf. Masa')
 
+ax8a.set_xlim(h1.model_number[0], h1.model_number[-1])
 ax8a.set_ylabel('Radio ($R_\odot$)', fontsize=14)
+ax8a.tick_params(axis='both', labelsize=11)
 ax8a.grid(True, linestyle='--', alpha=0.7)
 ax8a.legend()
 
@@ -461,6 +470,7 @@ if 'rl_2' in h2.bulk_names:
     ax8b.axvline(h2.model_number[idx_mt_start_2], color=accretor_color, linestyle=':', linewidth=2, alpha=0.8, label='Inicio Transf. Masa')
 
     ax8b.set_ylabel('Radio ($R_\odot$)', fontsize=14)
+    ax8b.tick_params(axis='both', labelsize=11)
     ax8b.grid(True, linestyle='--', alpha=0.7)
     ax8b.legend()
 

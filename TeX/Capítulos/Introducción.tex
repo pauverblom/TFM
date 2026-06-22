@@ -1,12 +1,38 @@
 \chapter{Introducción}
 
-Este es el capítulo de introducción.
+\section{Blue Stragglers}
 
-\section{Contexto Científico}
-Esta es una sección principal con el nuevo estilo profesional (fuente sans-serif y línea separadora azul oscuro).
+\lipsum[1-12]
+\section{HAYDN}
+La propuesta de misión HAYDN (acrónimo en inglés de High-precision AsteroseismologY in DeNse stellar fields) \citep{HAYDN} es una propuesta de misión espacial de clase media europea concebida en el marco del programa científico a largo plazo Voyage 2050 de la Agencia Espacial Europea. Actualmente, HAYDN compite con otras propuestas de misión para la misión M8 de la ESA, tras haber superado la primera fase de selección y tener una buena base tras su evaluación inicial en la anterior convocatoria (M7). El proyecto está liderado por Andrea Miglio (Universidad de Bolonia) como Investigador Principal y Benoît Mosser (Observatorio de París) como Co-IP, y cuenta con un extenso consorcio internacional de más de 200 científicos (entre ellos, Andrés Moya Bedón, tutor del presente proyecto. Él es Investigador Principal de dicha misión en España y Co-Investigador Principal a nivel global.)
 
-\subsection{El problema de los Blue Stragglers}
-Esta es una subsección que mantiene el color institucional pero sin la línea inferior, creando una jerarquía visual muy limpia.
+El objetivo de HAYDN es obtener series temporales fotométricas de alta precisión, alta cadencia y larga duración para grandes muestras de estrellas situadas en entornos estelares densos y ``controlados'', como son los cúmulos estelares, el bulbo de la Vía Láctea y galaxias enanas vecinas.
 
-\subsubsection{Enfoque astrosismológico}
-Finalmente, esta es una sub-subsección, con un estilo en cursiva para distinguirla de las subsecciones manteniendo la legibilidad.
+En la década pasada, diversas misiones como CoRoT, Kepler y TESS han permitido obtener resultados de un alto valor científico en el marco de la astrosismología. Sin embargo el propósito de dichas misiones no era el estudio de las oscilaciones estelares, sino el de detectar exoplanetas a través del método de tránsitos en estrellas brillantes del campo galáctico. El problema que presentan para la toma de datos astrosismológicos es que utilizan instrumentos con tamaños de píxel muy grandes en el cielo (TESS, por ejemplo, tiene píxeles que abarcan $20$ segundos de arco).
+
+Este tamaño de píxel tan extenso impide tomar series fotométricas de estrellas individuales cuando estas se encuentran en campos altamente poblados, como son los cúmulos estelares densos y el centro galáctico debido a la severa contaminación por el solapamiento de la luz de estrellas vecinas. HAYDN soluciona esto empleando un tamaño de píxel considerablemente menor ($1"$ o menor) y un campo de visión más concentrado (alrededor de un grado). Esto le permite resolver estrellas densamente agrupadas.
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Imagenes/cepheids.png}
+    \caption{Imagen mostrando la galaxia NGC 5584. La visualización ilustra cómo el telescopio Webb (NIRCam) logra separar una estrella Cefeida (punto naranja) de la multitud de estrellas de fondo (puntos azules), una distinción que la menor resolución del Hubble (WFC3-IR) en el infrarrojo cercano no permitía hacer con claridad, como se ve en los recuadros ampliados. Imagen tomada de \citet{NASAWebb2023Cepheids}}
+\end{figure}
+
+\subsection{Objetivos y Arquitectura}
+
+Como objetivos científicos, HAYDN abordará los siguientes pilares principales:
+
+\textbf{Astrofísica estelar sin precedentes:} HAYDN podrá poner a prueba, contrastar y calibrar una gran cantidad de modelos estelares mediante la obtención de observables de estrellas en cúmulos estelares. Esto permitirá estudiar el transporte interno de elementos químicos en el interior estelar y su rotación, la pérdida de masa en la rama de las gigantes rojas y los mecanismos de formación de Blue Stragglers y otros productos de fusiones o transferencias de masa entre sistemas complejos.
+
+\textbf{Formación y evolución de cúmulos estelares:} HAYDN brindará edades absolutas increíblemente precisas de cúmulos globulares, algo que es de gran utilidad para datar el Universo temprano. Además, ayudará a resolver el misterio de las ``poblaciones múltiples'' (constituyentes de un mismo cúmulo pero formados por generaciones de estrellas diferentes, de distinta edad y composición) en los cúmulos globulares (como Omega Centauri o 47 Tucanae) permitiendo la medición asterosísmica directa de las anomalías en la abundancia de helio estelar en dichos entornos. Además, sus mediciones restringirán la posible existencia de agujeros negros de masa intermedia en los centros de estos cúmulos.
+
+\textbf{Historia de ensamblaje y quimiodinámica de la Vía Láctea y galaxias enanas:} HAYDN tiene como objetivo realizar astrosismología galáctica. Entre sus posibles objetos de estudio se encuentran el Bulbo de la Vía Láctea, donde podrá revelar las edades reales de distintas poblaciones de interés, permitiendo datar la formación de la barra galáctica y otras galaxias enanas y restos galácticos, como el cúmulo Omega Centauri o la galaxia Esferoidal Enana de Sagitario, permitiendo dilucidar su historial de formación estelar.
+
+
+Para cumplir estos objetivos, la arquitectura preliminar de HAYDN contempla:
+
+\begin{itemize}
+    \item Un telescopio con un espejo primario de unos 90 cm de diámetro.
+    \item Campañas de observación de larga duración (6, 12 y hasta 24 meses continuos) sobre objetivos específicos, crucial para obtener la resolución frecuencial necesaria para detectar la fina estructura de modos de pulsación mezclados (p y g) y medir perfiles de rotación.
+    \item Una importante colaboración con otros proyectos espectroscópicos terrestres e instrumentos, como el futuro HRMOS y estudios de Gaia, permitiendo incrementar drásticamente su valor científico.
+\end{itemize}

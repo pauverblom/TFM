@@ -3,12 +3,12 @@ import numpy as np
 import os
 from wsssss.inlists.create_grid import MesaGrid
 
-base_dir = '/home/pauver/TFM/MESA/evolve_1.8_mass_star'
-grid_dir = '/home/pauver/TFM/MESA/mass_grid'
+base_dir = '/Users/pauverdeguer/TFM/MESA/evolve_1.8_mass_star'
+grid_dir = '/Users/pauverdeguer/TFM/MESA/mass_grid'
 
 # Create grid generator
 grid = MesaGrid(
-    mesa_dir='/home/pauver/mesa/mesa-26.04.1',
+    mesa_dir='/Users/pauverdeguer/mesa-25.12.1',
     inlist_filename='inlist',
     starjob_filename='inlist_project',
     controls_filename='inlist_project',
