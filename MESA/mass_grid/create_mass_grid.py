@@ -3,12 +3,12 @@ import numpy as np
 import os
 from wsssss.inlists.create_grid import MesaGrid
 
-base_dir = '/Users/pauverdeguer/TFM/MESA/evolve_1.8_mass_star'
-grid_dir = '/Users/pauverdeguer/TFM/MESA/mass_grid'
+base_dir = '/home/pauver/repos/pauverblom/TFM/MESA/evolve_1.8_mass_star'
+grid_dir = '/home/pauver/repos/pauverblom/TFM/MESA/mass_grid'
 
 # Create grid generator
 grid = MesaGrid(
-    mesa_dir='/Users/pauverdeguer/mesa-25.12.1',
+    mesa_dir='/home/pauver/mesa/mesa-26.04.1',
     inlist_filename='inlist',
     starjob_filename='inlist_project',
     controls_filename='inlist_project',
@@ -24,7 +24,7 @@ for d in ['src', 'make']:
     grid.add_dir(os.path.join(base_dir, d))
 
 # Override with an array of initial masses
-masses = np.round(np.arange(1.75, 1.90, 0.01), 2)
+masses = np.round(np.arange(1.79, 1.84, 0.01), 2)
 grid.controls['initial_mass'] = masses.tolist()
 
 # Baseline simple star parameters

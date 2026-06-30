@@ -1,22 +1,22 @@
-\chapter{Evolución de la Blue Straggler}
+\chapter{Evolución y Comparación de la Blue Straggler}
 
 Una vez la simulación de la interacción entre la estrella de $2 M_\odot$ y la de $1 M_\odot$ (nuestra blue straggler ahora), esta simulación se deja de lado: no tiene sentido alguno continuar evolucionando dos estrellas que no van a voler a interactuar, especialmente cuando no estamos interesados en la física de una de ellas.
 
-Por lo tanto, se toma la última \texttt{PHOTO} creada por MESA (una \texttt{PHOTO} es un archivo de volcado binaro que guarda el estado completo de una estrella en un punto en concreto de la simulación), y se utiliza como punto de partida de una simulación secundaria, consiguiendo así la historia entera de la Blue Straggler antes de la TAMS.
+Por lo tanto, se toma la última \texttt{PHOTO} creada por MESA (una \texttt{PHOTO} es un archivo de volcado binaro que guarda el estado completo de una estrella en un punto en concreto de la simulación), y se utiliza como punto de partida de una simulación secundaria, consiguiendo así la historia completa de la Blue Straggler antes de la TAMS.
 
 \section{Evolución de Estrellas Similares}
 
-Dado que, en una observación fotométrica, a menudo solo conocemos con certeza la luminosidad y temperatura de las estrellas observadas, naturalmente vamos a comparar nuestra Blue Straggler con estrellas que se encuentran en el mismo punto del diagrama HR. Para ver cómo se posiciona nuestra estrella en comparación con estrellas de masa similar durante su evolución, es necesario evolucionar una cuadrícula de estrellas en un intervalo de masas que englobe la masa de la Blue Straggler (ya que esperamos que evolucionen de manera similar).
+Dado que, en una observación fotométrica, a menudo solo conocemos con certeza la luminosidad y temperatura de las estrellas observadas, naturalmente vamos a comparar nuestra Blue Straggler con estrellas simples que se encuentren en el mismo punto del diagrama HR, permitiéndonos de esta forma comprobar las diferencias entre la hipótesis aislada y la binaria. Para ver cómo se posiciona nuestra estrella en comparación con estrellas de masa similar durante su evolución, es necesario evolucionar una cuadrícula de estrellas en un intervalo de masas que englobe la masa de la Blue Straggler (ya que esperamos que evolucionen de manera similar).
 
-Para ello, se emplea el repositorio \texttt{wsssss} \textit{(Walter's Set of Scripts for Studying Simulated Stars)}, el cual contiene una serie de scripts muy útiles para crear y simular de forma simultánea cuadrículas de estrellas con MESA, actuando como una ``envoltura'' al código de simulación.
+Para ello, se emplea el repositorio \texttt{wsssss} \textit{(Walter's Set of Scripts for Studying Simulated Stars)} \citep{wsssss}, el cual contiene una serie de scripts muy útiles para crear y simular de forma simultánea cuadrículas de estrellas con MESA, actuando como una ``envoltura'' al código de simulación.
 
 La evolución de esta cuadrícula de estrellas simulada y de la Blue Straggler puede verse en la figura \ref{fig:sim_estrellas}
 
 Se aprecia cómo la Blue Straggler evoluciona a temperaturas superiores que estrellas similares en masa (como es el caso de la estrella de $1.82 M_\odot$), fruto de su estructura interior rejuvenecida.
 
-\begin{figure}[htpb]
-    \centering
-    \includegraphics[width=\linewidth]{Imagenes/mass_grid_comparison.png}
-    \caption{Trazas en el diagrama HR de distintas estrellas con masas desde $1.75 M_\odot$ hasta $1.90 M_\odot$. Se incluye la traza de la Blue Straggler en azul. En cada traza se han representado diversos puntos, correspondientes a los valores indicados de la fracción de hidrógeno en el núcleo de cada estrella.}
-    \label{fig:sim_estrellas}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{Imagenes/mass_grid_comparison.png}
+  \caption{Trazas en el diagrama HR de distintas estrellas con masas desde $1.75 M_\odot$ hasta $1.90 M_\odot$. Se incluye la traza de la Blue Straggler en azul. En cada traza se han representado diversos puntos, correspondientes a los valores indicados de la fracción de hidrógeno en el núcleo de cada estrella.}
+  \label{fig:sim_estrellas}
 \end{figure}

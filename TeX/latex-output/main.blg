@@ -1,16 +1,18 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is 'latex-output/main.blg'
-[35] biber-darwin:340> INFO - === Mon Jun 22, 2026, 13:23:16
-[43] Biber.pm:419> INFO - Reading 'latex-output/main.bcf'
-[82] Biber.pm:979> INFO - Found 15 citekeys in bib section 0
-[89] Biber.pm:4419> INFO - Processing section 0
-[94] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[96] bibtex.pm:1713> INFO - LaTeX decoding ...
-[108] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[217] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[217] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[217] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
-[229] bbl.pm:660> INFO - Writing 'latex-output/main.bbl' with encoding 'UTF-8'
-[253] bbl.pm:763> INFO - Output to latex-output/main.bbl
-[253] Biber.pm:131> WARN - legacy month field 'sep' in entry 'NASAWebb2023Cepheids' is not an integer - this will probably not sort properly.
-[253] Biber.pm:133> INFO - WARNINGS: 1
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'latex-output/main.blg'
+[20] biber:342> INFO - === lun jun 29, 2026, 17:43:59
+[26] Biber.pm:421> INFO - Reading 'latex-output/main.bcf'
+[48] Biber.pm:1002> INFO - Found 21 citekeys in bib section 0
+[53] Biber.pm:4487> INFO - Processing section 0
+[57] Biber.pm:4678> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[58] bibtex.pm:1713> INFO - LaTeX decoding ...
+[65] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[172] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[172] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[172] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
+[186] bbl.pm:676> INFO - Writing 'latex-output/main.bbl' with encoding 'UTF-8'
+[193] bbl.pm:779> INFO - Output to latex-output/main.bbl
+[193] Biber.pm:132> WARN - legacy month field 'sep' in entry 'NASAWebb2023Cepheids' is not an integer - this will probably not sort properly.
+[193] Biber.pm:132> WARN - BibTeX subsystem: /tmp/biber_tmp_wtVb/f4d088b3f9f145b5c3058da33afd57d4_33140.utf8, line 210, warning: undefined macro "July"
+[193] Biber.pm:132> WARN - I didn't find a database entry for 'christensendalsgaard_oscillations_2019' (section 0)
+[193] Biber.pm:134> INFO - WARNINGS: 3

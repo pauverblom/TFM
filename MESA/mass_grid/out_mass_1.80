@@ -1,7 +1,7 @@
-DATE: 2026-06-22
-TIME: 11:47:12
- reading user weak rate file /Users/pauverdeguer/mesa-25.12.1/data/rates_data/rate_tables/S13_r_be7_wk_li7.h5
- version_number r25.12.1
+DATE: 2026-06-29
+TIME: 22:23:06
+ reading user weak rate file /home/pauver/mesa/mesa-26.04.1/data/rates_data/rate_tables/S13_r_be7_wk_li7.h5
+ version_number r26.4.1
  WARNING: Failed to find colors namelist in file: inlist
  read inlist_project
 
@@ -48,12 +48,12 @@ TIME: 11:47:12
  kap_option gs98
  kap_CO_option gs98_co
  kap_lowT_option lowT_fa05_gs98
-                                        OMP_NUM_THREADS           4
+                                        OMP_NUM_THREADS          16
 
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -63,7 +63,7 @@ ________________________________________________________________________________
  nz        2490
  s% num_retries           0
 
- retry:  logRho > hydro_mtx_max_allowed_logRho          26       1
+ retry:  logRho > hydro_mtx_max_allowed_logRho          27       1
                            1st model retry log10(dt/yr)    4.0607887415777535D+00
           1   7.304341   8291.019   1.067551   1.067551   1.800000   1.800000   0.697298   0.005043   0.280000  -2.481042   2490      1
  4.0608E+00   7.304341   0.195216 -38.701254  -0.311793 -99.000000   0.000000   0.282141   0.009319   0.020000   0.055353      5
@@ -106,7 +106,7 @@ save LOGS/profile2.data LOGS/profile2.data.GYRE for model 5
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -156,7 +156,7 @@ save LOGS/profile4.data LOGS/profile4.data.GYRE for model 15
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -206,7 +206,7 @@ save LOGS/profile6.data LOGS/profile6.data.GYRE for model 25
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -256,7 +256,7 @@ save LOGS/profile8.data LOGS/profile8.data.GYRE for model 35
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -306,7 +306,7 @@ save LOGS/profile10.data LOGS/profile10.data.GYRE for model 45
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -325,7 +325,6 @@ save photos/x050 for model 50
  7.1122E+00   7.315411   0.224779 -37.841311  -0.243722 -99.000000   0.000000   0.380079   0.006660   0.020000   0.057773      5
  2.6516E+08   1.860747   1.047936 -99.000000 -99.000000  -8.168450   0.000000   0.000041   0.002085   0.020227  0.000E+00      XHe_cntr
 
-save LOGS/profile12.data LOGS/profile12.data.GYRE for model 52
          53   7.315820   8134.855   1.049652   1.049652   1.800000   1.800000   0.594549   0.007463   0.280000  -2.553111    946      1
  7.1088E+00   7.315820   0.226598 -37.807135  -0.239648 -99.000000   0.000000   0.385238   0.006546   0.020000   0.057935      5
  2.7800E+08   1.861300   1.049290 -14.273349 -99.000000  -8.164210   0.000000   0.000042   0.002085   0.020213  0.000E+00      XHe_cntr
@@ -338,7 +337,7 @@ save LOGS/profile12.data LOGS/profile12.data.GYRE for model 52
  7.0993E+00   7.316641   0.230244 -37.739342  -0.231651 -99.000000   0.000000   0.395553   0.006325   0.020000   0.058267      5
  3.0333E+08   1.862452   1.051961 -14.148410 -99.000000  -8.155638   0.000000   0.000043   0.002085   0.020185  0.000E+00      XHe_cntr
 
-save LOGS/profile13.data LOGS/profile13.data.GYRE for model 55
+save LOGS/profile12.data LOGS/profile12.data.GYRE for model 55
          56   7.317051   8102.453   1.053644   1.053644   1.800000   1.800000   0.579169   0.007747   0.280000  -2.563202    951      1
  7.0942E+00   7.317051   0.232058 -37.705909  -0.227758 -99.000000   0.000000   0.400659   0.006219   0.020000   0.058434      5
  3.1575E+08   1.863042   1.053275 -99.000000 -99.000000  -8.151352   0.000000   0.000044   0.002085   0.020172  0.000E+00      XHe_cntr
@@ -358,7 +357,7 @@ save LOGS/profile13.data LOGS/profile13.data.GYRE for model 55
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -367,7 +366,7 @@ ________________________________________________________________________________
  7.0813E+00   7.318722   0.239336 -37.573128  -0.212793 -99.000000   0.000000   0.420987   0.005814   0.020000   0.059125      5
  3.6447E+08   1.865548   1.058461 -99.000000 -99.000000  -8.134060   0.000000   0.000046   0.002085   0.020121  0.000E+00      XHe_cntr
 
-save LOGS/profile14.data LOGS/profile14.data.GYRE for model 60
+save LOGS/profile13.data LOGS/profile13.data.GYRE for model 60
          61   7.319148   8047.815   1.060121   1.060121   1.800000   1.800000   0.553830   0.008182   0.280000  -2.579543    960      1
  7.0787E+00   7.319148   0.241169 -37.540045  -0.209185 -99.000000   0.000000   0.426061   0.005718   0.020000   0.059304      5
  3.7646E+08   1.866211   1.059744 -14.148410 -99.000000  -8.129679   0.000000   0.000047   0.002085   0.020109  0.000E+00      XHe_cntr
@@ -388,7 +387,7 @@ save LOGS/profile14.data LOGS/profile14.data.GYRE for model 60
  7.0675E+00   7.320890   0.248572 -37.407621  -0.195279 -99.000000   0.000000   0.446393   0.005348   0.020000   0.060045      5
  4.2368E+08   1.869039   1.064821 -99.000000 -99.000000  -8.111845   0.000000   0.000049   0.002085   0.020062  0.000E+00      XHe_cntr
 
-save LOGS/profile15.data LOGS/profile15.data.GYRE for model 65
+save LOGS/profile14.data LOGS/profile14.data.GYRE for model 65
          66   7.321336   7991.451   1.066460   1.066460   1.800000   1.800000   0.528454   0.008581   0.280000  -2.595493    967      1
  7.0644E+00   7.321336   0.250438 -37.374392  -0.191957 -99.000000   0.000000   0.451495   0.005259   0.020000   0.060237      5
  4.3528E+08   1.869797   1.066073 -99.000000 -99.000000  -8.107306   0.000000   0.000049   0.002085   0.020051  0.000E+00      XHe_cntr
@@ -408,7 +407,7 @@ save LOGS/profile15.data LOGS/profile15.data.GYRE for model 65
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -417,7 +416,7 @@ ________________________________________________________________________________
  7.0502E+00   7.323146   0.257971 -37.241946  -0.179092 -99.000000   0.000000   0.471907   0.004918   0.020000   0.061037      5
  4.8079E+08   1.872964   1.070969 -99.000000 -99.000000  -8.088701   0.000000   0.000051   0.002085   0.020008  0.000E+00      XHe_cntr
 
-save LOGS/profile16.data LOGS/profile16.data.GYRE for model 70
+save LOGS/profile15.data LOGS/profile15.data.GYRE for model 70
          71   7.323604   7932.958   1.072572   1.072572   1.800000   1.800000   0.503019   0.008947   0.280000  -2.611086    967      1
  7.0471E+00   7.323604   0.259867 -37.209040  -0.175991 -99.000000   0.000000   0.476983   0.004837   0.020000   0.061243      5
  4.9193E+08   1.873787   1.072168 -14.449440 -99.000000  -8.083964   0.000000   0.000052   0.002085   0.019998  0.000E+00      XHe_cntr
@@ -426,7 +425,6 @@ save LOGS/profile16.data LOGS/profile16.data.GYRE for model 70
  7.0444E+00   7.324065   0.261771 -37.176145  -0.172934 -99.000000   0.000000   0.482054   0.004757   0.020000   0.061452      5
  5.0301E+08   1.874626   1.073364 -99.000000 -99.000000  -8.079198   0.000000   0.000052   0.002085   0.019988  0.000E+00      XHe_cntr
 
-save LOGS/profile17.data LOGS/profile17.data.GYRE for model 72
          73   7.324534   7909.024   1.074960   1.074960   1.800000   1.800000   0.492859   0.009085   0.280000  -2.617195    967      1
  7.0419E+00   7.324534   0.263683 -37.142890  -0.169979 -99.000000   0.000000   0.487163   0.004678   0.020000   0.061666      5
  5.1402E+08   1.875502   1.074552 -14.273349 -99.000000  -8.074393   0.000000   0.000053   0.002085   0.019978  0.000E+00      XHe_cntr
@@ -439,7 +437,7 @@ save LOGS/profile17.data LOGS/profile17.data.GYRE for model 72
  7.0350E+00   7.325473   0.267523 -37.076950  -0.164106 -99.000000   0.000000   0.497341   0.004525   0.020000   0.062101      5
  5.3579E+08   1.877264   1.076888 -14.750470 -99.000000  -8.064654   0.000000   0.000054   0.002085   0.019959  0.000E+00      XHe_cntr
 
-save LOGS/profile18.data LOGS/profile18.data.GYRE for model 75
+save LOGS/profile16.data LOGS/profile16.data.GYRE for model 75
          76   7.325951   7872.500   1.078459   1.078459   1.800000   1.800000   0.477596   0.009283   0.280000  -2.626250    973      1
  7.0321E+00   7.325951   0.269449 -37.043688  -0.161300 -99.000000   0.000000   0.502455   0.004449   0.020000   0.062324      5
  5.4656E+08   1.878189   1.078043 -14.750470 -99.000000  -8.059745   0.000000   0.000054   0.002085   0.019949  0.000E+00      XHe_cntr
@@ -459,7 +457,7 @@ save LOGS/profile18.data LOGS/profile18.data.GYRE for model 75
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -468,7 +466,7 @@ ________________________________________________________________________________
  7.0172E+00   7.327881   0.277205 -36.911359  -0.150395 -99.000000   0.000000   0.522861   0.004161   0.020000   0.063252      5
  5.8873E+08   1.882014   1.082527 -14.750470 -99.000000  -8.039689   0.000000   0.000056   0.002085   0.019913  0.000E+00      XHe_cntr
 
-save LOGS/profile19.data LOGS/profile19.data.GYRE for model 80
+save LOGS/profile17.data LOGS/profile17.data.GYRE for model 80
          81   7.328368   7810.060   1.084053   1.084053   1.800000   1.800000   0.452165   0.009593   0.280000  -2.640971    976      1
  7.0142E+00   7.328368   0.279154 -36.878438  -0.147774 -99.000000   0.000000   0.527931   0.004093   0.020000   0.063490      5
  5.9906E+08   1.882998   1.083620 -99.000000 -99.000000  -8.034598   0.000000   0.000056   0.002085   0.019904  0.000E+00      XHe_cntr
@@ -489,7 +487,7 @@ save LOGS/profile19.data LOGS/profile19.data.GYRE for model 80
  7.0005E+00   7.330378   0.287043 -36.744535  -0.137957 -99.000000   0.000000   0.548453   0.003826   0.020000   0.064498      5
  6.3969E+08   1.887239   1.087880 -14.750470 -99.000000  -8.013750   0.000000   0.000058   0.002085   0.019870  0.000E+00      XHe_cntr
 
-save LOGS/profile20.data LOGS/profile20.data.GYRE for model 85
+save LOGS/profile18.data LOGS/profile18.data.GYRE for model 85
          86   7.330867   7745.462   1.089362   1.089362   1.800000   1.800000   0.426723   0.009878   0.280000  -2.655213    979      1
  6.9951E+00   7.330867   0.289014 -36.712335  -0.135448 -99.000000   0.000000   0.553414   0.003764   0.020000   0.064749      5
  6.4958E+08   1.888261   1.088911 -14.273349 -99.000000  -8.008497   0.000000   0.000059   0.002085   0.019863  0.000E+00      XHe_cntr
@@ -509,7 +507,7 @@ save LOGS/profile20.data LOGS/profile20.data.GYRE for model 85
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -518,12 +516,11 @@ ________________________________________________________________________________
  7.0225E+00   7.333441   0.299013 -36.545718  -0.124253 -99.000000   0.000000   0.578789   0.003463   0.020000   0.066105      5
  6.9792E+08   1.893963   1.093872 -14.449440 -99.000000  -7.981461   0.000000   0.000061   0.002085   0.019825  0.000E+00      XHe_cntr
 
-save LOGS/profile21.data LOGS/profile21.data.GYRE for model 90
+save LOGS/profile19.data LOGS/profile19.data.GYRE for model 90
          91   7.334005   7664.264   1.095355   1.095355   1.800000   1.800000   0.395977   0.010192   0.280000  -2.671752    991      1
  6.9985E+00   7.334005   0.301151 -36.509804  -0.122121 -99.000000   0.000000   0.584206   0.003402   0.020000   0.066409      5
  7.0788E+08   1.895267   1.094877 -99.000000 -99.000000  -7.975605   0.000000   0.000061   0.002085   0.019817  0.000E+00      XHe_cntr
 
-save LOGS/profile22.data LOGS/profile22.data.GYRE for model 91
          92   7.334551   7650.047   1.096318   1.096318   1.800000   1.800000   0.390728   0.010242   0.280000  -2.674502    992      1
  6.9836E+00   7.334551   0.303242 -36.475140  -0.119974 -99.000000   0.000000   0.589462   0.003343   0.020000   0.066709      5
  7.1751E+08   1.896530   1.095834 -99.000000 -99.000000  -7.969829   0.000000   0.000062   0.002085   0.019810  0.000E+00      XHe_cntr
@@ -540,7 +537,7 @@ save LOGS/profile22.data LOGS/profile22.data.GYRE for model 91
  6.9631E+00   7.336169   0.309405 -36.373448  -0.113920 -99.000000   0.000000   0.604794   0.003179   0.020000   0.067611      5
  7.4537E+08   1.900317   1.098577 -14.273349 -99.000000  -7.952756   0.000000   0.000063   0.002085   0.019789  0.000E+00      XHe_cntr
 
-save LOGS/profile23.data LOGS/profile23.data.GYRE for model 95
+save LOGS/profile20.data LOGS/profile20.data.GYRE for model 95
          96   7.336719   7593.781   1.099962   1.099962   1.800000   1.800000   0.370265   0.010431   0.280000  -2.685009    995      1
  6.9603E+00   7.336719   0.311469 -36.338839  -0.112105 -99.000000   0.000000   0.609953   0.003125   0.020000   0.067926      5
  7.5449E+08   1.901655   1.099464 -99.000000 -99.000000  -7.947001   0.000000   0.000063   0.002085   0.019782  0.000E+00      XHe_cntr
@@ -560,7 +557,7 @@ save LOGS/profile23.data LOGS/profile23.data.GYRE for model 95
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -569,7 +566,7 @@ ________________________________________________________________________________
  6.9450E+00   7.338936   0.319746 -36.202299  -0.104817 -99.000000   0.000000   0.630293   0.002922   0.020000   0.069214      5
  7.9013E+08   1.907050   1.102831 -14.750470 -99.000000  -7.923674   0.000000   0.000065   0.002085   0.019756  0.000E+00      XHe_cntr
 
-save LOGS/profile24.data LOGS/profile24.data.GYRE for model 100
+save LOGS/profile21.data LOGS/profile21.data.GYRE for model 100
 save photos/x100 for model 100
         101   7.339499   7521.789   1.104167   1.104167   1.800000   1.800000   0.344905   0.010649   0.280000  -2.697632    985      1
  6.9429E+00   7.339499   0.321835 -36.168040  -0.103082 -99.000000   0.000000   0.635344   0.002874   0.020000   0.069547      5
@@ -591,7 +588,7 @@ save photos/x100 for model 100
  6.9308E+00   7.341825   0.330299 -36.027972  -0.096658 -99.000000   0.000000   0.655792   0.002686   0.020000   0.070957      5
  8.3337E+08   1.914358   1.106755 -14.449440 -99.000000  -7.893698   0.000000   0.000067   0.002085   0.019726  0.000E+00      XHe_cntr
 
-save LOGS/profile25.data LOGS/profile25.data.GYRE for model 105
+save LOGS/profile22.data LOGS/profile22.data.GYRE for model 105
         106   7.342415   7447.034   1.108040   1.108040   1.800000   1.800000   0.319409   0.010850   0.280000  -2.709682   1011      1
  6.9263E+00   7.342415   0.332433 -35.992857  -0.095110 -99.000000   0.000000   0.660870   0.002641   0.020000   0.071322      5
  8.4181E+08   1.915875   1.107493 -14.449440 -99.000000  -7.887615   0.000000   0.000067   0.002085   0.019721  0.000E+00      XHe_cntr
@@ -611,7 +608,7 @@ save LOGS/profile25.data LOGS/profile25.data.GYRE for model 105
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -620,7 +617,7 @@ ________________________________________________________________________________
  6.9081E+00   7.344855   0.341049 -35.848822  -0.089532 -99.000000   0.000000   0.681456   0.002468   0.020000   0.072873      5
  8.7473E+08   1.922373   1.110234 -99.000000 -99.000000  -7.862987   0.000000   0.000069   0.002085   0.019699  0.000E+00      XHe_cntr
 
-save LOGS/profile26.data LOGS/profile26.data.GYRE for model 110
+save LOGS/profile23.data LOGS/profile23.data.GYRE for model 110
         111   7.345473   7369.530   1.111456   1.111456   1.800000   1.800000   0.293745   0.011036   0.280000  -2.721031   1027      1
  6.9040E+00   7.345473   0.343211 -35.812687  -0.088182 -99.000000   0.000000   0.686562   0.002426   0.020000   0.073275      5
  8.8275E+08   1.924045   1.110874 -99.000000 -99.000000  -7.856844   0.000000   0.000069   0.002085   0.019694  0.000E+00      XHe_cntr
@@ -641,7 +638,7 @@ save LOGS/profile26.data LOGS/profile26.data.GYRE for model 110
  6.8884E+00   7.348012   0.351872 -35.665763  -0.083284 -99.000000   0.000000   0.707012   0.002268   0.020000   0.074961      5
  9.1407E+08   1.931061   1.113257 -99.000000 -99.000000  -7.832489   0.000000   0.000071   0.002085   0.019674  0.000E+00      XHe_cntr
 
-save LOGS/profile27.data LOGS/profile27.data.GYRE for model 115
+save LOGS/profile24.data LOGS/profile24.data.GYRE for model 115
         116   7.348662   7290.484   1.114420   1.114420   1.800000   1.800000   0.268220   0.011205   0.280000  -2.731538   1017      1
  6.8848E+00   7.348662   0.354047 -35.628548  -0.082110 -99.000000   0.000000   0.712111   0.002230   0.020000   0.075401      5
  9.2174E+08   1.932886   1.113813 -99.000000 -99.000000  -7.826461   0.000000   0.000071   0.002085   0.019669  0.000E+00      XHe_cntr
@@ -661,7 +658,7 @@ save LOGS/profile27.data LOGS/profile27.data.GYRE for model 115
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -670,7 +667,7 @@ ________________________________________________________________________________
  6.8698E+00   7.351340   0.362790 -35.476475  -0.077863 -99.000000   0.000000   0.732552   0.002085   0.020000   0.077251      5
  9.5174E+08   1.940552   1.115853 -99.000000 -99.000000  -7.802615   0.000000   0.000073   0.002085   0.019650  0.000E+00      XHe_cntr
 
-save LOGS/profile28.data LOGS/profile28.data.GYRE for model 120
+save LOGS/profile25.data LOGS/profile25.data.GYRE for model 120
         121   7.352029   7209.678   1.116964   1.116964   1.800000   1.800000   0.242705   0.011360   0.280000  -2.741153   1019      1
  6.8663E+00   7.352029   0.364986 -35.437768  -0.076849 -99.000000   0.000000   0.737649   0.002050   0.020000   0.077734      5
  9.5909E+08   1.942547   1.116329 -14.449440 -99.000000  -7.796757   0.000000   0.000073   0.002085   0.019646  0.000E+00      XHe_cntr
@@ -691,7 +688,7 @@ save LOGS/profile28.data LOGS/profile28.data.GYRE for model 120
  6.8514E+00   7.354876   0.373821 -35.279289  -0.073133 -99.000000   0.000000   0.758010   0.001918   0.020000   0.079761      5
  9.8784E+08   1.950919   1.118053 -99.000000 -99.000000  -7.773638   0.000000   0.000074   0.002085   0.019629  0.000E+00      XHe_cntr
 
-save LOGS/profile29.data LOGS/profile29.data.GYRE for model 125
+save LOGS/profile26.data LOGS/profile26.data.GYRE for model 125
         126   7.355598   7127.135   1.119115   1.119115   1.800000   1.800000   0.217326   0.011502   0.280000  -2.749827   1014      1
  6.8495E+00   7.355598   0.376048 -35.238923  -0.072254 -99.000000   0.000000   0.763049   0.001886   0.020000   0.080287      5
  9.9491E+08   1.953055   1.118450 -14.449440 -99.000000  -7.767945   0.000000   0.000075   0.002085   0.019625  0.000E+00      XHe_cntr
@@ -711,7 +708,7 @@ save LOGS/profile29.data LOGS/profile29.data.GYRE for model 125
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -720,7 +717,7 @@ ________________________________________________________________________________
  6.8364E+00   7.358698   0.385090 -35.069619  -0.069110 -99.000000   0.000000   0.783582   0.001764   0.020000   0.082542      5
  1.0228E+09   1.962379   1.119891 -99.000000 -99.000000  -7.745309   0.000000   0.000076   0.002085   0.019610  0.000E+00      XHe_cntr
 
-save LOGS/profile30.data LOGS/profile30.data.GYRE for model 130
+save LOGS/profile27.data LOGS/profile27.data.GYRE for model 130
         131   7.359503   7042.203   1.120909   1.120909   1.800000   1.800000   0.191696   0.011632   0.280000  -2.757402   1008      1
  6.8313E+00   7.359503   0.387342 -35.026051  -0.068364 -99.000000   0.000000   0.788698   0.001735   0.020000   0.083134      5
  1.0296E+09   1.964830   1.120212 -14.449440 -99.000000  -7.739787   0.000000   0.000077   0.002085   0.019606  0.000E+00      XHe_cntr
@@ -741,7 +738,7 @@ save LOGS/profile30.data LOGS/profile30.data.GYRE for model 130
  6.8149E+00   7.362874   0.396285 -34.845078  -0.065692 -99.000000   0.000000   0.809150   0.001623   0.020000   0.085629      5
  1.0560E+09   1.975240   1.121370 -99.000000 -99.000000  -7.718280   0.000000   0.000078   0.002085   0.019592  0.000E+00      XHe_cntr
 
-save LOGS/profile31.data LOGS/profile31.data.GYRE for model 135
+save LOGS/profile28.data LOGS/profile28.data.GYRE for model 135
         136   7.363760   6957.956   1.122350   1.122350   1.800000   1.800000   0.166167   0.011751   0.280000  -2.763341   1009      1
  6.8115E+00   7.363760   0.398509 -34.798017  -0.065054 -99.000000   0.000000   0.814245   0.001597   0.020000   0.086285      5
  1.0625E+09   1.977999   1.121639 -99.000000 -99.000000  -7.713038   0.000000   0.000079   0.002085   0.019588  0.000E+00      XHe_cntr
@@ -761,7 +758,7 @@ save LOGS/profile31.data LOGS/profile31.data.GYRE for model 135
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -770,7 +767,7 @@ ________________________________________________________________________________
  6.7949E+00   7.367535   0.407337 -34.599122  -0.062739 -99.000000   0.000000   0.834742   0.001494   0.020000   0.089072      5
  1.0878E+09   1.989866   1.122628 -14.273349 -99.000000  -7.692531   0.000000   0.000081   0.002085   0.019575  0.000E+00      XHe_cntr
 
-save LOGS/profile32.data LOGS/profile32.data.GYRE for model 140
+save LOGS/profile29.data LOGS/profile29.data.GYRE for model 140
         141   7.368546   6875.177   1.123584   1.123584   1.800000   1.800000   0.140537   0.011859   0.280000  -2.767297   1005      1
  6.7906E+00   7.368546   0.409517 -34.546347  -0.062207 -99.000000   0.000000   0.839891   0.001470   0.020000   0.089812      5
  1.0940E+09   1.993070   1.122863 -14.273349 -99.000000  -7.687544   0.000000   0.000081   0.002085   0.019572  0.000E+00      XHe_cntr
@@ -791,7 +788,7 @@ save LOGS/profile32.data LOGS/profile32.data.GYRE for model 140
  6.7731E+00   7.372853   0.418048 -34.322524  -0.060074 -99.000000   0.000000   0.860316   0.001377   0.020000   0.092922      5
  1.1181E+09   2.006751   1.123844 -99.000000 -99.000000  -7.668399   0.000000   0.000083   0.002085   0.019560  0.000E+00      XHe_cntr
 
-save LOGS/profile33.data LOGS/profile33.data.GYRE for model 145
+save LOGS/profile30.data LOGS/profile30.data.GYRE for model 145
         146   7.374032   6796.543   1.124812   1.124812   1.800000   1.800000   0.114997   0.011958   0.280000  -2.768689    991      1
  6.7706E+00   7.374032   0.420131 -34.262120  -0.059558 -99.000000   0.000000   0.865445   0.001354   0.020000   0.093749      5
  1.1240E+09   2.010491   1.124108 -99.000000 -99.000000  -7.663818   0.000000   0.000083   0.002085   0.019557  0.000E+00      XHe_cntr
@@ -808,11 +805,10 @@ save LOGS/profile33.data LOGS/profile33.data.GYRE for model 145
  6.7588E+00   7.377853   0.426154 -34.067702  -0.057921 -99.000000   0.139964   0.880842   0.001289   0.020000   0.096352      5
  1.1414E+09   2.022610   1.125052 -99.000000 -99.000000  -7.650980   0.000000   0.000085   0.002085   0.019549  0.000E+00      XHe_cntr
 
-save LOGS/profile34.data LOGS/profile34.data.GYRE for model 149
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -821,7 +817,7 @@ ________________________________________________________________________________
  6.7535E+00   7.379240   0.428078 -33.997612  -0.057343 -99.000000   0.139964   0.885985   0.001268   0.020000   0.097263      5
  1.1470E+09   2.026997   1.125429 -14.148410 -99.000000  -7.647036   0.000000   0.000085   0.002085   0.019546  0.000E+00      XHe_cntr
 
-save LOGS/profile35.data LOGS/profile35.data.GYRE for model 150
+save LOGS/profile31.data LOGS/profile31.data.GYRE for model 150
 save photos/x150 for model 150
         151   7.380680   6727.035   1.126478   1.126478   1.800000   1.660036   0.089379   0.012048   0.280000  -2.766331    967      1
  6.7485E+00   7.380680   0.429933 -33.925131  -0.056732 -99.000000   0.139964   0.891078   0.001248   0.020000   0.098188      5
@@ -843,7 +839,7 @@ save photos/x150 for model 150
  6.7077E+00   7.387227   0.436611 -33.598241  -0.053888 -99.000000   0.139969   0.911350   0.001169   0.020000   0.102108      5
  1.1742E+09   2.052143   1.128243 -99.000000 -99.000000  -7.631740   0.000000   0.000089   0.002085   0.019533  0.000E+00    lg_XH_cntr
 
-save LOGS/profile36.data LOGS/profile36.data.GYRE for model 155
+save LOGS/profile32.data LOGS/profile32.data.GYRE for model 155
         156   7.388955   6677.387   1.129408   1.129408   1.800000   1.660031   0.064501   0.012127   0.280000  -2.758029    962      1
  6.6781E+00   7.388955   0.437950 -33.512575  -0.053075 -99.000000   0.139969   0.915968   0.001152   0.020000   0.103057      5
  1.1789E+09   2.057543   1.129020 -99.000000 -99.000000  -7.629979   0.000000   0.000089   0.002085   0.019531  0.000E+00    lg_XH_cntr
@@ -863,7 +859,7 @@ save LOGS/profile36.data LOGS/profile36.data.GYRE for model 155
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -872,7 +868,7 @@ ________________________________________________________________________________
  6.5432E+00   7.395870   0.441711 -33.171604  -0.049536 -99.000000   0.139969   0.931785   0.001095   0.020000   0.106480      5
  1.1947E+09   2.079021   1.132815 -14.449440 -99.000000  -7.628097   0.000000   0.000092   0.002085   0.019523  0.000E+00    lg_XH_cntr
 
-save LOGS/profile37.data LOGS/profile37.data.GYRE for model 160
+save LOGS/profile33.data LOGS/profile33.data.GYRE for model 160
         161   7.397557   6662.786   1.133835   1.133835   1.800000   1.660031   0.045422   0.012184   0.280000  -2.744238    976      1
  6.5080E+00   7.397557   0.442297 -33.088747  -0.048583 -99.000000   0.139969   0.935056   0.001083   0.020000   0.107223      5
  1.1979E+09   2.084220   1.133912 -14.051500 -99.000000  -7.628767   0.000000   0.000093   0.002085   0.019522  0.000E+00    lg_XH_cntr
@@ -893,7 +889,7 @@ save LOGS/profile37.data LOGS/profile37.data.GYRE for model 160
  6.3704E+00   7.404304   0.443439 -32.757707  -0.044510 -99.000000   0.139969   0.946215   0.001044   0.020000   0.109855      5
  1.2086E+09   2.104907   1.138963 -99.000000 -99.000000  -7.635631   0.000000   0.000095   0.002085   0.019516  0.000E+00    lg_XH_cntr
 
-save LOGS/profile38.data LOGS/profile38.data.GYRE for model 165
+save LOGS/profile34.data LOGS/profile34.data.GYRE for model 165
         166   7.405952   6678.560   1.139503   1.139503   1.800000   1.660031   0.031967   0.012222   0.280000  -2.726751    976      1
  6.3350E+00   7.405952   0.443461 -32.676895  -0.043439 -99.000000   0.139969   0.948518   0.001036   0.020000   0.110417      5
  1.2107E+09   2.109935   1.140348 -14.449440 -99.000000  -7.638219   0.000000   0.000096   0.002085   0.019515  0.000E+00    lg_XH_cntr
@@ -913,7 +909,7 @@ save LOGS/profile38.data LOGS/profile38.data.GYRE for model 165
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -922,7 +918,7 @@ ________________________________________________________________________________
  6.1996E+00   7.412528   0.442648 -32.353769  -0.039031 -99.000000   0.139969   0.956342   0.001009   0.020000   0.112388      5
  1.2179E+09   2.130002   1.146460 -99.000000 -99.000000  -7.651869   0.000000   0.000098   0.002085   0.019512  0.000E+00    lg_XH_cntr
 
-save LOGS/profile39.data LOGS/profile39.data.GYRE for model 170
+save LOGS/profile35.data LOGS/profile35.data.GYRE for model 170
         171   7.414167   6718.013   1.146068   1.146068   1.800000   1.660031   0.022497   0.012247   0.280000  -2.706276    981      1
  6.1656E+00   7.414167   0.442234 -32.272860  -0.037904 -99.000000   0.139969   0.957992   0.001003   0.020000   0.112817      5
  1.2194E+09   2.135023   1.148126 -99.000000 -99.000000  -7.656058   0.000000   0.000099   0.002085   0.019511  0.000E+00    lg_XH_cntr
@@ -943,7 +939,7 @@ save LOGS/profile39.data LOGS/profile39.data.GYRE for model 170
  6.0281E+00   7.420555   0.439895 -31.955618  -0.033385 -99.000000   0.139969   0.963463   0.000984   0.020000   0.114284      5
  1.2242E+09   2.154680   1.155061 -99.000000 -99.000000  -7.675047   0.000000   0.000101   0.002085   0.019508  0.000E+00    lg_XH_cntr
 
-save LOGS/profile40.data LOGS/profile40.data.GYRE for model 175
+save LOGS/profile36.data LOGS/profile36.data.GYRE for model 175
         176   7.422142   6776.074   1.153138   1.153138   1.800000   1.660031   0.015874   0.012263   0.280000  -2.683291    995      1
  5.9963E+00   7.422142   0.439152 -31.876105  -0.032306 -99.000000   0.139969   0.964618   0.000980   0.020000   0.114606      5
  1.2252E+09   2.159630   1.156911 -99.000000 -99.000000  -7.680419   0.000000   0.000102   0.002085   0.019507  0.000E+00    lg_XH_cntr
@@ -963,7 +959,7 @@ save LOGS/profile40.data LOGS/profile40.data.GYRE for model 175
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -972,7 +968,7 @@ ________________________________________________________________________________
  5.8636E+00   7.428397   0.435695 -31.559364  -0.028083 -99.000000   0.139969   0.968500   0.000967   0.020000   0.115742      5
  1.2284E+09   2.179419   1.164626 -14.273349 -99.000000  -7.703841   0.000000   0.000104   0.002085   0.019505  0.000E+00    lg_XH_cntr
 
-save LOGS/profile41.data LOGS/profile41.data.GYRE for model 180
+save LOGS/profile37.data LOGS/profile37.data.GYRE for model 180
         181   7.429889   6848.841   1.160332   1.160332   1.800000   1.660031   0.011182   0.012274   0.280000  -2.657422   1001      1
  5.8272E+00   7.429889   0.434734 -31.479790  -0.027038 -99.000000   0.139969   0.969314   0.000964   0.020000   0.116000      5
  1.2291E+09   2.184301   1.166631 -14.273349 -99.000000  -7.710132   0.000000   0.000105   0.002085   0.019505  0.000E+00    lg_XH_cntr
@@ -993,7 +989,7 @@ save LOGS/profile41.data LOGS/profile41.data.GYRE for model 180
  5.6908E+00   7.435884   0.430700 -31.167630  -0.023289 -99.000000   0.139969   0.972028   0.000954   0.020000   0.116920      5
  1.2313E+09   2.204189   1.174832 -99.000000 -99.000000  -7.736444   0.000000   0.000107   0.002085   0.019503  0.000E+00    lg_XH_cntr
 
-save LOGS/profile42.data LOGS/profile42.data.GYRE for model 185
+save LOGS/profile38.data LOGS/profile38.data.GYRE for model 185
         186   7.437351   6930.001   1.167217   1.167217   1.800000   1.660031   0.007898   0.012281   0.280000  -2.628505   1000      1
  5.6599E+00   7.437351   0.429657 -31.089983  -0.022512 -99.000000   0.139969   0.972599   0.000952   0.020000   0.117137      5
  1.2318E+09   2.209231   1.176941 -14.148410 -99.000000  -7.743327   0.000000   0.000108   0.002085   0.019503  0.000E+00    lg_XH_cntr
@@ -1013,7 +1009,7 @@ save LOGS/profile42.data LOGS/profile42.data.GYRE for model 185
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -1022,7 +1018,7 @@ ________________________________________________________________________________
  5.5294E+00   7.443060   0.425461 -30.782214  -0.019710 -99.000000   0.139969   0.974518   0.000945   0.020000   0.117978      5
  1.2333E+09   2.229690   1.185594 -99.000000 -99.000000  -7.771907   0.000000   0.000110   0.002085   0.019502  0.000E+00    lg_XH_cntr
 
-save LOGS/profile43.data LOGS/profile43.data.GYRE for model 190
+save LOGS/profile39.data LOGS/profile39.data.GYRE for model 190
         191   7.444456   7015.829   1.173314   1.173314   1.800000   1.660031   0.005572   0.012285   0.280000  -2.595365   1008      1
  5.4966E+00   7.444456   0.424417 -30.705411  -0.019248 -99.000000   0.139969   0.974926   0.000943   0.020000   0.118195      5
  1.2336E+09   2.234993   1.187843 -99.000000 -99.000000  -7.779381   0.000000   0.000111   0.002085   0.019501  0.000E+00    lg_XH_cntr
@@ -1043,7 +1039,7 @@ save LOGS/profile43.data LOGS/profile43.data.GYRE for model 190
  5.3615E+00   7.449752   0.420381 -30.408078  -0.017565 -99.000000   0.139969   0.976278   0.000938   0.020000   0.119073      5
  1.2346E+09   2.256280   1.196809 -99.000000 -99.000000  -7.809646   0.000000   0.000113   0.002085   0.019500  0.000E+00    lg_XH_cntr
 
-save LOGS/profile44.data LOGS/profile44.data.GYRE for model 195
+save LOGS/profile40.data LOGS/profile40.data.GYRE for model 195
         196   7.451015   7102.105   1.178415   1.178415   1.800000   1.660031   0.003936   0.012287   0.280000  -2.557141    996      1
  5.3304E+00   7.451015   0.419412 -30.335576  -0.017436 -99.000000   0.139969   0.976564   0.000937   0.020000   0.119312      5
  1.2349E+09   2.261777   1.199067 -99.000000 -99.000000  -7.817359   0.000000   0.000113   0.002085   0.019500  0.000E+00    lg_XH_cntr
@@ -1063,7 +1059,7 @@ save LOGS/profile44.data LOGS/profile44.data.GYRE for model 195
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -1072,7 +1068,7 @@ ________________________________________________________________________________
  5.2013E+00   7.455728   0.415782 -30.058617  -0.017345 -99.000000   0.139969   0.977518   0.000934   0.020000   0.120353      5
  1.2356E+09   2.284230   1.208040 -99.000000 -99.000000  -7.848344   0.000000   0.000115   0.002085   0.019499  0.000E+00    lg_XH_cntr
 
-save LOGS/profile45.data LOGS/profile45.data.GYRE for model 200
+save LOGS/profile41.data LOGS/profile41.data.GYRE for model 200
 save photos/x200 for model 200
         201   7.456812   7184.837   1.182220   1.182220   1.800000   1.660031   0.002786   0.012288   0.280000  -2.512357   1017      1
  5.1677E+00   7.456812   0.414947 -29.993283  -0.017329 -99.000000   0.139969   0.977715   0.000933   0.020000   0.120640      5
@@ -1094,7 +1090,7 @@ save photos/x200 for model 200
  5.0446E+00   7.460722   0.411891 -29.750558  -0.018536 -99.000000   0.139969   0.978386   0.000930   0.020000   0.121962      5
  1.2362E+09   2.313762   1.218899 -99.000000 -99.000000  -7.886385   0.000000   0.000118   0.002085   0.019498  0.000E+00    lg_XH_cntr
 
-save LOGS/profile46.data LOGS/profile46.data.GYRE for model 205
+save LOGS/profile42.data LOGS/profile42.data.GYRE for model 205
         206   7.461576   7260.537   1.184573   1.184573   1.800000   1.660031   0.001974   0.012288   0.280000  -2.459226   1028      1
  5.0130E+00   7.461576   0.411208 -29.695520  -0.018995 -99.000000   0.139969   0.978527   0.000930   0.020000   0.122343      5
  1.2363E+09   2.319938   1.220985 -14.273349 -99.000000  -7.893735   0.000000   0.000118   0.002085   0.019498  0.000E+00    lg_XH_cntr
@@ -1114,7 +1110,7 @@ save LOGS/profile46.data LOGS/profile46.data.GYRE for model 205
 
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -1123,7 +1119,7 @@ ________________________________________________________________________________
  4.8910E+00   7.464399   0.408808 -29.504728  -0.020759 -99.000000   0.139969   0.979000   0.000928   0.020000   0.124087      5
  1.2367E+09   2.345346   1.228847 -14.750470 -99.000000  -7.921522   0.000000   0.000120   0.002085   0.019498  0.000E+00    lg_XH_cntr
 
-save LOGS/profile47.data LOGS/profile47.data.GYRE for model 210
+save LOGS/profile43.data LOGS/profile43.data.GYRE for model 210
         211   7.464940   7325.703   1.186498   1.186498   1.800000   1.660031   0.001404   0.012288   0.280000  -2.396117   1014      1
  4.8622E+00   7.464940   0.408285 -29.465382  -0.021080 -99.000000   0.139969   0.979098   0.000927   0.020000   0.124584      5
  1.2367E+09   2.351870   1.230662 -14.750470 -99.000000  -7.927971   0.000000   0.000120   0.002085   0.019498  0.000E+00    lg_XH_cntr
@@ -1144,7 +1140,7 @@ save LOGS/profile47.data LOGS/profile47.data.GYRE for model 210
  4.7558E+00   7.466351   0.406459 -29.346970  -0.021101 -99.000000   0.139969   0.979427   0.000926   0.020000   0.126856      5
  1.2370E+09   2.378605   1.237168 -99.000000 -99.000000  -7.951309   0.000000   0.000121   0.002085   0.019497  0.000E+00    lg_XH_cntr
 
-save LOGS/profile48.data LOGS/profile48.data.GYRE for model 215
+save LOGS/profile44.data LOGS/profile44.data.GYRE for model 215
         216   7.466503   7378.055   1.190318   1.190318   1.800000   1.660031   0.001008   0.012288   0.280000  -2.322340   1024      1
  4.7317E+00   7.466503   0.406061 -29.327884  -0.020638 -99.000000   0.139969   0.979495   0.000926   0.020000   0.127501      5
  1.2370E+09   2.385446   1.238584 -14.449440 -99.000000  -7.956467   0.000000   0.000121   0.002085   0.019497  0.000E+00    lg_XH_cntr
@@ -1157,7 +1153,7 @@ stop because have dropped below central lower limit for h1
  4.7086E+00   7.466558   0.405685 -29.313915  -0.019966 -99.000000   0.140629   0.979559   0.000925   0.020000   0.128182      5
  1.2371E+09   2.392354   1.239909 -99.000000 -99.000000  -7.961332   0.000000   0.000122   0.002085   0.019497  0.000E+00    lg_XH_cntr
 
-save LOGS/profile49.data LOGS/profile49.data.GYRE for model 217
+save LOGS/profile45.data LOGS/profile45.data.GYRE for model 217
                                          solver retries           1
 
                                   max increase dt limit          41
@@ -1168,7 +1164,7 @@ save photos/x217 for model 217
 termination code: xa_central_lower_limit
 __________________________________________________________________________________________________________________________________________________
 
-       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc_tot Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
   lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
     age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
 __________________________________________________________________________________________________________________________________________________
@@ -1177,5 +1173,5 @@ ________________________________________________________________________________
  4.7086E+00   7.466558   0.405685 -29.313915  -0.019966 -99.000000   0.140629   0.979559   0.000925   0.020000   0.128182      5
  1.2371E+09   2.392354   1.239909 -99.000000 -99.000000  -7.961332   0.000000   0.000122   0.002085   0.019497  0.000E+00    lg_XH_cntr
 
-DATE: 2026-06-22
-TIME: 11:49:50
+DATE: 2026-06-29
+TIME: 22:23:29

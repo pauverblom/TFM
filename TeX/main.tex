@@ -10,18 +10,18 @@
 \usepackage{cancel}
 % Section: Sans-serif, Large, Bold, Dark Blue with an elegant underline
 \titleformat{\section}
-  {\normalfont\Large\bfseries}
-  {\thesection}{1em}{}[{\vspace{0.2ex}\titlerule[0.8pt]}]
+{\normalfont\Large\bfseries}
+{\thesection}{1em}{}[{\vspace{0.2ex}\titlerule[0.8pt]}]
 
 % Subsection: Sans-serif, large, bold, Dark Blue
 \titleformat{\subsection}
-  {\normalfont\large\bfseries}
-  {\thesubsection}{1em}{}
+{\normalfont\large\bfseries}
+{\thesubsection}{1em}{}
 
 % Subsubsection: Sans-serif, normal size, italic, Dark Blue
 \titleformat{\subsubsection}
-  {\normalfont\normalsize\itshape}
-  {\thesubsubsection}{1em}{}
+{\normalfont\normalsize\itshape}
+{\thesubsubsection}{1em}{}
 \usepackage{fancyhdr} %to customize the headers
 \fancyhead{\nouppercase}
 \usepackage[lmargin=1in, rmargin=1in, tmargin=1.5in, bmargin=1.3in]{geometry} %sets the margins for the pages
@@ -51,11 +51,11 @@
 \usepackage[spanish]{babel} %to include different languages, e.g. for captions
 
 \hypersetup{
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=black
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=black
 }
 
 % Define journal abbreviations
@@ -69,97 +69,97 @@
 \def\prl{Phys. Rev. Lett.}
 
 \usepackage[backend = biber,
-            natbib = true,
-            style = authoryear,
-            maxcitenames = 2,
-            ]{biblatex}
+  natbib = true,
+  style = authoryear,
+  maxcitenames = 2,
+]{biblatex}
 \addbibresource{bibliography.bib}
 \usepackage{comment}
 \usepackage{afterpage}
 %\usepackage[version=4]{mhchem}
 
 \newcommand\myemptypage{
-    \null
-    \thispagestyle{empty}
-    \addtocounter{page}{-1}
-    \newpage
-    } %sets new page command to insert an empty page without adding to the page counter or having a page number
+  \null
+  \thispagestyle{empty}
+  \addtocounter{page}{-1}
+  \newpage
+} %sets new page command to insert an empty page without adding to the page counter or having a page number
 
-    \makeatletter
-    \renewcommand*{\@makechapterhead}[1]{%
-      \vspace*{0\p@}%
-      {\parindent \z@ \raggedright \normalfont
-        \ifnum \c@secnumdepth >\m@ne
-          \if@mainmatter%%%%% Fix for frontmatter, mainmatter, and backmatter 040920
-            \DOCH
-          \fi
-        \fi
-        \interlinepenalty\@M
-        \if@mainmatter%%%%% Fix for frontmatter, mainmatter, and backmatter 060424
-          \DOTI{#1}%
-        \else%
-          \DOTIS{#1}%
-        \fi
-      }}
-    % For the case \chapter*:
-    \renewcommand*{\@makeschapterhead}[1]{%
-      \vspace*{10\p@}%
-      {\parindent \z@ \raggedright
-        \normalfont
-        \interlinepenalty\@M
-        \DOTIS{#1}
-        \vskip 40\p@
-      }}
-    \makeatother
+\makeatletter
+\renewcommand*{\@makechapterhead}[1]{%
+  \vspace*{0\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+    \if@mainmatter%%%%% Fix for frontmatter, mainmatter, and backmatter 040920
+    \DOCH
+    \fi
+    \fi
+    \interlinepenalty\@M
+    \if@mainmatter%%%%% Fix for frontmatter, mainmatter, and backmatter 060424
+    \DOTI{#1}%
+    \else%
+    \DOTIS{#1}%
+    \fi
+}}
+% For the case \chapter*:
+\renewcommand*{\@makeschapterhead}[1]{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \DOTIS{#1}
+    \vskip 40\p@
+}}
+\makeatother
 
 \begin{document}
 
 \newgeometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
 \begin{titlepage}
-\begingroup
-\renewcommand{\huge}{\fontsize{20.74}{25}\selectfont}
-\renewcommand{\Large}{\fontsize{14.4}{18}\selectfont}
+  \begingroup
+  \renewcommand{\huge}{\fontsize{20.74}{25}\selectfont}
+  \renewcommand{\Large}{\fontsize{14.4}{18}\selectfont}
 
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-\center 
+  \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+  \center
 
-\begin{figure}[t]
+  \begin{figure}[t]
     \centering
     \includegraphics[width=0.85\textwidth]{portada/logo_facultad.png}
-\end{figure}
-\hspace{2cm}
+  \end{figure}
+  \hspace{2cm}
 
-\textbf{\Huge Máster en Física Avanzada}\\[0.7cm]
-\huge Especialidad Astrofísica\\[0.7cm] 
+  \textbf{\Huge Máster en Física Avanzada}\\[0.7cm]
+  \huge Especialidad Astrofísica\\[0.7cm]
 
-\begin{figure}[H]
+  \begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{portada/logo_uv.png}
-\end{figure}
-\hspace{1cm}
+  \end{figure}
+  \hspace{1cm}
 
-\textbf{\Huge Trabajo Fin de Máster}\\[0.3cm]
-\HRule \\[1.5cm]
-{ \huge \bfseries Estudio Astrosismológico de Blue Stragglers en el contexto de la misión HAYDN}\\[2.5cm]
+  \textbf{\Huge Trabajo Fin de Máster}\\[0.3cm]
+  \HRule \\[1.5cm]
+  { \huge \bfseries Estudio Astrosismológico de Blue Stragglers en el contexto de la misión HAYDN}\\[2.5cm]
 
-\huge Pau Verdeguer Blom-Dahl\\[0.7cm]
+  \huge Pau Verdeguer Blom-Dahl\\[0.7cm]
 
-\begin{minipage}[t]{0.45\textwidth}
-    \begin{flushleft} 
+  \begin{minipage}[t]{0.45\textwidth}
+    \begin{flushleft}
     \end{flushleft}
-\end{minipage}
-\begin{minipage}[t]{0.52\textwidth}
+  \end{minipage}
+  \begin{minipage}[t]{0.52\textwidth}
     \begin{flushright} \Large
-    {Tutores:} 
-    Andrés Moya Bedón, Giovanni M. Miurouh \\ [0.5cm]
+      {Tutores:}
+      Andrés Moya Bedón, Giovanni M. Miurouh \\ [0.5cm]
 
-    \textit{Curso académico 2025/26}
+      \textit{Curso académico 2025/26}
     \end{flushright}
-\end{minipage}
+  \end{minipage}
 
-\vfill
+  \vfill
 
-\endgroup
+  \endgroup
 \end{titlepage}
 \restoregeometry
 
@@ -174,12 +174,11 @@
 %add an empty non-counted page by the command below in order to get the first chapter on the left hand side, if needed (check your page number so that the first chapter is on an odd page)
 
 %\chapter*{Prefacio}
-%\addcontentsline{toc}{chapter}{\protect\numberline{}Prefacio} 
+%\addcontentsline{toc}{chapter}{\protect\numberline{}Prefacio}
 
 %\input{Capítulos/Prefacio}
 
 \tableofcontents
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Customize the layout of the main content of your thesis
@@ -194,9 +193,8 @@
 
 \setlength{\headheight}{14.49998pt} %set the header height
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%main content 
+%main content
 
 \pagenumbering{arabic}
 

@@ -7,8 +7,8 @@ import shutil
 
 mass_compare = 1.84
 
-dir_bs = '/home/pauver/TFM/MESA/evolve_created_blue_straggler'
-dir_mass_compare = f'/home/pauver/TFM/MESA/mass_grid/mass_{mass_compare}'
+dir_bs = '/home/pauver/repos/pauverblom/TFM/MESA/evolve_created_blue_straggler'
+dir_mass_compare = f'/home/pauver/repos/pauverblom/TFM/MESA/mass_grid/mass_{mass_compare}'
 
 out_dir = f'comp_mass_{mass_compare}'
 
@@ -201,7 +201,7 @@ for p_num_compare, p_num_bs, h_pct in profile_pairs:
             freq_comp = np.array(group_compare['freq'].real)
             
             diffs = []
-            freqs_plot = []
+            n_pg_plot = []
             
             for i, n in enumerate(n_pg_comp):
                 idx_match_bs = np.where(n_pg_bs == n)[0]
@@ -209,23 +209,23 @@ for p_num_compare, p_num_bs, h_pct in profile_pairs:
                     f_comp = freq_comp[i]
                     f_bs = freq_bs[idx_match_bs[0]]
                     diffs.append(f_comp - f_bs)
-                    freqs_plot.append(f_comp)
+                    n_pg_plot.append(n)
             
-            if freqs_plot:
-                ax_diff.plot(freqs_plot, diffs, color=l_colors[l_val], marker=l_markers[l_val],
+            if n_pg_plot:
+                ax_diff.plot(n_pg_plot, diffs, color=l_colors[l_val], marker=l_markers[l_val],
                              markersize=7, linestyle='None', alpha=0.9,
                              label=l_labels[l_val])
                              
     ax_diff.set_title(rf'Frequency Differences ($\nu_{{{mass_compare} M_\odot}} - \nu_{{\rm BS}}$)', fontsize=13, fontweight='bold', pad=10)
-    ax_diff.set_xlabel(rf'Frequency $\nu_{{{mass_compare} M_\odot}}$ (cyc/day)', fontsize=12)
+    ax_diff.set_xlabel('Radial Order ($n_{pg}$)', fontsize=12)
     ax_diff.set_ylabel(r'$\Delta\nu$ (cyc/day)', fontsize=12)
     ax_diff.legend(fontsize=11, loc='best', framealpha=0.9)
     ax_diff.grid(True, which='both', linestyle=':', color='gray', alpha=0.4)
     ax_diff.tick_params(labelsize=10)
     ax_diff.axhline(0, color='black', linestyle='--', alpha=0.5, linewidth=1)
+    ax_diff.set_xlim(-10.5, 10.5)
     
     # Bottom right: HR Diagram (full subplot)
-    ax_hr = fig.add_subplot(gs[1, 2])
     
     # Plot the full background HR tracks for both stars
     ax_hr.plot(hist_bs.log_Teff, hist_bs.log_L, color=color_bs, alpha=0.4, linewidth=1.5, zorder=1,

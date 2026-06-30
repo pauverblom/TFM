@@ -6,8 +6,8 @@ import glob
 import os
 from matplotlib.lines import Line2D
 
-data_dir = '/Users/pauverdeguer/TFM/MESA/evolve_created_blue_straggler/gyre_temp_output'
-output_dir = '/Users/pauverdeguer/TFM/Analysis/propagation'
+data_dir = '/home/pauver/repos/pauverblom/TFM/MESA/evolve_created_blue_straggler/gyre_temp_output'
+output_dir = '/home/pauver/repos/pauverblom/TFM/Analysis/propagation'
 
 l2_files = sorted(glob.glob(os.path.join(data_dir, 'detail.l2.*.h5')))
 
@@ -31,7 +31,7 @@ with np.errstate(divide='ignore', invalid='ignore'):
     Sl2 = l * (l + 1) * Gamma_1 / (V * c_1)
 
 # Plotting
-fig, ax = plt.subplots(figsize=(10, 8))
+fig, ax = plt.subplots(figsize=(10, 10))
 
 # Plot N2 and Sl2 curves (x on X-axis, N2/Sl2 on Y-axis)
 ax.plot(x_bg, N2, label=r'$N^2$', color='black', linestyle='-', linewidth=2)
@@ -92,6 +92,8 @@ for file_path in l2_files:
                 # Only show label for g-modes up to 10, or every 10 modes after that
                 if g_num > 10 and g_num % 10 != 0:
                     show_label = False
+                elif g_num > 50:
+                    show_label = False
             else:
                 lbl = "f"
                 mode_color = 'purple'
@@ -111,7 +113,7 @@ for file_path in l2_files:
 
 # Include max(N2) when determining y-limits
 if all_omega2:
-    min_w2 = max(min(all_omega2) * 0.8, 1e-6)
+    min_w2 = 3e-1
     max_w2 = 2e3
     ax.set_ylim(min_w2, max_w2)
 
@@ -134,7 +136,7 @@ plt.tight_layout()
 # Adjust margins so the text outside the axes fits nicely
 fig.subplots_adjust(right=0.92)
 
-plt.show()
-#out_file = os.path.join(output_dir, 'propagation_diagram.png')
-#plt.savefig(out_file, dpi=300, bbox_inches='tight')
-#print(f"Diagram saved to {out_file}")
+#plt.show()
+out_file = os.path.join(output_dir, 'propagation_diagram.png')
+plt.savefig(out_file, dpi=300, bbox_inches='tight')
+print(f"Diagram saved to {out_file}")

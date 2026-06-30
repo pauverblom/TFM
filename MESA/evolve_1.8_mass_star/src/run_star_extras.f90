@@ -97,20 +97,20 @@ contains
          if (ierr /= 0) return
          extras_check_model = keep_going
          
-         target_h1 = (/ 0.6d0, 0.5d0, 0.4d0, 0.3d0, 0.2d0, 0.1d0 /)
+         !target_h1 = (/ 0.6d0, 0.5d0, 0.4d0, 0.3d0, 0.2d0, 0.1d0 /)
 
-         if (s% x_ctrl(1) == 0.0d0) then
-            s% x_ctrl(1) = 1.0d0
-            s% need_to_save_profiles_now = .true.
-         end if
+         !if (s% x_ctrl(1) == 0.0d0) then
+         !   s% x_ctrl(1) = 1.0d0
+         !   s% need_to_save_profiles_now = .true.
+         !end if
          
-         cur_target = int(s% x_ctrl(1))
-         if (cur_target >= 1 .and. cur_target <= 6) then
-            if (s% center_h1 <= target_h1(cur_target)) then
-               s% need_to_save_profiles_now = .true.
-               s% x_ctrl(1) = s% x_ctrl(1) + 1.0d0
-            end if
-         end if
+         !cur_target = int(s% x_ctrl(1))
+         !if (cur_target >= 1 .and. cur_target <= 6) then
+         !   if (s% center_h1 <= target_h1(cur_target)) then
+         !      s% need_to_save_profiles_now = .true.
+         !      s% x_ctrl(1) = s% x_ctrl(1) + 1.0d0
+         !   end if
+         !end if
 
          ! by default, indicate where (in the code) MESA terminated
          if (extras_check_model == terminate) s% termination_code = t_extras_check_model

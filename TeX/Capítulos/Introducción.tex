@@ -1,21 +1,55 @@
 \chapter{Introducción}
 
+La astrosismología es el estudio de las oscilaciones estelares mediante el análisis de los cambios que estas provocan en la luz de las estrellas. Dichos cambios se manifiestan como pequeñas variaciones en el brillo (fotometría) o como desplazamientos en las líneas espectrales debido al efecto Doppler (espectroscopía), y permiten obtener información acerca de la estructura interior, composición química e historia evolutiva de las estrellas.
+
+Dichas oscilaciones corresponden a modos propios de vibración atrapados en el interior de la estrella. El análisis de estos modos permite determinar con precisión los gradientes de densidad, la rotación interna del núcleo y la extensión de las zonas de mezcla convectiva, proporcionando una visión de la estructura interna que la fotometría clásica no puede dilucidar.
+
 \section{Blue Stragglers}
 
-\lipsum[1-12]
+Los cúmulos estelares resultan ser de gran importancia a la hora de probar modelos teóricos de evolución estelar, puesto que nos permiten comparar sus predicciones con las observaciones. Esto es debido a que, por lo general, se asume que las estrellas de un mismo cúmulo se formaron alrededor del mismo momento y con una composición química muy similar. Al asumir esto como verdadero, se puede estudiar en detalle cómo la masa inicial de una estrella determina su evolución a lo largo del tiempo sin la interferencia de otros parámetros desconocidos.
+
+Esta homogeneidad permite modelar la población de un cúmulo mediante el uso de isócronas: curvas teóricas en el diagrama Hertzsprung-Russell (HR) que representan las posiciones de estrellas de la misma edad y composición química, pero con diferentes masas iniciales. A medida que el cúmulo envejece, las estrellas más masivas agotan el hidrógeno en su núcleo y abandonan la secuencia principal. El punto preciso del diagrama donde se produce esta transición se conoce como el ``turn-off point'', y permite estimar la antigüedad de un cúmulo en concreto.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Imagenes/HR_isoch.png}
+  \caption{Diagrama HR para distintos cúmulos estelares con las isócronas de mejor ajuste superpuestas. Puede apreciarse el ``turn-off point'' en diferentes posiciones dependiendo de la edad. Cuanto más a la derecha se encuentra este punto, más antiguo es el cúmulo. Imagen tomada de \citet{santrich_2022}.}
+  \label{fig:hr_diagram}
+\end{figure}
+
+No obstante, al elaborar este tipo de diagramas, a menudo se observan una serie de anomalías que escapan a la explicación de los modelos estelares evolutivos simples. Un ejemplo de ello son las denominadas ``Blue Stragglers'' (Rezagadas Azules): estrellas más calientes y luminosas que el resto de estrellas de un mismo cúmulo, y que, de alguna manera, parecen haber ``rejuvenecido'' (ya que están a la izquierda del ``turn-off point'' de su cúmulo). Un ejemplo de estas estrellas se encuentra en la Figura \ref{fig:hr_diagram_bss}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Imagenes/HR_BSS.png}
+  \caption{Diagrama HR miembros del cúmulo King 2. Las estrellas en azul conforman el grupo de Blue Stragglers del cúmulo. La isócrona de mejor ajuste del cúmulo tiene los parámetros log edad $= 9.7$, [M/H] $= -0.4$, DM $= 13.8$ y E(B-V) $=0.45$.Figura tomada de \citet{Jadhav_2021}.}
+  \label{fig:hr_diagram_bss}
+\end{figure}
+
+Existen diversas hipótesis para explicar la existencia de este tipo de estrellas. En el presente trabajo trataremos de diferenciar dos de ellas: la hipótesis aislada y la hipótesis binaria, mediante la astrosismología.
+
+El modelo teórico de evolución estelar más simple asume una evolución aislada, es decir, que la estrella no interactúa con otros objetos celestes. En este caso, la explicación de la existencia de estas blue stragglers es que son estrellas de una masa inicial alta, las cuales se formaron mucho más tarde que el resto de estrellas de su cúmulo. Esta es la hipótesis aislada.
+
+La alternativa a esto es que estas blue stragglers se encuentren en sistemas binarios con otro objeto, el cual ha interactuado de alguna manera con la estrella, provocando que esta se vuelva más masiva y caliente de lo que era al inicio de su vida.
+
+Estas dos hipótesis no pueden ser explicadas solamente con el diagrama HR. Dos estrellas con historias evolutivas completamente distintas pueden ubicarse en la misma posición, ocultándonos sus diferencias internas. Debido a ello recurrimos a la astrosismología. Al estudiar las pulsaciones de dos estrellas en la misma posición pero con historias evolutivas distintas, esperamos encontrar diferencias cuantificables en sus frecuencias de oscilación que nos permitan discernir cual de las dos hipótesis es la correcta.
+
+Esto nos lleva a la siguiente pregunta: ¿Qué tipo de observaciones astrosismológicas necesitamos para poder diferenciar entre estas dos hipótesis? Aquí es donde entra en juego la misión HAYDN.
+
+%describes los dos escenarios y por que los contemplamos y por que no los podemos diferencias sin astrosismologia.
 \section{HAYDN}
-La propuesta de misión HAYDN (acrónimo en inglés de High-precision AsteroseismologY in DeNse stellar fields) \citep{HAYDN} es una propuesta de misión espacial de clase media europea concebida en el marco del programa científico a largo plazo Voyage 2050 de la Agencia Espacial Europea. Actualmente, HAYDN compite con otras propuestas de misión para la misión M8 de la ESA, tras haber superado la primera fase de selección y tener una buena base tras su evaluación inicial en la anterior convocatoria (M7). El proyecto está liderado por Andrea Miglio (Universidad de Bolonia) como Investigador Principal y Benoît Mosser (Observatorio de París) como Co-IP, y cuenta con un extenso consorcio internacional de más de 200 científicos (entre ellos, Andrés Moya Bedón, tutor del presente proyecto. Él es Investigador Principal de dicha misión en España y Co-Investigador Principal a nivel global.)
+La propuesta de misión HAYDN (acrónimo en inglés de High-precision AsteroseismologY in DeNse stellar fields) \citep{HAYDN} es una propuesta de misión espacial de clase media europea concebida en el marco del programa científico a largo plazo Voyage 2050 de la Agencia Espacial Europea. Actualmente, HAYDN compite con otras propuestas de misión para la misión M8 de la ESA, tras haber superado la primera fase de selección y tener una buena base tras su evaluación inicial en la anterior convocatoria (M7). El proyecto está liderado por Andrea Miglio (Universidad de Bolonia) como Investigador Principal, y cuenta con un extenso consorcio internacional de más de 200 científicos (entre ellos, Andrés Moya Bedón, tutor del presente proyecto. Él es Investigador Principal de dicha misión en España y Co-Investigador Principal a nivel global.)
 
-El objetivo de HAYDN es obtener series temporales fotométricas de alta precisión, alta cadencia y larga duración para grandes muestras de estrellas situadas en entornos estelares densos y ``controlados'', como son los cúmulos estelares, el bulbo de la Vía Láctea y galaxias enanas vecinas.
+El objetivo de HAYDN es obtener series temporales fotométricas de alta precisión, alta cadencia y larga duración para grandes muestras de estrellas situadas en entornos estelares densos y ``controlados'', como son los cúmulos estelares abiertos (e.g. $\chi$ y h Persei), cúmulos de edad intermedia (e.g. M67), cúmulos globulares antiguos (e.g. 47 Tuc y NGC 6397), y otras estructuras complejas, como son el bulbo de la Vía Láctea y Omega Centauri, hipotético remanente del cúmulo central de una galaxia absorbida por la Vía Láctea hace miles de millones de años \citep{Bekki_2003, haydn_mission_proposal_2026}
 
-En la década pasada, diversas misiones como CoRoT, Kepler y TESS han permitido obtener resultados de un alto valor científico en el marco de la astrosismología. Sin embargo el propósito de dichas misiones no era el estudio de las oscilaciones estelares, sino el de detectar exoplanetas a través del método de tránsitos en estrellas brillantes del campo galáctico. El problema que presentan para la toma de datos astrosismológicos es que utilizan instrumentos con tamaños de píxel muy grandes en el cielo (TESS, por ejemplo, tiene píxeles que abarcan $20$ segundos de arco).
+En la década pasada, diversas misiones como CoRoT, Kepler y TESS han permitido obtener resultados de un alto valor científico en el marco de la astrosismología. Sin embargo el propósito de dichas misiones no era el estudio de las oscilaciones estelares, sino el de detectar exoplanetas a través del método de tránsitos en estrellas brillantes del campo galáctico. El problema que presentan para la toma de datos astrosismológicos en campos estelares densos es que emplean instrumentos con tamaños de píxel muy grandes en el cielo (TESS, por ejemplo, tiene píxeles que abarcan $20''$), y las Point-Spread-Functions (PSFs) de las estrellas no son suficientemente pequeñas.
 
-Este tamaño de píxel tan extenso impide tomar series fotométricas de estrellas individuales cuando estas se encuentran en campos altamente poblados, como son los cúmulos estelares densos y el centro galáctico debido a la severa contaminación por el solapamiento de la luz de estrellas vecinas. HAYDN soluciona esto empleando un tamaño de píxel considerablemente menor ($1"$ o menor) y un campo de visión más concentrado (alrededor de un grado). Esto le permite resolver estrellas densamente agrupadas.
+Esto impide tomar series fotométricas de estrellas individuales cuando estas se encuentran en campos altamente poblados, como son los cúmulos estelares densos y el centro galáctico debido a la severa contaminación por el solapamiento de la luz de estrellas vecinas. HAYDN soluciona esto empleando una escala del píxel en el orden de $0.25''$ y un campo de visión más concentrado ($\lesssim 1 \text{ deg}$). Esto le permite resolver estrellas densamente agrupadas.
 
 \begin{figure}[htpb]
-    \centering
-    \includegraphics[width=0.8\textwidth]{Imagenes/cepheids.png}
-    \caption{Imagen mostrando la galaxia NGC 5584. La visualización ilustra cómo el telescopio Webb (NIRCam) logra separar una estrella Cefeida (punto naranja) de la multitud de estrellas de fondo (puntos azules), una distinción que la menor resolución del Hubble (WFC3-IR) en el infrarrojo cercano no permitía hacer con claridad, como se ve en los recuadros ampliados. Imagen tomada de \citet{NASAWebb2023Cepheids}}
+  \centering
+  \includegraphics[width=0.8\textwidth]{Imagenes/cepheids.png}
+  \caption{Imagen mostrando la galaxia NGC 5584. La visualización ilustra cómo el telescopio Webb (NIRCam) logra separar una estrella Cefeida (punto naranja) de la multitud de estrellas de fondo (puntos azules), una distinción que la menor resolución del Hubble (WFC3-IR) en el infrarrojo cercano no permitía hacer con claridad, como se ve en los recuadros ampliados. Imagen tomada de \citet{NASAWebb2023Cepheids}}
 \end{figure}
 
 \subsection{Objetivos y Arquitectura}
@@ -24,15 +58,14 @@ Como objetivos científicos, HAYDN abordará los siguientes pilares principales:
 
 \textbf{Astrofísica estelar sin precedentes:} HAYDN podrá poner a prueba, contrastar y calibrar una gran cantidad de modelos estelares mediante la obtención de observables de estrellas en cúmulos estelares. Esto permitirá estudiar el transporte interno de elementos químicos en el interior estelar y su rotación, la pérdida de masa en la rama de las gigantes rojas y los mecanismos de formación de Blue Stragglers y otros productos de fusiones o transferencias de masa entre sistemas complejos.
 
-\textbf{Formación y evolución de cúmulos estelares:} HAYDN brindará edades absolutas increíblemente precisas de cúmulos globulares, algo que es de gran utilidad para datar el Universo temprano. Además, ayudará a resolver el misterio de las ``poblaciones múltiples'' (constituyentes de un mismo cúmulo pero formados por generaciones de estrellas diferentes, de distinta edad y composición) en los cúmulos globulares (como Omega Centauri o 47 Tucanae) permitiendo la medición asterosísmica directa de las anomalías en la abundancia de helio estelar en dichos entornos. Además, sus mediciones restringirán la posible existencia de agujeros negros de masa intermedia en los centros de estos cúmulos.
+\textbf{Formación y evolución de cúmulos estelares:} HAYDN brindará edades absolutas increíblemente precisas de cúmulos estelares, algo que es de gran utilidad para datar el Universo temprano. Además, ayudará a resolver el misterio de las ``poblaciones múltiples'' (constituyentes de un mismo cúmulo pero formados por generaciones de estrellas diferentes, de distinta edad y composición) en los cúmulos estelares (como Omega Centauri o 47 Tucanae) permitiendo la medición asterosísmica directa de las anomalías en la abundancia de helio estelar en dichos entornos. Además, sus mediciones restringirán la posible existencia de agujeros negros de masa intermedia en los centros de estos cúmulos.
 
-\textbf{Historia de ensamblaje y quimiodinámica de la Vía Láctea y galaxias enanas:} HAYDN tiene como objetivo realizar astrosismología galáctica. Entre sus posibles objetos de estudio se encuentran el Bulbo de la Vía Láctea, donde podrá revelar las edades reales de distintas poblaciones de interés, permitiendo datar la formación de la barra galáctica y otras galaxias enanas y restos galácticos, como el cúmulo Omega Centauri o la galaxia Esferoidal Enana de Sagitario, permitiendo dilucidar su historial de formación estelar.
-
+\textbf{Arqueología galáctica:} HAYDN tiene como objetivo realizar astrosismología galáctica. Entre sus posibles objetos de estudio se encuentran el Bulbo de la Vía Láctea, donde podrá revelar las edades reales de distintas poblaciones de interés, permitiendo datar la formación de la barra galáctica y otras galaxias enanas y restos galácticos, como el cúmulo Omega Centauri o la galaxia Esferoidal Enana de Sagitario, permitiendo dilucidar su historial de formación estelar.
 
 Para cumplir estos objetivos, la arquitectura preliminar de HAYDN contempla:
 
 \begin{itemize}
-    \item Un telescopio con un espejo primario de unos 90 cm de diámetro.
-    \item Campañas de observación de larga duración (6, 12 y hasta 24 meses continuos) sobre objetivos específicos, crucial para obtener la resolución frecuencial necesaria para detectar la fina estructura de modos de pulsación mezclados (p y g) y medir perfiles de rotación.
-    \item Una importante colaboración con otros proyectos espectroscópicos terrestres e instrumentos, como el futuro HRMOS y estudios de Gaia, permitiendo incrementar drásticamente su valor científico.
+  \item Un telescopio con un espejo primario de unos 137 cm de diámetro.
+  \item Campañas de observación de larga duración (3, 6, 9 y hasta 18 meses continuos) sobre objetivos específicos, crucial para obtener la resolución frecuencial necesaria para detectar la fina estructura de modos de pulsación mezclados (p y g) y medir perfiles de rotación.
+  \item Una importante colaboración con otros proyectos espectroscópicos terrestres e instrumentos, como el futuro HRMOS y estudios de Gaia, permitiendo incrementar drásticamente su valor científico.
 \end{itemize}
