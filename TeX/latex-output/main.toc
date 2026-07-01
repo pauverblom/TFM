@@ -29,4 +29,4 @@
 \contentsline {chapter}{\numberline {4}Evolución y Comparación de la Blue Straggler}{32}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Evolución de Estrellas Similares}{32}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Comparación Astrosismológica}{35}{subsection.4.1.1}%
-\contentsline {chapter}{\numberline {}Referencias}{35}{subsection.4.1.1}%
+\contentsline {chapter}{\numberline {}Referencias}{39}{figure.caption.26}%

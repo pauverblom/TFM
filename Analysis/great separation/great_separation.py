@@ -5,10 +5,14 @@ import numpy as np
 import mesa_reader as mr
 import shutil
 
-mass_compare = 1.79
+mass_compare = 1.838
 
-dir_bs = '/Users/pauverdeguer/TFM/MESA/evolve_created_blue_straggler'
-dir_mass_compare = f'/Users/pauverdeguer/TFM/MESA/mass_grid/mass_{mass_compare}'
+#dir_bs = '/Users/pauverdeguer/TFM/MESA/evolve_created_blue_straggler'
+#dir_mass_compare = f'/Users/pauverdeguer/TFM/MESA/mass_grid/mass_{mass_compare}'
+
+dir_bs = '/home/pauver/repos/pauverblom/TFM/MESA/evolve_created_blue_straggler'
+#dir_mass_compare = f'/home/pauver/repos/pauverblom/TFM/MESA/mass_grid/mass_{mass_compare}'
+dir_mass_compare = f'/home/pauver/repos/pauverblom/TFM/MESA/finer_mass_grid/mass_{mass_compare}'
 
 out_dir = f'great_separations_comp_mass_{mass_compare}'
 
@@ -16,7 +20,7 @@ if os.path.exists(out_dir):
     shutil.rmtree(out_dir)
 os.makedirs(out_dir, exist_ok=True)
 
-print("Loading HR tracks and profiles index...")
+print("Cargando trazas HR y el índice de perfiles...")
 # Load MESA history and profiles to dynamically access exact HR track data points
 hist_bs = mr.MesaData(f'{dir_bs}/LOGS/history.data')
 idx_bs = mr.MesaProfileIndex(f'{dir_bs}/LOGS/profiles.index')
@@ -66,7 +70,7 @@ for p_num_compare, m_num_compare in zip(idx_compare.profile_numbers, idx_compare
     if closest_p_bs is not None:
         profile_pairs.append((p_num_compare, closest_p_bs, h_pct))
 
-print("Generating comparison plots with HR diagram insets...")
+print("Generando gráficos comparativos con diagramas HR insertados...")
 
 # Generate a separate figure for each hydrogen fraction
 for p_num_compare, p_num_bs, h_pct in profile_pairs:
@@ -74,7 +78,7 @@ for p_num_compare, p_num_bs, h_pct in profile_pairs:
     file_compare = f"{dir_mass_compare}/gyre_outputs/profile{p_num_compare}.data/summary.h5"
     
     if not (os.path.exists(file_bs) and os.path.exists(file_compare)):
-        print(f"Skipping profiles {mass_compare}M={p_num_compare}, BS={p_num_bs} (H={h_pct}%) as outputs are missing.")
+        print(f"Saltando perfiles {mass_compare}M={p_num_compare}, BS={p_num_bs} (H={h_pct}%) ya que faltan los archivos de salida.")
         continue
     
     try:
@@ -84,26 +88,18 @@ for p_num_compare, p_num_bs, h_pct in profile_pairs:
         s_compare = pg.read_output(file_compare)
         sg_compare = s_compare.group_by('l')
     except Exception as e:
-        print(f"Error reading files for profiles {mass_compare}M={p_num_compare}, BS={p_num_bs}: {e}")
+        print(f"Error leyendo archivos para los perfiles {mass_compare}M={p_num_compare}, BS={p_num_bs}: {e}")
         continue
         
-    fig = plt.figure(figsize=(22, 12))
-    gs = fig.add_gridspec(2, 4)
+    fig = plt.figure(figsize=(10, 10.5))
+    gs = fig.add_gridspec(2, 2)
     
-    axes_top = []
-    axes_bot = []
+    ax_0 = fig.add_subplot(gs[0, 0])
+    ax_1 = fig.add_subplot(gs[0, 1])
+    ax_2 = fig.add_subplot(gs[1, 0])
+    axes = [ax_0, ax_1, ax_2]
     
-    ax_top_0 = fig.add_subplot(gs[0, 0])
-    ax_top_1 = fig.add_subplot(gs[0, 1], sharey=ax_top_0)
-    ax_top_2 = fig.add_subplot(gs[0, 2], sharey=ax_top_0)
-    axes_top = [ax_top_0, ax_top_1, ax_top_2]
-    
-    ax_bot_0 = fig.add_subplot(gs[1, 0])
-    ax_bot_1 = fig.add_subplot(gs[1, 1])
-    ax_bot_2 = fig.add_subplot(gs[1, 2])
-    axes_bot = [ax_bot_0, ax_bot_1, ax_bot_2]
-    
-    ax_hr = fig.add_subplot(gs[:, 3])
+    ax_hr = fig.add_subplot(gs[1, 1])
     
     # Distinct styling for the two stars
     color_bs = '#3498db' # Vivid blue
@@ -121,36 +117,12 @@ for p_num_compare, p_num_bs, h_pct in profile_pairs:
             if len(g['l']) > 0:
                 groups_compare[g['l'][0]] = g
     
-    # ---- Top Row: Frequency vs Radial Order (per l) ----
-    # ---- Bottom Row: Great Separation vs Radial Order (per l) ----
+    # ---- Great Separation vs Radial Order (per l) ----
     for l_idx, l_val in enumerate([0, 1, 2]):
-        ax_top = axes_top[l_idx]
-        ax_bot = axes_bot[l_idx]
+        ax = axes[l_idx]
         
         group_bs = groups_bs.get(l_val)
         group_compare = groups_compare.get(l_val)
-        
-        # Plot Top Row (Frequency)
-        if group_bs is not None:
-            ax_top.plot(group_bs['n_pg'], group_bs['freq'].real, 
-                    color=color_bs, marker='^', markersize=7, linestyle='-', linewidth=2, alpha=0.9,
-                    label='Blue Straggler' if l_idx == 0 else "")
-                    
-        if group_compare is not None:
-            ax_top.plot(group_compare['n_pg'], group_compare['freq'].real, 
-                    color=color_compare, marker='o', markersize=6, linestyle='--', linewidth=2, alpha=0.8,
-                    label=rf'{mass_compare} M$_\odot$ Star' if l_idx == 0 else "")
-                    
-        ax_top.set_xlim(-10.5, 10.5)
-        ax_top.set_title(f'Harmonic Degree $l = {l_val}$', fontsize=14, fontweight='bold', pad=12)
-        ax_top.set_xlabel('Radial Order ($n_{pg}$)', fontsize=12)
-        if l_idx == 0:
-            ax_top.set_ylabel('Frequency $\\nu$ (cyc/day)', fontsize=12)
-            ax_top.legend(fontsize=11, loc='best', framealpha=0.9)
-            
-        ax_top.grid(True, which='both', linestyle=':', color='gray', alpha=0.4)
-        ax_top.tick_params(labelsize=10)
-        ax_top.axvline(0, color='gray', linestyle=':', alpha=0.7, linewidth=1)
         
         # Count modes in [-10, 10] for warning (optional but kept for parity)
         expected_modes = {0: 10, 1: 20, 2: 21}[l_val]
@@ -163,14 +135,13 @@ for p_num_compare, p_num_bs, h_pct in profile_pairs:
         modes_comp = count_modes(group_compare)
         
         if modes_bs != expected_modes:
-            warn_msg = f"WARNING: BS (p_num={p_num_bs}) l={l_val} has {modes_bs} modes in [-10, 10]!"
-            ax_top.text(0.5, 0.9, warn_msg, transform=ax_top.transAxes, color='red', weight='bold', ha='center', fontsize=9, bbox=dict(facecolor='white', alpha=0.8, edgecolor='red'))
+            warn_msg = f"AVISO: ¡Rezagada Azul (p_num={p_num_bs}) l={l_val} tiene {modes_bs} modos en [-10, 10]!"
+            ax.text(0.5, 0.9, warn_msg, transform=ax.transAxes, color='red', ha='center', fontsize=9, bbox=dict(facecolor='white', alpha=0.8, edgecolor='red'))
             
         if modes_comp != expected_modes:
-            warn_msg = f"WARNING: {mass_compare}M (p_num={p_num_compare}) l={l_val} has {modes_comp} modes in [-10, 10]!"
-            ax_top.text(0.5, 0.8, warn_msg, transform=ax_top.transAxes, color='red', weight='bold', ha='center', fontsize=9, bbox=dict(facecolor='white', alpha=0.8, edgecolor='red'))
+            warn_msg = f"AVISO: ¡{mass_compare}M (p_num={p_num_compare}) l={l_val} tiene {modes_comp} modos en [-10, 10]!"
+            ax.text(0.5, 0.8, warn_msg, transform=ax.transAxes, color='red', ha='center', fontsize=9, bbox=dict(facecolor='white', alpha=0.8, edgecolor='red'))
 
-        # Plot Bottom Row (Great Separation)
         def plot_separation(ax, group, color, marker, label, linestyle):
             if group is None: return []
             n_pg = np.array(group['n_pg'])
@@ -182,39 +153,49 @@ for p_num_compare, p_num_bs, h_pct in profile_pairs:
             
             n_plot = []
             dnu = []
+            valid_dnu = []
             for i in range(1, len(n_pg)):
                 if n_pg[i] == n_pg[i-1] + 1:
-                    n_plot.append(n_pg[i])
-                    dnu.append(freq[i] - freq[i-1])
+                    n_plot.append(float(n_pg[i] + 9))
+                    val = float(freq[i] - freq[i-1])
+                    dnu.append(val)
+                    valid_dnu.append(val)
+                elif len(n_plot) > 0 and not np.isnan(n_plot[-1]):
+                    n_plot.append(np.nan)
+                    dnu.append(np.nan)
             
-            if n_plot:
+            if valid_dnu:
                 ax.plot(n_plot, dnu, color=color, marker=marker, markersize=7, 
-                        linestyle=linestyle, linewidth=2, alpha=0.9, label=label)
-            return dnu
+                        linestyle=linestyle, linewidth=2, alpha=0.6, label=label)
+            return valid_dnu
 
-        dnu_bs = plot_separation(ax_bot, group_bs, color_bs, '^', 'Blue Straggler' if l_idx == 0 else "", '-')
-        dnu_comp = plot_separation(ax_bot, group_compare, color_compare, 'o', rf'{mass_compare} M$_\odot$ Star' if l_idx == 0 else "", '--')
+        dnu_bs = plot_separation(ax, group_bs, color_bs, '^', 'Blue  Straggler' if l_idx == 0 else "", '-')
+        dnu_comp = plot_separation(ax, group_compare, color_compare, 'o', rf'Estrella de {mass_compare} M$_\odot$' if l_idx == 0 else "", '--')
         
-        ax_bot.set_xlim(-10.5, 10.5)
-        ax_bot.set_xlabel('Radial Order Index ($n_{pg}$)', fontsize=12)
-        if l_idx == 0:
-            all_dnus = dnu_bs + dnu_comp
-            if all_dnus:
-                min_dnu = min(all_dnus)
-                ax_bot.set_ylim(bottom=min_dnu - 0.1)
-            ax_bot.set_ylabel(r'Great Separation $\Delta\nu$ (cyc/day)', fontsize=12)
-            ax_bot.legend(fontsize=11, loc='best', framealpha=0.9)
+        ax.set_xlim(-0.5, 19.5)
+        ax.set_xlabel('Índice de gran separación ($k$)', fontsize=12)
+        ax.set_xticks(range(0, 20, 2))
+        
+        all_dnus = dnu_bs + dnu_comp
+        if all_dnus:
+            min_dnu = min(all_dnus)
+            ax.set_ylim(bottom=min_dnu - 0.1)
             
-        ax_bot.grid(True, which='both', linestyle=':', color='gray', alpha=0.4)
-        ax_bot.tick_params(labelsize=10)
-        ax_bot.axvline(0, color='gray', linestyle=':', alpha=0.7, linewidth=1)
-        ax_bot.set_title(rf'Great Separation for $l = {l_val}$', fontsize=13, fontweight='bold', pad=10)
+        ax.set_ylabel(r'Gran separación $\Delta\nu$ (ciclos/día)', fontsize=12)
         
-    # ---- Right Side: HR Diagram ----
+        if l_idx == 0:
+            ax.legend(fontsize=11, loc='best', framealpha=0.9)
+            
+        ax.grid(True, which='both', linestyle=':', color='gray', alpha=0.4)
+        ax.tick_params(labelsize=10)
+        ax.axvline(0, color='gray', linestyle=':', alpha=0.7, linewidth=1)
+        ax.set_title(rf'Gran separación para $l = {l_val}$', fontsize=13, pad=10)
+        
+    # ---- HR Diagram ----
     ax_hr.plot(hist_bs.log_Teff, hist_bs.log_L, color=color_bs, alpha=0.4, linewidth=1.5, zorder=1,
                label='Blue Straggler')
     ax_hr.plot(hist_compare.log_Teff, hist_compare.log_L, color=color_compare, alpha=0.4, linewidth=1.5, zorder=1,
-               label=rf'{mass_compare} M$_\odot$ Star')
+               label=rf'Estrella de {mass_compare} M$_\odot$')
     
     teff_bs, L_bs = get_hr_point(hist_bs, idx_bs, p_num_bs)
     teff_compare, L_compare = get_hr_point(hist_compare, idx_compare, p_num_compare)
@@ -230,17 +211,16 @@ for p_num_compare, p_num_bs, h_pct in profile_pairs:
     ax_hr.set_xlabel(r'$\log T_{\rm eff}$', fontsize=12)
     ax_hr.set_ylabel(r'$\log L/L_\odot$', fontsize=12)
     ax_hr.tick_params(labelsize=10)
-    ax_hr.set_title('HR Diagram', fontsize=13, fontweight='bold', pad=10)
-    ax_hr.legend(fontsize=10, loc='best', framealpha=0.9)
+    ax_hr.set_title('Diagrama HR', fontsize=13, pad=10)
+    ax_hr.legend(fontsize=11, loc='best', framealpha=0.9)
     ax_hr.grid(True, linestyle=':', alpha=0.3)
         
-    plt.suptitle(rf'Frequency and Great Separation: Blue Straggler vs {mass_compare} M$_\odot$ Star' + '\n' + f'Central Hydrogen: ~{h_pct}%', 
-                 fontsize=15, fontweight='bold', y=1.02)
+    plt.suptitle(rf'Gran separación: Blue Straggler vs Estrella de {mass_compare} M$_\odot$', fontsize=15, y=1.0)
     plt.tight_layout()
     
     out_filename = f'{out_dir}/great_separation_mass_{mass_compare}_pcomp_{p_num_compare}_pbs_{p_num_bs}_H_{h_pct}.png'
     plt.savefig(out_filename, dpi=300, bbox_inches='tight')
     plt.close(fig) 
-    print(f"Saved {out_filename}")
+    print(f"Guardado {out_filename}")
 
-print("All plots generated successfully!")
+print("¡Todos los gráficos se generaron con éxito!")

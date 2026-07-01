@@ -125,7 +125,7 @@ def plot_mkipp_diagram(ax, logs_dirs_list, title, line_color, cmap_name="Blues",
     else:
         ax.set_xlabel('')
     
-    ax.set_ylabel('Masa ($M_\odot$)', fontsize=14)
+    ax.set_ylabel(r'Masa ($M_\odot$)', fontsize=14)
 
 def overlay_abundance_shading(ax, logs_dirs_list, identifier, levels, cmap_name):
     """
@@ -205,9 +205,10 @@ def main():
         cmap_name="Blues",
         cores=["He"],
         show_xlabel=False,
-        age_decimals=2
+        age_decimals=2,
+        num_ticks=8
     )
-    overlay_abundance_shading(ax_kipp1, [logs_dir_bs_creation], 'y_mass_fraction_He', levels=np.linspace(0.5, 1.0, 5), cmap_name='Greens')
+    overlay_abundance_shading(ax_kipp1, [logs_dir_bs_creation], 'y_mass_fraction_He', levels=np.linspace(0.5, 1.0, 100), cmap_name='Greens')
 
 
     
@@ -222,7 +223,7 @@ def main():
         show_xlabel=False,
         num_ticks=8
     )
-    overlay_abundance_shading(ax_kipp2, [logs_dir_bs_evolution], 'y_mass_fraction_He', levels=np.linspace(0.5, 1.0, 5), cmap_name='Greens')
+    overlay_abundance_shading(ax_kipp2, [logs_dir_bs_evolution], 'y_mass_fraction_He', levels=np.linspace(0.5, 1.0, 100), cmap_name='Greens')
 
 
     
@@ -230,13 +231,13 @@ def main():
     plot_mkipp_diagram(
         ax_kipp3, 
         [logs_dir_183], 
-        "Evolución de la Estrella de 1.83 $M_\odot$", 
+        r"Evolución de la Estrella de 1.83 $M_\odot$", 
         star_183_color, 
         cmap_name="Purples",
         cores=["He"],
         show_xlabel=True
     )
-    overlay_abundance_shading(ax_kipp3, [logs_dir_183], 'y_mass_fraction_He', levels=np.linspace(0.5, 1.0, 5), cmap_name='Greens')
+    overlay_abundance_shading(ax_kipp3, [logs_dir_183], 'y_mass_fraction_He', levels=np.linspace(0.5, 1.0, 100), cmap_name='Greens')
 
 
     
