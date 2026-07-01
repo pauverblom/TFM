@@ -18,7 +18,7 @@ grid = MesaGrid(
 )
 
 # Add MESA execution files explicitly so they are copied into each grid subfolder
-for f in ['clean', 'mk', 'rn', 're', 'gyre.in', 'run_gyre_all.sh']:
+for f in ['clean', 'mk', 'rn', 're', 'gyre.in', 'run_gyre_all.sh', 'run_gyre_all_bash.sh']:
     grid.add_file(os.path.join(base_dir, f))
 for d in ['src', 'make']:
     grid.add_dir(os.path.join(base_dir, d))

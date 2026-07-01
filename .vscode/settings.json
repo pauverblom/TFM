@@ -2,10 +2,10 @@
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
   "python.terminal.activateEnvironment": true,
   "cSpell.words": [
-    "astrosismología",
-    "astrosismológico",
-    "hidrodinámica",
-    "Hidrodinámica"
+    "astrosismolog\u00eda",
+    "astrosismol\u00f3gico",
+    "hidrodin\u00e1mica",
+    "Hidrodin\u00e1mica"
   ],
   "files.associations": {
     "**/LOGS*/*.data": "csv (whitespace)"
@@ -49,7 +49,9 @@
     {
       "name": "bibtex",
       "command": "bibtex",
-      "args": ["%OUTDIR%/%DOCFILE%"],
+      "args": [
+        "%OUTDIR%/%DOCFILE%"
+      ],
       "env": {
         "BIBINPUTS": "%OUTDIR%:"
       }
@@ -58,24 +60,49 @@
   "latex-workshop.latex.recipes": [
     {
       "name": "pdflatex",
-      "tools": ["pdflatex"]
+      "tools": [
+        "pdflatex"
+      ]
     },
     {
       "name": "lualatex",
-      "tools": ["lualatex"]
+      "tools": [
+        "lualatex"
+      ]
     },
     {
-      "name": "lualatex ➞ biber ➞ lualatex x2",
-      "tools": ["lualatex", "biber", "lualatex", "lualatex"]
+      "name": "lualatex \u279e biber \u279e lualatex x2",
+      "tools": [
+        "lualatex",
+        "biber",
+        "lualatex",
+        "lualatex"
+      ]
     },
     {
-      "name": "pdflatex ➞ biber ➞ pdflatex x2",
-      "tools": ["pdflatex", "biber", "pdflatex", "pdflatex"]
+      "name": "pdflatex \u279e biber \u279e pdflatex x2",
+      "tools": [
+        "pdflatex",
+        "biber",
+        "pdflatex",
+        "pdflatex"
+      ]
     },
     {
-      "name": "pdflatex ➞ bibtex ➞ pdflatex x2",
-      "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+      "name": "pdflatex \u279e bibtex \u279e pdflatex x2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
     }
   ],
-  "latex-workshop.latex.recipe.default": "lualatex ➞ biber ➞ lualatex x2"
+  "latex-workshop.latex.recipe.default": "lualatex \u279e biber \u279e lualatex x2",
+  "latex-workshop.intellisense.citation.backend": "biblatex",
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.linting.run": "onType",
+  "[latex]": {
+    "editor.wordWrap": "on"
+  }
 }

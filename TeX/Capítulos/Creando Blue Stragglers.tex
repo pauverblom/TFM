@@ -5,7 +5,7 @@ En este capítulo se expondrán las técnicas utilizadas para simular la formaci
 \section{MESA}
 MESA (\textit{Modules for Experiments in Stellar Astrophysics}) es un entorno numérico de código abierto diseñado para simular la estructura y evolución estelar en 1D \autocite{paxton2011, paxton2013, paxton2015, paxton2018, paxton2019, jermyn2023}. Gracias a su arquitectura modular, MESA permite modelar una amplia gama de configuraciones estelares y escenarios evolutivos.
 
-MESA está escrito en Fortran moderno y se caracteriza por su resolución del sistema de ecuaciones diferenciales en derivadas parciales acopladas que rige la estructura y evolución estelar en coordenadas lagrangianas de masa (anteriormente desarrollado). El ``núcleo'' de MESA resuelve simultáneamente para cada paso este sistema de ecuaciones. Su solver aplica un método de Newton-Raphson de múltiples variables, utilizando un esquema de discretización espacial adaptativa (malla móvil), que modifica automáticamente el número y la distribución de las celdas en zonas con fuertes gradientes físicos (como límites de zonas convectivas, frentes de combustión nuclear \dots). Además, también ajusta el paso de tiempo para poder simular correctamente puntos de la evolución estelar donde las cantidades de interés evolucionan con muy alta rapidez.
+MESA está escrito en Fortran moderno y se caracteriza por su resolución del sistema de ecuaciones diferenciales en derivadas parciales acopladas que rige la estructura y evolución estelar en coordenadas lagrangianas de masa (anteriormente desarrollado). El ``núcleo'' de MESA resuelve simultáneamente para cada paso este sistema de ecuaciones. Su solver aplica un método de Newton-Raphson de múltiples variables, utilizando un esquema de discretización espacial adaptativa (malla móvil), que modifica automáticamente el número y la distribución de las celdas en zonas con fuertes gradientes físicos (como límites de zonas convectivas, frentes de combustión nuclear\dots). Además, también ajusta el paso de tiempo para poder simular correctamente puntos de la evolución estelar donde las cantidades de interés evolucionan con muy alta rapidez.
 
 \subsection{Módulos y Física Integrada}
 MESA funciona con lo que se conoce como módulos (la M de MESA). La idea es que las diferentes propiedades físicas calculadas pueden hacerse de forma independiente, comunicándose con el solver principal. Los módulos implicados en nuestras simulaciones son:
@@ -22,11 +22,11 @@ Para configurar estos módulos, se utilizan archivos de configuración con forma
 
 \subsection{Formación de Blue Stragglers}
 
-Se estudia la formación de Blue Stragglers mediante la vía de transferencia de masa en sistemas binarios. Para ello, se emplea el módulo \texttt{mesa/binary}, el cual calcula de manera simultánea la evolución de ambas estrellas (donante y acretora) y los parámetros orbitales del sistema. La Figura \ref{fig:binary_flow_chart} ilustra el diagrama de flujo que emplea este módulo para simular ambas estrellas.
+Para diferenciar las historias evolutivas de las blue stragglers y el resto de estrellas del cúmulo, se estudia la formación de Blue Stragglers mediante la vía de transferencia de masa en sistemas binarios. Para ello, se emplea el módulo \texttt{mesa/binary}, el cual calcula de manera simultánea la evolución de ambas estrellas (donante y acretora) y los parámetros orbitales del sistema. La Figura \ref{fig:binary_flow_chart} ilustra el diagrama de flujo que emplea este módulo para simular ambas estrellas.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.85\textwidth]{Imagenes/binary_flow_chart.png}
+  \includegraphics[width=0.82\textwidth]{Imagenes/binary_flow_chart.png}
   \caption{Diagrama de flujo del módulo \texttt{mesa/binary}.}
   \label{fig:binary_flow_chart}
 \end{figure}
@@ -54,16 +54,16 @@ Existen tres casos principales para la formación de Blue Stragglers, dependiend
   \item \textbf{Caso C:} ocurre en etapas evolutivas aún más tardías, cuando la estrella donante inicia la transferencia de masa siendo ya una estrella que se encuentra en la fase de quema de helio en una capa exterior.
 \end{itemize}
 
-En este caso, se ha optado por el \textbf{Caso A}. No obstante, para producir resultados más interesantes, se ha seleccionado un periodo inicial de 4 días. Esto permite a la estrella donante evolucionar durante un cierto tiempo por la MS, quemando una porción de su hidrógeno central, hasta que su radio aumenta lo suficiente como para comenzar a transferir masa a la acretora, y así evitar que se forme una envoltura común prematura.
+En este caso, se ha optado por el \textbf{Caso A}. El valor de 4 días se ha seleccionado para permitir a ambas estrellas evolucionar durante un cierto tiempo por la MS, evitando así el contacto prematuro. Una vez que la donante agota el hidrógeno de su núcleo, su radio aumenta lo suficiente como para comenzar a transferir masa a la acretora. En este punto se inicia el proceso de transferencia de masa, el cual se regula mediante una serie de parámetros.
 
 \subsubsection{Estabilidad Numérica del Acretor y Ajustes del Solver}
 
-La evolución de nuestro sistema es un proceso delicado. Es necesario elegir una combinación adecuada de condiciones iniciales y parámetros del solver para asegurar que la evolución se desarrolle de manera física y numérica correcta. En este caso, se han tomado las siguientes consideraciones:
+La evolución del sistema es un proceso delicado. Es necesario elegir una combinación adecuada de condiciones iniciales y parámetros del solver para asegurar que la evolución se desarrolle de manera física y numérica correcta. En este caso, se han tomado las siguientes consideraciones:
 \begin{itemize}
 
-  \item El proceso de transferencia de masa se modela bajo la hipótesis de \textbf{transferencia de masa no conservativa}, parametrizada mediante el coeficiente $\beta = 0.5$ (\texttt{mass\_\allowbreak transfer\_beta = 0.5d0}). Esto significa que el 50\% de la masa transferida por la estrella donante es retenida por la acretora, mientras que el otro 50\% es expulsado del vecindario de la estrella acretora. Esta materia perdida abandona el sistema, llevando con sí momento angular específico de la órbita de la acretora. Esto permite estabilizar la evolución orbital del sistema, ensanchando su semieje mayor.
+  \item El proceso de transferencia de masa se modela bajo la hipótesis de \textbf{transferencia de masa no conservativa}, parametrizada mediante el coeficiente $\beta = 0.5$ (\texttt{mass\_\allowbreak transfer\_beta = 0.5d0}). Esto significa que el 50\% de la masa transferida por la estrella donante es retenida por la acretora, mientras que el otro 50\% es expulsado del vecindario mediante el viento estelar. Esta materia perdida abandona el sistema, llevando con sí momento angular específico de la órbita de la acretora, lo que permite estabilizar la evolución orbital del sistema, ensanchando su semieje mayor.
 
-  \item La adición acelerada de material caliente sobre la estrella de $1.0\,M_\odot$ introduce perturbaciones térmicas y mecánicas drásticas en sus capas más externas. Esto provoca una expansión violenta de su envoltura convectiva y puede llevar a una caída de la luminosidad superficial por debajo de cero, deteniendo la convergencia numérica. Para mitigar esto, se ha aplicado un límite estricto sobre la máxima tasa de transferencia de masa de la donante a la acretora por paso de tiempo a un valor máximo de $10^{-4}\,M_\odot/\text{año}$ (\texttt{max\_implicit\_abs\_mdot = 1d-4}).
+  \item La adición acelerada de material caliente sobre la estrella de $1.0\,M_\odot$ introduce perturbaciones térmicas y mecánicas drásticas en sus capas más externas. Esto provoca una expansión rápida de su envoltura convectiva, lo que puede llevar a una caída de la luminosidad superficial por debajo de cero, deteniendo la convergencia numérica. Para mitigar esto, se ha aplicado un límite estricto sobre la máxima tasa de transferencia de masa de la donante a la acretora por paso de tiempo a un valor máximo de $10^{-4}\,M_\odot/\text{año}$ (\texttt{max\_implicit\_abs\_mdot = 1d-4}).
 
   \item La envoltura externa de la acretora es altamente superadiabática y está dominada por la presión de radiación. Para estabilizar esto numéricamente, se activa el esquema \texttt{MLT++} en MESA (\url{okay\_to\_reduce\_gradT\_excess = .true.}). Esto reduce artificialmente la superadición del gradiente de temperatura en regiones donde la eficiencia del transporte convectivo es extremadamente baja pero la radiación ejerce una presión dominante.
 

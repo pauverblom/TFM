@@ -3,7 +3,8 @@
 \contentsline {chapter}{\numberline {1}Introducción}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Blue Stragglers}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}HAYDN}{5}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Objetivos y Arquitectura}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.1}Objetivos y Arquitectura}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Arquitectura y Operaciones}{7}{subsection.1.2.2}%
 \contentsline {chapter}{\numberline {2}Hidrodinámica y Oscilaciones Estelares}{8}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Ecuaciones Básicas de la Hidrodinámica}{8}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Aproximación Adiabática}{10}{subsection.2.1.1}%
@@ -27,4 +28,5 @@
 \contentsline {section}{\numberline {3.2}GYRE}{30}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Evolución y Comparación de la Blue Straggler}{32}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Evolución de Estrellas Similares}{32}{section.4.1}%
-\contentsline {chapter}{\numberline {}Referencias}{33}{figure.caption.17}%
+\contentsline {subsection}{\numberline {4.1.1}Comparación Astrosismológica}{35}{subsection.4.1.1}%
+\contentsline {chapter}{\numberline {}Referencias}{35}{subsection.4.1.1}%

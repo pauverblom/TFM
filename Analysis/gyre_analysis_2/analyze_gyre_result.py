@@ -5,10 +5,12 @@ import numpy as np
 import mesa_reader as mr
 import shutil
 
-mass_compare = 1.84
+mass_compare = 1.83
 
-dir_bs = '/home/pauver/repos/pauverblom/TFM/MESA/evolve_created_blue_straggler'
-dir_mass_compare = f'/home/pauver/repos/pauverblom/TFM/MESA/mass_grid/mass_{mass_compare}'
+#dir_bs = '/home/pauver/repos/pauverblom/TFM/MESA/evolve_created_blue_straggler'
+#dir_mass_compare = f'/home/pauver/repos/pauverblom/TFM/MESA/mass_grid/mass_{mass_compare}'
+dir_bs = '/Users/pauverdeguer/TFM/MESA/evolve_created_blue_straggler'
+dir_mass_compare = f'/Users/pauverdeguer/TFM/MESA/mass_grid/mass_{mass_compare}'
 
 out_dir = f'comp_mass_{mass_compare}'
 
