@@ -2380,34 +2380,38 @@
     <bcf:citekey order="4" intorder="1">santrich_2022</bcf:citekey>
     <bcf:citekey order="5" intorder="1">Jadhav_2021</bcf:citekey>
     <bcf:citekey order="6" intorder="1">Jadhav_2021</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">wang2024bluestragglerstars</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">HAYDN</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">Bekki_2003</bcf:citekey>
-    <bcf:citekey order="9" intorder="2">haydn_mission_proposal_2026</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">NASAWebb2023Cepheids</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">NASAWebb2023Cepheids</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">haydn</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Kurtz2022</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">10.3389/fspas.2022.952296</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">2008CoAst.157..240J</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">2008CoAst.157..240J</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">wang2024bluestragglerstars</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">HAYDN</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Bekki_2003</bcf:citekey>
     <bcf:citekey order="12" intorder="2">haydn_mission_proposal_2026</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">ChristensenDalsgaard2019</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">PhysicsStackExchange537111</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">PhysicsStackExchange537111</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">NASAWebb2023Cepheids</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">NASAWebb2023Cepheids</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">HAYDN</bcf:citekey>
+    <bcf:citekey order="15" intorder="2">haydn_mission_proposal_2026</bcf:citekey>
     <bcf:citekey order="16" intorder="1">ChristensenDalsgaard2019</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">ChristensenDalsgaard2019</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">Cunha2017</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">Cunha2017</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">paxton2011</bcf:citekey>
-    <bcf:citekey order="20" intorder="2">paxton2013</bcf:citekey>
-    <bcf:citekey order="20" intorder="3">paxton2015</bcf:citekey>
-    <bcf:citekey order="20" intorder="4">paxton2018</bcf:citekey>
-    <bcf:citekey order="20" intorder="5">paxton2019</bcf:citekey>
-    <bcf:citekey order="20" intorder="6">jermyn2023</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">eggleton1983</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">ritter1988</bcf:citekey>
-    <bcf:citekey order="22" intorder="2">kolbritter1990</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">townsend2013</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">wsssss</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">Bedding_2003</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">Bedding_2003</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">PhysicsStackExchange537111</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">PhysicsStackExchange537111</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">ChristensenDalsgaard2019</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">ChristensenDalsgaard2019</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Cunha2017</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Cunha2017</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">paxton2011</bcf:citekey>
+    <bcf:citekey order="23" intorder="2">paxton2013</bcf:citekey>
+    <bcf:citekey order="23" intorder="3">paxton2015</bcf:citekey>
+    <bcf:citekey order="23" intorder="4">paxton2018</bcf:citekey>
+    <bcf:citekey order="23" intorder="5">paxton2019</bcf:citekey>
+    <bcf:citekey order="23" intorder="6">jermyn2023</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">eggleton1983</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">ritter1988</bcf:citekey>
+    <bcf:citekey order="25" intorder="2">kolbritter1990</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">townsend2013</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">wsssss</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">Bedding_2003</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">Bedding_2003</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

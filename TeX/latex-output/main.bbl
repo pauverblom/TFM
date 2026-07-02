@@ -345,6 +345,37 @@
       \verb http://dx.doi.org/10.1007/s12036-021-09746-y
       \endverb
     \endentry
+    \entry{2008CoAst.157..240J}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=36009c510949f3e0913904f8fbcee4df}{%
+           family={{Jeffery}},
+           familyi={J\bibinitperiod},
+           given={C.\bibnamedelimi S.},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{36009c510949f3e0913904f8fbcee4df}
+      \strng{fullhash}{36009c510949f3e0913904f8fbcee4df}
+      \strng{fullhashraw}{36009c510949f3e0913904f8fbcee4df}
+      \strng{bibnamehash}{36009c510949f3e0913904f8fbcee4df}
+      \strng{authorbibnamehash}{36009c510949f3e0913904f8fbcee4df}
+      \strng{authornamehash}{36009c510949f3e0913904f8fbcee4df}
+      \strng{authorfullhash}{36009c510949f3e0913904f8fbcee4df}
+      \strng{authorfullhashraw}{36009c510949f3e0913904f8fbcee4df}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications in Asteroseismology}
+      \field{month}{12}
+      \field{title}{{The impact of asteroseismology on the theory of stellar evolution}}
+      \field{volume}{157}
+      \field{year}{2008}
+      \field{pages}{240\bibrangedash 248}
+      \range{pages}{9}
+    \endentry
     \entry{jermyn2023}{article}{}{}
       \name{author}{13}{}{%
         {{un=0,uniquepart=base,hash=66d427d68ccd48cfebe44d859a7c745b}{%
@@ -486,6 +517,40 @@
       \field{year}{1990}
       \field{pages}{385\bibrangedash 392}
       \range{pages}{8}
+    \endentry
+    \entry{Kurtz2022}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=16406d7e8d31a0031bf6b5d03b84ec20}{%
+           family={Kurtz},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{16406d7e8d31a0031bf6b5d03b84ec20}
+      \strng{fullhash}{16406d7e8d31a0031bf6b5d03b84ec20}
+      \strng{fullhashraw}{16406d7e8d31a0031bf6b5d03b84ec20}
+      \strng{bibnamehash}{16406d7e8d31a0031bf6b5d03b84ec20}
+      \strng{authorbibnamehash}{16406d7e8d31a0031bf6b5d03b84ec20}
+      \strng{authornamehash}{16406d7e8d31a0031bf6b5d03b84ec20}
+      \strng{authorfullhash}{16406d7e8d31a0031bf6b5d03b84ec20}
+      \strng{authorfullhashraw}{16406d7e8d31a0031bf6b5d03b84ec20}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annual Review of Astronomy and Astrophysics}
+      \field{number}{1}
+      \field{title}{Asteroseismology Across the Hertzsprung-Russell Diagram}
+      \field{volume}{60}
+      \field{year}{2022}
+      \field{pages}{31\bibrangedash 71}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.1146/annurev-astro-052920-094232
+      \endverb
     \endentry
     \entry{HAYDN}{article}{}{}
       \name{author}{32}{}{%
@@ -713,6 +778,45 @@
       \verb 1908.05129
       \endverb
       \keyw{Stars: low-mass,Globular clusters,Galaxy: bulge,Galaxies: dwarf,Asteroseismology,Astrophysics - Solar and Stellar Astrophysics,Astrophysics - Astrophysics of Galaxies}
+    \endentry
+    \entry{10.3389/fspas.2022.952296}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0f0117644c325e27bd823c88c28c4335}{%
+           family={Mirouh},
+           familyi={M\bibinitperiod},
+           given={Giovanni\bibnamedelima M.},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0f0117644c325e27bd823c88c28c4335}
+      \strng{fullhash}{0f0117644c325e27bd823c88c28c4335}
+      \strng{fullhashraw}{0f0117644c325e27bd823c88c28c4335}
+      \strng{bibnamehash}{0f0117644c325e27bd823c88c28c4335}
+      \strng{authorbibnamehash}{0f0117644c325e27bd823c88c28c4335}
+      \strng{authornamehash}{0f0117644c325e27bd823c88c28c4335}
+      \strng{authorfullhash}{0f0117644c325e27bd823c88c28c4335}
+      \strng{authorfullhashraw}{0f0117644c325e27bd823c88c28c4335}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Asteroseismology has opened a window on the internal physics of thousands of stars, by relating oscillation spectra properties to the internal physics of stars. Mode identification, namely the process of associating a measured oscillation frequency to the corresponding mode geometry and properties, is the cornerstone of this analysis of seismic spectra. In rapidly-rotating stars this identification is a challenging task that remains incomplete, as modes assume complex geometries and regular patterns in frequencies get scrambled under the influence of the Coriolis force and centrifugal flattening. In this article, I will first discuss the various classes of mode geometries that emerge in rapidly-rotating stars and the related frequency and period patterns, as predicted by ray dynamics, complete (non-)adiabatic calculations, or using the traditional approximation of rotation. These patterns scale with structural quantities and help us derive crucial constraints on the structure and evolution of these stars. I will summarize the amazing progress accomplished over the last few years for the deciphering of gravity-mode pulsator oscillation spectra, and recent developments based on machine-learning classification techniques to distinguish oscillation modes and pattern analysis strategies that let us access the underlying physics of pressure-mode pulsators. These approaches pave the way to ensemble asteroseismology of classical pulsators. Finally, I will highlight how these recent progress can combine to improve forward seismic modelling. I will focus on the example of Rasalhague, a well-known rapid rotator, to illustrate the process and the needed advances to obtain a-la-carte modelling of such stars.}
+      \field{issn}{2296-987X}
+      \field{journaltitle}{Frontiers in Astronomy and Space Sciences}
+      \field{title}{Forward modelling and the quest for mode identification in rapidly rotating stars}
+      \field{volume}{Volume 9 - 2022}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.3389/fspas.2022.952296
+      \endverb
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/journals/astronomy-and-space-sciences/articles/10.3389/fspas.2022.952296
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/journals/astronomy-and-space-sciences/articles/10.3389/fspas.2022.952296
+      \endverb
     \endentry
     \entry{NASAWebb2023Cepheids}{misc}{}{}
       \name{author}{4}{}{%
@@ -1439,7 +1543,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{haydn}
 \endrefsection
 \endinput
 

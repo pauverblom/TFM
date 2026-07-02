@@ -7,8 +7,8 @@ import shutil
 
 dir_bs = '/home/pauver/repos/pauverblom/TFM/MESA/evolve_created_blue_straggler'
 
-out_dir = 'great_separations_hand_picked'
-out_dir_tex = '/home/pauver/repos/pauverblom/TFM/TeX/Imagenes/great_separations_hand_picked'
+out_dir = 'gyre_analysis_hand_picked'
+out_dir_tex = '/home/pauver/repos/pauverblom/TFM/TeX/Imagenes/gyre_analysis_hand_picked'
 
 if os.path.exists(out_dir):
     shutil.rmtree(out_dir)
@@ -61,7 +61,6 @@ print("Generando gráficos comparativos (3 columnas)...")
 global_hr_points = []
 
 # Generate colormap colors
-# Utilizando plasma para mayor contraste
 colors = [plt.cm.gist_heat(0.8 * i / (len(hand_picked_pairs) - 1)) for i in range(len(hand_picked_pairs))]
 
 for idx_pair, (mass_compare, p_num_compare, p_num_bs, h_pct) in enumerate(hand_picked_pairs):
@@ -99,8 +98,6 @@ for idx_pair, (mass_compare, p_num_compare, p_num_bs, h_pct) in enumerate(hand_p
 
     fig, axes = plt.subplots(1, 3, figsize=(9.5, 2.8))
     
-    # Mantener color fijo para BS, usar colormap para la comparación
-    color_bs = '#3498db'
     color_val = colors[idx_pair]
     
     groups_bs = {}
@@ -114,6 +111,8 @@ for idx_pair, (mass_compare, p_num_compare, p_num_bs, h_pct) in enumerate(hand_p
             if len(g['l']) > 0:
                 groups_compare[g['l'][0]] = g
     
+    all_diffs_in_fig = []
+
     for l_idx, l_val in enumerate([0, 1, 2]):
         ax = axes[l_idx]
         
@@ -137,46 +136,39 @@ for idx_pair, (mass_compare, p_num_compare, p_num_bs, h_pct) in enumerate(hand_p
             warn_msg = f"AVISO: {mass_compare}M l={l_val} tiene {modes_comp} modos!"
             ax.text(0.5, 0.8, warn_msg, transform=ax.transAxes, color='red', ha='center', fontsize=8, bbox=dict(facecolor='white', alpha=0.8, edgecolor='red'))
 
-        def plot_separation(ax, group, color, marker, label, linestyle, linewidth):
-            if group is None: return []
-            n_pg = np.array(group['n_pg'])
-            freq = np.array(group['freq'].real)
+        def plot_differences(ax, group_bs, group_compare, color, marker, label):
+            if group_bs is None or group_compare is None: return []
+            n_pg_bs = np.array(group_bs['n_pg'])
+            freq_bs = np.array(group_bs['freq'].real)
             
-            sort_idx = np.argsort(n_pg)
-            n_pg = n_pg[sort_idx]
-            freq = freq[sort_idx]
+            n_pg_comp = np.array(group_compare['n_pg'])
+            freq_comp = np.array(group_compare['freq'].real)
             
-            n_plot = []
-            dnu = []
-            valid_dnu = []
-            for i in range(1, len(n_pg)):
-                if n_pg[i] == n_pg[i-1] + 1:
-                    n_plot.append(float(n_pg[i] + 9))
-                    val = float(freq[i] - freq[i-1])
-                    dnu.append(val)
-                    valid_dnu.append(val)
-                elif len(n_plot) > 0 and not np.isnan(n_plot[-1]):
-                    n_plot.append(np.nan)
-                    dnu.append(np.nan)
+            diffs = []
+            n_pg_plot = []
+            for i, n in enumerate(n_pg_comp):
+                idx_match_bs = np.where(n_pg_bs == n)[0]
+                if len(idx_match_bs) > 0:
+                    f_comp = freq_comp[i]
+                    f_bs = freq_bs[idx_match_bs[0]]
+                    diffs.append(f_comp - f_bs)
+                    n_pg_plot.append(n)
             
-            if valid_dnu:
-                ax.plot(n_plot, dnu, color=color, marker=marker, markersize=6, 
-                        linestyle=linestyle, linewidth=linewidth, alpha=0.8, label=label)
-            return valid_dnu
+            if n_pg_plot:
+                ax.plot(n_pg_plot, diffs, color=color, marker=marker, markersize=5, 
+                        linestyle='None', alpha=0.8, label=label)
+            return diffs
 
-        dnu_bs = plot_separation(ax, group_bs, color_bs, '^', 'Blue Straggler', '-', 2)
-        dnu_comp = plot_separation(ax, group_compare, color_val, 'o', rf'Estrella de {mass_compare:.3f} M$_\odot$', '--', 1.5)
+        diffs = plot_differences(ax, group_bs, group_compare, color_val, 'o', rf'$\nu_{{{mass_compare} M_\odot}} - \nu_{{\rm BS}}$')
         
-        ax.set_xlim(-0.5, 19.5)
-        ax.set_xticks(range(0, 20, 2))
-        
-        all_dnus = dnu_bs + dnu_comp
-        if all_dnus:
-            min_dnu = min(all_dnus)
-            ax.set_ylim(bottom=min_dnu - 0.1)
+        if diffs:
+            all_diffs_in_fig.extend(diffs)
             
+        ax.set_xlim(-10.5, 10.5)
+        ax.set_xticks(range(-10, 11, 4))
+        
         if l_idx == 0:
-            ax.set_ylabel(r'$\Delta\nu$ (ciclos/día)', fontsize=10)
+            ax.set_ylabel(r'$\nu_{\rm comp} - \nu_{\rm BS}$ (ciclos/día)', fontsize=10)
         
         if l_idx == 0:
             ax.legend(fontsize=9, loc='upper left', framealpha=0.9)
@@ -184,90 +176,38 @@ for idx_pair, (mass_compare, p_num_compare, p_num_bs, h_pct) in enumerate(hand_p
         ax.grid(True, which='both', linestyle=':', color='gray', alpha=0.4)
         ax.tick_params(labelsize=9)
         ax.axvline(0, color='gray', linestyle=':', alpha=0.7, linewidth=1)
+        ax.axhline(0, color='black', linestyle='--', alpha=0.5, linewidth=1)
+        
         if idx_pair == 0:
             ax.set_title(rf'$l = {l_val}$', fontsize=11, pad=5)
         else:
             ax.set_title(' ', fontsize=11, pad=5)
+            
+    # Set symmetric y-limits for this row based on all differences
+    if all_diffs_in_fig:
+        max_abs = max([abs(d) for d in all_diffs_in_fig])
+        limit = max_abs * 1.1 + 0.1
+        for ax in axes:
+            ax.set_ylim(-limit, limit)
         
     # Bold text at the top left
     axes[0].annotate(f"{idx_pair+1}", xy=(-0.22, 0.95), xycoords='axes fraction', fontsize=14, weight='bold', va='bottom', ha='right', 
                      bbox=dict(boxstyle="circle,pad=0.3", fc="white", lw=1, alpha=0.8))
     
     if (idx_pair + 1) in [5, 7]:
-        fig.supxlabel('Índice de gran separación ($k$)', fontsize=12, y=0.02)
+        fig.supxlabel('Orden radial ($n_{pg}$)', fontsize=12, y=0.02)
 
     # Adjust layout manually to force identical horizontal axes width across all figures
     bottom_margin = 0.22 if (idx_pair + 1) in [5, 7] else 0.08
-    plt.subplots_adjust(left=0.09, right=0.98, top=0.85, bottom=bottom_margin, wspace=0.15)
+    plt.subplots_adjust(left=0.1, right=0.98, top=0.85, bottom=bottom_margin, wspace=0.15)
     
-    out_filename = f'{out_dir}/great_separation_mass_{mass_compare}_pcomp_{p_num_compare}_pbs_{p_num_bs}_H_{h_pct}.png'
-    out_filename_tex = f'{out_dir_tex}/great_separation_mass_{mass_compare}_pcomp_{p_num_compare}_pbs_{p_num_bs}_H_{h_pct}.png'
+    out_filename = f'{out_dir}/gyre_analysis_mass_{mass_compare}_pcomp_{p_num_compare}_pbs_{p_num_bs}_H_{h_pct}.png'
+    out_filename_tex = f'{out_dir_tex}/gyre_analysis_mass_{mass_compare}_pcomp_{p_num_compare}_pbs_{p_num_bs}_H_{h_pct}.png'
     plt.savefig(out_filename, dpi=300, bbox_inches='tight')
     plt.savefig(out_filename_tex, dpi=300, bbox_inches='tight')
     plt.close(fig) 
     print(f"Guardado {out_filename}")
 
-# Generar el diagrama HR global
-print("Generando diagrama HR global...")
-fig_hr, ax_hr = plt.subplots(figsize=(9, 6.5))
 
-# Color fijo para el BSS
-color_bs = '#3498db'
-
-# Trazas base del Blue Straggler
-ax_hr.plot(hist_bs.log_Teff, hist_bs.log_L, color=color_bs, alpha=0.7, linewidth=2.5, zorder=1, label='Blue Straggler')
-
-# Trazas de comparación con colores del colormap
-masses_labeled = set()
-for (idx_pair_1, _, _, _, _, mass), color in zip(global_hr_points, colors):
-    hist_comp = hist_compare_cache[mass]
-    
-    if mass not in masses_labeled:
-        ax_hr.plot(hist_comp.log_Teff, hist_comp.log_L, 
-                   color=color, alpha=0.6, linewidth=1.5, zorder=1, label=rf'{mass:.3f} $M_\odot$')
-        masses_labeled.add(mass)
-    else:
-        ax_hr.plot(hist_comp.log_Teff, hist_comp.log_L, 
-                   color=color, alpha=0.6, linewidth=1.5, zorder=1)
-
-for idx, ((idx_pair, teff_bs, L_bs, teff_compare, L_compare, _), color) in enumerate(zip(global_hr_points, colors)):
-    # Marcar los puntos (BS en azul, comparación en color del colormap)
-    ax_hr.scatter(teff_compare, L_compare, color=color, s=100, marker='o', zorder=3, edgecolor='black', linewidth=0.5, alpha=0.9)
-    ax_hr.scatter(teff_bs, L_bs, color=color_bs, s=150, marker='^', zorder=4, edgecolor='black', linewidth=1.0, alpha=0.6)
-    
-    # Unirlos con una línea
-    ax_hr.plot([teff_bs, teff_compare], [L_bs, L_compare], color='black', linestyle=':', linewidth=1.5, alpha=0.7, zorder=2)
-    
-    # Anotar el número con una pequeña sombra
-    mid_teff = (teff_bs + teff_compare) / 2
-    mid_L = (L_bs + L_compare) / 2
-    ax_hr.annotate(str(idx_pair), (mid_teff, mid_L), textcoords="offset points", xytext=(-11,11), ha='center', fontsize=10, fontweight='bold', 
-    bbox=dict(boxstyle="circle,pad=0.3", fc="white", lw=1, alpha=0.8))
-
-ax_hr.invert_xaxis()
-ax_hr.set_xlabel(r'$\log T_{\rm eff}$', fontsize=13)
-ax_hr.set_ylabel(r'$\log L/L_\odot$', fontsize=13)
-ax_hr.tick_params(labelsize=11)
-ax_hr.set_title('Diagrama HR Global de Comparaciones', fontsize=15, pad=15)
-
-# La leyenda ahora mostrará el BSS y cada masa (sin anotaciones directas en el gráfico)
-# También agregamos una pequeña ayuda visual para los marcadores
-from matplotlib.lines import Line2D
-handles, labels = ax_hr.get_legend_handles_labels()
-handles.extend([
-    Line2D([0], [0], marker='^', color='w', markerfacecolor=color_bs, markersize=10, markeredgecolor='black', label='Punto BSS'),
-    Line2D([0], [0], marker='o', color='w', markerfacecolor='gray', markersize=10, markeredgecolor='black', label='Punto Comparación')
-])
-ax_hr.legend(handles=handles, fontsize=11, loc='best', framealpha=0.9)
-
-ax_hr.grid(True, linestyle=':', alpha=0.4)
-
-plt.tight_layout()
-hr_out = f'{out_dir}/global_hr_diagram.png'
-hr_out_tex = f'{out_dir_tex}/global_hr_diagram.png'
-plt.savefig(hr_out, dpi=300, bbox_inches='tight')
-plt.savefig(hr_out_tex, dpi=300, bbox_inches='tight')
-plt.close(fig_hr)
-print(f"Guardado {hr_out}")
 
 print("¡Todos los gráficos se generaron con éxito!")
