@@ -1,12 +1,12 @@
 \chapter{Evolución y Comparación de la Blue Straggler}
 
-Una vez la simulación de la interacción entre la estrella de $2 M_\odot$ y la de $1 M_\odot$ (nuestra blue straggler ahora), esta simulación se deja de lado: no tiene sentido alguno continuar evolucionando dos estrellas que no van a voler a interactuar, especialmente cuando no estamos interesados en la física de una de ellas.
+Una vez la simulación de la interacción entre la estrella de $2 M_\odot$ y la de $1 M_\odot$ (nuestra blue straggler ahora), esta simulación se deja de lado: no tiene sentido alguno continuar evolucionando dos estrellas que no van a volver a interactuar, especialmente cuando no tiene interés la física de una de ellas.
 
-Por lo tanto, se toma la última \texttt{PHOTO} creada por MESA (una \texttt{PHOTO} es un archivo de volcado binaro que guarda el estado completo de una estrella en un punto en concreto de la simulación), y se utiliza como punto de partida de una simulación secundaria, consiguiendo así la historia completa de la Blue Straggler antes de la TAMS.
+Por lo tanto, se toma la última \texttt{PHOTO} creada por MESA (una \texttt{PHOTO} es un archivo de volcado binario que guarda el estado completo de una estrella en un punto en concreto de la simulación), y se utiliza como punto de partida de una simulación secundaria, consiguiendo así la historia completa de la Blue Straggler antes de la TAMS.
 
 \section{Evolución de Estrellas Similares}
 
-Dado que, en una observación fotométrica, a menudo solo conocemos con certeza la luminosidad y temperatura de las estrellas observadas, naturalmente vamos a comparar nuestra Blue Straggler con estrellas simples que se encuentren en el mismo punto del diagrama HR, permitiéndonos de esta forma comprobar las diferencias entre la hipótesis aislada y la binaria. Para ver cómo se posiciona nuestra estrella en comparación con estrellas de masa similar durante su evolución, es necesario evolucionar una cuadrícula de estrellas en un intervalo de masas que englobe la masa de la Blue Straggler (ya que esperamos que evolucionen de manera similar).
+Dado que, en una observación fotométrica, a menudo solo se conoce con certeza la luminosidad y temperatura de las estrellas observadas, naturalmente se comparará nuestra Blue Straggler con estrellas simples que se encuentren en el mismo punto del diagrama HR, permitiéndonos de esta forma comprobar las diferencias entre la hipótesis aislada y la binaria. Para ver cómo se posiciona nuestra estrella en comparación con estrellas de masa similar durante su evolución, es necesario evolucionar una cuadrícula de estrellas en un intervalo de masas que englobe la masa de la Blue Straggler (ya que se espera que evolucionen de manera similar).
 
 Para ello, se emplea el repositorio \texttt{wsssss} \textit{(Walter's Set of Scripts for Studying Simulated Stars)} \citep{wsssss}, el cual contiene una serie de scripts muy útiles para crear y simular de forma simultánea cuadrículas de estrellas con MESA, actuando como una ``envoltura'' al código de simulación.
 
@@ -21,7 +21,7 @@ Se aprecia cómo la Blue Straggler evoluciona a temperaturas superiores que estr
   \label{fig:sim_estrellas}
 \end{figure}
 
-Resulta interesante comparar el interior de la Blue Straggler con el de una estrella de masa similar. Podemos ver esto con un diagrama de Kippenhahn (Figura \ref{fig:kippenhahn_comparison}).
+Resulta interesante comparar el interior de la Blue Straggler con el de una estrella de masa similar. Esto puede verse con un diagrama de Kippenhahn (Figura \ref{fig:kippenhahn_comparison}).
 
 \begin{figure}[H]
   \centering
@@ -42,11 +42,11 @@ Una primera aproximación consiste en calcular la gran separación $\Delta\nu$ p
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.95\linewidth]{Imagenes/virgo-detail.png}
-  \caption{Detalle del espectro de oscilaciones solares, observado por VIRGO. Cada pico de frecuencia está anotado con su valor de $n$ y $l$ correspondiente. Se indican también las grandes y pequeñas separaciones de frecuencia, representadas como $\Delta\nu$ y $\delta\nu$, respectivamente. (La pequeña separación de frecuencias, $\delta\nu$, se define como $\nu_{n_{pg}}^l - \nu_{n_{pg}}^{l+2}$). Imagen tomada de \citet{Bedding_2003}.}
+  \caption{Detalle del espectro de oscilaciones solares, observado por VIRGO. Cada pico de frecuencia está anotado con su valor de $n$ y $l$ correspondiente. Se indican también las grandes y pequeñas separaciones de frecuencia, representadas como $\Delta\nu$ y $\delta\nu$, respectivamente. (La pequeña separación de frecuencias, $\delta\nu$, se define como $\nu_{n_{pg}}^l - \nu_{n_{pg}-1}^{l+2}$). Imagen tomada de \citet{Bedding_2003}.}
   \label{fig:great_separation}
 \end{figure}
 
-Para nuestro caso en particular, emplearemos la siguiente notación: $\Delta \nu_k = \nu_{-10 + k + 1}^l - \nu_{-10 + k}^l$, de modo que $\Delta \nu_0 = \nu_{-9}^l - \nu_{-10}^l$, $\Delta \nu_1 = \nu_{-8}^l - \nu_{-9}^l$, y así sucesivamente.
+Para este caso en particular, se empleará la siguiente notación: $\Delta \nu_k = \nu_{-10 + k + 1}^l - \nu_{-10 + k}^l$, de modo que $\Delta \nu_0 = \nu_{-9}^l - \nu_{-10}^l$, $\Delta \nu_1 = \nu_{-8}^l - \nu_{-9}^l$, y así sucesivamente.
 
 Podemos, pues, representar la gran separación $\Delta \nu$ de las estrellas de nuestra cuadrícula y la de la Blue Straggler en el mismo gráfico, para observar sus diferencias.
 
@@ -89,9 +89,9 @@ Podemos, pues, representar la gran separación $\Delta \nu$ de las estrellas de 
   \vspace{-0.5cm}
 
   \includegraphics[width=0.9\linewidth]{Imagenes/great_separations_hand_picked/global_hr_diagram.png}
-  \label{fig:global_hr_diagram}
   \vspace{-0.4cm}
   \caption{Comparación de la gran separación $\Delta\nu$ en función del índice $k$ para los modos $l=0, 1, 2$ (paneles de la página anterior y superiores). Se compara el modelo de la Blue Straggler (triángulos) con estrellas de evolución estándar (círculos) en distintos puntos de la secuencia principal, ordenados en el tiempo. Panel inferior: Diagrama HR mostrando la traza evolutiva de la Blue Straggler (azul) junto a las trazas de las estrellas estándar comparadas. Los pares de perfiles concretos empleados en cada comparación están resaltados con sus respectivos marcadores, numerados del 1 al 7.}
+  \label{fig:global_hr_diagram}
 \end{figure}
 
 \clearpage
@@ -105,24 +105,24 @@ Las diferencias máximas observadas en la gran separación para cada modo, restr
   \centering
   \begin{tabular}{
       c
-      S[table-format=2.1, table-space-text-post=\%]
       c
       c
       c
-      S[table-format=2.1]
+      c
+      c
     }
     \toprule
     & & \multicolumn{3}{c}{$|\Delta(\Delta\nu)|_\mathrm{max}$ (ciclos\,día$^{-1}$)} & \\
     \cmidrule(lr){3-5}
     {Par} & {$H_c$ (\%)} & {$l = 0$} & {$l = 1$} & {$l = 2$} & {$r = l{=}2/l{=}0$} \\
     \midrule
-    Par 1 ($1.840\,M_\odot$) & 69.7 & 0.0826 & 0.469 & 0.863 & 10.4 \\
-    Par 2 ($1.840\,M_\odot$) & 46.0 & 0.0563 & 0.827 & 1.412 & 25.1 \\
-    Par 3 ($1.836\,M_\odot$) & 35.7 & 0.0474 & 0.708 & 1.425 & 30.0 \\
-    Par 4 ($1.834\,M_\odot$) & 25.6 & 0.0424 & 0.481 & 1.464 & 34.5 \\
-    Par 5 ($1.832\,M_\odot$) & 14.8 & 0.0392 & 0.432 & 1.240 & 31.6 \\
-    Par 6 ($1.790\,M_\odot$) &  0.8 & 0.0454 & 1.977 & 2.076 & 45.7 \\
-    Par 7 ($1.790\,M_\odot$) &  0.1 & 0.0281 & 2.544 & 2.491 & 88.5 \\
+    Par 1 ($1.840\,M_\odot$) & 69.7 & 0.0826 & 0.4692 & 0.8626 & 10.4 \\
+    Par 2 ($1.840\,M_\odot$) & 46.0 & 0.0563 & 0.8275 & 1.4120 & 25.1 \\
+    Par 3 ($1.836\,M_\odot$) & 35.7 & 0.0474 & 0.7077 & 1.4246 & 30.0 \\
+    Par 4 ($1.834\,M_\odot$) & 25.6 & 0.0424 & 0.4807 & 1.4642 & 34.5 \\
+    Par 5 ($1.832\,M_\odot$) & 14.8 & 0.0392 & 0.4322 & 1.2398 & 31.6 \\
+    Par 6 ($1.790\,M_\odot$) &  0.8 & 0.0454 & 1.9775 & 2.0763 & 45.7 \\
+    Par 7 ($1.790\,M_\odot$) &  0.1 & 0.0281 & 2.5440 & 2.4907 & 88.5 \\
     \bottomrule
   \end{tabular}
   \caption{Diferencia máxima absoluta en la gran separación $|\Delta(\Delta\nu)|_\mathrm{max}$ entre la Blue Straggler y la estrella de evolución estándar, para cada par de comparación y modo $l$. Cada par está emparejado a idéntica fracción de hidrógeno central $H_c$, de modo que las diferencias son de carácter puramente estructural. La última columna recoge la razón $r = |\Delta(\Delta\nu)|_\mathrm{max}^{l=2}\,/\,|\Delta(\Delta\nu)|_\mathrm{max}^{l=0}$, que cuantifica la mayor sensibilidad diagnóstica de los modos $l=2$ frente a los modos radiales.}
@@ -173,7 +173,9 @@ Este intervalo de orden radial (entre $g_{10}$ y $p_{10}$) es un intervalo ampli
 
 \subsection{Frecuencias Individuales}
 
-Otro indicador de las diferencias estructurales entre la Blue Straggler y las estrellas de evolución estándar es la comparación de las frecuencias individuales de los modos ($\nu^{\text{Ref}}_{n_{pg}, l} - \nu^{\text{BS}}_{n_{pg}, l}$). De igual manera que se hizo anteriormente con la gran separación, se puede representar esta diferencia para distintos puntos de la secuencia principal. En la figura \ref{fig:individual_frequencies_hand_picked} se muestran estos resultados para los mismos pares de perfiles que se han utilizado en las secciones anteriores.
+Otro indicador de las diferencias estructurales entre la Blue Straggler y las estrellas de evolución estándar es la comparación de las frecuencias individuales de los modos ($\nu^{\text{Ref}}_{n_{pg}, l} - \nu^{\text{BS}}_{n_{pg}, l}$). De igual manera que se hizo anteriormente con la gran separación, se puede representar esta diferencia para distintos puntos de la secuencia principal. En la Figura \ref{fig:individual_frequencies_hand_picked} se muestran estos resultados para los mismos pares de perfiles que se han utilizado en las secciones anteriores.
+
+A destacar, se observa, de nuevo, que las mayores diferencias se encuentran en los modos no radiales ($l=1, 2$) y que, además, estas diferencias aumentan a medida que avanza la evolución de la estrella. Sin embargo, se aprecia una importante desviación continua de todas las frecuencias para la primera comparación (1), en todos los modos, la cual se relaja posteriormente.
 
 \clearpage
 \newgeometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=2.5cm}
@@ -202,7 +204,8 @@ Otro indicador de las diferencias estructurales entre la Blue Straggler y las es
 \end{figure}
 
 \clearpage
-\thispagestyle{plain}
+\restoregeometry
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=\linewidth]{Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_38_pbs_72_H_0.8.png}
@@ -213,8 +216,88 @@ Otro indicador de las diferencias estructurales entre la Blue Straggler y las es
   \label{fig:gyre_analysis_0.1}
   \vspace{-0.5cm}
 
-  \caption{}
+  \caption{Frecuencias individuales de los modos $\nu^{\text{Ref}}_{n_{pg}, l} - \nu^{\text{BS}}_{n_{pg}, l}$ en función del orden radial $n_{pg}$ para los modos $l=0, 1, 2$. Los paneles se encuentran ordenados de mayor a menor fracción de hidrógeno central (con los mismos puntos que los denotados en la Figura \ref{fig:global_hr_diagram}).}
+  \label{fig:individual_frequencies_hand_picked}
+\end{figure}
+Resulta interesante también observar que las mayores diferencias continuas en etapas avanzadas de la evolución estelar se encuentran principalmente en los modos g.
+
+Las diferencias máximas observadas en las frecuencias individuales para cada modo, restringidas a $n_{pg} \in [-10, 10]$, se cuantifican en la Tabla \ref{tab:max_diff_indfreq}.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{
+      c
+      c
+      c
+      c
+      c
+      c
+    }
+    \toprule
+    & & \multicolumn{3}{c}{$|\Delta(\nu)|_\mathrm{max}$ (ciclos\,día$^{-1}$)} & \\
+    \cmidrule(lr){3-5}
+    {Par} & {$H_c$ (\%)} & {$l = 0$} & {$l = 1$} & {$l = 2$} & {$r = l{=}2/l{=}0$} \\
+    \midrule
+    Par 1 ($1.840\,M_\odot$) & 69.7 & 0.3908 & 0.9037 & 1.2557 &  3.2 \\
+    Par 2 ($1.840\,M_\odot$) & 46.0 & 0.2109 & 0.7618 & 1.3163 &  6.2 \\
+    Par 3 ($1.836\,M_\odot$) & 35.7 & 0.1836 & 0.6418 & 1.3048 &  7.1 \\
+    Par 4 ($1.834\,M_\odot$) & 25.6 & 0.1964 & 0.4183 & 1.3141 &  6.7 \\
+    Par 5 ($1.832\,M_\odot$) & 14.8 & 0.2342 & 0.5112 & 1.0348 &  4.4 \\
+    Par 6 ($1.790\,M_\odot$) &  0.8 & 0.2059 & 2.3441 & 2.2710 & 11.0 \\
+    Par 7 ($1.790\,M_\odot$) &  0.1 & 0.1230 & 2.7491 & 3.2107 & 26.1 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Diferencia máxima absoluta en las frecuencias individuales $|\Delta(\nu)|_\mathrm{max} = |\nu^{\mathrm{Ref}}_{n_{pg},l} - \nu^{\mathrm{BS}}_{n_{pg},l}|_\mathrm{max}$ entre la Blue Straggler y la estrella de evolución estándar, para cada par de comparación y modo $l$. La última columna recoge la razón $r = |\Delta(\nu)|_\mathrm{max}^{l=2}\,/\,|\Delta(\nu)|_\mathrm{max}^{l=0}$, que cuantifica la mayor sensibilidad diagnóstica de los modos $l=2$ frente a los modos radiales.}
+  \label{tab:max_diff_indfreq}
+\end{table}
+
+\section{Pequeña Separación}
+
+Finalmente, se puede comparar la pequeña separación ($\delta \nu$) de las frecuencias de la Blue Straggler con las frecuencias de las estrellas de referencia. Esta se define como $\delta\nu_{l, l+2} = \nu_{n_{pg}, l} - \nu_{n_{pg}-1, l+2}$. Para este caso en particular, como sólo se tienen modos $l=0, 1, 2$, se emplea la notación en función del índice $k$ ($k = n_{pg} + 9$) empleado en las gráficas: $\delta\nu_{0, 2}^k = \nu_{k-9, 0} - \nu_{k-10, 2}$. Los resultados de la pequeña separación se muestran en la Figura \ref{fig:small_separation}.
+
+A destacar, en etapas tempranas de la evolución estelar, los valores de la pequeña separación son casi idénticos para ambas estrellas. Conforme avanza la evolución y disminuye la fracción de hidrógeno central, la pequeña separación decrece globalmente hasta alcanzar valores muy negativos a órdenes bajos. La diferencia más significativa aparece en las etapas finales de la secuencia principal (últimos paneles). En este punto se observa una clara separación entre ambas curvas, siendo la pequeña separación de la estrella de referencia más pequeña que la de la Blue Straggler.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{Imagenes/small_separations_hand_picked/small_separation_group_1_2.png}
+  \label{fig:small_separation_group_1_2}
+
+  \includegraphics[width=\linewidth]{Imagenes/small_separations_hand_picked/small_separation_group_3_4.png}
+  \label{fig:small_separation_group_3_4}
+
+  \includegraphics[width=\linewidth]{Imagenes/small_separations_hand_picked/small_separation_group_5_6.png}
+  \label{fig:small_separation_group_5_6}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\linewidth]{Imagenes/small_separations_hand_picked/small_separation_group_7.png}
+  \label{fig:small_separation_group_7}
+
+  \caption{Pequeña separación de los modos $\delta\nu_{0, 2}^k$ en función del índice $k$ para los modos $l=0$ y $l=2$. Los paneles se encuentran ordenados de mayor a menor fracción de hidrógeno central (con los mismos puntos que los denotados en la Figura \ref{fig:global_hr_diagram}).}
+  \label{fig:small_separation}
 \end{figure}
 
-\clearpage
-\restoregeometry
+Las diferencias máximas observadas en la pequeña separación para cada par se cuantifican en la Tabla \ref{tab:max_diff_smallsep}.
+
+\begin{table}[htpb]
+  \centering
+  \begin{tabular}{
+      c
+      c
+      c
+    }
+    \toprule
+    {Par} & {$H_c$ (\%)} & {$|\Delta(\delta\nu_{02})|_\mathrm{max}$ (ciclos\,día$^{-1}$)} \\
+    \midrule
+    Par 1 ($1.840\,M_\odot$) & 69.7 & 0.0853 \\
+    Par 2 ($1.840\,M_\odot$) & 46.0 & 1.4977 \\
+    Par 3 ($1.836\,M_\odot$) & 35.7 & 1.4614 \\
+    Par 4 ($1.834\,M_\odot$) & 25.6 & 1.4679 \\
+    Par 5 ($1.832\,M_\odot$) & 14.8 & 1.2515 \\
+    Par 6 ($1.790\,M_\odot$) &  0.8 & 2.0841 \\
+    Par 7 ($1.790\,M_\odot$) &  0.1 & 3.2488 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Diferencia máxima absoluta en la pequeña separación $|\Delta(\delta\nu_{02})|_\mathrm{max}$ entre la Blue Straggler y la estrella de evolución estándar, para cada par de comparación. Los pares están emparejados a idéntica fracción de hidrógeno central $H_c$, de modo que las diferencias son de carácter puramente estructural.}
+  \label{tab:max_diff_smallsep}
+\end{table}
