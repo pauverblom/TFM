@@ -25,24 +25,24 @@
 \contentsline {subsection}{\numberline {3.1.1}Módulos y Física Integrada}{25}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Formación de Blue Stragglers}{26}{subsection.3.1.2}%
 \contentsline {subsubsection}{\numberline {3.1.2.1}Estabilidad Numérica del Acretor y Ajustes del Solver}{28}{subsubsection.3.1.2.1}%
-\contentsline {section}{\numberline {3.2}GYRE}{31}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Evolución y Comparación de la Blue Straggler}{33}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Evolución de Estrellas Similares}{33}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Comparación Astrosismológica}{36}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Gran Separación}{36}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Frecuencias Individuales}{39}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Pequeña Separación}{42}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{44}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Resultados Principales}{44}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Simulación de la Blue Straggler y estrellas de referencia}{44}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Diferencias en la Gran Separación}{44}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Diferencias en Frecuencias Individuales}{45}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Diferencias en la Pequeña Separación}{45}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Estimación del Tiempo de Integración}{45}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Resolución de frecuencias próximas}{46}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Diferencia en las separaciones (Gran y Pequeña) entre dos estrellas}{46}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Identificación de Modos en las $\boldsymbol {\delta }$ Scuti}{48}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Las dificultades intrínsecas de la identificación de modos}{48}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Avances recientes y perspectivas}{49}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Perspectivas Futuras}{49}{section.5.4}%
-\contentsline {chapter}{\numberline {}Referencias}{50}{section.5.4}%
+\contentsline {section}{\numberline {3.2}GYRE}{32}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Evolución y Comparación de la Blue Straggler}{34}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Evolución de Estrellas Similares}{34}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Comparación Astrosismológica}{37}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Gran Separación}{37}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Frecuencias Individuales}{41}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Pequeña Separación}{44}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{46}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Resultados Principales}{46}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Simulación de la Blue Straggler y estrellas de referencia}{46}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Diferencias en la Gran Separación}{46}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Diferencias en Frecuencias Individuales}{47}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Diferencias en la Pequeña Separación}{47}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Estimación del Tiempo de Integración}{47}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Resolución de frecuencias próximas}{48}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Diferencia en las separaciones (Gran y Pequeña) entre dos estrellas}{48}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Identificación de Modos en las $\boldsymbol {\delta }$ Scuti}{50}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Las dificultades intrínsecas de la identificación de modos}{50}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Avances recientes y perspectivas}{51}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Perspectivas Futuras}{51}{section.5.4}%
+\contentsline {chapter}{\numberline {}Referencias}{52}{section.5.4}%

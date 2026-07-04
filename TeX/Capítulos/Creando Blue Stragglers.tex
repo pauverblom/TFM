@@ -12,7 +12,7 @@ MESA funciona con lo que se conoce como módulos (la M de MESA). La idea es que 
 
 \begin{itemize}
   \item \texttt{mesa/star}: El resolvedor central, encargado de coordinar la integración temporal y espacial.
-  \item \texttt{mesa/eos}: La ecuación de estado (EOS), que calcula la presión, entropía y demás variables termodinámicas en función de la densidad, temperatura y composición química de la estrella. Utiliza una combinación de tablas (OPAL, SCVH, HELM y PC) adaptada a cada rango de densidad y temperatura.
+  \item \texttt{mesa/eos}: La ecuación de estado (EOS), que calcula la presión, entropía y demás variables termodinámicas en función de la densidad, temperatura y composición química de la estrella. Utiliza una combinación de tablas (OPAL, SCVH, HELM y PC) adaptada a cada rango de densidad y temperatura \citep{paxton2011}.
   \item \texttt{mesa/kap}: Módulo de opacidades. En las simulaciones se utilizaron las opacidades avanzadas de tipo 2 (\texttt{use\_Type2\_opacities = .true.}), con una metalicidad base de $Z_{\text{base}} = 0.02$.
   \item \texttt{mesa/net}: La red de reacciones nucleares que determina la nucleosíntesis y la generación de energía nuclear $\epsilon_{\text{nuc}}$.
   \item \texttt{mesa/binary}: Especialmente relevante cuando se quiere simular la formación de la Blue Straggler. Este módulo de evolución binaria simula dos modelos estelares que se comunican entre sí a través de interacciones orbitales y transferencia de masa.
@@ -22,7 +22,7 @@ Para configurar estos módulos, se utilizan archivos de configuración con forma
 
 \subsection{Formación de Blue Stragglers}
 
-Para diferenciar las historias evolutivas de las blue stragglers y el resto de estrellas del cúmulo, se estudia la formación de Blue Stragglers mediante la vía de transferencia de masa en sistemas binarios. Para ello, se emplea el módulo \texttt{mesa/binary}, el cual calcula de manera simultánea la evolución de ambas estrellas (donante y acretora) y los parámetros orbitales del sistema. La Figura \ref{fig:binary_flow_chart} ilustra el diagrama de flujo que emplea este módulo para simular ambas estrellas.
+Para diferenciar las historias evolutivas de las blue stragglers y el resto de estrellas del cúmulo, se estudia la formación de Blue Stragglers mediante la vía de transferencia de masa en sistemas binarios \citep{paxton2015}. Para ello, se emplea el módulo \texttt{mesa/binary}, el cual calcula de manera simultánea la evolución de ambas estrellas (donante y acretora) y los parámetros orbitales del sistema. La Figura \ref{fig:binary_flow_chart} ilustra el diagrama de flujo que emplea este módulo para simular ambas estrellas.
 
 \begin{figure}[H]
   \centering
@@ -46,7 +46,7 @@ En este caso en particular, la simulación modela la formación de una Blue Stra
 
 La elección de estos parámetros se basa en una combinación de factores físicos y teóricos. La masa inicial de $2.0\,M_\odot$ es un valor arbitrario pero plausible para la estrella donante. El periodo, sin embargo, tiene una importancia fundamental para determinar en qué condiciones se produce nuestra Blue Straggler.
 
-Existen tres casos principales para la formación de Blue Stragglers, dependiendo de en qué momento de la evolución estelar se dé la transferencia de masa:
+Existen tres casos principales para la formación de Blue Stragglers, dependiendo de en qué momento de la evolución estelar se dé la transferencia de masa \citep{wang2024bluestragglerstars}:
 
 \begin{itemize}
   \item \textbf{Caso A:} la estrella donante llena su lóbulo de Roche y comienza a transferir masa mientras todavía se encuentra en la secuencia principal. En esta etapa, la estrella todavía está quemando hidrógeno de forma estable en su núcleo.
@@ -69,7 +69,7 @@ La evolución del sistema es un proceso delicado. Es necesario elegir una combin
 
   \item Finamente, se ajusta la tolerancia del solver aumentando el coeficiente de resolución espacial superficial (\texttt{mesh\_delta\_coeff = 0.5}) para tener un mallado del perfil más fino, y se relaja ligeramente el residuo máximo admisible a $10^{-3}$ (\texttt{gold\_\allowbreak tol\_max\_residual3 = 1d-3}) para evitar fallos del solver debidos al ruido numérico inducido por la acreción rápida. Además, el paso de tiempo durante la fase de desbordamiento (Roche Limit Overflow) se restringe rígidamente utilizando los parámetros \texttt{fm = 0.001}, \texttt{fr = 0.01} y \texttt{fj = 0.01} (que limitan los cambios fraccionales de masa, radio y momento angular respectivamente).
 
-  \item \textbf{Omisión de la rotación estelar:} Por simplicidad computacional, se ha omitido la rotación en MESA (y GYRE, se detallará más este otro código a continuación). Aunque en la realidad la acreción acelera drásticamente el giro de la estrella (\textit{spin-up}), ignorar este efecto nos permite asumir simetría esférica estricta y evitar otras complejidades numéricas en los modelos evolutivos y las ecuaciones de oscilación.
+  \item \textbf{Omisión de la rotación estelar:} Por simplicidad computacional, se ha omitido la rotación en MESA (y GYRE, se detallará más este otro código a continuación). Aunque en la realidad la acreción acelera drásticamente el giro de la estrella (\textit{spin-up}) \citep{paxton2015}, ignorar este efecto nos permite asumir simetría esférica estricta y evitar otras complejidades numéricas en los modelos evolutivos y las ecuaciones de oscilación.
 
 \end{itemize}
 

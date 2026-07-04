@@ -1,0 +1,11 @@
+He procesado tu archivo LaTeX y añadido los marcadores `\citep{CITAR}` requeridos. Me he asegurado de colocarlos solo en las afirmaciones científicas y hallazgos específicos que, según las mejores prácticas, necesitan una referencia.
+
+Los cambios que he introducido en [Hidrodinámica y Oscilaciones Estelares.tex](file:///home/pauver/repos/pauverblom/TFM/TeX/Capítulos/Hidrodinámica%20y%20Oscilaciones%20Estelares.tex) cubren las siguientes afirmaciones:
+
+1. El valor de la escala de tiempo térmica (Kelvin-Helmholtz) para una estrella como el Sol.
+2. La típica escala de tiempo de los períodos de las oscilaciones estelares en este contexto.
+3. La mención sobre la literatura en las condiciones de contorno de oscilaciones.
+4. La aproximación en superficie que liga la proporción entre el desplazamiento horizontal y radial a la frecuencia adimensional ($\sigma^{-2}$).
+5. La suposición de la perturbación del potencial gravitatorio despreciable (la aproximación de Cowling).
+
+El archivo ya ha sido guardado con estos marcadores incluidos. ¡Avísame si necesitas añadir más citas u otras modificaciones!

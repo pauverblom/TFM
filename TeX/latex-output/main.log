@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.6.2)  4 JUL 2026 17:03
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.6.2)  4 JUL 2026 17:54
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/pauver/repos/pauverblom/TFM/TeX/main
@@ -1297,7 +1297,7 @@ LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1.
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-<Imagenes/HR_isoch.png, id=134, 728.7225pt x 866.23625pt>
+<Imagenes/HR_isoch.png, id=137, 728.7225pt x 866.23625pt>
 File: Imagenes/HR_isoch.png Graphic file (type png)
 <use Imagenes/HR_isoch.png>
 Package luatex.def Info: Imagenes/HR_isoch.png  used on input line 17.
@@ -1305,7 +1305,7 @@ Package luatex.def Info: Imagenes/HR_isoch.png  used on input line 17.
  [2
 
 ]
-<Imagenes/HR_BSS.png, id=146, 1044.15094pt x 1034.36438pt>
+<Imagenes/HR_BSS.png, id=151, 1044.15094pt x 1034.36438pt>
 File: Imagenes/HR_BSS.png Graphic file (type png)
 <use Imagenes/HR_BSS.png>
 Package luatex.def Info: Imagenes/HR_BSS.png  used on input line 26.
@@ -1313,33 +1313,33 @@ Package luatex.def Info: Imagenes/HR_BSS.png  used on input line 26.
 LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
  [3<./Imagenes/HR_isoch.png>]
-<Imagenes/HR_Pulsating.png, id=160, 1210.5225pt x 845.40843pt>
+<Imagenes/HR_Pulsating.png, id=168, 1210.5225pt x 845.40843pt>
 File: Imagenes/HR_Pulsating.png Graphic file (type png)
 <use Imagenes/HR_Pulsating.png>
 Package luatex.def Info: Imagenes/HR_Pulsating.png  used on input line 35.
 (luatex.def)             Requested size: 452.9679pt x 316.34369pt.
-LaTeX Info: Redefining \. on input line 45.
-LaTeX Info: Redefining \% on input line 45.
+LaTeX Info: Redefining \. on input line 44.
+LaTeX Info: Redefining \% on input line 44.
  [4<./Imagenes/HR_BSS.png>]
-LaTeX Info: Redefining \. on input line 53.
-LaTeX Info: Redefining \% on input line 53.
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
  [5<./Imagenes/HR_Pulsating.png>]
-<Imagenes/cepheids.png, id=189, 2006.49625pt x 1133.23375pt>
+<Imagenes/cepheids.png, id=205, 2006.49625pt x 1133.23375pt>
 File: Imagenes/cepheids.png Graphic file (type png)
 <use Imagenes/cepheids.png>
-Package luatex.def Info: Imagenes/cepheids.png  used on input line 62.
+Package luatex.def Info: Imagenes/cepheids.png  used on input line 61.
 (luatex.def)             Requested size: 362.37569pt x 204.66493pt.
-LaTeX Info: Redefining \. on input line 71.
-LaTeX Info: Redefining \% on input line 71.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
  [6]
-LaTeX Info: Redefining \. on input line 84.
-LaTeX Info: Redefining \% on input line 84.
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
  [7<./Imagenes/cepheids.png>]) ("./Capítulos/Hidrodinámica y Oscilaciones Estelares.tex"
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [8]
 Capítulo 2.
-<Imagenes/euler_vs_lagrange.png, id=217, 855.195pt x 357.335pt>
+<Imagenes/euler_vs_lagrange.png, id=234, 855.195pt x 357.335pt>
 File: Imagenes/euler_vs_lagrange.png Graphic file (type png)
 <use Imagenes/euler_vs_lagrange.png>
 Package luatex.def Info: Imagenes/euler_vs_lagrange.png  used on input line 10.
@@ -1368,7 +1368,7 @@ LaTeX Info: Redefining \% on input line 245.
 LaTeX Info: Redefining \. on input line 300.
 LaTeX Info: Redefining \% on input line 300.
  [16]
-<Imagenes/spherical_harmonics.png, id=306, 949.5475pt x 1164.35pt>
+<Imagenes/spherical_harmonics.png, id=327, 949.5475pt x 1164.35pt>
 File: Imagenes/spherical_harmonics.png Graphic file (type png)
 <use Imagenes/spherical_harmonics.png>
 Package luatex.def Info: Imagenes/spherical_harmonics.png  used on input line 341.
@@ -1394,12 +1394,12 @@ LaTeX Info: Redefining \% on input line 413.
 LaTeX Info: Redefining \. on input line 437.
 LaTeX Info: Redefining \% on input line 437.
  [21]
-<Imagenes/prop_diagrams.png, id=360, 834.11626pt x 822.07124pt>
+<Imagenes/prop_diagrams.png, id=380, 834.11626pt x 822.07124pt>
 File: Imagenes/prop_diagrams.png Graphic file (type png)
 <use Imagenes/prop_diagrams.png>
 Package luatex.def Info: Imagenes/prop_diagrams.png  used on input line 443.
 (luatex.def)             Requested size: 407.66833pt x 401.78984pt.
-<Imagenes/eigenfunctions.png, id=361, 1136.245pt x 775.89874pt>
+<Imagenes/eigenfunctions.png, id=381, 1136.245pt x 775.89874pt>
 File: Imagenes/eigenfunctions.png Graphic file (type png)
 <use Imagenes/eigenfunctions.png>
 Package luatex.def Info: Imagenes/eigenfunctions.png  used on input line 477.
@@ -1418,14 +1418,14 @@ Capítulo 3.
 [25
 
 ]
-<Imagenes/binary_flow_chart.png, id=403, 1114.1625pt x 625.33624pt>
+<Imagenes/binary_flow_chart.png, id=425, 1114.1625pt x 625.33624pt>
 File: Imagenes/binary_flow_chart.png Graphic file (type png)
 <use Imagenes/binary_flow_chart.png>
 Package luatex.def Info: Imagenes/binary_flow_chart.png  used on input line 29.
 (luatex.def)             Requested size: 371.43698pt x 208.47034pt.
-LaTeX Info: Redefining \. on input line 35.
-LaTeX Info: Redefining \% on input line 35.
- [26<./Imagenes/binary_flow_chart.png>]
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+ [26]
 Overfull \hbox (6.25093pt too wide) in paragraph at lines 42--43
 []\TU/lmr/bx/sc/12 Es-tre-lla do-nan-te ($\OML/cmm/m/it/12 M[]$\TU/lmr/bx/sc/12 ): \TU/lmr/m/n/12 Ma-sa ini-cial de $\OT1/cmr/m/n/12 2[]0 \OML/cmm/m/it/12 M[]$\TU/lmr/m/n/12 , con-fi-gu-ra-da con el ar-chi-vo \TU/lmtt/m/n/12 inlist1\TU/lmr/m/n/12 . 
  []
@@ -1435,18 +1435,21 @@ Overfull \hbox (7.72693pt too wide) in paragraph at lines 43--44
 []\TU/lmr/bx/sc/12 Es-tre-lla acre-to-ra ($\OML/cmm/m/it/12 M[]$\TU/lmr/bx/sc/12 ): \TU/lmr/m/n/12 Ma-sa ini-cial de $\OT1/cmr/m/n/12 1[]0 \OML/cmm/m/it/12 M[]$\TU/lmr/m/n/12 , con-fi-gu-ra-da con el ar-chi-vo \TU/lmtt/m/n/12 inlist2\TU/lmr/m/n/12 . 
  []
 
-LaTeX Info: Redefining \. on input line 62.
-LaTeX Info: Redefining \% on input line 62.
-[27]
-LaTeX Info: Redefining \. on input line 77.
-LaTeX Info: Redefining \% on input line 77.
+LaTeX Info: Redefining \. on input line 54.
+LaTeX Info: Redefining \% on input line 54.
+[27<./Imagenes/binary_flow_chart.png>]
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
  [28]
-<Imagenes/macrofigure_1.png, id=431, 1023.825pt x 979.7403pt>
+<Imagenes/macrofigure_1.png, id=456, 1023.825pt x 979.7403pt>
 File: Imagenes/macrofigure_1.png Graphic file (type png)
 <use Imagenes/macrofigure_1.png>
 Package luatex.def Info: Imagenes/macrofigure_1.png  used on input line 87.
 (luatex.def)             Requested size: 452.9679pt x 433.46405pt.
-<Imagenes/macrofigure_2.png, id=432, 948.1824pt x 1360.6032pt>
+LaTeX Info: Redefining \. on input line 89.
+LaTeX Info: Redefining \% on input line 89.
+ [29]
+<Imagenes/macrofigure_2.png, id=463, 948.1824pt x 1360.6032pt>
 File: Imagenes/macrofigure_2.png Graphic file (type png)
 <use Imagenes/macrofigure_2.png>
 Package luatex.def Info: Imagenes/macrofigure_2.png  used on input line 91.
@@ -1458,13 +1461,13 @@ Overfull \hbox (9.06128pt too wide) in paragraph at lines 91--92
 
 LaTeX Info: Redefining \. on input line 93.
 LaTeX Info: Redefining \% on input line 93.
-[29<./Imagenes/macrofigure_1.png>]
+[30<./Imagenes/macrofigure_1.png>]
 Overfull \vbox (20.3153pt too high) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 93.
 LaTeX Info: Redefining \% on input line 93.
- [30<./Imagenes/macrofigure_2.png>]
-<Imagenes/bss_radial_profile.png, id=446, 787.0203pt x 476.982pt>
+ [31<./Imagenes/macrofigure_2.png>]
+<Imagenes/bss_radial_profile.png, id=474, 787.0203pt x 476.982pt>
 File: Imagenes/bss_radial_profile.png Graphic file (type png)
 <use Imagenes/bss_radial_profile.png>
 Package luatex.def Info: Imagenes/bss_radial_profile.png  used on input line 95.
@@ -1476,8 +1479,8 @@ Overfull \hbox (0.32033pt too wide) in paragraph at lines 104--105
 
 LaTeX Info: Redefining \. on input line 108.
 LaTeX Info: Redefining \% on input line 108.
-[31<./Imagenes/bss_radial_profile.png>]
-<Imagenes/propagation_diagram.png, id=456, 687.0468pt x 713.064pt>
+[32<./Imagenes/bss_radial_profile.png>]
+<Imagenes/propagation_diagram.png, id=484, 687.0468pt x 713.064pt>
 File: Imagenes/propagation_diagram.png Graphic file (type png)
 <use Imagenes/propagation_diagram.png>
 Package luatex.def Info: Imagenes/propagation_diagram.png  used on input line 115.
@@ -1485,37 +1488,40 @@ Package luatex.def Info: Imagenes/propagation_diagram.png  used on input line 11
 ) ("./Capítulos/Evolución de la Blue Straggler.tex"
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [32<./Imagenes/propagation_diagram.png>]
+ [33<./Imagenes/propagation_diagram.png>]
 Capítulo 4.
-<Imagenes/mass_grid_comparison.png, id=467, 549.0111pt x 571.6557pt>
+<Imagenes/mass_grid_comparison.png, id=496, 549.0111pt x 571.6557pt>
 File: Imagenes/mass_grid_comparison.png Graphic file (type png)
 <use Imagenes/mass_grid_comparison.png>
 Package luatex.def Info: Imagenes/mass_grid_comparison.png  used on input line 19.
 (luatex.def)             Requested size: 452.9679pt x 471.65666pt.
-[33
+[34
 
 ]
-<Imagenes/kippenhahn_comparision.png, id=476, 824.8416pt x 1080.4365pt>
+<Imagenes/kippenhahn_comparision.png, id=505, 824.8416pt x 1080.4365pt>
 File: Imagenes/kippenhahn_comparision.png Graphic file (type png)
 <use Imagenes/kippenhahn_comparision.png>
 Package luatex.def Info: Imagenes/kippenhahn_comparision.png  used on input line 28.
 (luatex.def)             Requested size: 430.31812pt x 563.67667pt.
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
- [34<./Imagenes/mass_grid_comparison.png>]
+ [35<./Imagenes/mass_grid_comparison.png>]
 Overfull \vbox (17.98602pt too high) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
- [35<./Imagenes/kippenhahn_comparision.png>]
-<Imagenes/virgo-detail.png, id=490, 2225.31375pt x 1071.00125pt>
+ [36<./Imagenes/kippenhahn_comparision.png>]
+<Imagenes/virgo-detail.png, id=520, 2225.31375pt x 1071.00125pt>
 File: Imagenes/virgo-detail.png Graphic file (type png)
 <use Imagenes/virgo-detail.png>
 Package luatex.def Info: Imagenes/virgo-detail.png  used on input line 44.
 (luatex.def)             Requested size: 430.31812pt x 207.10396pt.
 LaTeX Info: Redefining \. on input line 53.
 LaTeX Info: Redefining \% on input line 53.
- [36<./Imagenes/virgo-detail.png>]
+ [37<./Imagenes/virgo-detail.png>]
+LaTeX Info: Redefining \. on input line 53.
+LaTeX Info: Redefining \% on input line 53.
+ [38]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: luatex
 * paper: a4paper
@@ -1548,51 +1554,51 @@ LaTeX Info: Redefining \% on input line 53.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<Imagenes/great_separations_hand_picked/great_separation_mass_1.84_pcomp_4_pbs_5_H_69.7.png, id=501, 675.9654pt x 199.2243pt>
+<Imagenes/great_separations_hand_picked/great_separation_mass_1.84_pcomp_4_pbs_5_H_69.7.png, id=537, 675.9654pt x 199.2243pt>
 File: Imagenes/great_separations_hand_picked/great_separation_mass_1.84_pcomp_4_pbs_5_H_69.7.png Graphic file (type png)
 <use Imagenes/great_separations_hand_picked/great_separation_mass_1.84_pcomp_4_pbs_5_H_69.7.png>
 Package luatex.def Info: Imagenes/great_separations_hand_picked/great_separation_mass_1.84_pcomp_4_pbs_5_H_69.7.png  used on input line 59.
 (luatex.def)             Requested size: 512.14963pt x 150.94693pt.
-<Imagenes/great_separations_hand_picked/great_separation_mass_1.84_pcomp_16_pbs_29_H_46.0.png, id=502, 675.9654pt x 199.2243pt>
+<Imagenes/great_separations_hand_picked/great_separation_mass_1.84_pcomp_16_pbs_29_H_46.0.png, id=538, 675.9654pt x 199.2243pt>
 File: Imagenes/great_separations_hand_picked/great_separation_mass_1.84_pcomp_16_pbs_29_H_46.0.png Graphic file (type png)
 <use Imagenes/great_separations_hand_picked/great_separation_mass_1.84_pcomp_16_pbs_29_H_46.0.png>
 Package luatex.def Info: Imagenes/great_separations_hand_picked/great_separation_mass_1.84_pcomp_16_pbs_29_H_46.0.png  used on input line 63.
 (luatex.def)             Requested size: 512.14963pt x 150.94693pt.
-<Imagenes/great_separations_hand_picked/great_separation_mass_1.836_pcomp_20_pbs_40_H_35.7.png, id=503, 675.9654pt x 199.2243pt>
+<Imagenes/great_separations_hand_picked/great_separation_mass_1.836_pcomp_20_pbs_40_H_35.7.png, id=539, 675.9654pt x 199.2243pt>
 File: Imagenes/great_separations_hand_picked/great_separation_mass_1.836_pcomp_20_pbs_40_H_35.7.png Graphic file (type png)
 <use Imagenes/great_separations_hand_picked/great_separation_mass_1.836_pcomp_20_pbs_40_H_35.7.png>
 Package luatex.def Info: Imagenes/great_separations_hand_picked/great_separation_mass_1.836_pcomp_20_pbs_40_H_35.7.png  used on input line 67.
 (luatex.def)             Requested size: 512.14963pt x 150.94693pt.
-<Imagenes/great_separations_hand_picked/great_separation_mass_1.834_pcomp_24_pbs_51_H_25.6.png, id=504, 675.9654pt x 199.2243pt>
+<Imagenes/great_separations_hand_picked/great_separation_mass_1.834_pcomp_24_pbs_51_H_25.6.png, id=540, 675.9654pt x 199.2243pt>
 File: Imagenes/great_separations_hand_picked/great_separation_mass_1.834_pcomp_24_pbs_51_H_25.6.png Graphic file (type png)
 <use Imagenes/great_separations_hand_picked/great_separation_mass_1.834_pcomp_24_pbs_51_H_25.6.png>
 Package luatex.def Info: Imagenes/great_separations_hand_picked/great_separation_mass_1.834_pcomp_24_pbs_51_H_25.6.png  used on input line 71.
 (luatex.def)             Requested size: 512.14963pt x 150.94693pt.
-<Imagenes/great_separations_hand_picked/great_separation_mass_1.832_pcomp_28_pbs_63_H_14.8.png, id=505, 675.9654pt x 195.8517pt>
+<Imagenes/great_separations_hand_picked/great_separation_mass_1.832_pcomp_28_pbs_63_H_14.8.png, id=541, 675.9654pt x 195.8517pt>
 File: Imagenes/great_separations_hand_picked/great_separation_mass_1.832_pcomp_28_pbs_63_H_14.8.png Graphic file (type png)
 <use Imagenes/great_separations_hand_picked/great_separation_mass_1.832_pcomp_28_pbs_63_H_14.8.png>
 Package luatex.def Info: Imagenes/great_separations_hand_picked/great_separation_mass_1.832_pcomp_28_pbs_63_H_14.8.png  used on input line 75.
 (luatex.def)             Requested size: 512.14963pt x 148.39159pt.
- [37
+ [39
 
 
 <./Imagenes/great_separations_hand_picked/great_separation_mass_1.84_pcomp_4_pbs_5_H_69.7.png><./Imagenes/great_separations_hand_picked/great_separation_mass_1.84_pcomp_16_pbs_29_H_46.0.png><./Imagenes/great_separations_hand_picked/great_separation_mass_1.836_pcomp_20_pbs_40_H_35.7.png><./Imagenes/great_separations_hand_picked/great_separation_mass_1.834_pcomp_24_pbs_51_H_25.6.png><./Imagenes/great_separations_hand_picked/great_separation_mass_1.832_pcomp_28_pbs_63_H_14.8.png>]
-<Imagenes/great_separations_hand_picked/great_separation_mass_1.79_pcomp_38_pbs_72_H_0.8.png, id=516, 675.9654pt x 199.2243pt>
+<Imagenes/great_separations_hand_picked/great_separation_mass_1.79_pcomp_38_pbs_72_H_0.8.png, id=552, 675.9654pt x 199.2243pt>
 File: Imagenes/great_separations_hand_picked/great_separation_mass_1.79_pcomp_38_pbs_72_H_0.8.png Graphic file (type png)
 <use Imagenes/great_separations_hand_picked/great_separation_mass_1.79_pcomp_38_pbs_72_H_0.8.png>
 Package luatex.def Info: Imagenes/great_separations_hand_picked/great_separation_mass_1.79_pcomp_38_pbs_72_H_0.8.png  used on input line 83.
 (luatex.def)             Requested size: 512.14963pt x 150.94693pt.
-<Imagenes/great_separations_hand_picked/great_separation_mass_1.79_pcomp_45_pbs_92_H_0.1.png, id=517, 675.9654pt x 195.8517pt>
+<Imagenes/great_separations_hand_picked/great_separation_mass_1.79_pcomp_45_pbs_92_H_0.1.png, id=553, 675.9654pt x 195.8517pt>
 File: Imagenes/great_separations_hand_picked/great_separation_mass_1.79_pcomp_45_pbs_92_H_0.1.png Graphic file (type png)
 <use Imagenes/great_separations_hand_picked/great_separation_mass_1.79_pcomp_45_pbs_92_H_0.1.png>
 Package luatex.def Info: Imagenes/great_separations_hand_picked/great_separation_mass_1.79_pcomp_45_pbs_92_H_0.1.png  used on input line 87.
 (luatex.def)             Requested size: 512.14963pt x 148.39159pt.
-<Imagenes/great_separations_hand_picked/global_hr_diagram.png, id=518, 641.0349pt x 459.8781pt>
+<Imagenes/great_separations_hand_picked/global_hr_diagram.png, id=554, 641.0349pt x 459.8781pt>
 File: Imagenes/great_separations_hand_picked/global_hr_diagram.png Graphic file (type png)
 <use Imagenes/great_separations_hand_picked/global_hr_diagram.png>
 Package luatex.def Info: Imagenes/great_separations_hand_picked/global_hr_diagram.png  used on input line 91.
 (luatex.def)             Requested size: 460.93153pt x 330.66989pt.
- [38
+ [40
 
 <./Imagenes/great_separations_hand_picked/great_separation_mass_1.79_pcomp_38_pbs_72_H_0.8.png><./Imagenes/great_separations_hand_picked/great_separation_mass_1.79_pcomp_45_pbs_92_H_0.1.png><./Imagenes/great_separations_hand_picked/global_hr_diagram.png>]
 LaTeX Info: Redefining \. on input line 180.
@@ -1605,7 +1611,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.21004pt}.
 
-[39
+[41
 
 
 ]
@@ -1641,41 +1647,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.84_pcomp_4_pbs_5_H_69.7.png, id=537, 669.9429pt x 199.2243pt>
+<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.84_pcomp_4_pbs_5_H_69.7.png, id=574, 669.9429pt x 199.2243pt>
 File: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.84_pcomp_4_pbs_5_H_69.7.png Graphic file (type png)
 <use Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.84_pcomp_4_pbs_5_H_69.7.png>
 Package luatex.def Info: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.84_pcomp_4_pbs_5_H_69.7.png  used on input line 186.
 (luatex.def)             Requested size: 512.14963pt x 152.2997pt.
-<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.84_pcomp_16_pbs_29_H_46.0.png, id=538, 669.9429pt x 199.2243pt>
+<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.84_pcomp_16_pbs_29_H_46.0.png, id=575, 669.9429pt x 199.2243pt>
 File: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.84_pcomp_16_pbs_29_H_46.0.png Graphic file (type png)
 <use Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.84_pcomp_16_pbs_29_H_46.0.png>
 Package luatex.def Info: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.84_pcomp_16_pbs_29_H_46.0.png  used on input line 190.
 (luatex.def)             Requested size: 512.14963pt x 152.2997pt.
-<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.836_pcomp_20_pbs_40_H_35.7.png, id=539, 669.9429pt x 199.2243pt>
+<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.836_pcomp_20_pbs_40_H_35.7.png, id=576, 669.9429pt x 199.2243pt>
 File: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.836_pcomp_20_pbs_40_H_35.7.png Graphic file (type png)
 <use Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.836_pcomp_20_pbs_40_H_35.7.png>
 Package luatex.def Info: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.836_pcomp_20_pbs_40_H_35.7.png  used on input line 194.
 (luatex.def)             Requested size: 512.14963pt x 152.2997pt.
-<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.834_pcomp_24_pbs_51_H_25.6.png, id=540, 669.9429pt x 199.2243pt>
+<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.834_pcomp_24_pbs_51_H_25.6.png, id=577, 669.9429pt x 199.2243pt>
 File: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.834_pcomp_24_pbs_51_H_25.6.png Graphic file (type png)
 <use Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.834_pcomp_24_pbs_51_H_25.6.png>
 Package luatex.def Info: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.834_pcomp_24_pbs_51_H_25.6.png  used on input line 198.
 (luatex.def)             Requested size: 512.14963pt x 152.2997pt.
-<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.832_pcomp_28_pbs_63_H_14.8.png, id=541, 669.9429pt x 195.8517pt>
+<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.832_pcomp_28_pbs_63_H_14.8.png, id=578, 669.9429pt x 195.8517pt>
 File: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.832_pcomp_28_pbs_63_H_14.8.png Graphic file (type png)
 <use Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.832_pcomp_28_pbs_63_H_14.8.png>
 Package luatex.def Info: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.832_pcomp_28_pbs_63_H_14.8.png  used on input line 202.
 (luatex.def)             Requested size: 512.14963pt x 149.72145pt.
- [40
+ [42
 
 
 <./Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.84_pcomp_4_pbs_5_H_69.7.png><./Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.84_pcomp_16_pbs_29_H_46.0.png><./Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.836_pcomp_20_pbs_40_H_35.7.png><./Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.834_pcomp_24_pbs_51_H_25.6.png><./Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.832_pcomp_28_pbs_63_H_14.8.png>]
-<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_38_pbs_72_H_0.8.png, id=552, 669.9429pt x 199.2243pt>
+<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_38_pbs_72_H_0.8.png, id=589, 669.9429pt x 199.2243pt>
 File: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_38_pbs_72_H_0.8.png Graphic file (type png)
 <use Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_38_pbs_72_H_0.8.png>
 Package luatex.def Info: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_38_pbs_72_H_0.8.png  used on input line 211.
 (luatex.def)             Requested size: 452.9679pt x 134.70163pt.
-<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_45_pbs_92_H_0.1.png, id=553, 669.9429pt x 195.8517pt>
+<Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_45_pbs_92_H_0.1.png, id=590, 669.9429pt x 195.8517pt>
 File: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_45_pbs_92_H_0.1.png Graphic file (type png)
 <use Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_45_pbs_92_H_0.1.png>
 Package luatex.def Info: Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_45_pbs_92_H_0.1.png  used on input line 215.
@@ -1690,26 +1696,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.21004pt}.
 
-[41
+[43
 
 
 <./Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_38_pbs_72_H_0.8.png><./Imagenes/gyre_analysis_hand_picked/gyre_analysis_mass_1.79_pcomp_45_pbs_92_H_0.1.png>]
-<Imagenes/small_separations_hand_picked/small_separation_group_1_2.png, id=566, 692.3466pt x 171.039pt>
+<Imagenes/small_separations_hand_picked/small_separation_group_1_2.png, id=605, 692.3466pt x 171.039pt>
 File: Imagenes/small_separations_hand_picked/small_separation_group_1_2.png Graphic file (type png)
 <use Imagenes/small_separations_hand_picked/small_separation_group_1_2.png>
 Package luatex.def Info: Imagenes/small_separations_hand_picked/small_separation_group_1_2.png  used on input line 262.
 (luatex.def)             Requested size: 452.9679pt x 111.90216pt.
-<Imagenes/small_separations_hand_picked/small_separation_group_3_4.png, id=567, 692.3466pt x 171.039pt>
+<Imagenes/small_separations_hand_picked/small_separation_group_3_4.png, id=606, 692.3466pt x 171.039pt>
 File: Imagenes/small_separations_hand_picked/small_separation_group_3_4.png Graphic file (type png)
 <use Imagenes/small_separations_hand_picked/small_separation_group_3_4.png>
 Package luatex.def Info: Imagenes/small_separations_hand_picked/small_separation_group_3_4.png  used on input line 265.
 (luatex.def)             Requested size: 452.9679pt x 111.90216pt.
-<Imagenes/small_separations_hand_picked/small_separation_group_5_6.png, id=568, 692.3466pt x 171.039pt>
+<Imagenes/small_separations_hand_picked/small_separation_group_5_6.png, id=607, 692.3466pt x 171.039pt>
 File: Imagenes/small_separations_hand_picked/small_separation_group_5_6.png Graphic file (type png)
 <use Imagenes/small_separations_hand_picked/small_separation_group_5_6.png>
 Package luatex.def Info: Imagenes/small_separations_hand_picked/small_separation_group_5_6.png  used on input line 268.
 (luatex.def)             Requested size: 452.9679pt x 111.90216pt.
-<Imagenes/small_separations_hand_picked/small_separation_group_7.png, id=569, 396.7623pt x 195.8517pt>
+<Imagenes/small_separations_hand_picked/small_separation_group_7.png, id=608, 396.7623pt x 195.8517pt>
 File: Imagenes/small_separations_hand_picked/small_separation_group_7.png Graphic file (type png)
 <use Imagenes/small_separations_hand_picked/small_separation_group_7.png>
 Package luatex.def Info: Imagenes/small_separations_hand_picked/small_separation_group_7.png  used on input line 273.
@@ -1724,7 +1730,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.21004pt}.
 
-[42<./Imagenes/small_separations_hand_picked/small_separation_group_1_2.png><./Imagenes/small_separations_hand_picked/small_separation_group_3_4.png><./Imagenes/small_separations_hand_picked/small_separation_group_5_6.png>]) (./Capítulos/Conclusiones.tex
+[44<./Imagenes/small_separations_hand_picked/small_separation_group_1_2.png><./Imagenes/small_separations_hand_picked/small_separation_group_3_4.png><./Imagenes/small_separations_hand_picked/small_separation_group_5_6.png>]) (./Capítulos/Conclusiones.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
@@ -1735,14 +1741,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.21004pt}.
 
-[43<./Imagenes/small_separations_hand_picked/small_separation_group_7.png>]
+[45<./Imagenes/small_separations_hand_picked/small_separation_group_7.png>]
 Capítulo 5.
-[44
+[46
 
 ]
+
+LaTeX Warning: Citation 'CITAR' on page 47 undefined on input line 35.
+
 LaTeX Info: Redefining \. on input line 36.
 LaTeX Info: Redefining \% on input line 36.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.21004pt, for example:
@@ -1750,7 +1758,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.21004pt}.
 
-[45]
+[47]
 LaTeX Info: Redefining \. on input line 109.
 LaTeX Info: Redefining \% on input line 109.
 
@@ -1761,10 +1769,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.21004pt}.
 
-[46]
+[48]
+
+LaTeX Warning: Citation 'CITAR' on page 49 undefined on input line 136.
+
+
+LaTeX Warning: Citation 'CITAR' on page 49 undefined on input line 137.
+
 LaTeX Info: Redefining \. on input line 138.
 LaTeX Info: Redefining \% on input line 138.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.21004pt, for example:
@@ -1772,7 +1785,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.21004pt}.
 
-[47]
+[49]
+
+LaTeX Warning: Citation 'CITAR' on page 50 undefined on input line 138.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 143.
@@ -2006,16 +2022,28 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 143.
 
 
-LaTeX Warning: Citation 'CITAR' on page 48 undefined on input line 159.
+LaTeX Warning: Citation 'CITAR' on page 50 undefined on input line 151.
 
 
-LaTeX Warning: Citation 'CITAR' on page 48 undefined on input line 159.
+LaTeX Warning: Citation 'CITAR' on page 50 undefined on input line 151.
 
 
-LaTeX Warning: Citation 'CITAR' on page 48 undefined on input line 159.
+LaTeX Warning: Citation 'CITAR' on page 50 undefined on input line 153.
 
 
-LaTeX Warning: Citation 'CITAR' on page 48 undefined on input line 159.
+LaTeX Warning: Citation 'CITAR' on page 50 undefined on input line 155.
+
+
+LaTeX Warning: Citation 'CITAR' on page 50 undefined on input line 159.
+
+
+LaTeX Warning: Citation 'CITAR' on page 50 undefined on input line 159.
+
+
+LaTeX Warning: Citation 'CITAR' on page 50 undefined on input line 159.
+
+
+LaTeX Warning: Citation 'CITAR' on page 50 undefined on input line 159.
 
 LaTeX Info: Redefining \. on input line 160.
 LaTeX Info: Redefining \% on input line 160.
@@ -2026,9 +2054,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.21004pt}.
 
-[48]
+[50]
 
-LaTeX Warning: Citation 'CITAR' on page 49 undefined on input line 161.
+LaTeX Warning: Citation 'CITAR' on page 51 undefined on input line 161.
+
+
+LaTeX Warning: Citation 'CITAR' on page 51 undefined on input line 173.
 
 LaTeX Info: Redefining \. on input line 174.
 LaTeX Info: Redefining \% on input line 174.
@@ -2039,7 +2070,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.21004pt}.
 
-[49])
+[51])
 LaTeX Info: Redefining \. on input line 209.
 LaTeX Info: Redefining \% on input line 209.
 
@@ -2050,22 +2081,49 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.21004pt}.
 
-[50]
+[52]
 Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
 Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
 Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
 Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+
+Overfull \hbox (19.13318pt too wide) in paragraph at lines 209--209
+\TU/lmr/m/it/12 Workshop (TASC8/KASC15) \TU/lmr/m/n/12 (2024). Held in Por-to, Por-tu-gal; or-ga-ni-zed by the TESS/Ke-
+ []
+
+
+Overfull \hbox (5.69058pt too wide) in paragraph at lines 209--209
+\TU/lmr/m/n/12 type planet-hosting stars using Ba-ye-sian tech-ni-ques and ma-chi-ne lear-ning''. En: \TU/lmr/m/it/12 Monthly
+ []
+
 
 Overfull \hbox (9.99158pt too wide) in paragraph at lines 209--209
 [][]$\TU/lmtt/m/n/12 https : / / physics . stackexchange . com / questions / 537111 / eulerian - description -
  []
 
-[51
+Missing character: There is no δ (U+03B4) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no   (U+2009) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no δ (U+03B4) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no   (U+2009) in font [lmroman12-regular]:+tlig;!
+[53
 
 
 Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
 Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no δ (U+03B4) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no   (U+2009) in font [lmroman12-regular]:+tlig;!
 ]
+LaTeX Info: Redefining \. on input line 209.
+LaTeX Info: Redefining \% on input line 209.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[54]
 LaTeX Info: Redefining \. on input line 210.
 LaTeX Info: Redefining \% on input line 210.
 
@@ -2076,7 +2134,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[52] (./latex-output/main.aux
+[55] (./latex-output/main.aux
 LaTeX Info: Redefining \sptext on input line 14.
 LaTeX Info: Redefining \. on input line 14.
 LaTeX Info: Redefining \% on input line 14.
@@ -2095,19 +2153,19 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 44473 strings out of 476076
+ 44534 strings out of 476076
  125016,1977958 words of node,token memory allocated
- 1395 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 254 attribute, 70 glue_spec, 128 attribute_list, 3 write, 11 pdf_action nodes
-   avail lists: 1:10,2:1598,3:494,4:276,5:438,6:110,7:8519,8:102,9:986,10:29,11:1175
- 65560 multiletter control sequences out of 65536+600000
+ 1431 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 260 attribute, 70 glue_spec, 131 attribute_list, 3 write, 14 pdf_action nodes
+   avail lists: 1:10,2:1823,3:550,4:283,5:438,6:109,7:8694,8:102,9:986,10:29,11:1158
+ 65613 multiletter control sequences out of 65536+600000
  80 fonts using 6021007 bytes
  98i,14n,104p,1826b,2757s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (55 pages, 13534939 bytes).
+Output written on main.pdf (58 pages, 13542813 bytes).
 
-PDF statistics: 942 PDF objects out of 1000 (max. 8388607)
- 756 compressed objects within 8 object streams
- 214 named destinations out of 1000 (max. 1048576)
+PDF statistics: 997 PDF objects out of 1000 (max. 8388607)
+ 807 compressed objects within 9 object streams
+ 222 named destinations out of 1000 (max. 1048576)
  392 words of extra memory for PDF output out of 10000 (max. 100000000)
 

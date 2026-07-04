@@ -1,0 +1,14 @@
+I have reviewed the file [Introducción.tex](file:///home/pauver/repos/pauverblom/TFM/TeX/Capítulos/Introducción.tex) and inserted the `\citep{CITAR}` placeholders into the scientific claims and facts that required them. 
+
+The added citations include:
+- The claim that asteroseismology precisely determines density gradients, internal rotation, and convective mixing zones compared to classical photometry.
+- The assumption that stars in a cluster form from the same gas and dust cloud at around the same time.
+- The use of the HR diagram's "turn-off point" to estimate a cluster's age.
+- The definition and "rejuvenated" appearance of Blue Stragglers to the left of the turn-off point.
+- The specific $n_{pg}$ modes associated with $\delta$ Scuti, $\gamma$ Doradus, and SX Phoenicis.
+- The definition of the *isolated hypothesis* for Blue Stragglers.
+- The definition of the *binary mass transfer hypothesis* for Blue Stragglers.
+- The statements regarding CoRoT, Kepler, and TESS yielding high-value scientific results in asteroseismology, as well as the claim regarding their large pixel sizes and Point-Spread-Functions (PSFs).
+- The specifics of the survey sample targets (SS) such as M67, 47 Tuc, $\chi$+ h Persei, etc., and their age and metallicity ranges.
+
+The changes have been saved to the file. Let me know if you would like me to adjust any of these or add others!

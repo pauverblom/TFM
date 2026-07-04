@@ -12,7 +12,7 @@ Para ello, se emplea el repositorio \texttt{wsssss} \textit{(Walter's Set of Scr
 
 La evolución de esta cuadrícula de estrellas simulada y de la Blue Straggler puede verse en la figura \ref{fig:sim_estrellas}
 
-Se aprecia cómo la Blue Straggler evoluciona a temperaturas superiores que estrellas similares en masa (como es el caso de la estrella de $1.82 M_\odot$), fruto de su estructura interior rejuvenecida.
+Se aprecia cómo la Blue Straggler evoluciona a temperaturas superiores que estrellas similares en masa (como es el caso de la estrella de $1.82 M_\odot$), fruto de su estructura interior rejuvenecida (Figura \ref{fig:evolution_graphs}).
 
 \begin{figure}[H]
   \centering
@@ -37,7 +37,7 @@ Puesto que la Blue Straggler ya había evolucionado ligeramente al inicio de su 
 El objetivo final de este trabajo es determinar si la astrosismología puede ayudarnos a identificar los escenarios de evolución binaria que dan lugar a las Blue Stragglers, frente a la evolución estelar simple. Para ello, en esta sección se lleva a cabo un estudio comparativo entre las frecuencias de oscilación de la Blue Straggler y de las estrellas de la cuadrícula de la sección anterior.
 \subsection{Gran Separación}
 
-Una primera aproximación consiste en calcular la gran separación $\Delta\nu$ para las frecuencias de oscilación de la Blue Straggler y de las estrellas de la cuadrícula. Esta se define como la diferencia de frecuencia entre modos de idéntico orden y harmonicidad (es decir, $\nu_{n_{pg}}^l - \nu_{n_{pg}-1}^l$). Un ejemplo de esta gran separación puede verse en la Figura \ref{fig:great_separation}.
+Una primera aproximación consiste en calcular la gran separación $\Delta\nu$ para las frecuencias de oscilación de la Blue Straggler y de las estrellas de la cuadrícula. Esta se define como la diferencia de frecuencia entre modos de idéntico orden y harmonicidad (es decir, $\nu_{n_{pg}}^l - \nu_{n_{pg}-1}^l$) \citep{Davies_2015}. Un ejemplo de esta gran separación puede verse en la Figura \ref{fig:great_separation}.
 
 \begin{figure}[H]
   \centering
@@ -129,7 +129,7 @@ Las diferencias máximas observadas en la gran separación para cada modo, restr
   \label{tab:max_diff_dnu}
 \end{table}
 
-Este intervalo de orden radial (entre $g_{10}$ y $p_{10}$) es un intervalo amplio que engloba pulsaciones de los modos $g$ y $p$ de bajo orden. Elegimos este intervalo pues se trata de la zona de oscilación esperada para las $\delta$ Scuti, zona donde se encuentra la Blue Straggler objetivo de nuestro estudio.
+Este intervalo de orden radial (entre $g_{10}$ y $p_{10}$) es un intervalo amplio que engloba pulsaciones de los modos $g$ y $p$ de bajo orden. Elegimos este intervalo pues se trata de la zona de oscilación esperada para las $\delta$ Scuti, zona donde se encuentra la Blue Straggler objetivo de nuestro estudio \citep{Gatuam_2026}.
 
 %Para garantizar que las diferencias observadas entre la Blue Straggler y las estrellas de evolución estándar reflejan diferencias estructurales genuinas (y no artefactos numéricos del código), es interesante realizar una prueba de control. Para ello, analizaremos las oscilaciones de dos estrellas regulares de masas muy similares ($1.832$ y $1.834\,$M$_\odot$) que evolucionan de forma casi idéntica en el diagrama HR. Si las desviaciones observadas anteriormente fuesen el resultado de inestabilidades del código, cabría esperar que también aparecieran diferencias notables al comparar estos dos modelos estándar.
 
@@ -253,7 +253,7 @@ Las diferencias máximas observadas en las frecuencias individuales para cada mo
 
 \section{Pequeña Separación}
 
-Finalmente, se puede comparar la pequeña separación ($\delta \nu$) de las frecuencias de la Blue Straggler con las frecuencias de las estrellas de referencia. Esta se define como $\delta\nu_{l, l+2} = \nu_{n_{pg}, l} - \nu_{n_{pg}-1, l+2}$. Para este caso en particular, como sólo se tienen modos $l=0, 1, 2$, se emplea la notación en función del índice $k$ ($k = n_{pg} + 9$) empleado en las gráficas: $\delta\nu_{0, 2}^k = \nu_{k-9, 0} - \nu_{k-10, 2}$. Los resultados de la pequeña separación se muestran en la Figura \ref{fig:small_separation}.
+Finalmente, se puede comparar la pequeña separación ($\delta \nu$) de las frecuencias de la Blue Straggler con las frecuencias de las estrellas de referencia. Esta se define como $\delta\nu_{l, l+2} = \nu_{n_{pg}, l} - \nu_{n_{pg}-1, l+2}$ \citep{Cunha2017}. Para este caso en particular, como sólo se tienen modos $l=0, 1, 2$, se emplea la notación en función del índice $k$ ($k = n_{pg} + 9$) empleado en las gráficas: $\delta\nu_{0, 2}^k = \nu_{k-9, 0} - \nu_{k-10, 2}$. Los resultados de la pequeña separación se muestran en la Figura \ref{fig:small_separation}.
 
 A destacar, en etapas tempranas de la evolución estelar, los valores de la pequeña separación son casi idénticos para ambas estrellas. Conforme avanza la evolución y disminuye la fracción de hidrógeno central, la pequeña separación decrece globalmente hasta alcanzar valores muy negativos a órdenes bajos. La diferencia más significativa aparece en las etapas finales de la secuencia principal (últimos paneles). En este punto se observa una clara separación entre ambas curvas, siendo la pequeña separación de la estrella de referencia más pequeña que la de la Blue Straggler.
 

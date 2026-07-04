@@ -1,0 +1,9 @@
+I've reviewed [Creando Blue Stragglers.tex](file:///home/pauver/repos/pauverblom/TFM/TeX/Capítulos/Creando Blue Stragglers.tex) and inserted the `\citep{CITAR}` placeholder for the scientific claims and facts that typically require a citation. 
+
+Here are the specific locations where the placeholders were added:
+1. **Equations of State Tables:** Added to the statement regarding the combination of OPAL, SCVH, HELM, and PC tables used for the EOS (Line 15).
+2. **Formation Pathway:** Added to the statement establishing that Blue Stragglers can form via mass transfer in binary systems (Line 25).
+3. **Mass Transfer Cases:** Added to the introduction of the three main cases (Case A, B, and C) for binary mass transfer according to the evolutionary stage of the donor star (Line 49).
+4. **Accretion Spin-up:** Added to the claim that accretion drastically accelerates the spin of the star (*spin-up*) (Line 72).
+
+Other factual claims in the text (like the Eggleton and Ritter formulations, or the use of MESA and GYRE) were already correctly cited. Let me know if there are any other specific sections or files you'd like me to review!
