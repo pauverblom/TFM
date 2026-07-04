@@ -2414,6 +2414,11 @@
     <bcf:citekey order="29" intorder="1">Bedding_2003</bcf:citekey>
     <bcf:citekey order="30" intorder="1">Kurtz2022</bcf:citekey>
     <bcf:citekey order="30" intorder="2">10.3389/fspas.2022.952296</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">CITAR</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">CITAR</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">CITAR</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">CITAR</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">CITAR</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

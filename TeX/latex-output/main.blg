@@ -1,17 +1,18 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'latex-output/main.blg'
-[20] biber:342> INFO - === vie jul  3, 2026, 11:42:57
-[26] Biber.pm:421> INFO - Reading 'latex-output/main.bcf'
-[48] Biber.pm:1002> INFO - Found 25 citekeys in bib section 0
-[54] Biber.pm:4487> INFO - Processing section 0
-[57] Biber.pm:4678> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[58] bibtex.pm:1713> INFO - LaTeX decoding ...
-[67] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[179] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[179] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[179] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
+[20] biber:342> INFO - === sáb jul  4, 2026, 17:03:09
+[25] Biber.pm:421> INFO - Reading 'latex-output/main.bcf'
+[48] Biber.pm:1002> INFO - Found 26 citekeys in bib section 0
+[53] Biber.pm:4487> INFO - Processing section 0
+[56] Biber.pm:4678> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[56] bibtex.pm:1713> INFO - LaTeX decoding ...
+[66] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[183] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[183] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[183] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
 [193] bbl.pm:676> INFO - Writing 'latex-output/main.bbl' with encoding 'UTF-8'
 [200] bbl.pm:779> INFO - Output to latex-output/main.bbl
 [200] Biber.pm:132> WARN - legacy month field 'sep' in entry 'NASAWebb2023Cepheids' is not an integer - this will probably not sort properly.
-[200] Biber.pm:132> WARN - BibTeX subsystem: /tmp/biber_tmp_JuUD/f4d088b3f9f145b5c3058da33afd57d4_17626.utf8, line 210, warning: undefined macro "July"
-[200] Biber.pm:134> INFO - WARNINGS: 2
+[200] Biber.pm:132> WARN - BibTeX subsystem: /tmp/biber_tmp_jylk/f4d088b3f9f145b5c3058da33afd57d4_48147.utf8, line 210, warning: undefined macro "July"
+[200] Biber.pm:132> WARN - I didn't find a database entry for 'CITAR' (section 0)
+[200] Biber.pm:134> INFO - WARNINGS: 3
