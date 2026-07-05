@@ -69,7 +69,7 @@ La evolución del sistema es un proceso delicado. Es necesario elegir una combin
 
   \item Finamente, se ajusta la tolerancia del solver aumentando el coeficiente de resolución espacial superficial (\texttt{mesh\_delta\_coeff = 0.5}) para tener un mallado del perfil más fino, y se relaja ligeramente el residuo máximo admisible a $10^{-3}$ (\texttt{gold\_\allowbreak tol\_max\_residual3 = 1d-3}) para evitar fallos del solver debidos al ruido numérico inducido por la acreción rápida. Además, el paso de tiempo durante la fase de desbordamiento (Roche Limit Overflow) se restringe rígidamente utilizando los parámetros \texttt{fm = 0.001}, \texttt{fr = 0.01} y \texttt{fj = 0.01} (que limitan los cambios fraccionales de masa, radio y momento angular respectivamente).
 
-  \item \textbf{Omisión de la rotación estelar:} Por simplicidad computacional, se ha omitido la rotación en MESA (y GYRE, se detallará más este otro código a continuación). Aunque en la realidad la acreción acelera drásticamente el giro de la estrella (\textit{spin-up}) \citep{paxton2015}, ignorar este efecto nos permite asumir simetría esférica estricta y evitar otras complejidades numéricas en los modelos evolutivos y las ecuaciones de oscilación.
+  \item \textbf{Omisión de la rotación estelar:} Por simplicidad computacional, se ha omitido la rotación en MESA (y GYRE, se detallará más este otro código a continuación). Aunque en la realidad la acreción acelera drásticamente el giro de la estrella (\textit{spin-up}) \citep{paxton2015}, ignorar este efecto permite asumir simetría esférica estricta y evitar otras complejidades numéricas en los modelos evolutivos y las ecuaciones de oscilación.
 
 \end{itemize}
 

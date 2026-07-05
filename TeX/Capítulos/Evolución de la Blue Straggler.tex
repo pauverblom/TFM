@@ -6,7 +6,7 @@ Por lo tanto, se toma la última \texttt{PHOTO} creada por MESA (una \texttt{PHO
 
 \section{Evolución de Estrellas Similares}
 
-Dado que, en una observación fotométrica, a menudo solo se conoce con certeza la luminosidad y temperatura de las estrellas observadas, naturalmente se comparará nuestra Blue Straggler con estrellas simples que se encuentren en el mismo punto del diagrama HR, permitiéndonos de esta forma comprobar las diferencias entre la hipótesis aislada y la binaria. Para ver cómo se posiciona nuestra estrella en comparación con estrellas de masa similar durante su evolución, es necesario evolucionar una cuadrícula de estrellas en un intervalo de masas que englobe la masa de la Blue Straggler (ya que se espera que evolucionen de manera similar).
+Dado que, en una observación fotométrica, a menudo solo se conoce con certeza la luminosidad y temperatura de las estrellas observadas, naturalmente se comparará nuestra Blue Straggler con estrellas simples que se encuentren en el mismo punto del diagrama HR, permitiendo así comprobar las diferencias entre la hipótesis aislada y la binaria. Para ver cómo se posiciona nuestra estrella en comparación con estrellas de masa similar durante su evolución, es necesario evolucionar una cuadrícula de estrellas en un intervalo de masas que englobe la masa de la Blue Straggler (ya que se espera que evolucionen de manera similar).
 
 Para ello, se emplea el repositorio \texttt{wsssss} \textit{(Walter's Set of Scripts for Studying Simulated Stars)} \citep{wsssss}, el cual contiene una serie de scripts muy útiles para crear y simular de forma simultánea cuadrículas de estrellas con MESA, actuando como una ``envoltura'' al código de simulación.
 
@@ -34,10 +34,10 @@ Puesto que la Blue Straggler ya había evolucionado ligeramente al inicio de su 
 
 \section{Comparación Astrosismológica}
 
-El objetivo final de este trabajo es determinar si la astrosismología puede ayudarnos a identificar los escenarios de evolución binaria que dan lugar a las Blue Stragglers, frente a la evolución estelar simple. Para ello, en esta sección se lleva a cabo un estudio comparativo entre las frecuencias de oscilación de la Blue Straggler y de las estrellas de la cuadrícula de la sección anterior.
+El objetivo final de este trabajo es determinar si la astrosismología es capaz de identificar los escenarios de evolución binaria que dan lugar a las Blue Stragglers, frente a la evolución estelar simple. Para ello, en esta sección se lleva a cabo un estudio comparativo entre las frecuencias de oscilación de la Blue Straggler y de las estrellas de la cuadrícula de la sección anterior.
 \subsection{Gran Separación}
 
-Una primera aproximación consiste en calcular la gran separación $\Delta\nu$ para las frecuencias de oscilación de la Blue Straggler y de las estrellas de la cuadrícula. Esta se define como la diferencia de frecuencia entre modos de idéntico orden y harmonicidad (es decir, $\nu_{n_{pg}}^l - \nu_{n_{pg}-1}^l$) \citep{Davies_2015}. Un ejemplo de esta gran separación puede verse en la Figura \ref{fig:great_separation}.
+Una primera aproximación consiste en calcular la gran separación $\Delta\nu$ para las frecuencias de oscilación de la Blue Straggler y de las estrellas de la cuadrícula. Esta se define como la diferencia de frecuencia entre modos de idéntico orden y harmonicidad (es decir, $\nu_{n_{pg}}^l - \nu_{n_{pg}-1}^l$). Un ejemplo de esta gran separación puede verse en la Figura \ref{fig:great_separation}.
 
 \begin{figure}[H]
   \centering
@@ -48,7 +48,7 @@ Una primera aproximación consiste en calcular la gran separación $\Delta\nu$ p
 
 Para este caso en particular, se empleará la siguiente notación: $\Delta \nu_k = \nu_{-10 + k + 1}^l - \nu_{-10 + k}^l$, de modo que $\Delta \nu_0 = \nu_{-9}^l - \nu_{-10}^l$, $\Delta \nu_1 = \nu_{-8}^l - \nu_{-9}^l$, y así sucesivamente.
 
-Podemos, pues, representar la gran separación $\Delta \nu$ de las estrellas de nuestra cuadrícula y la de la Blue Straggler en el mismo gráfico, para observar sus diferencias.
+Se puede, pues, representar la gran separación $\Delta \nu$ de las estrellas de nuestra cuadrícula y la de la Blue Straggler en el mismo gráfico, para observar sus diferencias.
 
 \clearpage
 \newgeometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=2.5cm}
@@ -129,7 +129,7 @@ Las diferencias máximas observadas en la gran separación para cada modo, restr
   \label{tab:max_diff_dnu}
 \end{table}
 
-Este intervalo de orden radial (entre $g_{10}$ y $p_{10}$) es un intervalo amplio que engloba pulsaciones de los modos $g$ y $p$ de bajo orden. Elegimos este intervalo pues se trata de la zona de oscilación esperada para las $\delta$ Scuti, zona donde se encuentra la Blue Straggler objetivo de nuestro estudio \citep{Gatuam_2026}.
+Este intervalo de orden radial (entre $g_{10}$ y $p_{10}$) es un intervalo amplio que engloba pulsaciones de los modos $g$ y $p$ de bajo orden. Se elige este intervalo pues se trata de la zona de oscilación esperada para las $\delta$ Scuti, zona donde se encuentra la Blue Straggler objetivo de nuestro estudio \citep{Gatuam_2026}.
 
 %Para garantizar que las diferencias observadas entre la Blue Straggler y las estrellas de evolución estándar reflejan diferencias estructurales genuinas (y no artefactos numéricos del código), es interesante realizar una prueba de control. Para ello, analizaremos las oscilaciones de dos estrellas regulares de masas muy similares ($1.832$ y $1.834\,$M$_\odot$) que evolucionan de forma casi idéntica en el diagrama HR. Si las desviaciones observadas anteriormente fuesen el resultado de inestabilidades del código, cabría esperar que también aparecieran diferencias notables al comparar estos dos modelos estándar.
 

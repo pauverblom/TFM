@@ -1,48 +1,48 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {}Resumen}{\es@scroman {i}}{chapter*.3}%
-\contentsline {chapter}{\numberline {1}Introducción}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Blue Stragglers}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}HAYDN}{6}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Objetivos y Arquitectura}{6}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Arquitectura y Operaciones}{7}{subsection.1.2.2}%
-\contentsline {chapter}{\numberline {2}Hidrodinámica y Oscilaciones Estelares}{9}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Ecuaciones Básicas de la Hidrodinámica}{9}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Aproximación Adiabática}{11}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Análisis Perturbativo}{12}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Marco Euleriano y Lagrangiano}{12}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Linealización del Sistema Hidrodinámico}{13}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Las Ecuaciones de Oscilación Estelar}{15}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Componentes Radiales y Horizontales}{15}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Separación de Variables y Problema de Autovalores}{17}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Oscilaciones Adiabáticas y Condiciones de Contorno}{19}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Naturaleza y Clasificación de los Modos de Oscilación}{21}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}La Aproximación de Cowling}{21}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Frecuencias Características y Atrapamiento}{21}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Modos de Presión (p-modes)}{22}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Modos de Gravedad (g-modes)}{22}{subsection.2.4.4}%
-\contentsline {chapter}{\numberline {3}Creando Blue Stragglers}{25}{chapter.3}%
-\contentsline {section}{\numberline {3.1}MESA}{25}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Módulos y Física Integrada}{25}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Formación de Blue Stragglers}{26}{subsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.2.1}Estabilidad Numérica del Acretor y Ajustes del Solver}{28}{subsubsection.3.1.2.1}%
-\contentsline {section}{\numberline {3.2}GYRE}{32}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Evolución y Comparación de la Blue Straggler}{34}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Evolución de Estrellas Similares}{34}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Comparación Astrosismológica}{37}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Gran Separación}{37}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Frecuencias Individuales}{41}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Pequeña Separación}{44}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{46}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Resultados Principales}{46}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Simulación de la Blue Straggler y estrellas de referencia}{46}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Diferencias en la Gran Separación}{46}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Diferencias en Frecuencias Individuales}{47}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Diferencias en la Pequeña Separación}{47}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Estimación del Tiempo de Integración}{47}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Resolución de frecuencias próximas}{48}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Diferencia en las separaciones (Gran y Pequeña) entre dos estrellas}{48}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Identificación de Modos en las $\boldsymbol {\delta }$ Scuti}{50}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Las dificultades intrínsecas de la identificación de modos}{50}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Avances recientes y perspectivas}{51}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Perspectivas Futuras}{51}{section.5.4}%
-\contentsline {chapter}{\numberline {}Referencias}{52}{section.5.4}%
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Blue Stragglers}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}HAYDN}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Objetivos y Arquitectura}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Arquitectura y Operaciones}{6}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}Hidrodinámica y Oscilaciones Estelares}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Ecuaciones Básicas de la Hidrodinámica}{8}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Aproximación Adiabática}{10}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Análisis Perturbativo}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Marco Euleriano y Lagrangiano}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Linealización del Sistema Hidrodinámico}{11}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Las Ecuaciones de Oscilación Estelar}{12}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Componentes Radiales y Horizontales}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Separación de Variables y Problema de Autovalores}{12}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Condiciones de Contorno}{14}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Naturaleza y Clasificación de los Modos de Oscilación}{15}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}La Aproximación de Cowling}{15}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Frecuencias Características y Atrapamiento}{16}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Modos de Presión (p-modes)}{16}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Modos de Gravedad (g-modes)}{16}{subsection.2.4.4}%
+\contentsline {chapter}{\numberline {3}Creando Blue Stragglers}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}MESA}{19}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Módulos y Física Integrada}{19}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Formación de Blue Stragglers}{20}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Estabilidad Numérica del Acretor y Ajustes del Solver}{22}{subsubsection.3.1.2.1}%
+\contentsline {section}{\numberline {3.2}GYRE}{26}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Evolución y Comparación de la Blue Straggler}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Evolución de Estrellas Similares}{28}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Comparación Astrosismológica}{31}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Gran Separación}{31}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Frecuencias Individuales}{34}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Pequeña Separación}{37}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Resultados Principales}{39}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Simulación de la Blue Straggler y estrellas de referencia}{39}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Diferencias en la Gran Separación}{39}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Diferencias en Frecuencias Individuales}{40}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Diferencias en la Pequeña Separación}{40}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Estimación del Tiempo de Integración}{40}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Resolución de frecuencias próximas}{41}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Diferencia en las separaciones (Gran y Pequeña) entre dos estrellas}{41}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Identificación de Modos en las $\boldsymbol {\delta }$ Scuti}{43}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Dificultades de la identificación de modos}{43}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Avances recientes}{44}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Perspectivas Futuras}{44}{section.5.4}%
+\contentsline {chapter}{\numberline {}Referencias}{45}{section.5.4}%
