@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to spawn scientific and LaTeX review agents for the TFM chapters
+# Script to spawn scientific and LaTeX review agents for the TFM chapters sequentially per chapter
 
 # Ensure Reviews directory exists
 mkdir -p /home/pauver/repos/pauverblom/TFM/Reviews
@@ -13,11 +13,11 @@ chapters=(
   "Conclusiones.tex"
 )
 
-echo "=== STEP 1: Spawning Chapter Review Agents ==="
+echo "=== STEP 1: Spawning Chapter Review Agents (Sequentially per Chapter) ==="
 
 for chapter in "${chapters[@]}"; do
   chap_name="${chapter%.tex}"
-  echo "Spawning agents for $chapter..."
+  echo "Spawning agents for $chapter (max 2 parallel)..."
   
   # 1. Scientific Review Agent (Gemini 3.1 Pro (High))
   agy --dangerously-skip-permissions --model "Gemini 3.1 Pro (High)" --print "You are an expert scientific peer reviewer in astrophysics, stellar evolution, and asteroseismology. Conduct an in-depth scientific review of the chapter located at /home/pauver/repos/pauverblom/TFM/TeX/Capítulos/$chapter.
@@ -41,11 +41,13 @@ for chapter in "${chapters[@]}"; do
   4. Style check - IMPERSONAL STYLE (CRITICAL): Strictly identify any occurrences of first-person plural verbs or pronouns (e.g., 'hemos', 'observamos', 'esperamos', 'nuestro', 'nuestras', 'nuestros', 'nosotros'). The entire text must be written in an impersonal, passive academic style (e.g., 'se observa', 'se calcula', 'este estudio', 'las simulaciones'). Provide the line numbers and exact suggestions to rewrite them to impersonal passive.
   
   Do NOT modify the file. Output a detailed Markdown report in Spanish listing your findings as bullet points with clear textual explanations and referencing specific line numbers. Do not include introductory or concluding conversational chat; start directly with the markdown content." > "/home/pauver/repos/pauverblom/TFM/Reviews/latex_review_${chap_name}.md" 2>&1 &
+  
+  # Wait for the two agents for the current chapter to complete before proceeding to the next chapter
+  wait
+  echo "Completed review for $chapter."
 done
 
-echo "Waiting for chapter review agents to complete..."
-wait
-echo "All chapter review agents completed!"
+echo "All chapter-specific reviews completed!"
 
 echo "=== STEP 2: Running Global Coherence Agent ==="
 echo "Spawning Global Coherence Agent for all chapters..."

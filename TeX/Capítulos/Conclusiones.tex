@@ -1,26 +1,26 @@
 \chapter{Conclusiones}
 
-En este trabajo se ha llevado a cabo un trabajo teórico y computacional para evaluar la capacidad de la astrosismología de diferenciar dos historias evolutivas distintas que producen estrellas en idéntica posición del diagrama HR: la hipótesis aislada y la hipótesis de transferencia de masa binaria en el contexto de la formación de Blue Stragglers. Para ello se ha combinado el uso del código de evolución estelar MESA con el de oscilación, GYRE. Con los resultados obtenidos, se han calculado las diferencias en gran separación, pequeña separación y frecuencias individuales que cabría esperar entre una Blue Straggler y una estrella ``simple''. A continuación, se resumen los resultados y las limitaciones del estudio.
+En este trabajo se ha llevado a cabo un estudio teórico y computacional para evaluar la capacidad de la astrosismología de diferenciar dos historias evolutivas distintas que producen estrellas en idéntica posición del diagrama HR: la hipótesis aislada y la hipótesis de transferencia de masa binaria en el contexto de la formación de \textit{Blue Stragglers}. Para ello se ha combinado el uso del código de evolución estelar MESA con el de oscilación, GYRE. Con los resultados obtenidos, se han calculado las diferencias en gran separación, pequeña separación y frecuencias individuales que cabría esperar entre una \textit{Blue Straggler} y una estrella ``simple''. A continuación, se resumen los resultados y las limitaciones del estudio.
 
 \section{Resultados Principales}
 
-\subsection{Simulación de la Blue Straggler y estrellas de referencia}
+\subsection{Simulación de la \textit{Blue Straggler} y estrellas de referencia}
 
-Se ha simulado la creación de una Blue Straggler en la etapa evolutiva de secuencia principal temprana (Caso A) a través de la transferencia de masa, empleando para ello el módulo \texttt{binary} de MESA. El sistema binario se componía de una estrella donante de $2.0~M_\odot$ y una acretora de $1.0~M_\odot$, con un periodo orbital de 4 días. La transferencia de masa comienza alrededor de $t_0 = 909.3~\text{Myr}$ y da lugar a una estrella rejuvenecida de $1.82136~M_\odot$ con una estructura interior claramente distinta a la de una estrella de masa similar con evolución aislada: un núcleo enriquecido con hidrógeno nuevo y helio más diluido (Figura \ref{fig:evolution_graphs}), y un perfil de composición química alterado en sus capas intermedias. Esta estructura interna modificada es la señal que la astrosismología debe detectar.
+Se ha simulado la creación de una \textit{Blue Straggler} en la etapa evolutiva de secuencia principal temprana (Caso A) a través de la transferencia de masa, empleando para ello el módulo \texttt{binary} de MESA. El sistema binario se componía de una estrella donante de $2.0~M_\odot$ y una acretora de $1.0~M_\odot$, con un periodo orbital de 4 días. La transferencia de masa comienza alrededor de $t_0 = 909.3~\mathrm{Myr}$ y da lugar a una estrella rejuvenecida de $1.82136~M_\odot$ con una estructura interior claramente distinta a la de una estrella de masa similar con evolución aislada: un núcleo enriquecido con hidrógeno nuevo y helio más diluido (Figura~\ref{fig:evolution_graphs}), y un perfil de composición química alterado en sus capas intermedias. Esta estructura interna modificada es la señal que la astrosismología debe detectar.
 
-Además, se ha empleado el repositorio \texttt{wsssss} para simular una cuadrícula de estrellas de masa similar a la de la Blue Straggler, con el fin de emplearlas para comparar sus frecuencias de oscilación, y poder determinar si la astrosismología puede diferenciar ambos escenarios evolutivos.
+Además, se ha empleado el repositorio \texttt{wsssss} para simular una cuadrícula de estrellas de masa similar a la de la \textit{Blue Straggler}, con el fin de comparar sus frecuencias de oscilación y poder determinar si la astrosismología puede diferenciar ambos escenarios evolutivos.
 
 \subsection{Diferencias en la Gran Separación}
 
-Las grandes separaciones ($\Delta\nu$) de la Blue Straggler y de las estrellas de referencia se han calculado de forma similar a como se haría en un estudio observacional (calculando el espectro de frecuencias de la estrella y obteniendo la diferencia de frecuencia entre modos de órdenes radiales consecutivos). En este caso, dado que se disponía de las frecuencias calculadas directamente por GYRE, no ha sido necesario calcular dicho espectro de frecuencias, y se han empleado directamente estas frecuencias.
+Las grandes separaciones ($\Delta\nu$) de la \textit{Blue Straggler} y de las estrellas de referencia se han calculado de forma similar a como se haría en un estudio observacional (calculando el espectro de frecuencias de la estrella y obteniendo la diferencia de frecuencia entre modos de órdenes radiales consecutivos). En este caso, dado que se disponía de las frecuencias calculadas directamente por GYRE, no ha sido necesario calcular dicho espectro, utilizándose directamente los valores obtenidos por GYRE.
 
-Se han comparado las diferencias en grandes separaciones para 7 puntos significativos de la evolución de la Blue Straggler (representados en la Figura \ref{fig:global_hr_diagram}), abarcando desde $H_c \approx 69.7\%$ hasta $H_c \approx 0.1\%$. Las diferencias más notables se identifican en los modos no radiales, especialmente para $l=2$, con valores máximos que alcanzan $|\Delta(\Delta\nu)|_{\max}^{l=2} \approx 2.491\,\text{ciclos\,día}^{-1}$ en las etapas más tardías de la secuencia principal. Además se ha observado que las diferencias para $l=0$ son comparativamente menores, llegando el cociente $r = |\Delta(\Delta\nu)|_{\max}^{l=2} / |\Delta(\Delta\nu)|_{\max}^{l=0}$ a valores como $88.5$ para el Par 7. Todo esto confirma que los modos cuadrupolares son significativamente más sensibles a las diferencias internas que existen entre una BSS y una estrella simple.
+Se han comparado las diferencias en grandes separaciones para 7 puntos significativos de la evolución de la \textit{Blue Straggler} (representados en la Figura~\ref{fig:global_hr_diagram}), abarcando desde $H_c \approx 69.7\%$ hasta $H_c \approx 0.1\%$. Las diferencias más notables se identifican en los modos no radiales, especialmente para $l=2$, con valores máximos que alcanzan $|\Delta(\Delta\nu)|_{\max}^{l=2} \approx 2.491\,\text{ciclos\,día}^{-1}$ en las etapas más tardías de la secuencia principal. Además, se ha observado que las diferencias para $l=0$ son comparativamente menores, llegando el cociente $r = |\Delta(\Delta\nu)|_{\max}^{l=2} / |\Delta(\Delta\nu)|_{\max}^{l=0}$ a valores como $88.5$ para el Par 7. Todo esto confirma que los modos cuadrupolares son significativamente más sensibles a las diferencias internas que existen entre una BSS y una estrella simple.
 
 \subsection{Diferencias en Frecuencias Individuales}
 
 Al comparar las frecuencias individuales para estos mismos 7 puntos, se observa que en los modos radiales ($l=0$) las diferencias siguen siendo pequeñas ($\le 0.4\,\text{ciclos\,día}^{-1}$), mientras que en los no radiales las discrepancias son mucho más notables, incrementándose conforme la estrella evoluciona.
 
-Cerca del agotamiento del hidrógeno en el núcleo ($H_c \le 0.8\%$), las diferencias alcanzan valores máximos de $\sim 2.75\,\text{ciclos\,día}^{-1}$ para $l=1$ y $\sim 3.21\,\text{ciclos\,día}^{-1}$ para $l=2$. Estas mayores diferencias se observan principalmente de forma continua en modos g de frecuencias más bajas. Si bien es cierto que se observan picos esporádicos de diferencias para etapas evolutivas más tempranas, no se llega a observar un patrón claro que permita identificar inequívocamente a la Blue Straggler a través de estas diferencias, por lo tanto, las diferencias continuas en modos g son más significativas a la hora de identificar la BSS.
+Cerca del agotamiento del hidrógeno en el núcleo ($H_c \le 0.8\%$), las diferencias alcanzan valores máximos de $\sim 2.75\,\text{ciclos\,día}^{-1}$ para $l=1$ y $\sim 3.21\,\text{ciclos\,día}^{-1}$ para $l=2$. Estas mayores diferencias se observan principalmente de forma continua en modos g de frecuencias más bajas. Si bien es cierto que se observan picos esporádicos de diferencias para etapas evolutivas más tempranas, no se llega a observar un patrón claro que permita identificar inequívocamente a la \textit{Blue Straggler} a través de estas diferencias, por lo tanto, las diferencias continuas en modos g son más significativas a la hora de identificar la BSS.
 
 \subsection{Diferencias en la Pequeña Separación}
 
@@ -30,15 +30,15 @@ En los momentos previos a agotar el hidrógeno nuclear (Pares 6 y 7), la discrep
 
 \section{Estimación del Tiempo de Integración}
 
-El anterior análisis pone de manifiesto que la identificación de las Blue Stragglers y la diferenciación de su escenario evolutivo mediante astrosismología requiere una precisión considerable. En esta sección, se estimará el tiempo de integración necesario para alcanzar dicha precisión.
+El anterior análisis pone de manifiesto que la identificación de las \textit{Blue Stragglers} y la diferenciación de su escenario evolutivo mediante astrosismología requiere una precisión considerable. En esta sección, se estimará el tiempo de integración necesario para alcanzar dicha precisión.
 
-La incertidumbre (ancho de línea) asociada a la medida de una frecuencia de oscilación individual en un espectro de potencias continuo está directamente relacionada con el tiempo de integración como $\sigma_\nu \approx \frac{1}{T_{int}}$, donde $T_{int}$ es el tiempo total de integración ininterrumpido \citep{ChristensenDalsgaard2019}.
+La incertidumbre (ancho de línea) asociada a la medida de una frecuencia de oscilación individual en un espectro de potencias continuo está directamente relacionada con el tiempo de integración como $\sigma_\nu \approx \frac{1}{T_{\mathrm{int}}}$, donde $T_{\mathrm{int}}$ es el tiempo total de integración ininterrumpido \citep{ChristensenDalsgaard2019}.
 
 \subsection{Resolución de frecuencias próximas}
 
 Para resolver dos modos de oscilación próximos separados por $\delta\nu$, la condición temporal es:
 \begin{equation}
-  \delta\nu \gtrsim 2 \sigma_\nu \implies T_{int} \gtrsim \frac{2}{\delta\nu}
+  \delta\nu \gtrsim 2 \sigma_\nu \implies T_{\mathrm{int}} \gtrsim \frac{2}{\delta\nu}
 \end{equation}
 
 Aplicando esto a los resultados obtenidos, se obtienen los siguientes tiempos mínimos de integración:
@@ -66,15 +66,15 @@ Aplicando esto a los resultados obtenidos, se obtienen los siguientes tiempos m�
     Par 7 ($1.790\,M_\odot$) &  0.1 & 16.3 & 0.7 & 0.6 \\
     \bottomrule
   \end{tabular}
-  \caption{Tiempo de integración mínimo $T_{\protect\min} = 2/|\Delta(\nu)|_{\protect\max}$ necesario para resolver la diferencia máxima en las frecuencias individuales entre la Blue Straggler y la estrella de evolución estándar, para cada par y modo $l$.}
+  \caption{Tiempo de integración mínimo $T_{\protect\min} = 2/|\Delta(\nu)|_{\protect\max}$ necesario para resolver la diferencia máxima en las frecuencias individuales entre la \textit{Blue Straggler} y la estrella de evolución estándar, para cada par y modo $l$.}
   \label{tab:tmin_indfreq}
 \end{table}
 
 \subsection{Diferencia en las separaciones (Gran y Pequeña) entre dos estrellas}
 
-Dado que tanto la gran separación ($\Delta\nu$) como la pequeña separación ($\delta\nu_{02}$) son la diferencia de dos frecuencias independientes, su incertidumbre teórica es $\sigma_{\text{sep}} \approx \sqrt{2 \sigma_\nu^2} = \sqrt{2}/T_{int}$. Al propagar el error de las cuatro mediciones de frecuencia, se obtiene:
+Dado que tanto la gran separación ($\Delta\nu$) como la pequeña separación ($\delta\nu_{02}$) son la diferencia de dos frecuencias independientes, su incertidumbre teórica es $\sigma_{\mathrm{sep}} \approx \sqrt{2 \sigma_\nu^2} = \sqrt{2}/T_{\mathrm{int}}$. Al propagar el error de las cuatro mediciones de frecuencia, se obtiene:
 \begin{equation}
-  \sigma_{\Delta S} \approx \sqrt{2 \sigma_{\text{sep}}^2} = \frac{2}{T_{int}} \implies \Delta S \gtrsim 2 \sigma_{\Delta S} \implies T_{int} \gtrsim \frac{4}{\Delta S}
+  \sigma_{\Delta S} \approx \sqrt{2 \sigma_{\mathrm{sep}}^2} = \frac{2}{T_{\mathrm{int}}} \implies \Delta S \gtrsim 2 \sigma_{\Delta S} \implies T_{\mathrm{int}} \gtrsim \frac{4}{\Delta S}
 \end{equation}
 (donde $\Delta S$ puede ser $\Delta \nu$ o $\delta\nu_{02}$).
 
@@ -103,7 +103,7 @@ De igual manera, se obtienen los siguientes tiempos mínimos de integración:
     Par 7 ($1.790\,M_\odot$) &  0.1 & 142.2 &  1.6 & 1.6 \\
     \bottomrule
   \end{tabular}
-  \caption{Tiempo de integración mínimo $T_{\protect\min} = 4/|\Delta(\Delta\nu)|_{\protect\max}$ necesario para resolver la diferencia máxima en la gran separación entre la Blue Straggler y la estrella de evolución estándar, para cada par y modo $l$.}
+  \caption{Tiempo de integración mínimo $T_{\protect\min} = 4/|\Delta(\Delta\nu)|_{\protect\max}$ necesario para resolver la diferencia máxima en la gran separación entre la \textit{Blue Straggler} y la estrella de evolución estándar, para cada par y modo $l$.}
   \label{tab:tmin_gran_sep}
 \end{table}
 
@@ -126,14 +126,14 @@ De igual manera, se obtienen los siguientes tiempos mínimos de integración:
     Par 7 ($1.790\,M_\odot$) &  0.1 &  1.2 \\
     \bottomrule
   \end{tabular}
-  \caption{Tiempo de integración mínimo $T_{\protect\min} = 4/|\Delta(\delta\nu_{02})|_{\protect\max}$ necesario para resolver la diferencia máxima en la pequeña separación entre la Blue Straggler y la estrella de evolución estándar, para cada par.}
+  \caption{Tiempo de integración mínimo $T_{\protect\min} = 4/|\Delta(\delta\nu_{02})|_{\protect\max}$ necesario para resolver la diferencia máxima en la pequeña separación entre la \textit{Blue Straggler} y la estrella de evolución estándar, para cada par.}
   \label{tab:tmin_peq_sep}
 \end{table}
 
-Se tiene, pues, que para resolver todas las diferencias entre esta Blue Straggler y estrellas de evolución estándar, se necesitaría un tiempo de integración mínimo de aproximadamente 142 días (unos 5 meses), dominado por la necesidad de resolver la máxima diferencia en las frecuencias individuales del modo $l=0$ para el Par 7. Sin embargo, es crucial subrayar que estos tiempos son límites inferiores puramente teóricos en el mejor de los casos. En la práctica, una serie de factores aumentan considerablemente la duración de la campaña de observación:
+Se tiene, pues, que para resolver todas las diferencias entre esta \textit{Blue Straggler} y estrellas de evolución estándar, se necesitaría un tiempo de integración mínimo de aproximadamente 142 días (unos 5 meses), dominado por la necesidad de resolver la máxima diferencia en las frecuencias individuales del modo $l=0$ para el Par 7. Sin embargo, es crucial subrayar que estos tiempos son límites inferiores puramente teóricos en el mejor de los casos. En la práctica, una serie de factores aumentan considerablemente la duración de la campaña de observación:
 
 \begin{itemize}
-  \item \textbf{Relación señal-ruido y amplitudes bajas:} El criterio de Rayleigh solo garantiza la resolución de dos picos cuando ambos tienen una amplitud comparable y el ruido de fondo es despreciable \citep{CITAR}. Las observaciones reales rara vez cumplen estas condiciones ideales, a menudo presentando ruido de fondo alto que interfiere con los modos reales, suprimiéndolos o creando picos ficticios.
+  \item \textbf{Relación señal-ruido y amplitudes bajas:} El criterio de Rayleigh solo garantiza la resolución de dos picos cuando ambos tienen una amplitud comparable y el ruido de fondo es despreciable \citep{ChristensenDalsgaard2019}. Las observaciones reales rara vez cumplen estas condiciones ideales, a menudo presentando ruido de fondo alto que interfiere con los modos reales, suprimiéndolos o creando picos ficticios.
   \item \textbf{Aliasing y ventanas temporales:} Las interrupciones en la cadena de observación generan ventanas espectrales que contaminan el espectro con lóbulos laterales artificiales, dificultando la separación de picos cercanos. Sin embargo, para una misión como HAYDN, la cual operará desde la órbita L2, este problema desaparece al permitir una monitorización continua sin eclipses o fluctuaciones térmicas \citep{haydn_mission_proposal_2026}.
   \item \textbf{Espectros densos y modos mixtos:} Las estrellas $\delta$ Scuti pueden excitar gran cantidad de modos radiales, no radiales y mixtos simultáneamente \citep{Handler_2009}. Esta enorme cantidad de picos genera un espectro de frecuencias abarrotado que requiere de una muy alta resolución (y, por tanto, tiempos de integración muy prolongados) para poder aislar cada modo.
 \end{itemize}
@@ -142,7 +142,7 @@ Además, es importante mencionar el problema fundamental al que se enfrenta la i
 
 \section{Identificación de Modos en las $\boldsymbol{\delta}$ Scuti}
 
-Existe un impedimento fundamental que compromete la aplicabilidad de los resultados anteriores a observaciones reales: las Blue Stragglers se ubican frecuentemente en la región del diagrama HR correspondiente a las estrellas pulsantes de tipo $\delta$ Scuti \citep{Kurtz2022, 10.3389/fspas.2022.952296}, como se mencionó en la introducción.
+Existe un impedimento fundamental que compromete la aplicabilidad de los resultados anteriores a observaciones reales: las \textit{Blue Stragglers} se ubican frecuentemente en la región del diagrama HR correspondiente a las estrellas pulsantes de tipo $\delta$ Scuti \citep{Kurtz2022, 10.3389/fspas.2022.952296}, como se mencionó en la introducción.
 
 \subsection{Dificultades de la identificación de modos}
 
@@ -150,9 +150,9 @@ Identificar los modos de oscilación de las estrellas $\delta$ Scuti (es decir, 
 
 A diferencia de los osciladores de tipo solar (que pulsan en el régimen asintótico, con frecuencias espaciadas de forma regular), las $\delta$ Scuti pulsan en modos de \textit{bajo} orden radial, donde las frecuencias no siguen patrones simples y periódicos \citep{Handler_2009,Gatuam_2026}. Esto provoca que interpretar el espectro sea muy complicado. A esta dificultad se añade el hecho de que la mayoría de las $\delta$ Scuti rotan muy rápidamente, lo cual aplana la estrella por los polos y provoca desdoblamiento rotacional de los modos de oscilación, complicando todavía más la identificación de los modos \citep{10.3389/fspas.2022.952296}.
 
-Otra dificultad a la que se enfrentan los análisis es el hecho de que, a medida que la estrella evoluciona, las frecuencias de los modos g del interior aumentan mientras que las de los modos p disminuyen \citep{Handler_2009}. Cuando ambas familias de modos se cruzan en frecuencia dan lugar a modos mixtos. Este fenómeno (visible en la Figura~\ref{fig:prop_bss}), genera un espectro difícil de interpretar.
+Otra dificultad a la que se enfrentan los análisis es el hecho de que, a medida que la estrella evoluciona, las frecuencias de los modos g del interior aumentan mientras que las de los modos p disminuyen \citep{Handler_2009}. Cuando ambas familias de modos se cruzan en frecuencia dan lugar a modos mixtos. Este fenómeno (visible en la Figura~\ref{fig:prop_bss}) genera un espectro difícil de interpretar.
 
-A todo lo anterior se suma el carácter no lineal de las pulsaciones en este tipo de estrellas. Las interacciones entre modos producen armónicos y frecuencias de combinación, que pueblan el espectro como picos aparentemente independientes pero que son, en realidad, artefactos matemáticos \citep{LaresMartiz2021}. Algunas frecuencias de combinación pueden incluso presentar amplitudes superiores a las de los modos padre, lo que dificulta enormemente la distinción entre oscilaciones reales y artefactos.
+A todo lo anterior se suma el carácter no lineal de las pulsaciones en este tipo de estrellas. Las interacciones entre modos producen armónicos y frecuencias de combinación, que pueblan el espectro como picos aparentemente independientes pero que son, en realidad, efectos físicos no lineales \citep{LaresMartiz2021}. Algunas frecuencias de combinación pueden incluso presentar amplitudes superiores a las de los modos padre, lo que dificulta enormemente la distinción entre oscilaciones reales y artefactos.
 
 \subsection{Avances recientes}
 
@@ -162,17 +162,17 @@ Sin embargo, la identificación completa de modos para la mayoría de las $\delt
 
 \section{Perspectivas Futuras}
 
-Los resultados de este trabajo abren diversas líneas de investigación para continuar el estudio de la diferenciación astrosismológica de Blue Stragglers:
+Los resultados de este trabajo abren diversas líneas de investigación para continuar el estudio de la diferenciación astrosismológica de \textit{Blue Stragglers}:
 
 \begin{itemize}
   \item \textbf{Extensión del espacio de parámetros:} Se ha analizado un único escenario de formación (Caso A, sistema 2.0-1.0 $M_\odot$, período de 4 días). Cabría esperar que las señales astrosismológicas para distintos valores de la masa inicial, la relación de masas, el período orbital y el coeficiente $\beta$ de conservación de masa, así como para escenarios de Caso B y Caso C fueran drásticamente distintas. Futuros estudios deberían explorar sistemáticamente el espacio de parámetros para determinar qué combinaciones de parámetros producen diferencias astrosismológicas suficientemente grandes como para ser detectadas observacionalmente. Por otro lado, sería interesante explorar la posibilidad de que el método propuesto pueda ser capaz de distinguir entre los diferentes escenarios de formación.
 
-  \item \textbf{Incorporación de la rotación:} Se ha omitido la rotación estelar por simplicidad. Sin embargo, la acreción de masa en un sistema binario acelera drásticamente la rotación de la estrella acretora. Esto tiene importantes consecuencias para este estudio, ya que produce una división de los modos en multiplets debido a la rotación (con $m \neq 0$) y modifica sus frecuencias (de forma análoga a lo que ocurre en el efecto Zeeman) \citep{10.3389/fspas.2022.952296,paxton2015}. La inclusión de la rotación es un paso necesario para obtener predicciones más realistas y, además, podría ser otro indicador que permita diferenciar Blue Stragglers de estrellas simples.
+  \item \textbf{Incorporación de la rotación:} Se ha omitido la rotación estelar por simplicidad. Sin embargo, la acreción de masa en un sistema binario acelera drásticamente la rotación de la estrella acretora. Esto tiene importantes consecuencias para este estudio, ya que produce una división de los modos en \textit{multiplets} debido a la rotación (con $m \neq 0$) y modifica sus frecuencias (de forma análoga a lo que ocurre en el efecto Zeeman) \citep{10.3389/fspas.2022.952296,paxton2015}. La inclusión de la rotación es un paso necesario para obtener predicciones más realistas y, además, podría ser otro indicador que permita diferenciar \textit{Blue Stragglers} de estrellas simples.
 
-  \item \textbf{Comparación con Blue Stragglers reales:} Los modelos generados en este trabajo constituyen una base de predicciones teóricas que pueden compararse con observaciones actuales o futuras de Blue Stragglers de las cuales se conoce su espectro de potencias (por ejemplo, en los cúmulos objetivo de HAYDN). Esta comparación teórica permitiría determinar en qué medida los indicadores calculados son suficientemente robustos como para ser empleados en la caracterización de Blue Stragglers reales.
+  \item \textbf{Comparación con \textit{Blue Stragglers} reales:} Los modelos generados en este trabajo constituyen una base de predicciones teóricas que pueden compararse con observaciones actuales o futuras de \textit{Blue Stragglers} de las cuales se conoce su espectro de potencias (por ejemplo, en los cúmulos objetivo de HAYDN). Esta comparación teórica permitiría determinar en qué medida los indicadores calculados son suficientemente robustos como para ser empleados en la caracterización de \textit{Blue Stragglers} reales.
 
   \item \textbf{Modelización de la incertidumbre observacional:} El análisis realizado asume que los modos pueden identificarse sin ambigüedad y que las frecuencias se miden con una precisión infinita. Una evaluación más realista requeriría incluir el ruido instrumental, la resolución frecuencial finita y la incertidumbre en la identificación de modos, para determinar qué diferencias son realmente detectables bajo condiciones observacionales concretas.
 
-  \item \textbf{Métodos de identificación de modos en $\delta$ Scuti:} Dado que el principal obstáculo es la identificación de modos en un espectro complejo, el desarrollo de métodos estadísticos o de inteligencia artificial entrenados específicamente para estrellas $\delta$ Scuti sería de gran utilidad para extraer indicadores de la gran separación sin necesidad de asignar previamente los valores de $(n_{pg}, l)$ a cada pico.
+  \item \textbf{Métodos de identificación de modos en $\delta$ Scuti:} Dado que el principal obstáculo es la identificación de modos en un espectro complejo, el desarrollo de métodos estadísticos o de inteligencia artificial entrenados específicamente para estrellas $\delta$ Scuti sería de gran utilidad para extraer indicadores de la gran separación sin necesidad de asignar previamente los valores de $(n_{\mathrm{pg}}, l)$ a cada pico.
 
 \end{itemize}

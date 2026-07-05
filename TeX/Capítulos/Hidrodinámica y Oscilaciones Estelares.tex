@@ -1,9 +1,9 @@
 \chapter{Hidrodinámica y Oscilaciones Estelares}
 
-\noindent Buena parte de la astrofísica estelar se sustenta bajo las ecuaciones de la hidrodinámica. Es la base matemática ideal para describir el plasma del interior de las estrellas como un fluido continuo. En este capítulo, dichas ecuaciones se presentan, así como su formulación en el marco de la teoría de perturbaciones, para su posterior empleo en la modelización de estrellas pulsantes bajo el marco de la astrosismología. Una explicación considerablemente más detallada puede encontrarse en \citet{ChristensenDalsgaard2019}.
+\noindent Buena parte de la astrofísica estelar se sustenta sobre las ecuaciones de la hidrodinámica. Esta es la base matemática ideal para describir el plasma del interior de las estrellas como un fluido continuo. En este capítulo, dichas ecuaciones se presentan, así como su formulación en el marco de la teoría de perturbaciones, para su posterior empleo en la modelización de estrellas pulsantes en el marco de la astrosismología. Una explicación considerablemente más detallada puede encontrarse en \citet{ChristensenDalsgaard2019}.
 
 \section{Ecuaciones Básicas de la Hidrodinámica}
-Las propiedades esenciales del gas estelar pueden especificarse como funciones de la posición y del tiempo. Estas propiedades incluyen la densidad local $\rho(\mathbf{r},t)$, la presión $p(\mathbf{r},t)$, la temperatura $T(\mathbf{r},t)$ (y/o cualquier otra cantidad termodinámica relevante) y la velocidad del fluido $\mathbf{v}(\mathbf{r},t)$. Aquí, $\mathbf{r}$ denota el vector posición con respecto a un punto de referencia en el espacio, correspondiéndose con lo que vería un observador en reposo. Esta descripción, pues, se conoce como la descripción \textit{Euleriana} del fluido. Otra descripción posible es la \textit{Lagrangiana}, en la cual un observador sigue el movimiento de un elemento de fluido a medida que se desplaza por el espacio. En este marco, un elemento de gas puede ser etiquetado por su posición inicial $\mathbf{r}_0$, y sus propiedades se describen como funciones de $\mathbf{r}_0$ y del tiempo $t$ (por ejemplo, $\mathbf{r}(\mathbf{r}_0,t)$).
+Las propiedades esenciales del gas estelar pueden especificarse como funciones de la posición y del tiempo. Estas propiedades incluyen la densidad local $\rho(\mathbf{r},t)$, la presión $p(\mathbf{r},t)$, la temperatura $T(\mathbf{r},t)$ (y/o cualquier otra cantidad termodinámica relevante) y la velocidad del fluido $\mathbf{v}(\mathbf{r},t)$. Aquí, $\mathbf{r}$ denota el vector posición con respecto a un punto de referencia en el espacio, la cual se corresponde con lo que vería un observador en reposo. Esta descripción, pues, se conoce como la descripción \textit{Euleriana} del fluido. Otra descripción posible es la \textit{Lagrangiana}, en la cual un observador sigue el movimiento de un elemento de fluido a medida que se desplaza por el espacio. En este marco, un elemento de gas puede ser etiquetado por su posición inicial $\mathbf{r}_0$, y sus propiedades se describen como funciones de $\mathbf{r}_0$ y del tiempo $t$ (por ejemplo, $\mathbf{r}(\mathbf{r}_0,t)$).
 
 \begin{figure}[htbp]
   \centering
@@ -16,23 +16,21 @@ La derivada temporal de una cantidad $\phi$, observada desde un marco lagrangian
 \begin{equation}
   \frac{d \phi}{d t} = \left( \frac{\partial \phi}{\partial t} \right)_{\mathbf{r}} + \nabla \phi \cdot \frac{d \mathbf{r}}{d t} = \frac{\partial \phi}{\partial t} + \mathbf{v} \cdot \nabla \phi,
 \end{equation}
-notando que $\mathbf{v(\mathbf{r}, t)} = \frac{d \mathbf{r}}{d t}$.
+notando que $\mathbf{v}(\mathbf{r}, t) = \frac{d \mathbf{r}}{d t}$.
 
 La conservación de la masa en un fluido lleva a la ecuación de continuidad, que en la descripción Euleriana suele expresarse como
 \begin{equation}
   \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0,
   \label{eq:continuidad}
 \end{equation}
-
 dicha ecuación establece un balance entre la tasa de cambio de la densidad local y el flujo de gas a través de un cierto volumen. Si hubiera existido una fuente de masa en el sistema, dicho término aparecería en el lado derecho de esta ecuación.
 
 La siguiente ecuación a tener en cuenta es la ecuación del momento, expresada como
 
 \begin{equation}
-  \rho \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathbf{v} \right) = -\nabla p + \rho \mathbf{g}
+  \rho \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathbf{v} \right) = -\nabla p + \rho \mathbf{g},
 \end{equation}
-
-donde $\mathbf{g} = - \nabla \Phi$ es el vector de aceleración gravitatoria. En este punto se asume que la gravitatoria es la única fuerza externa que actúa sobre el fluido.
+donde $\mathbf{g} = - \nabla \Phi$ es el vector de aceleración gravitatoria. En este punto se asume que la fuerza gravitatoria es la única fuerza externa que actúa sobre el fluido.
 
 En este punto se escribe también la ecuación de Poisson, que relaciona la densidad de masa con el potencial gravitatorio $\Phi$:
 
@@ -46,14 +44,13 @@ Finalmente, es necesaria una relación termodinámica entre densidad y presión.
 
 \begin{equation} \frac{dT}{dt} - \frac{\Gamma_2 - 1}{\Gamma_2} \frac{T}{p} \frac{dp}{dt} = \frac{1}{c_p} \left[ \epsilon + \frac{1}{\rho} \nabla \cdot \left( \frac{4 a \tilde{c} T^3}{3 \kappa \rho} \nabla T \right) \right]
 \end{equation}
-
 donde $c_p$ es la capacidad calorífica a presión constante, $a$ la constante de densidad de radiación, $\tilde{c}$ la velocidad de la luz y $\kappa$ la opacidad del gas.
 
 \subsection{Aproximación Adiabática}
 
 Para justificar la aproximación adiabática, se estima el orden de magnitud del término asociado al calentamiento (lado derecho de la ecuación). El término de flujo radiativo varía en proporción a $T / \tau_F$, donde $\tau_F$ es la escala térmica de Kelvin-Helmholtz (del orden de $10^7$ años para el Sol \citep{ChristensenDalsgaard2019}). De igual forma, el tiempo característico de generación de energía $\tau_\epsilon$ tiene una magnitud similar.
 
-Por otro lado, los términos con derivadas temporales del lado izquierdo cambian al ritmo de $T/\textit{Periodo de Oscilación}$. Dado que el período típico de oscilación es del orden de minutos u horas, las oscilaciones ocurren muchísimo más rápido de lo que la estrella tarda en transferir calor.
+Por otro lado, los términos con derivadas temporales del lado izquierdo cambian al ritmo de $T/\text{período de oscilación}$. Dado que el período típico de oscilación es del orden de minutos u horas, las oscilaciones ocurren considerablemente más rápido de lo que la estrella tarda en transferir calor.
 
 Por lo tanto, $T/\tau_F$ y $T/\tau_\epsilon$ son valores diminutos, lo que hace que todo el lado derecho de la ecuación sea despreciable frente a las rápidas derivadas temporales. Esto se conoce como la aproximación adiabática, la cual permite escribir la ecuación de energía simplemente como:
 
@@ -80,11 +77,13 @@ Para poder estudiar el problema de oscilaciones estelares de forma simplificada,
   p(\mathbf{r}, t) = p_0(\mathbf{r}) + p'(\mathbf{r}, t),
 \end{equation}
 
-Esta es la perturbación de la presión en el marco Euleriano (la perturbación en un punto en concreto).
+Esta es la perturbación de la presión en el marco Euleriano (la perturbación en un punto concreto).
 
-En cambio, en la perturbación lagrangiana se considera que un elemento es movido desde $\mathbf{r_0}$ a $\mathbf{r_0} + \boldsymbol{\delta r}$. Se escribe pues:
+En cambio, en la perturbación lagrangiana se considera que un elemento es movido desde $\mathbf{r}_0$ a $\mathbf{r}_0 + \boldsymbol{\delta r}$. Se escribe pues:
 
-$$ \delta p(\mathbf{r_0}) = p(\mathbf{r_0} + \boldsymbol{\delta r}) - p_0({\mathbf{r_0}}) = p (\mathbf{r_0}) + \boldsymbol{\delta r} \cdot \nabla p_0 - p_0(\mathbf{r_0}) = p'(\mathbf{r_0}) + \boldsymbol{\delta r} \cdot \nabla p_0 $$
+\begin{equation*}
+  \delta p(\mathbf{r}_0) = p(\mathbf{r}_0 + \boldsymbol{\delta r}) - p_0(\mathbf{r}_0) = p (\mathbf{r}_0) + \boldsymbol{\delta r} \cdot \nabla p_0 - p_0(\mathbf{r}_0) = p'(\mathbf{r}_0) + \boldsymbol{\delta r} \cdot \nabla p_0.
+\end{equation*}
 
 La velocidad asociada a la perturbación es simplemente la derivada temporal del desplazamiento del elemento de fluido:
 \begin{equation}
@@ -103,7 +102,7 @@ Sustituyendo estas expresiones en las ecuaciones de la hidrodinámica, asumiendo
 Para el estudio de oscilaciones estelares, suele ser más útil expresar esta relación matemática en términos de la perturbación lagrangiana de la densidad, $\delta \rho$. Empleando la relación entre ambas perturbaciones introducida anteriormente ($\delta \rho = \rho' + \boldsymbol{\delta r} \cdot \nabla \rho_0$), se obtiene la forma lagrangiana de la ecuación de continuidad linealizada:
 
 \begin{equation}
-  \frac{\delta \rho}{\rho_0} = - \nabla \cdot \boldsymbol{\delta r}
+  \frac{\delta \rho}{\rho_0} = - \nabla \cdot \boldsymbol{\delta r}.
 \end{equation}
 
 Esta expresión final tiene una interpretación física directa: el cambio fraccional en la densidad de un elemento de fluido del gas es directamente proporcional a la compresión del campo de desplazamiento en esa región.
@@ -112,30 +111,31 @@ De forma análoga, se puede linealizar la ecuación del momento y la ecuación d
 
 \begin{align}
   \rho_0 \frac{\partial^2 \boldsymbol{\delta r}}{\partial t^2} &= \rho_0\frac{\partial \mathbf{v}}{\partial t} = - \nabla p' + \rho_0 \mathbf{g}' + \rho' \mathbf{g}_0, \label{eq:momento_linealizado_euleriana}\\
-  \nabla^2 \Phi' &= 4 \pi G \rho'.
+  \nabla^2 \Phi' &= 4 \pi G \rho',
 \end{align}
+siendo $\mathbf{g}' = - \nabla \Phi'$.
 
 Finalmente, se aplica el análisis perturbativo a la ecuación de energía bajo la aproximación adiabática obtenida anteriormente. Trabajando con las perturbaciones lagrangianas $\delta p$ y $\delta \rho$ y aproximando la derivada material por la derivada temporal (al ser $\mathbf{v}_0$ nula), se obtiene tras integrar:
 
-$$ \frac{\delta p}{p_0} = \Gamma_{1,0} \frac{\delta \rho}{\rho_0} $$
+\begin{equation*}
+  \frac{\delta p}{p_0} = \Gamma_{1,0} \frac{\delta \rho}{\rho_0}.
+\end{equation*}
 
 Esta sencilla pero fundamental relación establece que los cambios fraccionales de presión y densidad en un mismo elemento de fluido estelar están acoplados directamente a través del índice adiabático del gas en cuestión.
 
 Sustituyendo el resultado de la ecuación de continuidad lagrangiana ($ \delta \rho / \rho_0 = - \nabla \cdot \boldsymbol{\delta r} $) y empleando la relación geométrica entre ambas perturbaciones para la presión ($ \delta p = p' + \boldsymbol{\delta r} \cdot \nabla p_0 $), se halla la expresión análoga en el marco euleriano:
 
 \begin{equation}
-  p' = - \boldsymbol{\delta r} \cdot \nabla p_0 - \Gamma_{1,0} p_0 \nabla \cdot \boldsymbol{\delta r}
+  p' = - \boldsymbol{\delta r} \cdot \nabla p_0 - \Gamma_{1,0} p_0 \nabla \cdot \boldsymbol{\delta r}.
 \end{equation}
 
-Con esta última ecuación de estado linealizada, el conjunto base de ecuaciones fluido-dinámicas queda completamente cerrado. El comportamiento de las oscilaciones adiabáticas en interiores estelares puede modelarse, de este modo, resolviendo de forma acoplada las perturbaciones de masa, momento, gravedad y energía.
-
-siendo $\mathbf{g}' = - \nabla \Phi'$
+Con esta última ecuación de estado linealizada, el conjunto base de ecuaciones fluidodinámicas queda completamente cerrado. El comportamiento de las oscilaciones adiabáticas en interiores estelares puede modelarse, de este modo, resolviendo de forma acoplada las perturbaciones de masa, momento, gravedad y energía.
 
 \section{Las Ecuaciones de Oscilación Estelar}
 
 \subsection{Componentes Radiales y Horizontales}
 
-Al separar el vector desplazamiento $\mathbf{\delta r}$ en sus componentes radial y horizontal ($\mathbf{\delta r} = \xi_r \mathbf{a_r} + \mathbf{\xi_h}$), se proyectan las ecuaciones fluido-dinámicas linealizadas sobre estas mismas direcciones. Aplicando el gradiente y la divergencia en coordenadas esféricas, el sistema completo para el estudio de oscilaciones estelares bajo la aproximación adiabática ($\delta q = 0$) queda formulado en sus componentes radiales y horizontales:
+Al separar el vector desplazamiento $\boldsymbol{\delta r}$ en sus componentes radial y horizontal ($\boldsymbol{\delta r} = \xi_r \mathbf{a}_r + \boldsymbol{\xi}_h$), se proyectan las ecuaciones fluidodinámicas linealizadas sobre estas mismas direcciones. Aplicando el gradiente y la divergencia en coordenadas esféricas, el sistema completo para el estudio de oscilaciones estelares bajo la aproximación adiabática ($\delta q = 0$) queda formulado en sus componentes radiales y horizontales:
 
 \begin{align}
   -\frac{\partial^2}{\partial t^2} \left[ \rho' + \frac{1}{r^2} \frac{\partial}{\partial r} (r^2 \rho_0 \xi_r) \right] &= -\nabla_h^2 p' - \rho_0 \nabla_h^2 \Phi', \label{eq:oscilaciones_horizontal}\\
@@ -153,13 +153,12 @@ El objetivo es factorizar las dependencias angulares como una función $f(\theta
 \begin{equation}
   Y_l^m(\theta, \phi) = (-1)^m c_{lm} P_l^m(\cos \theta) \exp(im\phi),
 \end{equation}
-
 donde $P_l^m$ son los polinomios asociados de Legendre, $c_{lm}$ es una constante de normalización, y los autovalores vienen dados por $\Lambda = l(l+1)$ con $l \in \mathbb{Z}_{\ge0}$ y $|m| \le l$.
 
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=0.9\linewidth]{Imagenes/spherical_harmonics.png}
-\caption{Contorno de las partes reales de los armónicos esféricos $Y_m^l$; para simplificar, el factor de fase $(-1)^m$ se ha suprimido. Las líneas de contorno positivas están indicadas por líneas continuas y las negativas por líneas discontinuas. El eje $\theta = 0$ está inclinado en 45$^\circ$ hacia el observador, y se indica con una estrella. El ecuador se muestra como ``++++''. Los siguientes casos son ilustrados: a) $l = 1, m = 0$; b) $l = 1, m = 1$; c) $l = 2, m = 0$; d) $l= 2, m = 1$; e) $l = 2, m = 2$; f) $l = 3, m = 0$; g) $l = 3, m = 1$; h) $l = 3, m = 2$; i) $l = 3, m = 3$; j) $l = 5, m = 5$; k) $l = 10, m = 5$; l) $l = 10, m = 10$. Figura tomada de \autocite{ChristensenDalsgaard2019}}
+\caption{Contorno de las partes reales de los armónicos esféricos $Y_l^m$; para simplificar, el factor de fase $(-1)^m$ se ha suprimido. Las líneas de contorno positivas están indicadas por líneas continuas y las negativas por líneas discontinuas. El eje $\theta = 0$ está inclinado en 45$^\circ$ hacia el observador, y se indica con una estrella. El ecuador se muestra como ``++++''. Los siguientes casos son ilustrados: a) $l = 1, m = 0$; b) $l = 1, m = 1$; c) $l = 2, m = 0$; d) $l= 2, m = 1$; e) $l = 2, m = 2$; f) $l = 3, m = 0$; g) $l = 3, m = 1$; h) $l = 3, m = 2$; i) $l = 3, m = 3$; j) $l = 5, m = 5$; k) $l = 10, m = 5$; l) $l = 10, m = 10$. Figura tomada de \autocite{ChristensenDalsgaard2019}}
 \end{figure}
 
 Al emplear dichos armónicos esféricos como base angular y asumiendo una dependencia temporal armónica de la forma $\exp(-i\omega t)$ (donde $\omega$ es la frecuencia de oscilación propia), se pueden escribir las perturbaciones como productos separados:
@@ -167,10 +166,9 @@ Al emplear dichos armónicos esféricos como base angular y asumiendo una depend
 \begin{equation}
 \xi_r(r, \theta, \phi, t) = \sqrt{4\pi}\tilde{\xi}_r(r) Y_l^m(\theta, \phi) \exp(-i\omega t),
 \end{equation}
-
 y de forma análoga para el resto de variables ($\rho', p', \Phi', \dots$), donde las tildes denotan amplitudes dependientes puramente de la coordenada radial $r$.
 
-Sustituyendo estas formas separadas en el sistema de ecuaciones fluido-dinámicas derivado en la sección anterior, recordando que el operador laplaciano horizontal actúa sobre los armónicos esféricos como $\nabla_h^2 Y_l^m = -l(l+1)/r^2 Y_l^m$, y eliminando la perturbación de densidad mediante la ecuación de energía, el problema se transforma directamente en un sistema de ecuaciones diferenciales ordinarias (EDOs) unidimensionales. Suprimiendo la tilde y el subíndice ``$0$'' en las cantidades de equilibrio por claridad de notación, el sistema de cuarto orden resultante para las amplitudes es:
+Sustituyendo estas formas separadas en el sistema de ecuaciones fluidodinámicas derivado en la sección anterior, recordando que el operador laplaciano horizontal actúa sobre los armónicos esféricos como $\nabla_h^2 Y_l^m = -l(l+1)/r^2 Y_l^m$, y eliminando la perturbación de densidad mediante la ecuación de energía, el problema se transforma directamente en un sistema de ecuaciones diferenciales ordinarias (EDOs) unidimensionales. Suprimiendo la tilde y el subíndice ``$0$'' en las cantidades de equilibrio por claridad de notación, el sistema de cuarto orden resultante para las amplitudes es:
 
 \begin{align}
 \frac{d\xi_r}{dr} &= -\left(\frac{2}{r}+\frac{1}{\Gamma_1 p}\frac{dp}{dr}\right)\xi_r + \frac{1}{\rho c^2}\left(\frac{S_l^2}{\omega^2}-1\right) p' + \frac{l(l+1)}{\omega^2 r^2} \Phi', \\
@@ -194,11 +192,11 @@ El sistema que acaba de obtenerse es un sistema de ecuaciones diferenciales ordi
 \item \textbf{En el centro ($r=0$):} Este punto representa una singularidad regular en las ecuaciones. Como es habitual en la teoría de ecuaciones diferenciales, el sistema admite tanto soluciones regulares como singulares en este punto, por lo que dos de las condiciones sirven para seleccionar únicamente las soluciones regulares. Expandiendo las ecuaciones cerca de $r=0$, se demuestra que el desplazamiento $\xi_r$ se comporta como $r^{l-1}$, mientras que $p'$ y $\Phi'$ se comportan como $r^l$. En el caso particular de las oscilaciones radiales, el coeficiente del término de orden principal de $\xi_r$ se anula, de manera que $\xi_r$ es proporcional a $r$. De hecho, por consideraciones geométricas, es evidente que para oscilaciones con simetría esférica el desplazamiento debe anularse en el centro. Además, a partir de estas expansiones, se obtiene que para $l>0$, las soluciones cerca del centro cumplen la relación $\xi_r \simeq l\xi_h$ cuando $r \rightarrow 0$.
 
 \item \textbf{En la superficie ($r=R$):} Asumiendo que se asigna a la estrella un límite definido en $r=R$, es físicamente razonable suponer que dicha superficie exterior está libre, de modo que no actúan fuerzas sobre ella y el sistema se puede considerar como un sistema aislado. Esto equivale a exigir que la presión sea constante en la superficie perturbada. Por lo tanto, como condición de contorno en la superficie se toma que la perturbación de presión lagrangiana se anule, es decir, $\delta p = p' + \xi_r \frac{dp}{dr} = 0$ en $r=R$.
-Por último, se exige la continuidad de la perturbación del potencial gravitatorio ($\Phi'$) y de su primera derivada en el radio de la superficie ($r=R$). Dado que fuera de la estrella la perturbación de densidad se anula, la ecuación de Poisson puede resolverse de forma analítica. La solución que decae y se anula en el infinito es $\Phi' = A r^{-l-1}$. Como consecuencia, $\Phi'$ debe satisfacer la siguiente condición matemática empalmando con el vacío exterior:
+Por último, se exige la continuidad de la perturbación del potencial gravitatorio ($\Phi'$) y de su primera derivada en el radio de la superficie ($r=R$). Dado que fuera de la estrella la perturbación de densidad se anula, la ecuación de Poisson puede resolverse de forma analítica. La solución que decae y se anula en el infinito es $\Phi' = A r^{-l-1}$. Como consecuencia, $\Phi'$ debe satisfacer la siguiente condición matemática al empalmar con el vacío exterior:
 \begin{equation}
 \frac{d\Phi'}{dr} + \frac{l+1}{r}\Phi' = 0 \quad \text{en } r=R.
 \end{equation}
-Como información adicional derivada de la condición de la presión, se puede aproximar que la proporción entre el desplazamiento horizontal y radial en la superficie depende únicamente de la frecuencia adimensional ($\sigma$), dada por $\frac{\xi_h(R)}{\xi_r(R)} \approx \sigma^{-2}$
+Como información adicional derivada de la condición de la presión, se puede aproximar que la proporción entre el desplazamiento horizontal y radial en la superficie depende únicamente de la frecuencia adimensional ($\sigma$), dada por $\frac{\xi_h(R)}{\xi_r(R)} \approx \sigma^{-2}$.
 \end{itemize}
 \section{Naturaleza y Clasificación de los Modos de Oscilación}
 
@@ -209,16 +207,16 @@ Para analizar analíticamente las oscilaciones, a menudo se asume que la perturb
 \frac{d\xi_r}{dr} &= -\left(\frac{2}{r} - \frac{1}{\Gamma_1 H_p}\right)\xi_r + \frac{1}{\rho c^2}\left(\frac{S_l^2}{\omega^2} - 1\right)p' \\
 \frac{dp'}{dr} &= \rho(\omega^2 - N^2)\xi_r - \frac{1}{\Gamma_1 H_p}p',
 \end{align}
-
 donde $H_p = -(d \ln p / dr)^{-1}$ es la escala de altura de presión.
 
 \subsection{Frecuencias Características y Atrapamiento}
 Para modos de alto orden radial, las autofunciones varían mucho más rápido que las cantidades de equilibrio. Despreciando las derivadas de estas últimas, el sistema anterior se combina en una única ecuación diferencial de segundo orden que describe el comportamiento local de las ondas:
-$$\frac{d^2\xi_r}{dr^2} = -K(r)\xi_r,$$
-
-donde la función K(r) viene dada por:
+\begin{equation*}
+\frac{d^2\xi_r}{dr^2} = -K(r)\xi_r,
+\end{equation*}
+donde la función $K(r)$ viene dada por:
 \begin{equation}
-K(r) = \frac{\omega^2}{c^2} \left( \frac{N^2}{\omega^2} - 1 \right) \left( \frac{S_l^2}{\omega^2} - 1 \right)
+K(r) = \frac{\omega^2}{c^2} \left( \frac{N^2}{\omega^2} - 1 \right) \left( \frac{S_l^2}{\omega^2} - 1 \right).
 \end{equation}
 
 La propagación depende de las dos frecuencias características: la frecuencia acústica $(S_l)$ y la de flotabilidad $(N)$. La solución es oscilatoria $(\xi_r \sim \cos(\int K^{1/2} dr + \phi))$ en las regiones de ``atrapamiento'' donde $K(r) > 0$. Fuera de estas regiones $(K(r) < 0)$, la solución decae exponencialmente. Los límites de atrapamiento se sitúan en los puntos de retorno geométricos, donde $K(r) = 0.$
@@ -226,40 +224,52 @@ La propagación depende de las dos frecuencias características: la frecuencia a
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{Imagenes/prop_diagrams.png}
-\caption{Diagrama de propagación para un modelo de $1.4 M_\odot$ con $X_H=0.4$ (línea vertical gris punteada más a la izquierda en Fig. 1) que muestra, en unidades de $\nu_{\text{max}}$, las frecuencias de flotabilidad ($N$), la frecuencia de Lamb ($S_{l=1}$) y el potencial acústico, $V$, que es una frecuencia característica que describe la propagación de los modos radiales de una estrella. La región naranja del diagrama de propagación representa las regiones donde se pueden propagar modos p, mientras que las regiones azules representan las regiones de propagación de modos g. En las capas exteriores de la estrella, la frecuencia mínima a la cual se pueden propagar los modos p está determinada por la frecuencia crítica ($\nu_{\text{crit}}$ imita $V$ cerca de la superficie del modelo) en las capas exteriores. \textbf{Panel superior derecho:} El mismo panel que el anterior pero para el modelo de $1.4 M_\odot$ más tarde en su evolución (línea gris punteada a la derecha en Fig. 1, $X_H=0.05$). \textbf{Paneles inferiores:} Diagrama de propagación para los mismos dos modelos que los superiores, pero el eje x muestra la coordenada relativa de masa en escala logarítmica para mostrar las características cercanas al núcleo en mayor detalle. El potencial acústico, $V$, muestra un pico localizado y agudo en la parte cercana al núcleo.}
+\caption{Diagrama de propagación para un modelo de $1.4 M_\odot$ con $X_\text{H}=0.4$ que muestra, en unidades de $\nu_{\mathrm{max}}$, las frecuencias de flotabilidad ($N$), la frecuencia de Lamb ($S_{l=1}$) y el potencial acústico, $V$, que es una frecuencia característica que describe la propagación de los modos radiales de una estrella. La región naranja del diagrama de propagación representa las regiones donde se pueden propagar modos p, mientras que las regiones azules representan las regiones de propagación de modos g. En las capas exteriores de la estrella, la frecuencia mínima a la cual se pueden propagar los modos p está determinada por la frecuencia crítica ($\nu_{\mathrm{crit}}$ imita $V$ cerca de la superficie del modelo). \textbf{Panel superior derecho:} El mismo panel que el anterior pero para el modelo de $1.4 M_\odot$ más tarde en su evolución. \textbf{Paneles inferiores:} Diagrama de propagación para los mismos dos modelos que los superiores, pero el eje $x$ muestra la coordenada relativa de masa en escala logarítmica para mostrar las características cercanas al núcleo en mayor detalle. El potencial acústico, $V$, muestra un pico localizado y agudo en la parte cercana al núcleo.}
 \label{fig:prop_diagrams}
 \end{figure}
 
-\subsection{Modos de Presión (p-modes)}
+\subsection{Modos de Presión \textit{(p-modes)}}
 
 Corresponden a la rama de altas frecuencias donde $\omega \gg N$. En este límite, la función $K(r)$ se aproxima a:
 
-$$K(r) \simeq \frac{1}{c^2}(\omega^2 - S_l^2)$$
+\begin{equation*}
+K(r) \simeq \frac{1}{c^2}(\omega^2 - S_l^2).
+\end{equation*}
 
-La dinámica está dominada por la velocidad del sonido c (ondas acústicas). La condición del punto de retorno interno $(r_t)$, obtenida al igualar $S_l(r_t) = \omega$, es:
+La dinámica está dominada por la velocidad del sonido $c$ (ondas acústicas). La condición del punto de retorno interno $(r_t)$, obtenida al igualar $S_l(r_t) = \omega$, es:
 
-$$\frac{c^2(r_t)}{r_t^2} = \frac{\omega^2}{l(l+1)}$$
+\begin{equation*}
+\frac{c^2(r_t)}{r_t^2} = \frac{\omega^2}{l(l+1)}.
+\end{equation*}
 
-A partir de la relación de dispersión para ondas sonoras planas, el número de onda radial al cuadrado se identifica de forma natural con K:
+A partir de la relación de dispersión para ondas sonoras planas, el número de onda radial al cuadrado se identifica de forma natural con $K$:
 
-$$k_r^2 = \frac{1}{c^2}(\omega^2 - S_l^2)$$
+\begin{equation*}
+k_r^2 = \frac{1}{c^2}(\omega^2 - S_l^2).
+\end{equation*}
 
 En los modos p, la frecuencia de oscilación aumenta con el orden del modo.
 
-\subsection{Modos de Gravedad (g-modes)}
-Corresponden a la rama de bajas frecuencias, encontradas en el interior profundo estelar, donde $\omega^2 \ll S_l^2$. La aproximación para K(r) se convierte en:
+\subsection{Modos de Gravedad \textit{(g-modes)}}
+Corresponden a la rama de bajas frecuencias, las cuales se encuentran en el interior profundo estelar, donde $\omega^2 \ll S_l^2$. La aproximación para $K(r)$ se convierte en:
 
-$$ K(r) \simeq \frac{1}{\omega^2}(N^2 - \omega^2) \frac{l(l+1)}{r^2} $$
+\begin{equation*}
+K(r) \simeq \frac{1}{\omega^2}(N^2 - \omega^2) \frac{l(l+1)}{r^2}.
+\end{equation*}
 
 Aquí, la dinámica está controlada por la variación de la frecuencia de flotabilidad $N$, siendo la gravedad la fuerza restauradora sobre las perturbaciones de densidad. Los puntos de retorno vienen dados por la condición $N = \omega$. En congruencia con las ondas de gravedad estacionarias, su número de onda radial es:
 
-$$k_r^2 = \frac{l(l+1)}{r^2}\left(\frac{N^2}{\omega^2} - 1\right)$$
+\begin{equation*}
+k_r^2 = \frac{l(l+1)}{r^2}\left(\frac{N^2}{\omega^2} - 1\right).
+\end{equation*}
 
-A diferencia de los p-modes, en los modos g el orden aumenta a medida que disminuye $\omega$, y su frecuencia máxima está limitada estrictamente por el valor máximo de $N$ en el interior de la estrella.
+A diferencia de los \textit{p-modes}, en los modos g el orden aumenta a medida que disminuye $\omega$, y su frecuencia máxima está limitada estrictamente por el valor máximo de $N$ en el interior de la estrella.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{Imagenes/eigenfunctions.png}
-\caption{Autofunciones normalizadas para un modelo del Sol, en función del radio fraccional. La autofunción elegida, $r^3\delta p$, tiene las dimensiones de energía y está normalizada a su valor máximo. Izquierda: Resultados para 3 modos p: a) ($l = 0, n = 21, \nu = 3038.0\mu$Hz), b) ($l = 20, n = 14, \nu = 2939.2\mu$Hz), y c) ($l = 60, n = 9, \nu = 3043.2\mu$Hz). Derecha: Resultados para 3 modos g: a) ($l = 1, n = -5, \nu = 109.2\mu$Hz), b) ($l = 2, n = -10, \nu = 102.6\mu$Hz), y c) ($l = 3, n = -14, \nu = 104.1\mu$Hz). La línea punteada marca la base de la envoltura convectiva. Imagen tomada de \autocite{Cunha2017}.}
+\caption{Autofunciones normalizadas para un modelo del Sol, en función del radio fraccional. La autofunción elegida, $r^3\delta p$, tiene las dimensiones de energía y está normalizada a su valor máximo. Izquierda: Resultados para 3 modos p: a) ($l = 0, n = 21, \nu = 3038.0 \, \mu\mathrm{Hz}$), b) ($l = 20, n = 14, \nu = 2939.2 \, \mu\mathrm{Hz}$), y c) ($l = 60, n = 9, \nu = 3043.2 \, \mu\mathrm{Hz}$). Derecha: Resultados para 3 modos g: a) ($l = 1, n = -5, \nu = 109.2 \, \mu\mathrm{Hz}$), b) ($l = 2, n = -10, \nu = 102.6 \, \mu\mathrm{Hz}$), y c) ($l = 3, n = -14, \nu = 104.1 \, \mu\mathrm{Hz}$). La línea punteada marca la base de la envoltura convectiva. Imagen tomada de \autocite{Cunha2017}.}
 \label{fig:eigenfunctions_pg_modes}
 \end{figure}
+
+Habiendo formulado la teoría de oscilaciones, el siguiente paso consiste en generar y hacer evolucionar los modelos numéricos utilizando estas ecuaciones. Para ello, se ha empleado el código estelar MESA.
